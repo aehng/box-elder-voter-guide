@@ -402,7 +402,7 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
   const activeSpoke = selectedSpokeIndex !== null ? answeredIssues[selectedSpokeIndex] : null;
 
   return (
-    <div className={`bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs space-y-5 ${className}`}>
+    <div className={`bg-white rounded-2xl border border-stone-200 p-3 sm:p-5 shadow-2xs space-y-5 ${className}`}>
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-3">
         <div>
@@ -415,7 +415,7 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
         </div>
 
         <div className="text-[11px] text-stone-500 bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1 self-start sm:self-auto">
-          Center ring = Unknown &middot; Outer = Strongly Agree/Right
+          Center ring = unknown &middot; Tap an issue to see what the inner and outer ends of its spoke mean
         </div>
       </div>
 
@@ -455,9 +455,9 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
       </div>
 
       {/* Radar SVG Container */}
-      <div className="relative w-full max-w-[460px] mx-auto select-none">
+      <div className="relative w-full min-w-[300px] max-w-[520px] mx-auto select-none -mx-1 sm:mx-auto">
         <svg
-          viewBox={`0 0 ${size} ${size}`}
+          viewBox={`${cx - maxR - 78} ${cy - maxR - 44} ${2 * (maxR + 78)} ${2 * (maxR + 44)}`}
           className="w-full h-auto overflow-visible"
           aria-label="Candidate alignment radar chart"
           role="img"
@@ -667,13 +667,13 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
                     y={labelPt.y}
                     dy={dy}
                     textAnchor={textAnchor}
-                    className={`text-[11px] font-bold transition-colors ${
+                    fontSize={15} className={`font-bold transition-colors ${
                       isSelected
                         ? 'fill-teal-700 underline font-extrabold'
                         : 'fill-stone-700 group-hover:fill-stone-950'
                     }`}
                   >
-                    {shortName}
+                    {(() => { const w = shortName.split(' '); if (w.length < 2) return shortName; const h = Math.ceil(w.length / 2); return [w.slice(0, h).join(' '), w.slice(h).join(' ')].map((ln, k) => <tspan key={k} x={labelPt.x} dy={k === 0 ? (sin > 0.3 ? '0.8em' : sin < -0.3 ? '-1.2em' : '-0.25em') : '1.15em'}>{ln}</tspan>); })()}
                   </text>
                 </g>
               );
@@ -737,13 +737,13 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2.5 rounded-lg bg-white border border-stone-200 text-[11px]">
               <div>
                 <span className="font-bold text-stone-500 block uppercase text-[10px]">
-                  Left Scale End (-2)
+                  Inner end of spoke
                 </span>
                 <span className="text-stone-800 font-medium">{activeSpoke.leftLabel}</span>
               </div>
               <div>
                 <span className="font-bold text-teal-800 block uppercase text-[10px]">
-                  Right Scale End (+2)
+                  Outer end of spoke
                 </span>
                 <span className="text-stone-800 font-medium">{activeSpoke.rightLabel}</span>
               </div>
