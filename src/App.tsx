@@ -53,6 +53,7 @@ export const App: React.FC = () => {
                 <Route path="/ballot" element={<BallotPage />} />
                 <Route path="/explore" element={<ExplorePage />} />
                 <Route path="/my-views" element={<MyViewsPage />} />
+                <Route path="/my-matches" element={<MyViewsPage />} />
                 <Route path="/compare" element={<ComparePage />} />
                 <Route path="/compare/:contestId" element={<ComparePage />} />
                 <Route path="/candidate/:id" element={<CandidateDetailPage />} />

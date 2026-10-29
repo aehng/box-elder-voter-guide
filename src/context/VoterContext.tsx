@@ -58,7 +58,6 @@ interface VoterContextValue {
   clearAnswer: (issueId: string) => void;
   resetAllAnswers: () => void;
   setIncludePartyAssumed: (include: boolean) => void;
-  setGroupBy: (groupBy: 'category' | 'race') => void;
   setRaceFilter: (filter: string[]) => void;
   toggleRaceFilter: (contestId: string) => void;
   clearRaceFilter: () => void;
@@ -96,14 +95,13 @@ function loadInitialSettings(): UserSettings {
       const parsed = JSON.parse(raw);
       return {
         includePartyAssumed: Boolean(parsed.includePartyAssumed),
-        groupBy: parsed.groupBy === 'race' ? 'race' : 'category',
         raceFilter: Array.isArray(parsed.raceFilter) ? parsed.raceFilter : [],
       };
     }
   } catch (err) {
     console.error('Failed to parse saved settings from localStorage:', err);
   }
-  return { includePartyAssumed: false, groupBy: 'category', raceFilter: [] };
+  return { includePartyAssumed: false, raceFilter: [] };
 }
 
 export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -214,10 +212,6 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setSettings((prev) => ({ ...prev, includePartyAssumed: include }));
   };
 
-  const setGroupBy = (groupBy: 'category' | 'race') => {
-    setSettings((prev) => ({ ...prev, groupBy }));
-  };
-
   const setRaceFilter = (filter: string[]) => {
     setSettings((prev) => ({ ...prev, raceFilter: filter }));
   };
@@ -305,7 +299,6 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         clearAnswer,
         resetAllAnswers,
         setIncludePartyAssumed,
-        setGroupBy,
         setRaceFilter,
         toggleRaceFilter,
         clearRaceFilter,

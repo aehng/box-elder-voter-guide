@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { IssuePositionChart } from '../components/IssuePositionChart';
 import { RaceFilterChips } from '../components/RaceFilterChips';
+import { ContestMatches } from '../components/ContestMatches';
+import type { Issue, Candidate } from '../types';
 import {
   Compass,
   GitCompare,
@@ -11,14 +13,19 @@ import {
 
 export const MyViewsPage: React.FC = () => {
   const {
+    contests,
     issues,
+    candidateMap,
+    issueMap,
+    positionsByCandidate,
+    positionsByIssue,
     answers,
+    sourceMap,
     settings,
     setIncludePartyAssumed,
     resetAllAnswers,
     clearRaceFilter,
     answeredCount,
-    positionsByIssue,
   } = useVoter();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -51,6 +58,20 @@ export const MyViewsPage: React.FC = () => {
   const filteredSkipped = useMemo(() => {
     return Math.max(0, filteredTotal - filteredAnswered - filteredNoOpinion);
   }, [filteredTotal, filteredAnswered, filteredNoOpinion]);
+
+  // Contests where user has >= 1 answered (not no-opinion) issue
+  const contestsWithMatches = useMemo(() => {
+    return contests
+      .filter((c) => {
+        if (c.type !== 'candidate' || c.candidateIds.length === 0) return false;
+        if (activeRaceFilter.length > 0 && !activeRaceFilter.includes(c.id)) return false;
+        return c.issueIds.some((iid) => {
+          const ans = answers[iid];
+          return ans && ans.status === 'answered' && ans.stance !== null;
+        });
+      })
+      .sort((a, b) => a.order - b.order);
+  }, [contests, answers, activeRaceFilter]);
 
   // Filter issues answered or marked no-opinion within the filtered set
   const answeredIssues = useMemo(() => {
@@ -100,10 +121,10 @@ export const MyViewsPage: React.FC = () => {
 
         <div className="space-y-2">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-            No issues rated yet
+            No matches yet
           </h1>
           <p className="text-stone-600 text-base max-w-md mx-auto leading-relaxed">
-            Answer a few quick questions about water, growth, taxes, and education to see your positions mapped alongside candidates.
+            Answer a few quick questions about water, growth, taxes, and education to see which candidates align closest with your views.
           </p>
         </div>
 
@@ -127,12 +148,12 @@ export const MyViewsPage: React.FC = () => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-10">
       {/* Page Title & Summary Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-            My Views Dashboard
+            My Matches
           </h1>
           <p className="mt-1 text-sm font-medium text-stone-700">
             {filteredAnswered} answered &middot; {filteredNoOpinion} no opinion &middot; {filteredSkipped} skipped of {filteredTotal}
@@ -143,7 +164,7 @@ export const MyViewsPage: React.FC = () => {
             )}
           </p>
           <p className="text-xs text-stone-500 mt-0.5">
-            Sorted by importance to your vote. Unset priority defaults to 3 (Moderately important).
+            Per-race matches based on verified public stances matching issues you answered. Independent and nonpartisan.
           </p>
         </div>
 
@@ -181,92 +202,145 @@ export const MyViewsPage: React.FC = () => {
         <RaceFilterChips />
       </div>
 
-      {/* If active race filter has 0 answered issues */}
-      {answeredIssues.length === 0 ? (
+      {/* Per-Race Match Results Section (lead with matches where user answered >= 1 issue) */}
+      {contestsWithMatches.length > 0 ? (
+        <div className="space-y-10">
+          {contestsWithMatches.map((contest) => {
+            const contestIssues = contest.issueIds
+              .map((id) => issueMap.get(id))
+              .filter((i): i is Issue => Boolean(i));
+            const contestCandidates = contest.candidateIds
+              .map((id) => candidateMap.get(id))
+              .filter((k): k is Candidate => Boolean(k));
+
+            return (
+              <ContestMatches
+                key={contest.id}
+                contest={contest}
+                contestIssues={contestIssues}
+                candidates={contestCandidates}
+                positionsByCandidate={positionsByCandidate}
+                answers={answers}
+                sourceMap={sourceMap}
+                includePartyAssumed={settings.includePartyAssumed}
+                showFullComparisonLink={true}
+              />
+            );
+          })}
+        </div>
+      ) : (
         <div className="bg-white rounded-2xl border border-stone-200 p-8 text-center space-y-3 shadow-2xs">
           <Compass className="w-8 h-8 text-stone-400 mx-auto" />
           <h2 className="text-base font-bold text-stone-900">
-            No answered questions match this race filter
+            {activeRaceFilter.length > 0
+              ? 'No answered questions match this race filter'
+              : 'Answer candidate race questions to see matches'}
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 max-w-md mx-auto">
-            You haven&rsquo;t answered any questions in the selected race{activeRaceFilter.length === 1 ? '' : 's'} yet.
+            {activeRaceFilter.length > 0
+              ? 'You haven\u2019t answered any questions in the selected races yet.'
+              : 'Answer questions in competitive races like U.S. House, State Senate, or School Board to view closeness matches.'}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
-            <button
-              type="button"
-              onClick={clearRaceFilter}
-              className="px-3.5 py-1.5 rounded-lg bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors"
-            >
-              Reset to all races
-            </button>
+            {activeRaceFilter.length > 0 && (
+              <button
+                type="button"
+                onClick={clearRaceFilter}
+                className="px-3.5 py-1.5 rounded-lg bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors"
+              >
+                Reset to all races
+              </button>
+            )}
             <Link
               to="/explore"
               className="px-3.5 py-1.5 rounded-lg bg-teal-700 text-white text-xs font-semibold hover:bg-teal-800 transition-colors"
             >
-              Answer these questions &rarr;
+              Answer questions &rarr;
             </Link>
           </div>
         </div>
-      ) : (
-        <>
-          {/* Control Bar: Party Assumption Toggle & Category Filter */}
-          {(hasPartyAssumedInViews || categories.length > 1) && (
-            <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-4">
-              {/* Toggle (hidden if no party-assumed positions exist in relevant candidates) */}
-              {hasPartyAssumedInViews && (
-                <label className="flex items-center gap-3 cursor-pointer select-none">
-                  <input
-                    type="checkbox"
-                    checked={settings.includePartyAssumed}
-                    onChange={(e) => setIncludePartyAssumed(e.target.checked)}
-                    className="h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
-                  />
-                  <div>
-                    <span className="text-xs sm:text-sm font-semibold text-stone-900 block">
-                      Include party-based assumptions
-                    </span>
-                    <span className="text-[11px] text-stone-500 block">
-                      Show estimated stances from official party platforms when candidates have no individual statement
-                    </span>
-                  </div>
-                </label>
-              )}
+      )}
 
-              {/* Category Pills / Filter */}
-              {categories.length > 1 && (
-                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none ml-auto">
+      {/* Your Answers Section (Answer list and edit below matches) */}
+      <div className="pt-8 border-t border-stone-200 space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div>
+            <h2 className="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight">
+              Your answers
+            </h2>
+            <p className="text-xs text-stone-500 mt-0.5">
+              Review or adjust your stances and priority weights below. Unset priority defaults to 3 (Moderately important).
+            </p>
+          </div>
+
+          {/* Category Filter Pills */}
+          {categories.length > 1 && (
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+              <button
+                type="button"
+                onClick={() => setSelectedCategory('all')}
+                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                  selectedCategory === 'all'
+                    ? 'bg-stone-900 text-white'
+                    : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                }`}
+              >
+                All ({answeredIssues.length})
+              </button>
+              {categories.map((cat) => {
+                const count = answeredIssues.filter((i) => i.issue.category === cat).length;
+                return (
                   <button
+                    key={cat}
                     type="button"
-                    onClick={() => setSelectedCategory('all')}
+                    onClick={() => setSelectedCategory(cat)}
                     className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                      selectedCategory === 'all'
+                      selectedCategory === cat
                         ? 'bg-stone-900 text-white'
                         : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
                     }`}
                   >
-                    All ({answeredIssues.length})
+                    {cat} ({count})
                   </button>
-                  {categories.map((cat) => {
-                    const count = answeredIssues.filter((i) => i.issue.category === cat).length;
-                    return (
-                      <button
-                        key={cat}
-                        type="button"
-                        onClick={() => setSelectedCategory(cat)}
-                        className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                          selectedCategory === cat
-                            ? 'bg-stone-900 text-white'
-                            : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                        }`}
-                      >
-                        {cat} ({count})
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
+                );
+              })}
             </div>
           )}
+        </div>
+
+        {/* Party-assumed toggle if relevant */}
+        {hasPartyAssumedInViews && (
+          <div className="bg-white rounded-xl border border-stone-200 p-3.5 shadow-2xs">
+            <label className="flex items-center gap-3 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={settings.includePartyAssumed}
+                onChange={(e) => setIncludePartyAssumed(e.target.checked)}
+                className="h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+              />
+              <div>
+                <span className="text-xs sm:text-sm font-semibold text-stone-900 block">
+                  Include party-based assumptions
+                </span>
+                <span className="text-[11px] text-stone-500 block">
+                  Show estimated stances from official party platforms when candidates have no individual statement
+                </span>
+              </div>
+            </label>
+          </div>
+        )}
+
+        {/* Issues Position Chart List */}
+        <div className="space-y-6">
+          {displayedIssues.map(({ issue, answer }) => (
+            <IssuePositionChart
+              key={issue.id}
+              issue={issue}
+              answer={answer}
+            />
+          ))}
+        </div>
+      </div>
 
       {/* Reset Confirmation Dialog */}
       {showResetConfirm && (
@@ -300,19 +374,6 @@ export const MyViewsPage: React.FC = () => {
           </div>
         </div>
       )}
-
-        {/* Issues Chart List */}
-        <div className="space-y-6">
-          {displayedIssues.map(({ issue, answer }) => (
-            <IssuePositionChart
-              key={issue.id}
-              issue={issue}
-              answer={answer}
-            />
-          ))}
-        </div>
-      </>
-    )}
-  </div>
-);
+    </div>
+  );
 };

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
-import { Settings, Info, BookOpen, SlidersHorizontal, Menu, X } from 'lucide-react';
+import { Settings, Info, BookOpen, SlidersHorizontal, Menu, X, UserCheck } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const { answeredCount, totalActiveIssuesCount, settings, setIncludePartyAssumed, positions } = useVoter();
@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
               Explore
             </NavLink>
             <NavLink to="/my-views" className={navLinkClass}>
-              My Views
+              My Matches
               {answeredCount > 0 && (
                 <span className="ml-1.5 px-1.5 py-0.2 bg-teal-100 text-teal-800 text-[11px] font-bold rounded-full">
                   {answeredCount}
@@ -103,6 +103,21 @@ export const Header: React.FC = () => {
                 {answeredCount} of {totalActiveIssuesCount}
               </span>
             </div>
+            <Link
+              to="/my-views"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between px-3 py-2 text-sm text-stone-700 hover:bg-stone-50 rounded-lg"
+            >
+              <span className="flex items-center gap-2">
+                <UserCheck className="w-4 h-4 text-stone-500" />
+                My Matches
+              </span>
+              {answeredCount > 0 && (
+                <span className="px-1.5 py-0.2 bg-teal-100 text-teal-800 text-[11px] font-bold rounded-full">
+                  {answeredCount}
+                </span>
+              )}
+            </Link>
             <Link
               to="/sources"
               onClick={() => setMobileMenuOpen(false)}

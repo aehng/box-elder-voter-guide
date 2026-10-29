@@ -4,9 +4,9 @@ import { useVoter } from '../context/VoterContext';
 import { PositionSlider } from '../components/PositionSlider';
 import { ImportanceSlider } from '../components/ImportanceSlider';
 import { MiniPositionChart } from '../components/MiniPositionChart';
-import { RaceFilterChips } from '../components/RaceFilterChips';
-import { formatStanceLabel } from '../lib/compare';
-import type { UserStance, UserImportance, UserAnswerStatus, Issue, Contest } from '../types';
+import { RaceFilterChips, getContestShortName } from '../components/RaceFilterChips';
+import { formatStanceLabel, calculateContestCloseness } from '../lib/compare';
+import type { UserStance, UserImportance, UserAnswerStatus, Issue, Contest, Candidate } from '../types';
 import {
   ChevronLeft,
   ChevronRight,
@@ -18,6 +18,7 @@ import {
   X,
   Compass,
   ArrowRight,
+  UserCheck,
 } from 'lucide-react';
 
 export const ExplorePage: React.FC = () => {
@@ -25,12 +26,15 @@ export const ExplorePage: React.FC = () => {
     issues,
     contests,
     contestMap,
+    candidateMap,
+    issueMap,
+    positionsByCandidate,
     answers,
     setAnswer,
     sourceMap,
     settings,
-    setGroupBy,
     clearRaceFilter,
+    answeredCount,
   } = useVoter();
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,15 +42,35 @@ export const ExplorePage: React.FC = () => {
   const [showLearnMore, setShowLearnMore] = useState(false);
 
   const activeRaceFilter = settings.raceFilter || [];
-  const groupBy = settings.groupBy || 'category';
+
+  // Helper to determine contest order for an issue (minimum contest order)
+  const getIssueContestOrder = (issue: Issue): number => {
+    let minOrder = 9999;
+    for (const cid of issue.contestIds) {
+      const c = contestMap.get(cid);
+      if (c && c.order < minOrder) {
+        minOrder = c.order;
+      }
+    }
+    return minOrder;
+  };
 
   // Filter issues whose contestIds intersect the active raceFilter (empty = all)
+  // Questions are grouped/ordered by ballot race
   const filteredIssues = useMemo(() => {
-    if (activeRaceFilter.length === 0) return issues;
-    return issues.filter((issue) =>
-      issue.contestIds.some((cid) => activeRaceFilter.includes(cid))
-    );
-  }, [issues, activeRaceFilter]);
+    const matching = activeRaceFilter.length === 0
+      ? issues
+      : issues.filter((issue) =>
+          issue.contestIds.some((cid) => activeRaceFilter.includes(cid))
+        );
+
+    return [...matching].sort((a, b) => {
+      const orderA = getIssueContestOrder(a);
+      const orderB = getIssueContestOrder(b);
+      if (orderA !== orderB) return orderA - orderB;
+      return issues.indexOf(a) - issues.indexOf(b);
+    });
+  }, [issues, activeRaceFilter, contestMap]);
 
   // Contests that have issues
   const contestsWithIssues = useMemo(() => {
@@ -85,21 +109,6 @@ export const ExplorePage: React.FC = () => {
     ? Math.round(((filteredAnsweredCount + filteredSkippedCount) / filteredIssues.length) * 100)
     : 0;
 
-  // Group issues by category for jump list, surfacing Constitutional Amendments as their own section
-  const categoryGroups = useMemo(() => {
-    const map = new Map<string, Array<{ issue: Issue; index: number }>>();
-    filteredIssues.forEach((issue, index) => {
-      const isAmendment = issue.contestIds.some(
-        (cid) => contestMap.get(cid)?.group === 'amendments'
-      );
-      const categoryName = isAmendment ? 'Constitutional Amendments' : issue.category;
-      const list = map.get(categoryName) || [];
-      list.push({ issue, index });
-      map.set(categoryName, list);
-    });
-    return Array.from(map.entries());
-  }, [filteredIssues, contestMap]);
-
   // Group issues by Ballot race for jump list
   const raceGroups = useMemo(() => {
     const activeContests = contestsWithIssues.filter(
@@ -119,6 +128,50 @@ export const ExplorePage: React.FC = () => {
     }
     return groups;
   }, [contestsWithIssues, activeRaceFilter, filteredIssues]);
+
+  // Target candidate contest for the current issue's mini summary
+  const targetContest = useMemo(() => {
+    if (!currentIssue) return null;
+    const candidateContests = currentIssue.contestIds
+      .map((cid) => contestMap.get(cid))
+      .filter((c): c is Contest => Boolean(c && c.type === 'candidate'));
+    if (candidateContests.length === 0) return null;
+    const filtered = candidateContests.find((c) => activeRaceFilter.includes(c.id));
+    return filtered || candidateContests[0];
+  }, [currentIssue, contestMap, activeRaceFilter]);
+
+  const contestShortName = targetContest ? getContestShortName(targetContest) : '';
+
+  // Closeness calculation for target contest
+  const targetContestCloseness = useMemo(() => {
+    if (!targetContest) return null;
+    const contestIssues = targetContest.issueIds
+      .map((id) => issueMap.get(id))
+      .filter((i): i is Issue => Boolean(i));
+    const contestCandidates = targetContest.candidateIds
+      .map((id) => candidateMap.get(id))
+      .filter((k): k is Candidate => Boolean(k));
+
+    return calculateContestCloseness({
+      contestIssues,
+      candidates: contestCandidates,
+      positionsByCandidate,
+      answers,
+      sourceMap,
+      includePartyAssumed: settings.includePartyAssumed,
+    });
+  }, [
+    targetContest,
+    issueMap,
+    candidateMap,
+    positionsByCandidate,
+    answers,
+    sourceMap,
+    settings.includePartyAssumed,
+  ]);
+
+  const topCandidateResult = targetContestCloseness?.results[0];
+  const hasEnoughInfo = Boolean(topCandidateResult && topCandidateResult.isRanked && topCandidateResult.score !== null);
 
   const handleSkip = () => {
     if (!currentIssue) return;
@@ -204,54 +257,33 @@ export const ExplorePage: React.FC = () => {
     });
   };
 
+  // Ballot race tag for current question
+  const currentContest = currentIssue.contestIds.map((cid) => contestMap.get(cid))[0];
+  const currentContestName = currentContest ? getContestShortName(currentContest) : '';
+
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
-      {/* Top Filter and Grouping Bar */}
-      <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-3">
-          {/* Group By Toggle */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-stone-700">Group by:</span>
-            <div className="inline-flex rounded-lg p-0.5 bg-stone-100 border border-stone-200">
-              <button
-                type="button"
-                onClick={() => setGroupBy('category')}
-                className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                  groupBy === 'category'
-                    ? 'bg-stone-900 text-white shadow-2xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-              >
-                Category
-              </button>
-              <button
-                type="button"
-                onClick={() => setGroupBy('race')}
-                className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                  groupBy === 'race'
-                    ? 'bg-stone-900 text-white shadow-2xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-              >
-                Ballot race
-              </button>
-            </div>
-          </div>
-
-          <div className="text-xs text-stone-500 font-medium">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6 pb-28 sm:pb-24">
+      {/* Top Race Filter Bar (Group by category toggle removed) */}
+      <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs space-y-3">
+        <div className="flex items-center justify-between gap-2 border-b border-stone-100 pb-2.5">
+          <span className="text-xs font-bold text-stone-700">Questions Grouped by Ballot Race</span>
+          <span className="text-xs text-stone-500 font-medium">
             Showing {filteredIssues.length} question{filteredIssues.length === 1 ? '' : 's'}
-          </div>
+          </span>
         </div>
-
-        {/* Race Filter Chips */}
         <RaceFilterChips compact />
       </div>
 
       {/* Top Progress & Header Bar */}
       <div className="space-y-3">
         <div className="flex items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-stone-200 text-stone-800">
+          <div className="flex flex-wrap items-center gap-2">
+            {currentContestName && (
+              <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-stone-900 text-white">
+                {currentContestName}
+              </span>
+            )}
+            <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-stone-100 text-stone-700">
               {currentIssue.category}
             </span>
             <span className="text-xs font-semibold text-stone-500">
@@ -467,6 +499,28 @@ export const ExplorePage: React.FC = () => {
                 value={currentAnswer.importance}
                 onChange={handleImportanceChange}
               />
+
+              {/* One-line mini summary under the slider */}
+              {isAnswered && targetContest && (
+                <div className="pt-2">
+                  <div className="p-2.5 rounded-xl bg-stone-50 border border-stone-200 text-xs text-stone-700 flex items-center justify-between gap-2 animate-fadeIn">
+                    <span className="truncate">
+                      {hasEnoughInfo && topCandidateResult ? (
+                        <>
+                          Closest so far in {contestShortName}: <strong className="text-stone-900">{topCandidateResult.candidate.name}</strong> ({Math.round((topCandidateResult.score ?? 0) * 100)}%) &mdash;{' '}
+                          <Link to="/my-views" className="text-teal-800 underline font-semibold hover:text-teal-950">
+                            see matches
+                          </Link>
+                        </>
+                      ) : (
+                        <span className="text-stone-600">
+                          Answer a few more to see matches in {contestShortName}
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Navigation Controls: Prev, Skip, Next */}
@@ -490,7 +544,7 @@ export const ExplorePage: React.FC = () => {
                   Skip for now
                 </button>
 
-                {currentIndex < issues.length - 1 ? (
+                {currentIndex < filteredIssues.length - 1 ? (
                   <button
                     type="button"
                     onClick={handleNext}
@@ -504,7 +558,7 @@ export const ExplorePage: React.FC = () => {
                     to="/my-views"
                     className="px-5 py-2.5 rounded-xl bg-teal-700 text-white font-semibold text-xs sm:text-sm hover:bg-teal-800 flex items-center gap-1.5 shadow-xs"
                   >
-                    <span>View my results</span>
+                    <span>View my matches</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 )}
@@ -550,7 +604,7 @@ export const ExplorePage: React.FC = () => {
           )}
         </div>
 
-        {/* Desktop Sidebar / Jump List (4 cols) */}
+        {/* Desktop Sidebar / Jump List (4 cols) - Grouped by Ballot Race */}
         <div className="hidden lg:block lg:col-span-4 space-y-4">
           <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
             <div className="flex items-center justify-between mb-4 pb-2 border-b border-stone-100">
@@ -561,111 +615,57 @@ export const ExplorePage: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              {groupBy === 'category' ? (
-                categoryGroups.map(([cat, items]) => (
-                  <div key={cat} className="space-y-1">
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5">
-                      {cat}
-                    </h4>
-                    <div className="space-y-0.5">
-                      {items.map(({ issue, index }) => {
-                        const ans = answers[issue.id];
-                        const isCur = index === safeIndex;
-                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                        const noOp = ans && ans.status === 'no-opinion';
-                        const skipped = ans && ans.status === 'skipped';
+              {raceGroups.map(({ contest, items }) => (
+                <div key={contest.id} className="space-y-1">
+                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5 truncate">
+                    {contest.office}
+                  </h4>
+                  <div className="space-y-0.5">
+                    {items.map(({ issue, index }) => {
+                      const ans = answers[issue.id];
+                      const isCur = index === safeIndex;
+                      const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                      const noOp = ans && ans.status === 'no-opinion';
+                      const skipped = ans && ans.status === 'skipped';
 
-                        return (
-                          <button
-                            key={issue.id}
-                            type="button"
-                            onClick={() => {
-                              setCurrentIndex(index);
-                              setShowLearnMore(false);
-                            }}
-                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
-                              isCur
-                                ? 'bg-stone-900 text-white font-semibold'
-                                : 'text-stone-700 hover:bg-stone-100'
-                            }`}
-                          >
-                            <span className="truncate">
-                              {index + 1}. {issue.question}
-                            </span>
-                            <span className="shrink-0">
-                              {answered ? (
-                                <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                              ) : noOp ? (
-                                <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                  N/O
-                                </span>
-                              ) : skipped ? (
-                                <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                  —
-                                </span>
-                              ) : (
-                                <span className="w-2 h-2 rounded-full border border-stone-300" />
-                              )}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
+                      return (
+                        <button
+                          key={issue.id}
+                          type="button"
+                          onClick={() => {
+                            setCurrentIndex(index);
+                            setShowLearnMore(false);
+                          }}
+                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
+                            isCur
+                              ? 'bg-stone-900 text-white font-semibold'
+                              : 'text-stone-700 hover:bg-stone-100'
+                          }`}
+                        >
+                          <span className="truncate">
+                            {index + 1}. {issue.question}
+                          </span>
+                          <span className="shrink-0">
+                            {answered ? (
+                              <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                            ) : noOp ? (
+                              <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                N/O
+                              </span>
+                            ) : skipped ? (
+                              <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                &mdash;
+                              </span>
+                            ) : (
+                              <span className="w-2 h-2 rounded-full border border-stone-300" />
+                            )}
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
-                ))
-              ) : (
-                raceGroups.map(({ contest, items }) => (
-                  <div key={contest.id} className="space-y-1">
-                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5 truncate">
-                      {contest.office}
-                    </h4>
-                    <div className="space-y-0.5">
-                      {items.map(({ issue, index }) => {
-                        const ans = answers[issue.id];
-                        const isCur = index === safeIndex;
-                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                        const noOp = ans && ans.status === 'no-opinion';
-                        const skipped = ans && ans.status === 'skipped';
-
-                        return (
-                          <button
-                            key={issue.id}
-                            type="button"
-                            onClick={() => {
-                              setCurrentIndex(index);
-                              setShowLearnMore(false);
-                            }}
-                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
-                              isCur
-                                ? 'bg-stone-900 text-white font-semibold'
-                                : 'text-stone-700 hover:bg-stone-100'
-                            }`}
-                          >
-                            <span className="truncate">
-                              {index + 1}. {issue.question}
-                            </span>
-                            <span className="shrink-0">
-                              {answered ? (
-                                <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                              ) : noOp ? (
-                                <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                  N/O
-                                </span>
-                              ) : skipped ? (
-                                <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                  —
-                                </span>
-                              ) : (
-                                <span className="w-2 h-2 rounded-full border border-stone-300" />
-                              )}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))
-              )}
+                </div>
+              ))}
             </div>
 
             {filteredAnsweredCount > 0 && (
@@ -683,7 +683,7 @@ export const ExplorePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Drawer / Sheet for Questions Jump List */}
+      {/* Mobile Drawer / Sheet for Questions Jump List - Grouped by Ballot Race */}
       {showDrawer && (
         <div className="fixed inset-0 z-50 flex justify-end bg-stone-900/40 backdrop-blur-xs animate-fadeIn">
           <div className="bg-white w-full max-w-md h-full flex flex-col p-6 shadow-2xl overflow-hidden animate-slideLeft">
@@ -704,125 +704,52 @@ export const ExplorePage: React.FC = () => {
               </button>
             </div>
 
-            {/* Mobile Drawer Group By Toggle */}
-            <div className="pt-3 pb-2 flex items-center justify-between gap-2 border-b border-stone-100">
-              <span className="text-xs font-bold text-stone-600">Group by:</span>
-              <div className="inline-flex rounded-lg p-0.5 bg-stone-100 border border-stone-200">
-                <button
-                  type="button"
-                  onClick={() => setGroupBy('category')}
-                  className={`px-2.5 py-0.5 rounded text-xs font-semibold ${
-                    groupBy === 'category' ? 'bg-white text-stone-900 shadow-2xs' : 'text-stone-600'
-                  }`}
-                >
-                  Category
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setGroupBy('race')}
-                  className={`px-2.5 py-0.5 rounded text-xs font-semibold ${
-                    groupBy === 'race' ? 'bg-white text-stone-900 shadow-2xs' : 'text-stone-600'
-                  }`}
-                >
-                  Ballot race
-                </button>
-              </div>
-            </div>
-
             <div className="flex-1 overflow-y-auto py-4 space-y-5">
-              {groupBy === 'category' ? (
-                categoryGroups.map(([cat, items]) => (
-                  <div key={cat} className="space-y-1.5">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2">
-                      {cat}
-                    </h4>
-                    <div className="space-y-1">
-                      {items.map(({ issue, index }) => {
-                        const ans = answers[issue.id];
-                        const isCur = index === safeIndex;
-                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                        const noOp = ans && ans.status === 'no-opinion';
+              {raceGroups.map(({ contest, items }) => (
+                <div key={contest.id} className="space-y-1.5">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2 truncate">
+                    {contest.office}
+                  </h4>
+                  <div className="space-y-1">
+                    {items.map(({ issue, index }) => {
+                      const ans = answers[issue.id];
+                      const isCur = index === safeIndex;
+                      const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                      const noOp = ans && ans.status === 'no-opinion';
 
-                        return (
-                          <button
-                            key={issue.id}
-                            type="button"
-                            onClick={() => {
-                              setCurrentIndex(index);
-                              setShowDrawer(false);
-                              setShowLearnMore(false);
-                            }}
-                            className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
-                              isCur
-                                ? 'bg-stone-900 text-white font-semibold'
-                                : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
-                            }`}
-                          >
-                            <span className="truncate">
-                              {index + 1}. {issue.question}
-                            </span>
-                            <span className="shrink-0">
-                              {answered ? (
-                                <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                              ) : noOp ? (
-                                <span className="text-[10px] text-stone-400">N/O</span>
-                              ) : (
-                                <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
-                              )}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
+                      return (
+                        <button
+                          key={issue.id}
+                          type="button"
+                          onClick={() => {
+                            setCurrentIndex(index);
+                            setShowDrawer(false);
+                            setShowLearnMore(false);
+                          }}
+                          className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
+                            isCur
+                              ? 'bg-stone-900 text-white font-semibold'
+                              : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
+                          }`}
+                        >
+                          <span className="truncate">
+                            {index + 1}. {issue.question}
+                          </span>
+                          <span className="shrink-0">
+                            {answered ? (
+                              <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                            ) : noOp ? (
+                              <span className="text-[10px] text-stone-400">N/O</span>
+                            ) : (
+                              <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
+                            )}
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
-                ))
-              ) : (
-                raceGroups.map(({ contest, items }) => (
-                  <div key={contest.id} className="space-y-1.5">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2 truncate">
-                      {contest.office}
-                    </h4>
-                    <div className="space-y-1">
-                      {items.map(({ issue, index }) => {
-                        const ans = answers[issue.id];
-                        const isCur = index === safeIndex;
-                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                        const noOp = ans && ans.status === 'no-opinion';
-
-                        return (
-                          <button
-                            key={issue.id}
-                            type="button"
-                            onClick={() => {
-                              setCurrentIndex(index);
-                              setShowDrawer(false);
-                              setShowLearnMore(false);
-                            }}
-                            className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
-                              isCur
-                                ? 'bg-stone-900 text-white font-semibold'
-                                : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
-                            }`}
-                          >
-                            <span className="truncate">
-                              {index + 1}. {issue.question}
-                            </span>
-                            <span className="shrink-0">
-                              {answered ? (
-                                <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                              ) : noOp ? (
-                                <span className="text-[10px] text-stone-400">N/O</span>
-                              ) : (
-                                <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
-                              )}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))
-              )}
+                </div>
+              ))}
             </div>
 
             <div className="pt-4 border-t border-stone-200">
@@ -831,12 +758,23 @@ export const ExplorePage: React.FC = () => {
                 onClick={() => setShowDrawer(false)}
                 className="w-full py-3 rounded-xl bg-teal-700 text-white text-sm font-semibold flex items-center justify-center gap-2"
               >
-                Go to My Views dashboard &rarr;
+                Go to My Matches dashboard &rarr;
               </Link>
             </div>
           </div>
         </div>
       )}
+
+      {/* Persistent sticky button linking to /my-views (above BottomNav on mobile, visible on desktop) */}
+      <div className="fixed bottom-16 md:bottom-6 inset-x-0 z-30 pointer-events-none flex justify-center px-4">
+        <Link
+          to="/my-views"
+          className="pointer-events-auto inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-teal-800 hover:bg-teal-900 text-white font-semibold text-xs sm:text-sm shadow-lg hover:shadow-xl transition-all border border-teal-700 max-w-[calc(100vw-2rem)] truncate"
+        >
+          <UserCheck className="w-4 h-4 text-teal-300 shrink-0" />
+          <span className="truncate">See my matches ({answeredCount} answered)</span>
+        </Link>
+      </div>
     </div>
   );
 };

@@ -36,7 +36,7 @@ export const BottomNav: React.FC = () => {
               </span>
             )}
           </div>
-          <span>My views</span>
+          <span>My Matches</span>
         </NavLink>
 
         <NavLink to="/compare" className={navItemClass}>
