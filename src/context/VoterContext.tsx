@@ -58,6 +58,10 @@ interface VoterContextValue {
   clearAnswer: (issueId: string) => void;
   resetAllAnswers: () => void;
   setIncludePartyAssumed: (include: boolean) => void;
+  setGroupBy: (groupBy: 'category' | 'race') => void;
+  setRaceFilter: (filter: string[]) => void;
+  toggleRaceFilter: (contestId: string) => void;
+  clearRaceFilter: () => void;
 
   // Helpers
   answeredCount: number;
@@ -89,12 +93,17 @@ function loadInitialSettings(): UserSettings {
   try {
     const raw = localStorage.getItem(STORAGE_SETTINGS_KEY);
     if (raw) {
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      return {
+        includePartyAssumed: Boolean(parsed.includePartyAssumed),
+        groupBy: parsed.groupBy === 'race' ? 'race' : 'category',
+        raceFilter: Array.isArray(parsed.raceFilter) ? parsed.raceFilter : [],
+      };
     }
   } catch (err) {
     console.error('Failed to parse saved settings from localStorage:', err);
   }
-  return { includePartyAssumed: false };
+  return { includePartyAssumed: false, groupBy: 'category', raceFilter: [] };
 }
 
 export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -205,6 +214,27 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setSettings((prev) => ({ ...prev, includePartyAssumed: include }));
   };
 
+  const setGroupBy = (groupBy: 'category' | 'race') => {
+    setSettings((prev) => ({ ...prev, groupBy }));
+  };
+
+  const setRaceFilter = (filter: string[]) => {
+    setSettings((prev) => ({ ...prev, raceFilter: filter }));
+  };
+
+  const toggleRaceFilter = (contestId: string) => {
+    setSettings((prev) => {
+      const current = prev.raceFilter || [];
+      const exists = current.includes(contestId);
+      const updated = exists ? current.filter((id) => id !== contestId) : [...current, contestId];
+      return { ...prev, raceFilter: updated };
+    });
+  };
+
+  const clearRaceFilter = () => {
+    setSettings((prev) => ({ ...prev, raceFilter: [] }));
+  };
+
   const answeredCount = useMemo(() => {
     return Object.values(answers).filter((a) => a.status === 'answered' && a.stance !== null).length;
   }, [answers]);
@@ -275,6 +305,10 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         clearAnswer,
         resetAllAnswers,
         setIncludePartyAssumed,
+        setGroupBy,
+        setRaceFilter,
+        toggleRaceFilter,
+        clearRaceFilter,
         answeredCount,
         noOpinionCount,
         skippedCount,

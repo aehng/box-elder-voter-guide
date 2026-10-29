@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { EvidenceBadge } from '../components/EvidenceBadge';
 import { ResearchStatusBadge } from '../components/ResearchStatusBadge';
+import { ContestRadar, CANDIDATE_PALETTE } from '../components/ContestRadar';
 import {
   relation,
   formatStanceLabel,
@@ -262,7 +263,18 @@ export const ComparePage: React.FC = () => {
             </div>
           )}
 
-          {/* Section: Closest to your answers */}
+          {/* SVG Radar Chart (Item a) */}
+          {contestCandidates.length > 0 && contestIssues.length > 0 && (
+            <ContestRadar
+              contestIssues={contestIssues}
+              candidates={contestCandidates}
+              positionsByCandidate={positionsByCandidate}
+              answers={answers}
+              includePartyAssumed={settings.includePartyAssumed}
+            />
+          )}
+
+          {/* Section: Closest match to your answers (Item b) */}
           <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
               <div>
@@ -293,8 +305,9 @@ export const ComparePage: React.FC = () => {
             ) : (
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {closenessData.results.map((res) => {
+                  {closenessData.results.map((res, candIdx) => {
                     const isExpanded = expandedCandidateId === res.candidate.id;
+                    const palette = CANDIDATE_PALETTE[candIdx % CANDIDATE_PALETTE.length];
 
                     return (
                       <div
@@ -303,39 +316,61 @@ export const ComparePage: React.FC = () => {
                       >
                         <div>
                           <div className="flex items-start justify-between gap-2">
-                            <div>
-                              <Link
-                                to={`/candidate/${res.candidate.id}`}
-                                className="font-bold text-stone-900 hover:underline text-sm block"
-                              >
-                                {res.candidate.name}
-                              </Link>
-                              <span className="text-[11px] text-stone-500 font-medium">
-                                {res.candidate.party || 'Nonpartisan'}
-                              </span>
+                            <div className="flex items-start gap-2">
+                              <span
+                                className="w-3 h-3 rounded-full mt-0.5 shrink-0"
+                                style={{ backgroundColor: palette.stroke }}
+                                title={`${res.candidate.name} chart color`}
+                              />
+                              <div>
+                                <Link
+                                  to={`/candidate/${res.candidate.id}`}
+                                  className="font-bold text-stone-900 hover:underline text-sm block leading-tight"
+                                >
+                                  {res.candidate.name}
+                                </Link>
+                                <span className="text-[11px] text-stone-500 font-medium">
+                                  {res.candidate.party || 'Nonpartisan'}
+                                </span>
+                              </div>
                             </div>
                             <ResearchStatusBadge status={res.candidate.researchStatus} />
                           </div>
 
-                          {/* Soft Bar & Info */}
+                          {/* Horizontal Closeness Bar & Coverage Note */}
                           <div className="mt-3 space-y-1.5">
                             {res.isRanked ? (
-                              <>
-                                <div className="w-full bg-stone-200/80 rounded-full h-2 overflow-hidden">
+                              <div className="space-y-1.5">
+                                <div className="flex items-center justify-between text-xs">
+                                  <span className="font-semibold text-stone-700">Closeness score</span>
+                                  <span className="font-extrabold text-stone-900">
+                                    {Math.round((res.score ?? 0) * 100)}%
+                                  </span>
+                                </div>
+                                <div className="w-full bg-stone-200/80 rounded-full h-2.5 overflow-hidden">
                                   <div
-                                    className="bg-stone-700 h-full rounded-full transition-all duration-300"
-                                    style={{ width: `${Math.round((res.score ?? 0) * 100)}%` }}
+                                    className="h-full rounded-full transition-all duration-300"
+                                    style={{
+                                      width: `${Math.round((res.score ?? 0) * 100)}%`,
+                                      backgroundColor: palette.stroke,
+                                    }}
                                   />
                                 </div>
                                 <div className="text-[11px] text-stone-600 font-medium">
                                   Based on {res.counted} of {res.answeredRelevant} issues you answered &middot; {res.unknownCount} unknown
                                 </div>
-                              </>
+                              </div>
                             ) : (
-                              <div className="space-y-1">
-                                <span className="inline-block px-2 py-0.5 rounded bg-stone-200 text-stone-700 text-[11px] font-semibold">
-                                  Not enough info
-                                </span>
+                              <div className="space-y-1.5">
+                                <div className="flex items-center justify-between text-xs">
+                                  <span className="font-semibold text-stone-400">Closeness score</span>
+                                  <span className="inline-block px-2 py-0.5 rounded bg-stone-200 text-stone-600 text-[11px] font-semibold">
+                                    Not enough info
+                                  </span>
+                                </div>
+                                <div className="w-full bg-stone-200/60 rounded-full h-2.5 overflow-hidden">
+                                  <div className="bg-stone-300 h-full rounded-full" style={{ width: '0%' }} />
+                                </div>
                                 <div className="text-[11px] text-stone-500">
                                   Based on {res.counted} of {res.answeredRelevant} issues you answered &middot; {res.unknownCount} unknown
                                 </div>

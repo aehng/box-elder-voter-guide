@@ -4,8 +4,9 @@ import { useVoter } from '../context/VoterContext';
 import { PositionSlider } from '../components/PositionSlider';
 import { ImportanceSlider } from '../components/ImportanceSlider';
 import { MiniPositionChart } from '../components/MiniPositionChart';
+import { RaceFilterChips } from '../components/RaceFilterChips';
 import { formatStanceLabel } from '../lib/compare';
-import type { UserStance, UserImportance, UserAnswerStatus, Issue } from '../types';
+import type { UserStance, UserImportance, UserAnswerStatus, Issue, Contest } from '../types';
 import {
   ChevronLeft,
   ChevronRight,
@@ -22,20 +23,43 @@ import {
 export const ExplorePage: React.FC = () => {
   const {
     issues,
+    contests,
     contestMap,
     answers,
     setAnswer,
     sourceMap,
-    answeredCount,
-    skippedCount,
-    totalActiveIssuesCount,
+    settings,
+    setGroupBy,
+    clearRaceFilter,
   } = useVoter();
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showDrawer, setShowDrawer] = useState(false);
   const [showLearnMore, setShowLearnMore] = useState(false);
 
-  const currentIssue: Issue | undefined = issues[currentIndex];
+  const activeRaceFilter = settings.raceFilter || [];
+  const groupBy = settings.groupBy || 'category';
+
+  // Filter issues whose contestIds intersect the active raceFilter (empty = all)
+  const filteredIssues = useMemo(() => {
+    if (activeRaceFilter.length === 0) return issues;
+    return issues.filter((issue) =>
+      issue.contestIds.some((cid) => activeRaceFilter.includes(cid))
+    );
+  }, [issues, activeRaceFilter]);
+
+  // Contests that have issues
+  const contestsWithIssues = useMemo(() => {
+    return contests.filter((c) => issues.some((i) => i.contestIds.includes(c.id)));
+  }, [contests, issues]);
+
+  // Keep currentIndex bounded
+  const safeIndex = useMemo(() => {
+    if (filteredIssues.length === 0) return 0;
+    return Math.min(currentIndex, filteredIssues.length - 1);
+  }, [currentIndex, filteredIssues.length]);
+
+  const currentIssue: Issue | undefined = filteredIssues[safeIndex];
 
   const isAmendmentIssue = currentIssue
     ? currentIssue.contestIds.some((cid) => contestMap.get(cid)?.group === 'amendments')
@@ -44,10 +68,27 @@ export const ExplorePage: React.FC = () => {
     ? currentIssue.contestIds.map((cid) => contestMap.get(cid)).find((c) => c?.type === 'amendment')
     : null;
 
+  // Filtered progress counts
+  const filteredAnsweredCount = useMemo(() => {
+    return filteredIssues.filter(
+      (i) => answers[i.id]?.status === 'answered' && answers[i.id]?.stance !== null
+    ).length;
+  }, [filteredIssues, answers]);
+
+  const filteredSkippedCount = useMemo(() => {
+    return filteredIssues.filter(
+      (i) => answers[i.id]?.status === 'skipped'
+    ).length;
+  }, [filteredIssues, answers]);
+
+  const progressPercent = filteredIssues.length > 0
+    ? Math.round(((filteredAnsweredCount + filteredSkippedCount) / filteredIssues.length) * 100)
+    : 0;
+
   // Group issues by category for jump list, surfacing Constitutional Amendments as their own section
   const categoryGroups = useMemo(() => {
     const map = new Map<string, Array<{ issue: Issue; index: number }>>();
-    issues.forEach((issue, index) => {
+    filteredIssues.forEach((issue, index) => {
       const isAmendment = issue.contestIds.some(
         (cid) => contestMap.get(cid)?.group === 'amendments'
       );
@@ -57,12 +98,83 @@ export const ExplorePage: React.FC = () => {
       map.set(categoryName, list);
     });
     return Array.from(map.entries());
-  }, [issues, contestMap]);
+  }, [filteredIssues, contestMap]);
 
-  if (!currentIssue) {
+  // Group issues by Ballot race for jump list
+  const raceGroups = useMemo(() => {
+    const activeContests = contestsWithIssues.filter(
+      (c) => activeRaceFilter.length === 0 || activeRaceFilter.includes(c.id)
+    );
+    const groups: Array<{ contest: Contest; items: Array<{ issue: Issue; index: number }> }> = [];
+    for (const contest of activeContests) {
+      const items: Array<{ issue: Issue; index: number }> = [];
+      filteredIssues.forEach((issue, index) => {
+        if (issue.contestIds.includes(contest.id)) {
+          items.push({ issue, index });
+        }
+      });
+      if (items.length > 0) {
+        groups.push({ contest, items });
+      }
+    }
+    return groups;
+  }, [contestsWithIssues, activeRaceFilter, filteredIssues]);
+
+  const handleSkip = () => {
+    if (!currentIssue) return;
+    const curAns = answers[currentIssue.id];
+    const isAns = curAns?.status === 'answered' && curAns.stance !== null;
+    const isNoOp = curAns?.status === 'no-opinion';
+    if (!isAns && !isNoOp) {
+      setAnswer(currentIssue.id, {
+        stance: null,
+        importance: null,
+        status: 'skipped',
+      });
+    }
+    if (safeIndex < filteredIssues.length - 1) {
+      setCurrentIndex(safeIndex + 1);
+      setShowLearnMore(false);
+    }
+  };
+
+  const handleNext = () => {
+    if (safeIndex < filteredIssues.length - 1) {
+      setCurrentIndex(safeIndex + 1);
+      setShowLearnMore(false);
+    }
+  };
+
+  const handlePrev = () => {
+    if (safeIndex > 0) {
+      setCurrentIndex(safeIndex - 1);
+      setShowLearnMore(false);
+    }
+  };
+
+  if (!currentIssue || filteredIssues.length === 0) {
     return (
-      <div className="max-w-2xl mx-auto py-16 text-center">
-        <p className="text-stone-600">No issues found on ballot.</p>
+      <div className="max-w-4xl mx-auto px-4 py-12 space-y-6">
+        <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 text-center space-y-4 shadow-2xs">
+          <Compass className="w-10 h-10 text-stone-400 mx-auto" />
+          <h2 className="text-xl font-bold text-stone-900">No questions match your race filter</h2>
+          <p className="text-stone-600 text-sm max-w-md mx-auto">
+            None of the ballot questions correspond to the selected races. Reset the race filter to view all questions.
+          </p>
+          <div className="pt-2">
+            <button
+              type="button"
+              onClick={clearRaceFilter}
+              className="px-4 py-2 rounded-xl bg-stone-900 text-white font-semibold text-xs hover:bg-stone-800 transition-colors"
+            >
+              Reset to all races
+            </button>
+          </div>
+        </div>
+
+        <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs">
+          <RaceFilterChips />
+        </div>
       </div>
     );
   }
@@ -92,49 +204,58 @@ export const ExplorePage: React.FC = () => {
     });
   };
 
-  const handleSkip = () => {
-    if (!isAnswered && !isNoOpinion) {
-      setAnswer(currentIssue.id, {
-        stance: null,
-        importance: null,
-        status: 'skipped',
-      });
-    }
-    if (currentIndex < issues.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setShowLearnMore(false);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentIndex < issues.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setShowLearnMore(false);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setShowLearnMore(false);
-    }
-  };
-
-  const progressPercent = Math.round(
-    ((answeredCount + skippedCount) / totalActiveIssuesCount) * 100
-  );
-
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-6">
+      {/* Top Filter and Grouping Bar */}
+      <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-3">
+          {/* Group By Toggle */}
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-stone-700">Group by:</span>
+            <div className="inline-flex rounded-lg p-0.5 bg-stone-100 border border-stone-200">
+              <button
+                type="button"
+                onClick={() => setGroupBy('category')}
+                className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+                  groupBy === 'category'
+                    ? 'bg-stone-900 text-white shadow-2xs'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
+              >
+                Category
+              </button>
+              <button
+                type="button"
+                onClick={() => setGroupBy('race')}
+                className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+                  groupBy === 'race'
+                    ? 'bg-stone-900 text-white shadow-2xs'
+                    : 'text-stone-600 hover:text-stone-900'
+                }`}
+              >
+                Ballot race
+              </button>
+            </div>
+          </div>
+
+          <div className="text-xs text-stone-500 font-medium">
+            Showing {filteredIssues.length} question{filteredIssues.length === 1 ? '' : 's'}
+          </div>
+        </div>
+
+        {/* Race Filter Chips */}
+        <RaceFilterChips compact />
+      </div>
+
       {/* Top Progress & Header Bar */}
-      <div className="mb-6 space-y-3">
+      <div className="space-y-3">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-stone-200 text-stone-800">
               {currentIssue.category}
             </span>
             <span className="text-xs font-semibold text-stone-500">
-              Question {currentIndex + 1} of {issues.length}
+              Question {safeIndex + 1} of {filteredIssues.length}
             </span>
           </div>
 
@@ -147,7 +268,7 @@ export const ExplorePage: React.FC = () => {
               <ListFilter className="w-3.5 h-3.5" />
               <span>Questions Jump List</span>
               <span className="ml-1 px-1.5 py-0.2 rounded-full bg-stone-100 text-stone-600 text-[10px]">
-                {answeredCount}/{issues.length}
+                {filteredAnsweredCount}/{filteredIssues.length}
               </span>
             </button>
           </div>
@@ -435,65 +556,119 @@ export const ExplorePage: React.FC = () => {
             <div className="flex items-center justify-between mb-4 pb-2 border-b border-stone-100">
               <h3 className="font-bold text-stone-900 text-sm">Ballot Questions</h3>
               <span className="text-xs text-stone-500 font-medium">
-                {answeredCount} of {issues.length} answered
+                {filteredAnsweredCount} of {filteredIssues.length} answered
               </span>
             </div>
 
             <div className="space-y-4">
-              {categoryGroups.map(([cat, items]) => (
-                <div key={cat} className="space-y-1">
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5">
-                    {cat}
-                  </h4>
-                  <div className="space-y-0.5">
-                    {items.map(({ issue, index }) => {
-                      const ans = answers[issue.id];
-                      const isCur = index === currentIndex;
-                      const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                      const noOp = ans && ans.status === 'no-opinion';
-                      const skipped = ans && ans.status === 'skipped';
+              {groupBy === 'category' ? (
+                categoryGroups.map(([cat, items]) => (
+                  <div key={cat} className="space-y-1">
+                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5">
+                      {cat}
+                    </h4>
+                    <div className="space-y-0.5">
+                      {items.map(({ issue, index }) => {
+                        const ans = answers[issue.id];
+                        const isCur = index === safeIndex;
+                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                        const noOp = ans && ans.status === 'no-opinion';
+                        const skipped = ans && ans.status === 'skipped';
 
-                      return (
-                        <button
-                          key={issue.id}
-                          type="button"
-                          onClick={() => {
-                            setCurrentIndex(index);
-                            setShowLearnMore(false);
-                          }}
-                          className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
-                            isCur
-                              ? 'bg-stone-900 text-white font-semibold'
-                              : 'text-stone-700 hover:bg-stone-100'
-                          }`}
-                        >
-                          <span className="truncate">
-                            {index + 1}. {issue.question}
-                          </span>
-                          <span className="shrink-0">
-                            {answered ? (
-                              <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                            ) : noOp ? (
-                              <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                N/O
-                              </span>
-                            ) : skipped ? (
-                              <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
-                                —
-                              </span>
-                            ) : (
-                              <span className="w-2 h-2 rounded-full border border-stone-300" />
-                            )}
-                          </span>
-                        </button>
-                      );
-                    })}
+                        return (
+                          <button
+                            key={issue.id}
+                            type="button"
+                            onClick={() => {
+                              setCurrentIndex(index);
+                              setShowLearnMore(false);
+                            }}
+                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
+                              isCur
+                                ? 'bg-stone-900 text-white font-semibold'
+                                : 'text-stone-700 hover:bg-stone-100'
+                            }`}
+                          >
+                            <span className="truncate">
+                              {index + 1}. {issue.question}
+                            </span>
+                            <span className="shrink-0">
+                              {answered ? (
+                                <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                              ) : noOp ? (
+                                <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                  N/O
+                                </span>
+                              ) : skipped ? (
+                                <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                  —
+                                </span>
+                              ) : (
+                                <span className="w-2 h-2 rounded-full border border-stone-300" />
+                              )}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                raceGroups.map(({ contest, items }) => (
+                  <div key={contest.id} className="space-y-1">
+                    <h4 className="text-[11px] font-bold uppercase tracking-wider text-stone-500 px-2 py-0.5 truncate">
+                      {contest.office}
+                    </h4>
+                    <div className="space-y-0.5">
+                      {items.map(({ issue, index }) => {
+                        const ans = answers[issue.id];
+                        const isCur = index === safeIndex;
+                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                        const noOp = ans && ans.status === 'no-opinion';
+                        const skipped = ans && ans.status === 'skipped';
+
+                        return (
+                          <button
+                            key={issue.id}
+                            type="button"
+                            onClick={() => {
+                              setCurrentIndex(index);
+                              setShowLearnMore(false);
+                            }}
+                            className={`w-full text-left px-2.5 py-1.5 rounded-lg text-xs flex items-center justify-between gap-2 transition-colors ${
+                              isCur
+                                ? 'bg-stone-900 text-white font-semibold'
+                                : 'text-stone-700 hover:bg-stone-100'
+                            }`}
+                          >
+                            <span className="truncate">
+                              {index + 1}. {issue.question}
+                            </span>
+                            <span className="shrink-0">
+                              {answered ? (
+                                <CheckCircle2 className={`w-3.5 h-3.5 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                              ) : noOp ? (
+                                <span className={`text-[10px] font-mono ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                  N/O
+                                </span>
+                              ) : skipped ? (
+                                <span className={`text-[10px] ${isCur ? 'text-stone-300' : 'text-stone-400'}`}>
+                                  —
+                                </span>
+                              ) : (
+                                <span className="w-2 h-2 rounded-full border border-stone-300" />
+                              )}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
 
-            {answeredCount > 0 && (
+            {filteredAnsweredCount > 0 && (
               <div className="mt-6 pt-4 border-t border-stone-100">
                 <Link
                   to="/my-views"
@@ -516,7 +691,7 @@ export const ExplorePage: React.FC = () => {
               <div>
                 <h3 className="font-bold text-stone-900 text-base">Ballot Questions</h3>
                 <p className="text-xs text-stone-500 mt-0.5">
-                  {answeredCount} of {issues.length} questions answered
+                  {filteredAnsweredCount} of {filteredIssues.length} questions answered
                 </p>
               </div>
               <button
@@ -529,52 +704,125 @@ export const ExplorePage: React.FC = () => {
               </button>
             </div>
 
-            <div className="flex-1 overflow-y-auto py-4 space-y-5">
-              {categoryGroups.map(([cat, items]) => (
-                <div key={cat} className="space-y-1.5">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2">
-                    {cat}
-                  </h4>
-                  <div className="space-y-1">
-                    {items.map(({ issue, index }) => {
-                      const ans = answers[issue.id];
-                      const isCur = index === currentIndex;
-                      const answered = ans && ans.status === 'answered' && ans.stance !== null;
-                      const noOp = ans && ans.status === 'no-opinion';
+            {/* Mobile Drawer Group By Toggle */}
+            <div className="pt-3 pb-2 flex items-center justify-between gap-2 border-b border-stone-100">
+              <span className="text-xs font-bold text-stone-600">Group by:</span>
+              <div className="inline-flex rounded-lg p-0.5 bg-stone-100 border border-stone-200">
+                <button
+                  type="button"
+                  onClick={() => setGroupBy('category')}
+                  className={`px-2.5 py-0.5 rounded text-xs font-semibold ${
+                    groupBy === 'category' ? 'bg-white text-stone-900 shadow-2xs' : 'text-stone-600'
+                  }`}
+                >
+                  Category
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setGroupBy('race')}
+                  className={`px-2.5 py-0.5 rounded text-xs font-semibold ${
+                    groupBy === 'race' ? 'bg-white text-stone-900 shadow-2xs' : 'text-stone-600'
+                  }`}
+                >
+                  Ballot race
+                </button>
+              </div>
+            </div>
 
-                      return (
-                        <button
-                          key={issue.id}
-                          type="button"
-                          onClick={() => {
-                            setCurrentIndex(index);
-                            setShowDrawer(false);
-                            setShowLearnMore(false);
-                          }}
-                          className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
-                            isCur
-                              ? 'bg-stone-900 text-white font-semibold'
-                              : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
-                          }`}
-                        >
-                          <span className="truncate">
-                            {index + 1}. {issue.question}
-                          </span>
-                          <span className="shrink-0">
-                            {answered ? (
-                              <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
-                            ) : noOp ? (
-                              <span className="text-[10px] text-stone-400">N/O</span>
-                            ) : (
-                              <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
-                            )}
-                          </span>
-                        </button>
-                      );
-                    })}
+            <div className="flex-1 overflow-y-auto py-4 space-y-5">
+              {groupBy === 'category' ? (
+                categoryGroups.map(([cat, items]) => (
+                  <div key={cat} className="space-y-1.5">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2">
+                      {cat}
+                    </h4>
+                    <div className="space-y-1">
+                      {items.map(({ issue, index }) => {
+                        const ans = answers[issue.id];
+                        const isCur = index === safeIndex;
+                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                        const noOp = ans && ans.status === 'no-opinion';
+
+                        return (
+                          <button
+                            key={issue.id}
+                            type="button"
+                            onClick={() => {
+                              setCurrentIndex(index);
+                              setShowDrawer(false);
+                              setShowLearnMore(false);
+                            }}
+                            className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
+                              isCur
+                                ? 'bg-stone-900 text-white font-semibold'
+                                : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
+                            }`}
+                          >
+                            <span className="truncate">
+                              {index + 1}. {issue.question}
+                            </span>
+                            <span className="shrink-0">
+                              {answered ? (
+                                <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                              ) : noOp ? (
+                                <span className="text-[10px] text-stone-400">N/O</span>
+                              ) : (
+                                <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
+                              )}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              ) : (
+                raceGroups.map(({ contest, items }) => (
+                  <div key={contest.id} className="space-y-1.5">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500 px-2 truncate">
+                      {contest.office}
+                    </h4>
+                    <div className="space-y-1">
+                      {items.map(({ issue, index }) => {
+                        const ans = answers[issue.id];
+                        const isCur = index === safeIndex;
+                        const answered = ans && ans.status === 'answered' && ans.stance !== null;
+                        const noOp = ans && ans.status === 'no-opinion';
+
+                        return (
+                          <button
+                            key={issue.id}
+                            type="button"
+                            onClick={() => {
+                              setCurrentIndex(index);
+                              setShowDrawer(false);
+                              setShowLearnMore(false);
+                            }}
+                            className={`w-full text-left px-3 py-2 rounded-xl text-xs flex items-center justify-between gap-2 transition-colors ${
+                              isCur
+                                ? 'bg-stone-900 text-white font-semibold'
+                                : 'text-stone-700 hover:bg-stone-100 bg-stone-50/50'
+                            }`}
+                          >
+                            <span className="truncate">
+                              {index + 1}. {issue.question}
+                            </span>
+                            <span className="shrink-0">
+                              {answered ? (
+                                <CheckCircle2 className={`w-4 h-4 ${isCur ? 'text-teal-400' : 'text-teal-600'}`} />
+                              ) : noOp ? (
+                                <span className="text-[10px] text-stone-400">N/O</span>
+                              ) : (
+                                <span className="w-2.5 h-2.5 rounded-full border border-stone-300" />
+                              )}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))
+              )}
             </div>
 
             <div className="pt-4 border-t border-stone-200">

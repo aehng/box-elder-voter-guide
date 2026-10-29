@@ -118,4 +118,6 @@ export type UserAnswersMap = Record<string, UserAnswer>;
 
 export interface UserSettings {
   includePartyAssumed: boolean;
+  groupBy?: 'category' | 'race';
+  raceFilter?: string[];
 }
