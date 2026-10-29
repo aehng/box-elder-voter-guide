@@ -1,0 +1,107 @@
+{
+  "group": "federal",
+  "contests": [
+    {
+      "id": "us-house-1",
+      "office": "U.S. House of Representatives",
+      "district": "Utah 2nd Congressional District under the 2026 map; this is the seat represented by Blake Moore, formerly Utah's 1st District (contract stable ID retained)",
+      "type": "candidate",
+      "whatOfficeDecides": [
+        "Votes on and drafts federal laws, including taxes, spending, health programs, immigration, energy, and regulation.",
+        "Votes on federal appropriations and oversight of executive agencies; represents district interests in Congress.",
+        "Serves a two-year term and may introduce legislation, sit on committees, and provide constituent services."
+      ],
+      "howItAffectsVoters": "The House sets federal tax and spending policy and can shape programs and infrastructure funding that affect northern Utah households, farms, businesses, water, and energy. Moore's federal votes also determine whether the district's residents are represented by an incumbent with committee and leadership roles or a challenger with different priorities.",
+      "candidates": [
+        {"id":"peter-crosby","name":"Peter Crosby","party":"Democratic","incumbent":false,"status":"on ballot","campaignUrl":"https://petercrosbyforcongress.org/","bio":"Utah News Dispatch describes Crosby as an adjunct professor at Utah State University and a project manager and consultant. He is the Democratic nominee for the 2026 general election.","background":["Adjunct professor at Utah State University","Project manager and consultant"],"sourceIds":["src-ut-candidates","src-und-guide","src-sltrib"]},
+        {"id":"daniel-cottam","name":"Daniel Cottam","party":"Libertarian","incumbent":false,"status":"on ballot","campaignUrl":null,"bio":"Utah News Dispatch describes Cottam as a business owner, bariatric surgeon, and consultant. He is listed by the state as the Libertarian candidate; he did not provide responses to the reviewed Utah News Dispatch and Salt Lake Tribune questionnaires.","background":["Business owner","Bariatric surgeon","Consultant"],"sourceIds":["src-ut-candidates","src-und-guide","src-sltrib"]},
+        {"id":"robert-moesinger","name":"Robert Moesinger","party":"Unaffiliated","incumbent":false,"status":"on ballot","campaignUrl":"https://www.improveourelections.org/","bio":"Utah News Dispatch describes Moesinger as an automation engineer and University of Utah graduate; VOTE411 lists an M.S. in biomedical engineering. His campaign centers on election system reform and multiparty representation.","background":["Automation engineer","University of Utah graduate","M.S. in biomedical engineering (candidate profile)"],"sourceIds":["src-ut-candidates","src-und-guide","src-vote411","src-moesinger"]},
+        {"id":"blake-moore","name":"Blake Moore","party":"Republican","incumbent":true,"status":"on ballot","campaignUrl":"https://electmoore.com/","bio":"Moore is the incumbent U.S. representative, elected in 2020, and represents the district currently designated Utah 1st. He previously worked as a U.S. Foreign Service officer and consultant, and serves as House Republican Caucus vice chair. Under the 2026 map he is running in Utah 2nd District.","background":["U.S. representative since 2021","Former U.S. Foreign Service officer","House Republican Caucus vice chair"],"sourceIds":["src-ut-candidates","src-und-guide","src-sltrib","src-ballotpedia"]},
+        {"id":"carlton-bowen","name":"Carlton Bowen","party":"Independent American","incumbent":false,"status":"on ballot","campaignUrl":"https://bowenforcongress.com/","bio":"Bowen is an Air Force veteran who studied economics and worked as a senior IT project manager in healthcare. The Salt Lake Tribune also reports he formerly served on the American Fork City Council.","background":["U.S. Air Force veteran","Senior IT project manager in healthcare","Former American Fork City Council member"],"sourceIds":["src-ut-candidates","src-und-guide","src-sltrib","src-bowen"]}
+      ],
+      "issues": [
+        {
+          "id":"water-great-salt-lake-and-data-center",
+          "category":"Water & Land",
+          "question":"How should Congress support water security, Great Salt Lake restoration, and water-intensive development in northern Utah?",
+          "leftLabel":"Prioritize conservation and lake restoration; scrutinize water-intensive projects",
+          "rightLabel":"Prioritize locally led supply, infrastructure, and growth",
+          "leftPros":["Can direct attention and funding to lake levels, habitat, and long-term watershed health.","Can surface water costs and risks before major development is approved."],
+          "leftCons":["New limits or review can slow development and constrain local decisions.","Federal conservation programs may be costly and may not ensure water reaches the lake."],
+          "rightPros":["Infrastructure and locally set priorities can support communities, farms, and growth.","Respects state and local authority over many water decisions."],
+          "rightCons":["Local control and supply projects may not resolve basin-wide or interstate depletion.","Large new users may compete with households, agriculture, and ecological needs."],
+          "background":"Northern Utah faces drought, variable snowpack, population growth, and Great Salt Lake decline. Federal choices include infrastructure grants, lake restoration funding, interstate coordination, and agency permitting; most water-right and land-use decisions remain state or local matters.",
+          "whyLive":"The candidates' 2026 questionnaires directly address Great Salt Lake funding and the proposed Box Elder data center. Crosby emphasizes lake water leases, invasive-plant removal, and infrastructure; Bowen questions data-center water demand; Moesinger stresses locally driven conservation with federal assistance; Moore cites federal project funding, lake legislation, and state-focused solutions. Cottam supplied no questionnaire answer, so no position is inferred.",
+          "sourceIds":["src-und-guide","src-sltrib"]
+        },
+        {
+          "id":"affordability-housing-and-tax-policy",
+          "category":"Housing & Growth",
+          "question":"Which federal approach should lead on housing and household affordability?",
+          "leftLabel":"Expand public support and affordability protections",
+          "rightLabel":"Cut taxes and regulation to increase private supply and wages",
+          "leftPros":["Direct assistance can help households facing immediate housing and health costs.","Public investment can address infrastructure barriers to building."],
+          "leftCons":["Subsidies require public spending and can add complexity or demand pressure where supply is constrained.","Broader federal programs may not fit local housing markets."],
+          "rightPros":["Lower regulatory costs and tax burdens can support construction, hiring, and take-home pay.","Private development may respond quickly to demand if barriers fall."],
+          "rightCons":["Tax cuts reduce revenue and do not guarantee savings reach struggling households.","Deregulation alone may not make homes affordable or protect renters."],
+          "background":"Housing costs, inflation, and everyday expenses are prominent in northern Utah's campaign coverage. Congress influences taxes, federal housing finance and assistance, infrastructure grants, and regulation, while zoning and most land-use policy are local or state responsibilities.",
+          "whyLive":"The candidates offered materially different proposals in the 2026 Salt Lake Tribune and Utah News Dispatch guides: Crosby calls for rental-history consideration and broader health coverage and criticizes tariffs; Moesinger combines reducing barriers to construction with targeted assistance; Moore points to tax changes, deregulation, and homebuilding legislation; Bowen stresses deficit restraint as a route to lower inflation. Moore's congressional record is also directly relevant: he voted for H.R. 1, the 2025 reconciliation law, which changed taxes and federal spending (historical vote).",
+          "sourceIds":["src-und-guide","src-sltrib","src-house-roll190","src-hr1"]
+        },
+        {
+          "id":"federal-deficits-and-spending",
+          "category":"Taxes",
+          "question":"How should Congress balance tax relief, federal services, and deficit reduction?",
+          "leftLabel":"Protect or expand federal programs and revenue",
+          "rightLabel":"Reduce spending growth and prioritize tax relief",
+          "leftPros":["Maintains capacity for health, nutrition, infrastructure, and other federal services.","Can preserve investment that may prevent higher costs later."],
+          "leftCons":["Can require higher taxes or borrowing if spending exceeds revenue.","Program design may produce waste or weak results without oversight."],
+          "rightPros":["Can limit federal borrowing and interest costs.","Tax relief can increase disposable income and may encourage investment."],
+          "rightCons":["Spending cuts can reduce access to programs relied on by vulnerable households and providers.","Tax reductions without matching savings can increase deficits."],
+          "background":"Congress controls federal taxes, appropriations, and the debt limit. The 2025 reconciliation law, H.R. 1 (Public Law 119-21), combined tax changes with spending and program changes and was a major recorded vote for Moore; its costs and effects remain central in 2026 campaign debate.",
+          "whyLive":"Bowen and Moore emphasize debt and spending restraint, while Crosby criticizes the 2025 law's healthcare effects and tariffs and proposes other tax and benefit changes. Moesinger calls for responsible fiscal policy without a single ideological solution. Moore voted yea on H.R. 1 final passage (House Roll Call 190, July 3, 2025; historical recorded vote). Cottam did not provide a response in the reviewed questionnaires.",
+          "sourceIds":["src-sltrib","src-und-guide","src-house-roll190","src-hr1"]
+        },
+        {
+          "id":"government-ethics-and-election-reform",
+          "category":"Government & Elections",
+          "question":"What federal reforms should Congress prioritize to improve accountability and political representation?",
+          "leftLabel":"Tighten ethics rules and broaden representation reforms",
+          "rightLabel":"Strengthen oversight and retain current electoral structures",
+          "leftPros":["Limits conflicts of interest and may improve public trust.","Ranked-choice and multiparty proposals may give voters more choices and reduce winner-take-all incentives."],
+          "leftCons":["New restrictions and election systems may be complex to administer or raise constitutional questions.","Structural reforms do not guarantee more responsive government."],
+          "rightPros":["Existing election rules are familiar and comparatively straightforward to administer.","Oversight and enforcement can address misconduct without changing representation structures."],
+          "rightCons":["Incremental oversight may leave incentives and conflicts largely intact.","Winner-take-all elections can limit choices for voters outside the major parties."],
+          "background":"Congress can set ethics and campaign-related rules for federal officeholders, while election administration is shared with states and constitutional constraints apply. This race features an independent candidate whose central proposal is electoral reform, alongside candidates who frame accountability around ethics, oversight, or constitutional limits.",
+          "whyLive":"Moesinger names ranked-choice voting and multi-member House districts as his main campaign objective. Crosby proposes bans on congressional stock trading and lobbying restrictions; Moore cites insider-trading legislation and prediction-market limits; Bowen centers constitutional limits. These are direct differences described in candidate responses to the 2026 Salt Lake Tribune questionnaire. Cottam did not respond.",
+          "sourceIds":["src-sltrib","src-und-guide","src-moesinger"]
+        },
+        {
+          "id":"energy-reliability-and-environment",
+          "category":"Energy & Environment",
+          "question":"How should federal policy balance reliable, affordable power with environmental impacts and clean-energy investment?",
+          "leftLabel":"Accelerate clean-energy investment and environmental safeguards",
+          "rightLabel":"Prioritize all-source supply, permitting speed, and reliable baseload power",
+          "leftPros":["Can reduce pollution and support emerging technologies and efficiency.","Long-term investment may reduce exposure to fuel-price volatility."],
+          "leftCons":["Rapid transition can raise near-term costs or reliability challenges if replacement capacity lags.","Subsidies and mandates can favor selected technologies and increase federal costs."],
+          "rightPros":["Can add dispatchable generation and reduce permitting delays as demand grows.","An all-source approach can preserve multiple local energy industries."],
+          "rightCons":["Expanded fossil fuel use can increase pollution and climate impacts.","Fast permitting may reduce review time for environmental and community concerns."],
+          "background":"Federal lawmakers shape energy tax credits, public-land leasing, permitting, infrastructure, and environmental rules. Utah's growing demand and local energy production make reliability, electricity prices, and environmental effects relevant to voters and the district's data-center and industrial development debate.",
+          "whyLive":"The Utah News Dispatch candidate guide includes an energy question. Moore calls for all-source production, faster permitting, and domestic mining; other candidate answers describe different emphasis on technology competition, environmental standards, subsidy restraint, and reliability. The range makes federal energy policy a live issue in this contest; no party-only position is assigned to candidates who did not answer.",
+          "sourceIds":["src-und-guide"]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {"id":"src-ut-candidates","url":"https://vote.utah.gov/2026-candidate-filings/","title":"2026 Candidate Filings - Utah Voter Information","publisher":"Utah Lieutenant Governor, Elections","published":null,"accessed":"2026-10-28"},
+    {"id":"src-und-guide","url":"https://utahnewsdispatch.com/voter-guides/contests/2026-general-u-s-house-district-2/","title":"U.S. House representative, U.S. House District 2 | Voter Guide: 2026 General Election","publisher":"Utah News Dispatch","published":null,"accessed":"2026-10-28"},
+    {"id":"src-sltrib","url":"https://www.sltrib.com/news/politics/2026/10/12/blake-moore-faces-peter-crosby/","title":"Utah’s 2nd Congressional District: Blake Moore faces off against Peter Crosby and three other candidates","publisher":"The Salt Lake Tribune","published":"2026-10-12","accessed":"2026-10-28"},
+    {"id":"src-vote411","url":"https://onyourballot.vote411.org/m/race-detail.do?id=38266150","title":"Utah Congressional District 2 - VOTE411 Voter Guide","publisher":"League of Women Voters / VOTE411","published":null,"accessed":"2026-10-28"},
+    {"id":"src-moesinger","url":"https://www.improveourelections.org/home","title":"The Problem","publisher":"Improve Our Elections (Robert Moesinger campaign)","published":null,"accessed":"2026-10-28"},
+    {"id":"src-bowen","url":"https://bowenforcongress.com/","title":"Carlton Bowen for US Congress","publisher":"Carlton Bowen campaign","published":null,"accessed":"2026-10-28"},
+    {"id":"src-house-roll190","url":"https://clerk.house.gov/Votes/2025190","title":"Roll Call 190: H.R. 1, One Big Beautiful Bill Act","publisher":"Office of the Clerk, U.S. House of Representatives","published":"2025-07-03","accessed":"2026-10-28"},
+    {"id":"src-hr1","url":"https://www.congress.gov/bill/119th-congress/house-bill/1","title":"H.R.1 - One Big Beautiful Bill Act","publisher":"Congress.gov","published":null,"accessed":"2026-10-28"},
+    {"id":"src-ballotpedia","url":"https://ballotpedia.org/Utah%27s_2nd_Congressional_District_election,_2026","title":"Utah's 2nd Congressional District election, 2026","publisher":"Ballotpedia","published":null,"accessed":"2026-10-28"}
+  ]
+}

@@ -1,0 +1,937 @@
+{
+  "group": "county",
+  "positions": [
+    {
+      "candidateId": "vance-smith",
+      "issueId": "stratos-approval-and-oversight",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "In a June 2026 response about Stratos, Smith said local leadership could not stop this project but could set clear expectations to protect the surrounding community. That leans toward safeguards in this post-approval question, though he did not state a detailed oversight plan.",
+      "date": "2026-06-01",
+      "sourceIds": [
+        "src-vance-williams-hive"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "vance-smith",
+      "issueId": "water-and-resource-planning",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "vance-smith",
+      "issueId": "development-tax-and-public-benefit",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "vance-smith",
+      "issueId": "county-budget-and-property-taxes",
+      "position": -1,
+      "evidenceType": "campaign-site",
+      "summary": "Smith says he will manage budgets correctly, make smart long-term investments, keep taxes low, and avoid sudden large tax increases. This leans toward limiting tax growth while allowing planned investment.",
+      "date": null,
+      "sourceIds": [
+        "src-vance-campaign-priorities"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "alan-williams",
+      "issueId": "stratos-approval-and-oversight",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "alan-williams",
+      "issueId": "water-and-resource-planning",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "alan-williams",
+      "issueId": "development-tax-and-public-benefit",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "alan-williams",
+      "issueId": "county-budget-and-property-taxes",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "issueId": "stratos-approval-and-oversight",
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Tueller said the county should have shared more information about Stratos, but that staying at the table and saying yes was the right call to protect the county. This leans toward negotiated approval while acknowledging a need for better public information.",
+      "date": "2026-06-24",
+      "sourceIds": [
+        "src-upr-stratos"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "issueId": "water-and-resource-planning",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "issueId": "development-tax-and-public-benefit",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "issueId": "county-budget-and-property-taxes",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "mike-allred",
+      "issueId": "dispatch-reliability-and-governance",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Allred said he had spoken with DPS about getting its dispatch service working and funded, and described his effort as building a bridge between the sheriff office and dispatch. That leans toward rebuilding coordination, without an explicit demand that municipalities return to the shared system.",
+      "date": "2026-10-08",
+      "sourceIds": [
+        "src-sheriff-race"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "mike-allred",
+      "issueId": "sheriff-management-accountability",
+      "position": 2,
+      "evidenceType": "campaign-site",
+      "summary": "Allred proposes internal administrative meetings, staff briefings, clearer standards, accountability, and leadership-led changes, including cleaning house if needed. His plan relies on internal management reform rather than an independent outside review.",
+      "date": null,
+      "sourceIds": [
+        "src-allred-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "mike-allred",
+      "issueId": "public-safety-budget-and-staffing",
+      "position": 0,
+      "evidenceType": "campaign-site",
+      "summary": "Allred says deputies need training, tools, and resources, while also promising to use tax dollars wisely, streamline operations, and balance workloads. The statement documents both capacity investment and cost control.",
+      "date": null,
+      "sourceIds": [
+        "src-allred-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "mike-allred",
+      "issueId": "critical-incident-and-dispatch-practices",
+      "position": 1,
+      "evidenceType": "campaign-site",
+      "summary": "Allred calls for active-shooter training for patrol deputies and says staff should be prepared before a crisis. This favors agency-led readiness and improvement; he does not propose independent incident review in the cited statement.",
+      "date": null,
+      "sourceIds": [
+        "src-allred-campaign"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "issueId": "dispatch-reliability-and-governance",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "issueId": "sheriff-management-accountability",
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Christensen said he wants to work more closely with deputies and the community to identify positive changes, while noting that the office does a good job and can improve. This modestly favors internal, collaborative improvement over a separate independent review.",
+      "date": "2026-10-08",
+      "sourceIds": [
+        "src-sheriff-race"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "issueId": "public-safety-budget-and-staffing",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "issueId": "critical-incident-and-dispatch-practices",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "allan-shinney",
+      "issueId": "dispatch-reliability-and-governance",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "allan-shinney",
+      "issueId": "sheriff-management-accountability",
+      "position": 1,
+      "evidenceType": "campaign-site",
+      "summary": "Shinney says he will personally act on issues, rebuild department culture, lead by example, and hold himself to a higher standard; he also said he would clean house if needed. Taken together, this favors sheriff-led internal improvement over an independent outside review.",
+      "date": null,
+      "sourceIds": [
+        "src-shinney-campaign",
+        "src-sheriff-race"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "allan-shinney",
+      "issueId": "public-safety-budget-and-staffing",
+      "position": -2,
+      "evidenceType": "campaign-site",
+      "summary": "Shinney says he would operate within budget and seek to reduce it, buy only needed equipment, and reassign work to non-sworn support staff; he says this approach saved funds while statistics increased. This strongly aligns with cost control and efficiency.",
+      "date": null,
+      "sourceIds": [
+        "src-shinney-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "allan-shinney",
+      "issueId": "critical-incident-and-dispatch-practices",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "chad-hayman",
+      "issueId": "dispatch-reliability-and-governance",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "chad-hayman",
+      "issueId": "sheriff-management-accountability",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "chad-hayman",
+      "issueId": "public-safety-budget-and-staffing",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "chad-hayman",
+      "issueId": "critical-incident-and-dispatch-practices",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "marla-young",
+      "issueId": "election-administration-and-access",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "marla-young",
+      "issueId": "election-transparency-and-records",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "marla-young",
+      "issueId": "election-readiness-and-resources",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "blair-wardle",
+      "issueId": "prosecution-and-victim-services",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "In a 2023 Utah Crime Victims Council biography, Wardle said working with victims was at the top of the reasons he valued prosecution. This supports the issue’s victim-support end, though it does not set a charging standard or address fair-case review.",
+      "date": null,
+      "sourceIds": [
+        "src-wardle-victims-council"
+      ],
+      "confidence": "medium",
+      "historical": true
+    },
+    {
+      "candidateId": "blair-wardle",
+      "issueId": "legal-review-and-independence",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "blair-wardle",
+      "issueId": "county-legal-risk-and-disclosure",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "issueId": "budget-transparency-and-fiscal-control",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "issueId": "property-tax-administration-and-relief",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "issueId": "budget-reserves-and-service-costs",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "issueId": "fraud-and-mismanagement-reporting",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+      "date": null,
+      "sourceIds": [],
+      "confidence": "low",
+      "historical": false
+    }
+  ],
+  "facts": [
+    {
+      "candidateId": "vance-smith",
+      "kind": "record",
+      "text": "On Feb. 20, 2025, as an alternate/member of the county Planning Commission, Smith said he personally favored a 1.5-acre residential-to-general-industrial rezone for a cabinet/machine shop, acknowledged it affected neighborhood harmony, and seconded the motion recommending approval; the motion passed with one dissent.",
+      "date": "2025-02-20",
+      "sourceIds": [
+        "src-vance-planning-minutes"
+      ]
+    },
+    {
+      "candidateId": "vance-smith",
+      "kind": "statement",
+      "text": "Asked about Stratos in June 2026, Smith said local leadership could not stop the project but could set clear expectations to protect nearby communities.",
+      "date": "2026-06-01",
+      "sourceIds": [
+        "src-vance-williams-hive"
+      ]
+    },
+    {
+      "candidateId": "vance-smith",
+      "kind": "criticism",
+      "text": "A Sept. 17, 2026 Weber County Hive review of filed campaign disclosures reported $20 in contributions, $13,009.67 in expenses, and a reported ending balance of $12,989.67; it said the figures did not reconcile and that the $3,520 “Gather Signatures” expense named no recipient. The report did not identify a Smith response and did not establish a legal violation.",
+      "date": "2026-09-17",
+      "sourceIds": [
+        "src-vance-williams-hive"
+      ]
+    },
+    {
+      "candidateId": "vance-smith",
+      "kind": "criticism",
+      "text": "The same review said Smith’s conflict disclosure listed multiple business entities whose state records differed in some respects, including an expired assumed-name registration and a dissolved LLC; it also noted that those differences did not establish a false disclosure. The article did not report a Smith response.",
+      "date": "2026-09-17",
+      "sourceIds": [
+        "src-vance-williams-hive"
+      ]
+    },
+    {
+      "candidateId": "vance-smith",
+      "kind": "record",
+      "text": "Smith defeated incumbent Boyd Bingham in the June 2026 Republican primary for Commission Seat A.",
+      "date": "2026-06-23",
+      "sourceIds": [
+        "src-upr-stratos"
+      ]
+    },
+    {
+      "candidateId": "alan-williams",
+      "kind": "background",
+      "text": "Williams is listed by Box Elder County as the unaffiliated Seat A candidate. A Sept. 2026 local investigation reported he joined a July public tour of the proposed Stratos site; it said his campaign site described growth generally as bringing both positive and detrimental change without naming Stratos.",
+      "date": null,
+      "sourceIds": [
+        "src-candidates",
+        "src-vance-williams-hive"
+      ]
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "kind": "background",
+      "text": "Tueller had ten years of leadership experience on Perry City Council, according to Utah Public Radio, and said he decided to run months before public debate about Stratos began.",
+      "date": null,
+      "sourceIds": [
+        "src-upr-stratos"
+      ]
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "kind": "statement",
+      "text": "Tueller said county officials could have shared more information about Stratos, but that staying at the table and approving it was the right call to protect the county.",
+      "date": "2026-06-24",
+      "sourceIds": [
+        "src-upr-stratos"
+      ]
+    },
+    {
+      "candidateId": "nathan-tueller",
+      "kind": "record",
+      "text": "Tueller defeated incumbent Lee Perry in the June 2026 Republican primary for Commission Seat B and was unopposed in the November general election roster.",
+      "date": "2026-06-23",
+      "sourceIds": [
+        "src-upr-stratos",
+        "src-candidates"
+      ]
+    },
+    {
+      "candidateId": "mike-allred",
+      "kind": "background",
+      "text": "Allred reports six years as a Box Elder County deputy and six years volunteering with Search and Rescue; KSL reported he and his K-9 were injured in the August 2025 Tremonton-Garland shooting.",
+      "date": null,
+      "sourceIds": [
+        "src-sheriff-race",
+        "src-sheriff-settlement"
+      ]
+    },
+    {
+      "candidateId": "mike-allred",
+      "kind": "statement",
+      "text": "Allred’s campaign plan calls for weekly administrative meetings, monthly patrol and corrections briefings, individual deputy meetings, more training and equipment, clearer standards, community engagement, and possible staff changes. He also says taxpayer money should be used wisely and operations streamlined.",
+      "date": null,
+      "sourceIds": [
+        "src-allred-campaign"
+      ]
+    },
+    {
+      "candidateId": "mike-allred",
+      "kind": "criticism",
+      "text": "Allred’s campaign site says he had raised concerns and requested training and support for three years, that concerns often went unheard, and that no patrol staff meeting had occurred in six years. These are his campaign claims about the sheriff office, not independently verified findings in the cited source.",
+      "date": null,
+      "sourceIds": [
+        "src-allred-campaign"
+      ]
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "kind": "background",
+      "text": "Christensen grew up in Bear River City and worked in Box Elder County with the Utah Highway Patrol for 16 years, according to KSL.",
+      "date": null,
+      "sourceIds": [
+        "src-sheriff-race"
+      ]
+    },
+    {
+      "candidateId": "douglas-christensen",
+      "kind": "statement",
+      "text": "Christensen said the sheriff office should be more involved with communities and youth, and that he would work more closely with deputies and residents to identify improvements.",
+      "date": "2026-10-08",
+      "sourceIds": [
+        "src-sheriff-race"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "background",
+      "text": "Shinney told KSL he had more than 26 years in law enforcement, served as a state law-enforcement colonel, and later led law enforcement at the Utah State Tax Commission.",
+      "date": null,
+      "sourceIds": [
+        "src-sheriff-race"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "accomplishment",
+      "text": "Shinney said he saved taxpayers $10 million during ten years as Tax Commission law-enforcement director; KSL reported this as his claim.",
+      "date": null,
+      "sourceIds": [
+        "src-sheriff-race"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "statement",
+      "text": "Shinney called himself a fiscal conservative and said he would be fair and objective in resolving sheriff-office issues, adding that he would clean house if needed.",
+      "date": "2026-10-08",
+      "sourceIds": [
+        "src-sheriff-race"
+      ]
+    },
+    {
+      "candidateId": "chad-hayman",
+      "kind": "record",
+      "text": "KSL reported on Oct. 8, 2026 that Hayman had told the outlet he was no longer campaigning; Box Elder County’s Oct. 28 candidate list still listed him as an unaffiliated sheriff candidate.",
+      "date": "2026-10-08",
+      "sourceIds": [
+        "src-sheriff-race",
+        "src-candidates"
+      ]
+    },
+    {
+      "candidateId": "marla-young",
+      "kind": "background",
+      "text": "Box Elder County history records Young as county clerk since 2011.",
+      "date": null,
+      "sourceIds": [
+        "src-clerk-history"
+      ]
+    },
+    {
+      "candidateId": "marla-young",
+      "kind": "record",
+      "text": "As county clerk, Young certified on May 1, 2026 which county and local school-board candidates qualified for the primary ballot.",
+      "date": "2026-05-01",
+      "sourceIds": [
+        "src-young-election-certification"
+      ]
+    },
+    {
+      "candidateId": "blair-wardle",
+      "kind": "background",
+      "text": "Wardle’s Utah Crime Victims Council nomination biography says he graduated from the University of Utah law school in 2012, joined the Box Elder County Attorney’s Office as a prosecutor that year, was Chief Deputy Attorney, received two Prosecutor of the Year awards in 2018, taught for the Utah Prosecution Council, and served about five years on the New Hope Crisis Center board.",
+      "date": null,
+      "sourceIds": [
+        "src-wardle-victims-council"
+      ]
+    },
+    {
+      "candidateId": "blair-wardle",
+      "kind": "statement",
+      "text": "Wardle said working with victims was at the top of the reasons he valued prosecution.",
+      "date": null,
+      "sourceIds": [
+        "src-wardle-victims-council"
+      ]
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "kind": "background",
+      "text": "Box Elder County auditor history records Larsen as auditor since 2022.",
+      "date": null,
+      "sourceIds": [
+        "src-auditor-history"
+      ]
+    },
+    {
+      "candidateId": "vance-smith",
+      "kind": "statement",
+      "text": "Smith’s campaign priorities call for responsible budgeting, low taxes, smart long-term investments, attracting employers that fit the community, and protecting agricultural and rural character and private-property rights.",
+      "date": null,
+      "sourceIds": [
+        "src-vance-campaign-priorities"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "accomplishment",
+      "text": "Shinney says that as MVED director he changed budget practices, bought only needed equipment, reassigned work to support staff, reclassified ten full-time officer positions to non-sworn roles, operated under budget, and increased statistics; these are campaign-site claims.",
+      "date": null,
+      "sourceIds": [
+        "src-shinney-campaign"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "statement",
+      "text": "Shinney says that, if elected, he would operate within the sheriff office budget and seek ways to reduce it, and would ensure deputies are well trained.",
+      "date": null,
+      "sourceIds": [
+        "src-shinney-campaign"
+      ]
+    },
+    {
+      "candidateId": "marla-young",
+      "kind": "record",
+      "text": "On May 6, 2026, Young told The Salt Lake Tribune that she contacted referendum sponsors to return with a formal application; the county attorney was reviewing whether it qualified, and her office had calculated the signature threshold. This was an administrative action concerning a voter referendum application.",
+      "date": "2026-05-06",
+      "sourceIds": [
+        "src-sltrib-referendum-application"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-candidates",
+      "url": "https://www.boxeldercountyut.gov/597/Election-Candidates",
+      "title": "Election Candidates",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-commission-primary",
+      "url": "https://www.ksl.com/article/51540078/how-a-data-center-helped-topple-one-of-utahs-most-powerful-lawmakers",
+      "title": "How a data center helped topple one of Utah's most powerful lawmakers",
+      "publisher": "KSL.com",
+      "published": "2026-06-24",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-county",
+      "url": "https://www.boxeldercountyut.gov/m/newsflash/home/detail/82",
+      "title": "Box Elder County Authorizes MIDA to Initiate Stratos Project",
+      "publisher": "Box Elder County",
+      "published": "2026-05-04",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-agreement",
+      "url": "https://www.boxeldercountyut.gov/DocumentCenter/View/2189/Box-Elder-County-MIDA-Stratos-Agreement-26-15-",
+      "title": "Box Elder County MIDA Stratos Agreement 26-15",
+      "publisher": "Box Elder County",
+      "published": "2026-05-04",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-timeline",
+      "url": "https://www.boxeldercountyut.gov/665/Stratos-Project-Timeline",
+      "title": "Stratos Project Timeline",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-water",
+      "url": "https://growtheflowutah.org/stratos/",
+      "title": "Stratos Data Center FAQ",
+      "publisher": "Grow the Flow Utah",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-tax-news",
+      "url": "https://www.axios.com/local/salt-lake-city/2026/05/04/utah-data-center-kevin-oleary",
+      "title": "3 things to know about Utah's massive proposed data center",
+      "publisher": "Axios",
+      "published": "2026-05-04",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-budget-page",
+      "url": "https://www.boxeldercountyut.gov/566/Budgets",
+      "title": "Budgets",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-budget-approved",
+      "url": "https://www.boxeldercountyut.gov/DocumentCenter/View/1837/Box-Elder-County-Approved-Budget-2026",
+      "title": "Box Elder County Approved Budget 2026",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-auditor-role",
+      "url": "https://www.boxeldercountyut.gov/187/Auditor",
+      "title": "Auditor",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-auditor-history",
+      "url": "https://www.boxeldercountyut.gov/509/Auditor-History",
+      "title": "Auditor History",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-clerk-role",
+      "url": "https://www.boxeldercountyut.gov/198/Clerk",
+      "title": "Clerk",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-clerk-history",
+      "url": "https://www.boxeldercountyut.gov/510/Clerks-History",
+      "title": "Clerks History",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-state-election",
+      "url": "https://vote.utah.gov/current-election-information/",
+      "title": "Current Election Information",
+      "publisher": "Utah Lieutenant Governor's Office",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-attorney-role",
+      "url": "https://www.boxeldercountyut.gov/172/Attorney",
+      "title": "Attorney",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-referendum-ruling",
+      "url": "https://www.ksl.com/article/51503943/box-elder-county-officials-rebuff-effort-to-force-ballot-questions-on-data-center-plans",
+      "title": "Box Elder County officials rebuff effort to force ballot questions on data center plans",
+      "publisher": "KSL.com",
+      "published": "2026-05-28",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-elected-officials",
+      "url": "https://www.boxeldercountyut.gov/602/Box-Elder-County-Elected-Officials",
+      "title": "Box Elder County Elected Officials",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sheriff-race",
+      "url": "https://www.ksl.com/article/51634215/new-box-elder-county-sheriff-to-be-elected-as-three-remaining-candidates-vie-for-the-office",
+      "title": "New Box Elder County sheriff to be elected as three remaining candidates vie for the office",
+      "publisher": "KSL.com",
+      "published": "2026-10-08",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sheriff-settlement",
+      "url": "https://www.ksl.com/article/news/utah/police-and-courts/settlement-in-deadly-tremonton-shooting-outlines-payout-changes-made-to-dispatch/51635537",
+      "title": "Settlement in deadly Tremonton shooting outlines payout, changes made to dispatch",
+      "publisher": "KSL.com",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-dispatch-chief-response",
+      "url": "https://www.ksl.com/article/51589610/police-chiefs-push-back-on-box-elder-sheriffs-claims-amid-dispatch-split",
+      "title": "Police chiefs push back on Box Elder County sheriff's claims amid dispatch split",
+      "publisher": "KSL.com",
+      "published": "2026-01-15",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-vance-williams-hive",
+      "url": "https://webercountyhive.substack.com/p/twenty-dollars-in-thirteen-thousand",
+      "title": "Twenty Dollars In, Thirteen Thousand Out",
+      "publisher": "Weber County Hive",
+      "published": "2026-09-17",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-upr-stratos",
+      "url": "https://www.upr.org/politics/2026-06-24/box-elder-data-center-campus-claims-two-casualties-a-pair-of-incumbent-commissioners",
+      "title": "Box Elder data center campus claims two casualties: a pair of incumbent commissioners",
+      "publisher": "Utah Public Radio",
+      "published": "2026-06-24",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-vance-planning-minutes",
+      "url": "https://www.utah.gov/pmn/files/1245816.pdf",
+      "title": "Box Elder County Planning Commission Minutes 02-20-2025",
+      "publisher": "Box Elder County Planning Commission via Utah Public Notice Website",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-allred-campaign",
+      "url": "https://allred4sheriff.com/posts-1",
+      "title": "Posts - Allred for Sheriff",
+      "publisher": "Mike Allred for Box Elder County Sheriff",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-wardle-victims-council",
+      "url": "https://www.utah.gov/pmn/files/1038603.pdf",
+      "title": "Utah Crime Victims Council Meeting materials: Blair Wardle nomination biography",
+      "publisher": "Utah Crime Victims Council via Utah Public Notice Website",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-wardle-blue-to-gold",
+      "url": "https://bluetogold.com/instructors/blair-wardle/",
+      "title": "Blair Wardle - Attorney and Legal Instructor",
+      "publisher": "Blue to Gold Law Enforcement Training",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-young-election-certification",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/1077107.html",
+      "title": "Box Elder County 2026 Primary Election Certification",
+      "publisher": "Box Elder County Clerk via Utah Public Notice Website",
+      "published": "2026-05-01",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-vance-campaign-priorities",
+      "url": "https://www.smithforboxelder.com/priorities",
+      "title": "Priorities for Box Elder County",
+      "publisher": "Vance Smith for Box Elder County Commission",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-shinney-campaign",
+      "url": "https://www.shinney4sheriff.com/about",
+      "title": "About Allan Shinney",
+      "publisher": "Allan Shinney for Box Elder County Sheriff",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sltrib-referendum-application",
+      "url": "https://www.sltrib.com/news/politics/2026/05/06/utah-voters-file-referendum/",
+      "title": "Box Elder voters may have chance to overturn decision on hyperscale data center project, clerk says",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-05-06",
+      "accessed": "2026-10-28"
+    }
+  ]
+}

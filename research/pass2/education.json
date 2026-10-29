@@ -1,0 +1,439 @@
+{
+  "group": "education",
+  "positions": [
+    {
+      "candidateId": "jennie-earl",
+      "issueId": "utah-fits-all-public-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Earl did not respond to The Salt Lake Tribune's 2026 question about Utah Fits All. A 2023 board vote on scholarship appeals rules is procedural and does not establish her position on maintaining or ending the program.",
+      "date": null,
+      "sourceIds": ["src-sltrib-usbe-survey", "src-earl-ufa-vote"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "jennie-earl",
+      "issueId": "sensitive-materials-removal",
+      "position": 1,
+      "evidenceType": "recorded-vote",
+      "summary": "In 2024 Earl moved to amend and voted for USBE Rule R277-628 on sensitive materials, which established statewide removal procedures. This leans toward consistent statewide application, although the board approved the rule unanimously and Earl did not answer the Tribune's 2026 survey question.",
+      "date": "2024-06-07",
+      "sourceIds": ["src-earl-sensitive-rule-vote", "src-sltrib-usbe-survey"],
+      "confidence": "medium",
+      "historical": true
+    },
+    {
+      "candidateId": "jennie-earl",
+      "issueId": "school-immigration-enforcement",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Earl did not respond to the Tribune's question about immigration enforcement at schools; no stance is inferred.",
+      "date": null,
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "jennie-earl",
+      "issueId": "third-grade-reading-retention",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Earl did not respond to the Tribune's question about third-grade retention; no stance is inferred.",
+      "date": null,
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "jennie-earl",
+      "issueId": "bell-to-bell-cellphone-policy",
+      "position": 1,
+      "evidenceType": "recorded-vote",
+      "summary": "Earl voted to approve USBE Rule R277-495, which requires LEAs to maintain electronic-device policies and encourages local participation in setting them. That older rulemaking record leans toward local flexibility; it does not directly answer the Tribune's 2026 question about bell-to-bell bans.",
+      "date": "2024-08-01",
+      "sourceIds": ["src-earl-device-vote", "src-usbe-device-rule", "src-sltrib-usbe-survey"],
+      "confidence": "medium",
+      "historical": true
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "issueId": "utah-fits-all-public-funding",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Callow-Heusser answered no to using taxpayer money for Utah Fits All, arguing that voucher funds should instead support public schools and citing concerns about progress, enrollment, equitable access, and expenses.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "issueId": "sensitive-materials-removal",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "She called Utah's sensitive-materials law too broad and said statewide removals can go beyond the statutory definition; she urged consideration of district differences and representative local boards.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "issueId": "school-immigration-enforcement",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "She said immigration enforcement has no place in or near schools and that schools should be safe havens for children, matching the position to keep enforcement away from school settings.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "issueId": "third-grade-reading-retention",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "She answered no when asked whether she supports third-grade retention, aligning with an emphasis on interventions and exemptions over retention.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "issueId": "bell-to-bell-cellphone-policy",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "She answered yes when asked whether she supports Utah's bell-to-bell cellphone bans, matching the position requiring bell-to-bell restrictions.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "karen-cronin",
+      "issueId": "property-tax-increase-and-budget",
+      "position": -2,
+      "evidenceType": "recorded-vote",
+      "summary": "Cronin voted no on the 2025 tax rate, budget, and salary schedules, and said the nearly 37% tax increase would burden households and undermine voter trust after the bond was rejected. She urged the district to return a different plan to voters.",
+      "date": "2025-08-13",
+      "sourceIds": ["src-besd-tax-minutes"],
+      "confidence": "high",
+      "historical": true
+    },
+    {
+      "candidateId": "karen-cronin",
+      "issueId": "facilities-and-school-configuration",
+      "position": 0,
+      "evidenceType": "recorded-vote",
+      "summary": "In January 2026, Cronin voted against declaring Foothill Elementary surplus and urged the district to consider reusing buildings, but she also voted to approve negotiations for a new school site. Those records show a mixed approach to reuse and new facilities; they do not address ninth-grade placement.",
+      "date": "2026-01-14",
+      "sourceIds": ["src-cronin-facility"],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "karen-cronin",
+      "issueId": "secondary-grading-and-graduation",
+      "position": -1,
+      "evidenceType": "recorded-vote",
+      "summary": "The official 2024 district minutes report that Cronin opposed Policy 4060 and said students should graduate with their peers if they have 24 credits. This supports some flexibility in graduation timing, but it is a historical vote on graduation requirements and does not establish her view of the newer grading system.",
+      "date": "2024-04-10",
+      "sourceIds": ["src-cronin-4060"],
+      "confidence": "medium",
+      "historical": true
+    },
+    {
+      "candidateId": "karen-cronin",
+      "issueId": "teacher-pay-and-workplace-support",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Cronin voted against a combined package that included the 2025 budget, tax rate, and employee salary schedules, but her recorded explanation focused on the size and process of the tax increase. The bundled vote does not establish her position on teacher compensation or workplace support specifically.",
+      "date": null,
+      "sourceIds": ["src-besd-tax-minutes"],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "karen-cronin",
+      "issueId": "phones-and-state-testing",
+      "position": 1,
+      "evidenceType": "recorded-vote",
+      "summary": "In August 2026, Cronin asked how the district's device policy changed student use, heard that devices would be allowed during breaks and lunch, then moved to approve the policy package. This leans toward limited student access; the record does not establish her position on state testing.",
+      "date": "2026-08-12",
+      "sourceIds": ["src-cronin-device-vote"],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "issueId": "property-tax-increase-and-budget",
+      "position": -1,
+      "evidenceType": "campaign-site",
+      "summary": "Tonioli says she will review where the 37% increase is going, use tax dollars wisely, and lower rates if revenue allows. This leans toward limiting the tax burden, but she does not call for reversing the increase outright.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "issueId": "facilities-and-school-configuration",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Tonioli's campaign page lists questions about building updates and moving ninth grade to high schools, but the page provides no substantive answer to either question; no position is assigned.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "issueId": "secondary-grading-and-graduation",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "The campaign page asks about the new secondary grading system but provides no substantive answer on this page; no position is assigned.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "issueId": "teacher-pay-and-workplace-support",
+      "position": -2,
+      "evidenceType": "campaign-site",
+      "summary": "Tonioli says she will advocate for competitive pay, real support for teachers, and a workplace where staff can raise concerns without fear. This directly matches prioritizing compensation and staff support.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "issueId": "phones-and-state-testing",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "The campaign page lists questions about bell-to-bell device policy and mandated state testing but provides no substantive answer on either topic; no position is assigned.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"],
+      "confidence": "low",
+      "historical": false
+    }
+  ],
+  "facts": [
+    {
+      "candidateId": "jennie-earl",
+      "kind": "background",
+      "text": "Jennie Earl is the incumbent Utah State Board of Education District 1 member, was reelected in 2022, and is serving her second term. Her official biography says she taught students with special needs and middle-school math.",
+      "date": null,
+      "sourceIds": ["src-earl-bio"]
+    },
+    {
+      "candidateId": "jennie-earl",
+      "kind": "vote",
+      "text": "USBE's December 2023 voting record lists Earl's support for a motion approving rules for Utah Fits All scholarship appeals. This is a procedural administration vote, not a vote on the program's existence or funding level.",
+      "date": "2023-12-07",
+      "sourceIds": ["src-earl-ufa-vote"]
+    },
+    {
+      "candidateId": "jennie-earl",
+      "kind": "vote",
+      "text": "Earl moved to amend USBE Rule R277-628 on sensitive materials and voted for the final rule in June 2024. The rule governs statewide sensitive-material removal processes; this is a historical implementation record, not a 2026 survey response.",
+      "date": "2024-06-07",
+      "sourceIds": ["src-earl-sensitive-rule-vote"]
+    },
+    {
+      "candidateId": "jennie-earl",
+      "kind": "vote",
+      "text": "Earl voted yes on USBE Rule R277-495, Electronic Devices in Public Schools, in August 2024. The rule requires local electronic-device policies and leaves implementation to LEAs; it did not establish a bell-to-bell ban.",
+      "date": "2024-08-01",
+      "sourceIds": ["src-earl-device-vote", "src-usbe-device-rule"]
+    },
+    {
+      "candidateId": "jennie-earl",
+      "kind": "vote",
+      "text": "At a February 2024 legislative meeting, Earl supported a substitute motion asking the Legislature to fund USBE priorities before Utah Fits All or teacher-compensation funding. This budget-priority action does not establish support for ending or maintaining the scholarship program.",
+      "date": "2024-02-15",
+      "sourceIds": ["src-earl-ufa-priority-vote"]
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "kind": "background",
+      "text": "The Tribune describes Callow-Heusser as a teacher, university instructor, education consultant, and former Utah State Board of Education staff member.",
+      "date": null,
+      "sourceIds": ["src-sltrib-usbe-survey"]
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "kind": "statement",
+      "text": "Asked about Utah public education's biggest challenge, Callow-Heusser named funding and said it affects class sizes, student supports, curriculum and technology, teacher support, and equitable access.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"]
+    },
+    {
+      "candidateId": "cathy-callow-heusser",
+      "kind": "statement",
+      "text": "Callow-Heusser criticized Utah Fits All as diverting public revenue from public schools, raising equitable-access concerns because private schools may selectively admit students, and allowing questionable expenses; she said Utah audits had shown such expenses.",
+      "date": "2026-10-12",
+      "sourceIds": ["src-sltrib-usbe-survey"]
+    },
+    {
+      "candidateId": "karen-cronin",
+      "kind": "vote",
+      "text": "Cronin was the only board member recorded voting no on Box Elder School District's 2025 tax rate, budget, and employee salary schedules package. In remarks before the vote, she cited affordability concerns, the failed bond vote, and the need to earn taxpayer trust for future building projects.",
+      "date": "2025-08-13",
+      "sourceIds": ["src-besd-tax-minutes"]
+    },
+    {
+      "candidateId": "karen-cronin",
+      "kind": "vote",
+      "text": "The official April 2024 board minutes say Cronin opposed Policy 4060, High School Graduation Requirements, because she favored allowing a student with at least 24 credits to graduate from the district high school where the student completed most graduation coursework.",
+      "date": "2024-04-10",
+      "sourceIds": ["src-cronin-4060"]
+    },
+    {
+      "candidateId": "karen-cronin",
+      "kind": "record",
+      "text": "At the January 2026 meeting, Cronin opposed declaring Foothill Elementary surplus and advocated evaluating reuse of district buildings before disposal. The motion passed 5-1; she voted no.",
+      "date": "2026-01-14",
+      "sourceIds": ["src-cronin-facility"]
+    },
+    {
+      "candidateId": "karen-cronin",
+      "kind": "vote",
+      "text": "At the August 2026 meeting, Cronin asked how Policy 5305 would change device use; after staff said student devices would be allowed during breaks and lunch, she moved to approve the combined policy package, which passed unanimously.",
+      "date": "2026-08-12",
+      "sourceIds": ["src-cronin-device-vote"]
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "kind": "background",
+      "text": "Tonioli's campaign biography says she has lived in Box Elder County for more than 20 years, earned a bachelor's degree from Utah State University, volunteered in local schools, worked as a reading and progress-monitoring paraprofessional, and taught kindergarten and second grade in Box Elder School District.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"]
+    },
+    {
+      "candidateId": "tara-tonioli",
+      "kind": "statement",
+      "text": "Tonioli's campaign identifies competitive teacher pay, staff support, transparent district finances, careful use of tax dollars, and lower rates if revenues allow as priorities.",
+      "date": null,
+      "sourceIds": ["src-tonioli-campaign"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-sltrib-usbe-survey",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/incumbent-jennie-earl-faces-cathy/",
+      "title": "Utah State Board of Education District 1: Jennie Earl faces off against Cathy Callow-Heusser",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-bio",
+      "url": "https://www.schools.utah.gov/board/members/utah/jennieearl",
+      "title": "Jennie Earl",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-ufa-vote",
+      "url": "https://www.schools.utah.gov/board/_board_/_votingrecords_/December%202023%20Voting%20Records.pdf",
+      "title": "December 2023 Voting Records",
+      "publisher": "Utah State Board of Education",
+      "published": "2023-12-07",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-ufa-priority-vote",
+      "url": "https://schools.utah.gov/board/_board_/_minutes_/2024/February152024LegislativeMeeting.pdf",
+      "title": "Legislative Meeting Minutes, February 15, 2024",
+      "publisher": "Utah State Board of Education",
+      "published": "2024-03-11",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-sensitive-rule-vote",
+      "url": "https://schools.utah.gov/board/_board_/_minutes_/2024/June72024UnfinishedBusinessandStudySession.pdf",
+      "title": "Unfinished Business and Study Session Meeting Minutes, June 7, 2024",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-device-vote",
+      "url": "https://schools.utah.gov/board/_board_/_votingrecords_/August2024VotingRecords.pdf",
+      "title": "August 2024 Voting Records",
+      "publisher": "Utah State Board of Education",
+      "published": "2024-08-01",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-besd-tax-minutes",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/1023183.html",
+      "title": "Truth in Taxation Hearing Minutes",
+      "publisher": "Utah Public Notice Website / Box Elder School District",
+      "published": "2025-09-15",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cronin-4060",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/913733.html",
+      "title": "School Board Meeting Minutes, April 10, 2024",
+      "publisher": "Utah Public Notice Website / Box Elder School District",
+      "published": "2024-05-14",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cronin-facility",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/1061725.html",
+      "title": "School Board Meeting Minutes, January 14, 2026",
+      "publisher": "Utah Public Notice Website / Box Elder School District",
+      "published": "2026-02-23",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cronin-device-vote",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/1108917.html",
+      "title": "School Board Meeting Minutes, August 12, 2026",
+      "publisher": "Utah Public Notice Website / Box Elder School District",
+      "published": "2026-09-15",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-ut-candidates",
+      "url": "https://vote.utah.gov/2026-candidate-filings/",
+      "title": "2026 Candidate Filings",
+      "publisher": "Utah Voter Information",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bec-candidates",
+      "url": "https://www.boxeldercountyut.gov/597/Election-Candidates",
+      "title": "Election Candidates",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-usbe-device-rule",
+      "url": "https://schools.utah.gov/adminrules/R277-495",
+      "title": "R277-495. Electronic Devices in Public Schools",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-tonioli-campaign",
+      "url": "https://taraforschoolboard.com/",
+      "title": "Tara Tonioli for Box Elder School Board, District 7",
+      "publisher": "Tara Tonioli campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    }
+  ]
+}

@@ -1,0 +1,330 @@
+[
+ {
+  "id": "us-house-1",
+  "office": "U.S. House of Representatives",
+  "district": "Utah 2nd Congressional District under the 2026 map; this is the seat represented by Blake Moore, formerly Utah's 1st District (contract stable ID retained)",
+  "type": "candidate",
+  "group": "federal",
+  "order": 0,
+  "whatOfficeDecides": [
+   "Votes on and drafts federal laws, including taxes, spending, health programs, immigration, energy, and regulation.",
+   "Votes on federal appropriations and oversight of executive agencies; represents district interests in Congress.",
+   "Serves a two-year term and may introduce legislation, sit on committees, and provide constituent services."
+  ],
+  "howItAffectsVoters": "The House sets federal tax and spending policy and can shape programs and infrastructure funding that affect northern Utah households, farms, businesses, water, and energy. Moore's federal votes also determine whether the district's residents are represented by an incumbent with committee and leadership roles or a challenger with different priorities.",
+  "candidateIds": [
+   "peter-crosby",
+   "daniel-cottam",
+   "robert-moesinger",
+   "blake-moore",
+   "carlton-bowen"
+  ],
+  "issueIds": [
+   "water-great-salt-lake-and-data-center",
+   "affordability-housing-and-tax-policy",
+   "federal-deficits-and-spending",
+   "government-ethics-and-election-reform",
+   "energy-reliability-and-environment"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "ut-senate-1",
+  "office": "Utah State Senate",
+  "district": "Utah Senate District 1 (Box Elder County and parts of Cache and Tooele counties)",
+  "type": "candidate",
+  "group": "legislature",
+  "order": 1,
+  "whatOfficeDecides": [
+   "Passes, amends, or rejects statewide legislation with the Utah House and governor; state law can also be initiated or referred by voters.",
+   "Votes on the state budget, appropriations, and tax laws.",
+   "The Senate confirms certain gubernatorial appointments and participates in legislative oversight.",
+   "Can amend statewide rules governing public authorities and data-center energy or water policy, but does not personally approve a specific county project such as Stratos."
+  ],
+  "howItAffectsVoters": "The senator votes on state rules and spending that affect local services, schools, water, housing, and taxes. Senate District 1 spans Box Elder County and parts of Cache and Tooele counties, so the office represents a broad mix of rural, agricultural, and growing communities.",
+  "candidateIds": [
+   "claudia-bigler",
+   "scott-sandall",
+   "julie-quinlan"
+  ],
+  "issueIds": [
+   "fair-voting-maps",
+   "water-conservation-and-agriculture",
+   "taxes-and-affordability",
+   "stratos-data-center-and-mida"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "ut-house-6",
+  "office": "Utah House of Representatives",
+  "district": "Utah House District 6 (portions of Box Elder and Weber counties)",
+  "type": "candidate",
+  "group": "legislature",
+  "order": 2,
+  "whatOfficeDecides": [
+   "Passes, amends, or rejects statewide legislation with the Senate and governor; state law can also be initiated or referred by voters.",
+   "Votes on the state budget, appropriations, and tax laws.",
+   "The House considers legislation and participates in legislative oversight; its members serve two-year terms."
+  ],
+  "howItAffectsVoters": "The representative votes on statewide rules and funding that affect housing, water, taxes, schools, and public services in the district. District 6 includes portions of Box Elder and Weber counties. Voters are deciding whether to retain Rob Bishop, who entered the seat through a 2026 special election, or elect challenger James Rich.",
+  "candidateIds": [
+   "rob-bishop",
+   "james-rich"
+  ],
+  "issueIds": [
+   "starter-housing-and-growth",
+   "farm-water-rights-and-conservation",
+   "tax-transparency-and-affordability",
+   "government-accountability"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "usbe-1",
+  "office": "Utah State Board of Education, District 1",
+  "district": "Box Elder, Cache, Morgan, and Rich counties and part of Summit County",
+  "type": "candidate",
+  "group": "education",
+  "order": 3,
+  "whatOfficeDecides": [
+   "Exercises statewide general supervision of public education and adopts core standards, educator licensing policies, graduation requirements, and administrative rules.",
+   "Approves policies and oversees distribution of state and federal education funds to districts and charter schools; appoints the state superintendent.",
+   "Reviews appeals and statewide compliance matters under applicable education laws and rules."
+  ],
+  "howItAffectsVoters": "The board shapes statewide learning standards, school rules, educator requirements, and how public education programs are administered. A District 1 member represents communities across five northern Utah counties, while many major education funding decisions remain subject to the Legislature.",
+  "candidateIds": [
+   "jennie-earl",
+   "cathy-callow-heusser"
+  ],
+  "issueIds": [
+   "utah-fits-all-public-funding",
+   "sensitive-materials-removal",
+   "school-immigration-enforcement",
+   "third-grade-reading-retention",
+   "bell-to-bell-cellphone-policy"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "besd-7",
+  "office": "Box Elder School District Board of Education, District 7",
+  "district": "Box Elder School District election District 7",
+  "type": "candidate",
+  "group": "education",
+  "order": 4,
+  "whatOfficeDecides": [
+   "Sets district policy and adopts the district budget and tax rates, subject to state law and the public budget and truth-in-taxation processes.",
+   "Delegates day-to-day district management to the superintendent and monitors district goals, finances, and policy compliance.",
+   "Makes districtwide decisions about facilities, school configuration, curriculum policies, student rules, and other major educational priorities."
+  ],
+  "howItAffectsVoters": "The District 7 trustee is one of the elected members governing Box Elder School District, so the office affects school policies and how local school taxes support district programs and facilities. Board decisions are collective; a single trustee represents the district area but does not independently manage schools.",
+  "candidateIds": [
+   "karen-cronin",
+   "tara-tonioli"
+  ],
+  "issueIds": [
+   "property-tax-increase-and-budget",
+   "facilities-and-school-configuration",
+   "secondary-grading-and-graduation",
+   "teacher-pay-and-workplace-support",
+   "phones-and-state-testing"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "commission-a",
+  "office": "Box Elder County Commission Seat A",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 5,
+  "whatOfficeDecides": [
+   "Adopts county ordinances, budgets, and tax levies within county authority.",
+   "Sets county policy and oversees services and departments.",
+   "Makes land-use and development decisions in unincorporated county areas, subject to state law and MIDA jurisdiction."
+  ],
+  "howItAffectsVoters": "The commission sets the county budget and property-tax levy, funds services, and makes land-use and infrastructure decisions. Its Stratos/MIDA resolutions have made public process, water and infrastructure planning, and local oversight immediate questions.",
+  "candidateIds": [
+   "vance-smith",
+   "alan-williams"
+  ],
+  "issueIds": [
+   "stratos-approval-and-oversight",
+   "water-and-resource-planning",
+   "development-tax-and-public-benefit",
+   "county-budget-and-property-taxes"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "commission-b",
+  "office": "Box Elder County Commission Seat B",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 6,
+  "whatOfficeDecides": [
+   "Adopts county ordinances, budgets, and tax levies within county authority.",
+   "Sets county policy and oversees services and departments.",
+   "Makes land-use and development decisions in unincorporated county areas, subject to state law and MIDA jurisdiction."
+  ],
+  "howItAffectsVoters": "The commission sets county budgets and taxes, funds services, and makes land-use and infrastructure decisions. Seat B is unopposed, but its holder will participate in continuing Stratos/MIDA oversight.",
+  "candidateIds": [
+   "nathan-tueller"
+  ],
+  "issueIds": [
+   "stratos-approval-and-oversight",
+   "water-and-resource-planning",
+   "development-tax-and-public-benefit",
+   "county-budget-and-property-taxes"
+  ],
+  "uncontested": true
+ },
+ {
+  "id": "sheriff",
+  "office": "Box Elder County Sheriff",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 7,
+  "whatOfficeDecides": [
+   "Leads county patrol, jail, civil process, search and rescue, and law-enforcement services.",
+   "Oversees county dispatch/communications and coordination with municipal, state, and fire/EMS agencies.",
+   "Manages department staffing, training, policies, equipment, and budget within county appropriations and state law."
+  ],
+  "howItAffectsVoters": "The sheriff leads county law enforcement and jail services and coordinates public safety across a large rural county. Dispatch performance, interagency relationships, department management, and funding are immediate local concerns.",
+  "candidateIds": [
+   "mike-allred",
+   "douglas-christensen",
+   "allan-shinney",
+   "chad-hayman"
+  ],
+  "issueIds": [
+   "dispatch-reliability-and-governance",
+   "sheriff-management-accountability",
+   "public-safety-budget-and-staffing",
+   "critical-incident-and-dispatch-practices"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "clerk",
+  "office": "Box Elder County Clerk",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 8,
+  "whatOfficeDecides": [
+   "Serves as clerk to the county commission and maintains meeting records.",
+   "Administers county elections, prepares voting materials, and reports official results.",
+   "Operates clerk services including marriage licenses, passports, and public-record request intake as assigned by law."
+  ],
+  "howItAffectsVoters": "The clerk administers county elections and preserves commission records, affecting ballot access, accurate election administration, meeting records, and public information. This is unopposed; issues are core office responsibilities, not a documented candidate debate.",
+  "candidateIds": [
+   "marla-young"
+  ],
+  "issueIds": [
+   "election-administration-and-access",
+   "election-transparency-and-records",
+   "election-readiness-and-resources"
+  ],
+  "uncontested": true
+ },
+ {
+  "id": "attorney",
+  "office": "Box Elder County Attorney",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 9,
+  "whatOfficeDecides": [
+   "Directs prosecution of criminal offenses within the office's jurisdiction.",
+   "Assists crime victims and pursues the interests of justice.",
+   "Provides legal advice and review for county government actions, including referendum applications."
+  ],
+  "howItAffectsVoters": "The county attorney prosecutes criminal cases and assists victims; legal advice also affects county decisions and accountability. This is unopposed, and the Stratos referendum ruling made the office's legal-review role visible in 2026.",
+  "candidateIds": [
+   "blair-wardle"
+  ],
+  "issueIds": [
+   "prosecution-and-victim-services",
+   "legal-review-and-independence",
+   "county-legal-risk-and-disclosure"
+  ],
+  "uncontested": true
+ },
+ {
+  "id": "auditor",
+  "office": "Box Elder County Auditor",
+  "district": "Box Elder County",
+  "type": "candidate",
+  "group": "county",
+  "order": 10,
+  "whatOfficeDecides": [
+   "Serves as county budget officer and helps prepare and administer the budget.",
+   "Reviews county bills, accounts, and charges before payment.",
+   "Works with other elected officials to administer property taxes and taxpayer services."
+  ],
+  "howItAffectsVoters": "The auditor reviews county spending, serves as budget officer, and helps administer property taxes, linking the office to financial controls and residents' tax bills. This is unopposed; issues are office oversight and current budget context, not a candidate debate.",
+  "candidateIds": [
+   "shirlene-larsen"
+  ],
+  "issueIds": [
+   "budget-transparency-and-fiscal-control",
+   "property-tax-administration-and-relief",
+   "budget-reserves-and-service-costs",
+   "fraud-and-mismanagement-reporting"
+  ],
+  "uncontested": true
+ },
+ {
+  "id": "amendment-a",
+  "office": "Utah Constitutional Amendment A — publication of proposed constitutional amendments",
+  "district": "Statewide",
+  "type": "amendment",
+  "group": "amendments",
+  "order": 11,
+  "whatOfficeDecides": [
+   "Whether to amend Article XXIII, Section 1 of the Utah Constitution so the method for publishing proposed constitutional amendments is set by state law rather than constitutionally requiring newspaper publication in each county where a newspaper is published.",
+   "Under implementing H.B. 481, approval would require the Lieutenant Governor to publish the full text of proposed constitutional amendments and other legislative ballot questions on the Utah Public Notice Website and Lieutenant Governor website for 60 calendar days immediately before the general election. The amendment does not change the two-thirds legislative proposal threshold or majority-voter approval requirement."
+  ],
+  "howItAffectsVoters": "A For vote replaces the constitutional newspaper-publication rule with a 60-day publication period using a method set by state law; H.B. 481 specifies publication of full text on two government websites. A voter Against vote keeps the current constitutional rule requiring publication in a newspaper in every county where one is published for two months before the election. The 2026 pamphlet says A with H.B. 481 could reduce state costs by up to $1.4 million every two years; this is an estimate and depends on amendment length and newspaper rates.",
+  "candidateIds": [],
+  "issueIds": [
+   "amendment-a-publication-method"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "amendment-b",
+  "office": "Utah Constitutional Amendment B — tax-related statewide citizen initiatives",
+  "district": "Statewide",
+  "type": "amendment",
+  "group": "amendments",
+  "order": 12,
+  "whatOfficeDecides": [
+   "Whether to amend Article VI, Section 1 of the Utah Constitution so certain statewide citizen-initiated laws voted on after November 1, 2026 need at least 60% voter approval to pass.",
+   "The 60% threshold applies if the initiative imposes a new tax, expands an existing tax to additional items or transactions, increases an existing tax rate, or changes a property-tax rate so it decreases less than it would under current law. Other statewide initiatives retain the simple-majority rule; the existing two-thirds threshold for wildlife initiatives remains."
+  ],
+  "howItAffectsVoters": "A For vote makes at least 60% approval necessary for the specified tax-related citizen initiatives; an Against vote keeps the current simple-majority threshold for those initiatives. Supporters argue tax increases should receive broader voter backing and that initiative laws can be difficult to revise; opponents argue the higher threshold gives citizen initiatives a tougher standard than the Legislature faces and weakens a direct-democracy safeguard. The official fiscal analysis says the amendment likely would not materially affect current state revenues or expenditures.",
+  "candidateIds": [],
+  "issueIds": [
+   "amendment-b-tax-initiative-threshold"
+  ],
+  "uncontested": false
+ },
+ {
+  "id": "judicial-retention",
+  "office": "Judicial Retention",
+  "type": "judicial",
+  "group": "judges",
+  "order": 999,
+  "whatOfficeDecides": [
+   "Voters decide whether each judge keeps their seat for another term."
+  ],
+  "howItAffectsVoters": "Retention research is not done yet. See the Utah Judicial Performance Evaluation Commission reports.",
+  "candidateIds": [],
+  "issueIds": []
+ }
+]

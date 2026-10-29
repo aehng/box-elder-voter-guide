@@ -1,0 +1,429 @@
+{
+  "group": "legislature",
+  "contests": [
+    {
+      "id": "ut-senate-1",
+      "office": "Utah State Senate",
+      "district": "Utah Senate District 1 (Box Elder County and parts of Cache and Tooele counties)",
+      "type": "candidate",
+      "whatOfficeDecides": [
+        "Passes, amends, or rejects statewide legislation with the Utah House and governor; state law can also be initiated or referred by voters.",
+        "Votes on the state budget, appropriations, and tax laws.",
+        "The Senate confirms certain gubernatorial appointments and participates in legislative oversight.",
+        "Can amend statewide rules governing public authorities and data-center energy or water policy, but does not personally approve a specific county project such as Stratos."
+      ],
+      "howItAffectsVoters": "The senator votes on state rules and spending that affect local services, schools, water, housing, and taxes. Senate District 1 spans Box Elder County and parts of Cache and Tooele counties, so the office represents a broad mix of rural, agricultural, and growing communities.",
+      "candidates": [
+        {
+          "id": "claudia-bigler",
+          "name": "Claudia Bigler",
+          "party": "Democratic",
+          "incumbent": false,
+          "status": "on ballot",
+          "campaignUrl": null,
+          "bio": "Bigler is a retired choir teacher who taught at Box Elder High School for 24 years. She is also artistic director of the Cache Children?s Choir.",
+          "background": [
+            "Retired Box Elder High School choir teacher",
+            "Artistic director, Cache Children’s Choir"
+          ],
+          "sourceIds": [
+            "src-senate-guide",
+            "src-official-filings"
+          ]
+        },
+        {
+          "id": "scott-sandall",
+          "name": "Scott Sandall",
+          "party": "Republican",
+          "incumbent": true,
+          "status": "on ballot",
+          "campaignUrl": "https://www.votescottsandall.com/",
+          "bio": "Sandall is a rancher in Promontory and has served in the Legislature since 2015, including as a state senator since 2019. His 2026 legislative work included bills on water project management and energy users. He is the incumbent senator for District 1.",
+          "background": [
+            "Rancher",
+            "Utah legislator since 2015; senator since 2019",
+            "2026 bill sponsor on water project management and energy users"
+          ],
+          "sourceIds": [
+            "src-senate-guide",
+            "src-sandall-bills",
+            "src-official-filings",
+            "src-sandall-bills"
+          ]
+        },
+        {
+          "id": "julie-quinlan",
+          "name": "Julie Quinlan",
+          "party": "Forward",
+          "incumbent": false,
+          "status": "on ballot",
+          "campaignUrl": "https://julieq4utah.com/",
+          "bio": "Quinlan studied landscape architecture and is a political newcomer. She says fair voting maps are a central reason she is running. She is the Forward Party candidate for Senate District 1.",
+          "background": [
+            "Studied landscape architecture",
+            "Political newcomer",
+            "Forward Party candidate for District 1"
+          ],
+          "sourceIds": [
+            "src-senate-guide",
+            "src-official-filings"
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "id": "fair-voting-maps",
+          "category": "Government & Elections",
+          "question": "Who should draw Utah's legislative districts, and how should the process ensure fair representation?",
+          "leftLabel": "Independent or voter-led mapmaking",
+          "rightLabel": "Legislative control of maps",
+          "leftPros": [
+            "Can reduce the risk that mapmakers protect incumbents or one party.",
+            "May improve public trust if the process is open and criteria are clear."
+          ],
+          "leftCons": [
+            "An outside process can reduce direct accountability to elected lawmakers.",
+            "Map criteria and implementation still require difficult policy choices."
+          ],
+          "rightPros": [
+            "Elected legislators are accountable to voters for the maps they enact.",
+            "Lawmakers can weigh local communities and practical district boundaries."
+          ],
+          "rightCons": [
+            "Legislators may have incentives to favor their party or incumbents.",
+            "A process seen as partisan can weaken confidence in election outcomes."
+          ],
+          "background": "Utah's legislative maps determine representation for the next decade. The Legislature has constitutional authority over apportionment, and the 2026 campaign debate centers on whether that legislative role produced fair maps.",
+          "whyLive": "Quinlan says fair maps are a reason she is running and accuses Sandall, as chair of a mapmaking committee, of sabotaging the effort; Sandall and Bigler did not answer the Tribune questionnaire. The allegation is attributed to Quinlan, not presented as an independently established finding.",
+          "sourceIds": [
+            "src-senate-guide",
+            "src-ut-constitution"
+          ]
+        },
+        {
+          "id": "water-conservation-and-agriculture",
+          "category": "Water & Land",
+          "question": "How should Utah balance water conservation and Great Salt Lake recovery with agricultural and community water needs?",
+          "leftLabel": "Require broader conservation",
+          "rightLabel": "Protect existing uses and local flexibility",
+          "leftPros": [
+            "Can reduce pressure on rivers and the Great Salt Lake.",
+            "Conservation targets can create incentives for efficient use."
+          ],
+          "leftCons": [
+            "Mandates can impose costs or reduce flexibility for farms and local providers.",
+            "Water savings may require infrastructure investment."
+          ],
+          "rightPros": [
+            "Respects existing water rights and local knowledge.",
+            "Can avoid shifting disproportionate costs to agriculture and rural users."
+          ],
+          "rightCons": [
+            "Voluntary action may not achieve needed basin-wide savings.",
+            "Maintaining current use can leave less water for ecosystems and future growth."
+          ],
+          "background": "Utah lawmakers shape water policy, project funding, and water-rights rules. The district includes agricultural communities and fast-growing areas, making allocation and conservation consequential to voters.",
+          "whyLive": "Quinlan called for other water districts to adopt conservation practices and for statewide voluntary conservation to support the Great Salt Lake and Colorado River. Sandall sponsored a 2026 water-project bill and has an agricultural background; these records make water a live issue, but do not establish a direct candidate disagreement on policy specifics.",
+          "sourceIds": [
+            "src-senate-guide",
+            "src-sandall-bills"
+          ]
+        },
+        {
+          "id": "taxes-and-affordability",
+          "category": "Taxes",
+          "question": "How should Utah address household affordability through tax policy and wages?",
+          "leftLabel": "Higher taxes on wealthy households and wage requirements",
+          "rightLabel": "Lower taxes and fewer mandates",
+          "leftPros": [
+            "Can shift more of the tax burden toward higher-income households.",
+            "Wage requirements may raise earnings for some workers."
+          ],
+          "leftCons": [
+            "Higher taxes or labor mandates may increase costs for businesses or consumers.",
+            "Effects depend on tax design and enforcement."
+          ],
+          "rightPros": [
+            "Lower taxes may leave households and businesses with more disposable income.",
+            "Fewer mandates may reduce compliance costs."
+          ],
+          "rightCons": [
+            "Tax reductions can constrain funding for public services.",
+            "Without wage or tax changes, affordability pressures may persist for lower-paid workers."
+          ],
+          "background": "The Legislature controls state tax law and major spending decisions, which affect household budgets and services. The Tribune asked each candidate how they would respond to affordability concerns.",
+          "whyLive": "Quinlan argued that wealthy people should pay a fairer share and that corporations should pay a living wage; Bigler and Sandall did not answer the Tribune questionnaire. Their nonresponse is not evidence of an opposing position.",
+          "sourceIds": [
+            "src-senate-guide",
+            "src-ut-constitution"
+          ]
+        },
+        {
+          "id": "stratos-data-center-and-mida",
+          "category": "Energy & Environment",
+          "question": "How should Utah regulate large data-center projects and the Military Installation Development Authority (MIDA)?",
+          "leftLabel": "Pause or restrict projects pending study and oversight",
+          "rightLabel": "Allow development with permits and project review",
+          "leftPros": [
+            "Allows more time to assess water, energy, environmental, and public-input concerns.",
+            "Could limit risks from public authorities exercising broad development powers."
+          ],
+          "leftCons": [
+            "May delay investment, jobs, and infrastructure development.",
+            "Additional restrictions can create uncertainty for communities and developers."
+          ],
+          "rightPros": [
+            "Can support investment and infrastructure while using existing permit review.",
+            "Avoids delaying projects before all studies and permits are complete."
+          ],
+          "rightCons": [
+            "Permit-by-permit review may not address cumulative regional impacts.",
+            "Fast-moving approvals can leave residents feeling excluded from consequential decisions."
+          ],
+          "background": "The proposed Stratos project area in western Box Elder County is a large data-center development involving MIDA. County records show the county commission authorized MIDA to create the project area; a state senator can affect governing statutes and policy but does not issue the county-level project approval.",
+          "whyLive": "KSL reported Bigler favored more study and regulation and a provisional no on Stratos until environmental studies and public input, while Quinlan opposed data centers in the Great Salt Lake basin and called for dissolving MIDA. Sandall said he would monitor permits and would consider an interview if the issue required a Senate vote; KSL reported he sponsored 2025 SB 132 on large-load electric service. This is a documented difference in candidate positions, with Sandall?s position attributed to his statement.",
+          "sourceIds": [
+            "src-stratos-candidates",
+            "src-stratos-county",
+            "src-sandall-bills"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ut-house-6",
+      "office": "Utah House of Representatives",
+      "district": "Utah House District 6 (portions of Box Elder and Weber counties)",
+      "type": "candidate",
+      "whatOfficeDecides": [
+        "Passes, amends, or rejects statewide legislation with the Senate and governor; state law can also be initiated or referred by voters.",
+        "Votes on the state budget, appropriations, and tax laws.",
+        "The House considers legislation and participates in legislative oversight; its members serve two-year terms."
+      ],
+      "howItAffectsVoters": "The representative votes on statewide rules and funding that affect housing, water, taxes, schools, and public services in the district. District 6 includes portions of Box Elder and Weber counties. Voters are deciding whether to retain Rob Bishop, who entered the seat through a 2026 special election, or elect challenger James Rich.",
+      "candidates": [
+        {
+          "id": "rob-bishop",
+          "name": "Rob Bishop",
+          "party": "Republican",
+          "incumbent": true,
+          "status": "on ballot",
+          "campaignUrl": "https://www.bishop.vote/",
+          "bio": "Bishop returned to the Utah House in 2026 after Republican delegates selected him to fill the vacancy left by Rep. Matthew Gwynn. He previously served in the Utah Legislature from 1978 to 1994, including two years as House speaker, and represented Utah in Congress for nearly two decades before leaving in 2021. He did not respond to the Salt Lake Tribune's 2026 candidate questionnaire.",
+          "background": [
+            "Utah House member since May 2026 by special election",
+            "Former U.S. representative",
+            "Former Utah legislator and House speaker",
+            "Retired history teacher"
+          ],
+          "sourceIds": [
+            "src-house-guide",
+            "src-official-filings",
+            "src-bishop-committee"
+          ]
+        },
+        {
+          "id": "james-rich",
+          "name": "James Rich",
+          "party": "Forward",
+          "incumbent": false,
+          "status": "on ballot",
+          "campaignUrl": "https://move.forwardwith.us/",
+          "bio": "Rich leads a company providing information-technology consulting and software to businesses. He is the Forward Party candidate for House District 6. In a 2026 Tribune questionnaire, he discussed affordability, tax transparency, agricultural water conservation, starter homes, and government accountability.",
+          "background": [
+            "Technology consulting and software business executive",
+            "Forward Party candidate for District 6"
+          ],
+          "sourceIds": [
+            "src-house-guide",
+            "src-official-filings"
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "id": "starter-housing-and-growth",
+          "category": "Housing & Growth",
+          "question": "Which state tools should be prioritized to improve access to attainable first homes?",
+          "leftLabel": "Prioritize smaller and existing homes",
+          "rightLabel": "Rely on broad market supply and local choice",
+          "leftPros": [
+            "Can focus state programs on homes within reach of first-time buyers.",
+            "May expand options beyond large new single-family construction."
+          ],
+          "leftCons": [
+            "State priorities may not fit every local housing market.",
+            "Targeted programs can require public resources or regulatory changes."
+          ],
+          "rightPros": [
+            "Allows local governments and markets greater flexibility.",
+            "Avoids narrowing policy to particular housing types."
+          ],
+          "rightCons": [
+            "May not address a shortage of homes affordable to first-time buyers.",
+            "Local discretion can produce uneven access across communities."
+          ],
+          "background": "Utah lawmakers can shape housing programs, land-use incentives, and state funding, while local governments retain important land-use authority. Home availability and prices affect the district's growing communities.",
+          "whyLive": "Rich called for state starter-home initiatives prioritizing small-lot homes, townhomes, condos, owner-occupied duplexes, and existing homes. Bishop did not answer the Tribune questionnaire; no opposing Bishop position is documented there.",
+          "sourceIds": [
+            "src-house-guide",
+            "src-ut-constitution"
+          ]
+        },
+        {
+          "id": "farm-water-rights-and-conservation",
+          "category": "Water & Land",
+          "question": "Should Utah change water-forfeiture rules to protect farmers who conserve water?",
+          "leftLabel": "Protect rights when farmers reduce use",
+          "rightLabel": "Keep current forfeiture rules",
+          "leftPros": [
+            "Could reduce the disincentive to conserve irrigation water.",
+            "May support Great Salt Lake and river conservation while preserving farm viability."
+          ],
+          "leftCons": [
+            "Could complicate administration of water rights and measurement of beneficial use.",
+            "May preserve claims to water that otherwise could be available for other users."
+          ],
+          "rightPros": [
+            "Maintains longstanding rules for beneficial use and water allocation.",
+            "May make it easier to address unused claims amid scarcity."
+          ],
+          "rightCons": [
+            "Farmers may fear losing rights when they invest in efficient irrigation or fallow fields.",
+            "Can discourage conservation if reduced use risks a water-right claim."
+          ],
+          "background": "Utah law defines and administers water rights, and the Legislature can amend statutory rules. Farming and water scarcity make the conservation-versus-rights question relevant to Box Elder and Weber communities.",
+          "whyLive": "Rich specifically proposed amending the state's 'use it or lose it' forfeiture rules to protect farmers who lower consumption through irrigation upgrades or field transitions. Bishop did not answer the questionnaire, so it documents Rich's proposal but not a candidate-to-candidate split.",
+          "sourceIds": [
+            "src-house-guide",
+            "src-ut-constitution"
+          ]
+        },
+        {
+          "id": "tax-transparency-and-affordability",
+          "category": "Taxes",
+          "question": "How should lawmakers use tax policy to respond to affordability concerns?",
+          "leftLabel": "Audit levies and reduce taxes where possible",
+          "rightLabel": "Preserve revenue for public services",
+          "leftPros": [
+            "Clearer tax information can help voters identify costs and evaluate changes.",
+            "Targeted reductions may ease household or business burdens."
+          ],
+          "leftCons": [
+            "Tax cuts can reduce funds available for state services.",
+            "Transparency alone does not determine which taxes should change."
+          ],
+          "rightPros": [
+            "Stable revenue supports education, infrastructure, and public services.",
+            "Avoids cutting revenue without identifying service impacts."
+          ],
+          "rightCons": [
+            "Maintaining taxes can leave household affordability concerns unaddressed.",
+            "Complex tax systems can be difficult for voters to understand."
+          ],
+          "background": "The Legislature sets state tax law and approves the budget. Its choices affect both household costs and the funding available for public services.",
+          "whyLive": "Rich said he would seek laws making the tax system transparent and understandable to identify possible tax reductions and economic opportunities. Bishop did not answer the Tribune affordability question, so his position is unknown rather than opposed.",
+          "sourceIds": [
+            "src-house-guide",
+            "src-ut-constitution"
+          ]
+        },
+        {
+          "id": "government-accountability",
+          "category": "Government & Elections",
+          "question": "How should Utah lawmakers respond when voters believe state officials have ignored or overridden public preferences?",
+          "leftLabel": "Expand public checks and transparency",
+          "rightLabel": "Rely on elected officials and existing procedures",
+          "leftPros": [
+            "Can strengthen public confidence and make decisions easier to scrutinize.",
+            "May create more avenues for voters to influence policy."
+          ],
+          "leftCons": [
+            "Additional requirements can slow policymaking.",
+            "Direct voter processes can create implementation and fiscal challenges."
+          ],
+          "rightPros": [
+            "Elected lawmakers can weigh complex policy and competing interests.",
+            "Can allow faster legislative response to changing conditions."
+          ],
+          "rightCons": [
+            "Concentrated power may reduce perceived accountability.",
+            "Voters may feel excluded if decisions are made without meaningful public input."
+          ],
+          "background": "Utah's constitution vests legislative power in the Legislature and also provides for voter initiatives and referenda. The balance between representative lawmaking and direct voter control is a live statewide governance question.",
+          "whyLive": "Rich cited elected officials ignoring or trying to overturn voters' will as a reason for distrust and emphasized listening to constituents. Bishop did not answer the Tribune trust question; the available questionnaire does not establish his view.",
+          "sourceIds": [
+            "src-house-guide",
+            "src-ut-constitution"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-official-filings",
+      "url": "https://vote.utah.gov/2026-candidate-filings/",
+      "title": "2026 Candidate Filings",
+      "publisher": "Utah Lieutenant Governor / Utah Voter Information",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-senate-guide",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/claudia-bigler-scott-sandall-julie/",
+      "title": "Utah Senate District 1: Claudia Bigler, Scott Sandall and Julie Quinlan face off",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-house-guide",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/rob-bishop-faces-james-rich-2026/",
+      "title": "Utah House District 6: Rob Bishop faces off against James Rich",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sandall-bills",
+      "url": "https://le.utah.gov/bills/billSearch.jsp?comm=&disp=all&rep=&sen=SANDASD&sess=2026GS&sub=",
+      "title": "Browse Bills by Legislator: Scott D. Sandall, 2026 General Session",
+      "publisher": "Utah State Legislature",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-ut-constitution",
+      "url": "https://le.utah.gov/xcode/ArticleVI/UC_AVI_1800010118000101.pdf",
+      "title": "Utah Constitution, Article VI: Legislative Department",
+      "publisher": "Utah State Legislature",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bishop-committee",
+      "url": "https://le.utah.gov/committee/committee.jsp?com=APPPED&year=2026",
+      "title": "Public Education Appropriations Subcommittee 2026",
+      "publisher": "Utah State Legislature",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-candidates",
+      "url": "https://www.ksl.com/article/51598787/candidates-seeking-box-elder-senate-seat-weigh-in-on-controversial-stratos-project",
+      "title": "Candidates seeking Box Elder Senate seat weigh in on controversial Stratos project",
+      "publisher": "KSL.com",
+      "published": "2026-07-18",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-county",
+      "url": "https://www.boxeldercountyut.gov/m/newsflash/home/detail/82",
+      "title": "Box Elder County Authorizes MIDA to Initiate Stratos Project",
+      "publisher": "Box Elder County",
+      "published": "2026-05-04",
+      "accessed": "2026-10-28"
+    }
+  ]
+}

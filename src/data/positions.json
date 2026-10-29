@@ -1,0 +1,1311 @@
+[
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "water-great-salt-lake-and-data-center",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby calls Great Salt Lake restoration urgent and supports federal funding for water leases, infrastructure, and phragmites removal, while also saying Utah and local communities should make major water and data-center decisions. The conservation focus leans left, with a clear local-control qualification.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib",
+   "src-und-guide"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "affordability-housing-and-tax-policy",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby proposes renter protections and broader health coverage, and says tariffs have raised household costs. These proposals align strongly with expanding public affordability support and protections.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "federal-deficits-and-spending",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby supports a single-payer health system with a private option and rental-history-based aid, indicating a lean toward protecting or expanding federal programs. The reviewed answers do not give a specific deficit-reduction or revenue plan.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "government-ethics-and-election-reform",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby proposes bans on congressional stock and crypto trading, a five-year lobbying restriction, a judicial ethics code, and limits on corporate and dark-money influence. These are direct ethics-tightening proposals aligned strongly with the left label.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib-debate"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "energy-reliability-and-environment",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby champions solar and lower-emission generation, criticizing the rollback of solar incentives, while acknowledging that other sources will remain necessary. That favors clean-energy investment but is not an all-renewables position.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "water-great-salt-lake-and-data-center",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on water policy; no candidate-specific position was established in the reviewed sources.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "affordability-housing-and-tax-policy",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on affordability; no candidate-specific position was established in the reviewed sources.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "federal-deficits-and-spending",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Cottam did not answer the Salt Lake Tribune?s open-ended question that elicited other candidates? debt and deficit positions; no candidate-specific budget position was established in the reviewed sources.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "government-ethics-and-election-reform",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Cottam did not answer the Salt Lake Tribune?s corruption/accountability questionnaire; no candidate-specific ethics or election-reform position was established in the reviewed sources.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "energy-reliability-and-environment",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The Utah News Dispatch guide lists no response from Cottam to the energy question; no candidate-specific energy position was established in the reviewed sources.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "robert-moesinger",
+  "issueId": "water-great-salt-lake-and-data-center",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Moesinger supports voluntary water leasing, conservation, efficient use, and federal assistance for Great Salt Lake restoration, but says decisions should remain close to watersheds and communities and that federal action should augment rather than dictate local policy. This is a conservation-leaning position with local-control limits.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "robert-moesinger",
+  "issueId": "affordability-housing-and-tax-policy",
+  "position": 0,
+  "evidenceType": "explicit-statement",
+  "summary": "Moesinger says there is no single ideological answer: he supports reducing barriers and expanding housing supply, infrastructure investment, and targeted assistance. That is a documented mix of supply-side changes and public support.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "robert-moesinger",
+  "issueId": "federal-deficits-and-spending",
+  "position": 0,
+  "evidenceType": "explicit-statement",
+  "summary": "Moesinger calls for responsible fiscal policy while also supporting targeted family assistance and public infrastructure investment. The combination is mixed rather than a clear call either to expand broad programs/revenue or to prioritize spending cuts and tax relief.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib",
+   "src-und-guide",
+   "src-moesinger"
+  ],
+  "candidateId": "robert-moesinger",
+  "issueId": "government-ethics-and-election-reform",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Moesinger?s central reform proposal is ranked-choice voting in multi-member House districts to enable multiparty representation. This is a direct, strong fit with the left label?s broader-representation reforms.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "robert-moesinger",
+  "issueId": "energy-reliability-and-environment",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Moesinger supports a diverse portfolio including nuclear, gas, existing fossil generation, and renewables; he also favors streamlining slow permitting and retaining reliable capacity while requiring environmental safeguards. The all-source and reliability emphasis leans right, with significant environmental qualifications.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "water-great-salt-lake-and-data-center",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Moore emphasizes water infrastructure for a growing population, federal project funding, and locally or state-led solutions, while also supporting Great Salt Lake restoration and conservation. The growth and infrastructure focus gives this a modest right lean despite his lake-restoration commitments.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "affordability-housing-and-tax-policy",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Moore advocates tax relief, lower regulatory costs, higher wages, and more housing construction, aligning strongly with the right label. He also cites federal anti-fraud measures and housing legislation.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib",
+   "src-house-roll190",
+   "src-hr1"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "federal-deficits-and-spending",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Moore says deficit reduction, budget reform, stable programs, and less fraud and waste are priorities, aligning with spending restraint and tax relief. Historical context: he voted yea on final passage of H.R. 1 in 2025, a tax-and-spending package; that vote is relevant but does not by itself establish the bill?s net deficit effect.",
+  "date": "2026-10-12",
+  "historical": true
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "government-ethics-and-election-reform",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Moore says he backed the Stop Insider Trading Act, proposed limits on election and government-related prediction-market betting, and supports anti-fraud enforcement. These are documented ethics-tightening measures; the reviewed responses do not establish a position on broader representation reforms.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-und-guide",
+   "src-ratepayer-vote"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "energy-reliability-and-environment",
+  "position": 2,
+  "evidenceType": "recorded-vote",
+  "summary": "Moore advocates all-source power, faster permitting, and reliable baseload generation. He also voted yea on H.R. 9340, the Ratepayer Protection Act, and says data centers should pay their own power-system costs; this strongly aligns with the right label.",
+  "date": "2026-09-16",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "water-great-salt-lake-and-data-center",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen calls the Box Elder data center?s water demand a major concern, questions whether that is an appropriate use, and urges protection of water for basic needs. His comments support scrutinizing water-intensive development, though his answer emphasizes water rights and Colorado River allocations rather than Great Salt Lake restoration.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "affordability-housing-and-tax-policy",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen links household costs to federal debt and spending and pledges to freeze year-over-year spending growth and oppose debt-limit increases and annual deficit spending. That leans toward fiscal restraint, though he gives no specific housing or tax-relief proposal.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "federal-deficits-and-spending",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen calls the national debt unsustainable and says he would freeze spending growth, oppose debt-limit increases, and avoid annual deficit spending. Those are direct proposals aligned strongly with the right label.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-sltrib"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "government-ethics-and-election-reform",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Bowen described the Box Elder data-center approval as an example of corruption, but the reviewed sources do not establish a specific federal ethics or election-system reform proposal from him, so no directional position is assigned.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "energy-reliability-and-environment",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen supports an all-of-the-above energy mix including fossil fuels, nuclear, hydro, solar, wind, and geothermal, and opposes federal subsidies that favor particular sources. He emphasizes abundant, reliable, and affordable supply, matching the right label strongly.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-senate-guide"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "fair-voting-maps",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No specific position on who should draw Utah's legislative maps was found in the reviewed sources. Bigler did not respond to the Salt Lake Tribune questionnaire; that nonresponse is not treated as opposition.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-senate-guide",
+   "src-stratos-candidates"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "water-conservation-and-agriculture",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No specific position balancing Great Salt Lake or Colorado River conservation with agricultural and community water needs was found. Bigler did not respond to the Tribune water question, and her Stratos comments are not used to infer a broader water policy.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-senate-guide"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "taxes-and-affordability",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No specific tax or wage policy was found in the reviewed sources. Bigler did not respond to the Tribune affordability question; that nonresponse is not treated as opposition.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-stratos-candidates"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "stratos-data-center-and-mida",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Bigler said Utah should study and regulate large data-center projects before proceeding, and described her vote on Stratos as a provisional no pending environmental studies and public input. This strongly matches pausing or restricting projects pending study and oversight.",
+  "date": "2026-07-18",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sandall-campaign"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "fair-voting-maps",
+  "position": 2,
+  "evidenceType": "campaign-site",
+  "summary": "Sandall's campaign says he is working to ensure Utah's elected representatives, rather than unelected judges, decide how districts are drawn. That clearly supports legislative control of maps, the +2 end of this issue's scale.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-sandall-issues"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "water-conservation-and-agriculture",
+  "position": 1,
+  "evidenceType": "campaign-site",
+  "summary": "Sandall says water must be divided among municipalities, industry, and agriculture while maintaining current rights, and that water should move where needed while existing rights are protected. This leans toward protecting existing uses and local flexibility, without a specific position against conservation mandates.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sandall-campaign"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "taxes-and-affordability",
+  "position": 2,
+  "evidenceType": "campaign-site",
+  "summary": "Sandall's campaign says he has worked to provide $1.4 billion in tax cuts and intends to keep the tax burden low. That directly matches the lower-tax end of the issue scale.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-stratos-candidates"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "stratos-data-center-and-mida",
+  "position": 1,
+  "evidenceType": "inference",
+  "summary": "In an emailed statement, Sandall said he would monitor the project and ensure all permits were properly vetted. That leans toward allowing development through permit review; he did not state a direct position on dissolving MIDA or give an unconditional approval of Stratos.",
+  "date": "2026-07-18",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-quinlan-campaign"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "fair-voting-maps",
+  "position": -2,
+  "evidenceType": "campaign-site",
+  "summary": "Quinlan's campaign calls for no more gerrymandering and says voters should choose representatives rather than candidates choosing their voters. That strongly supports voter-led or independent mapmaking over legislative control.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-senate-guide"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "water-conservation-and-agriculture",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Quinlan said Utah should require the other four major water districts to follow the conservation practice that returned water to the Great Salt Lake, and urged statewide voluntary conservation. This strongly favors broader conservation; her answer did not specify how costs should be balanced for agriculture.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-senate-guide"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "taxes-and-affordability",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Quinlan said wealthy households should pay their fair share and corporations should pay a living wage so employees rely less on public assistance and taxes can be lower for other Utahns. This strongly matches the higher taxes on wealthy households and wage-requirement end of the scale.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-stratos-candidates"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "stratos-data-center-and-mida",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Quinlan said no additional data centers should be built in areas that drain into the Great Salt Lake and called for dissolving MIDA. This strongly matches restricting projects pending oversight and limiting MIDA's authority.",
+  "date": "2026-07-18",
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-bishop-return",
+   "src-house-guide"
+  ],
+  "candidateId": "rob-bishop",
+  "issueId": "starter-housing-and-growth",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Historical (December 2025 pre-election interview): Bishop said housing affordability remained among the issues he cared about, but no specific proposal prioritizing smaller or existing homes, or relying on broader market supply and local choice, was found. He did not respond to the Tribune’s 2026 questionnaire.",
+  "date": null,
+  "historical": true
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-bishop-return",
+   "src-house-guide",
+   "src-bishop-podcast"
+  ],
+  "candidateId": "rob-bishop",
+  "issueId": "farm-water-rights-and-conservation",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Bishop has spoken generally about protecting northern Utah's water rights, but no specific position on changing forfeiture rules for farmers who voluntarily conserve was found. He did not answer the Tribune's 2026 water question; the broader remarks do not establish a position on this proposal.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-house-guide"
+  ],
+  "candidateId": "rob-bishop",
+  "issueId": "tax-transparency-and-affordability",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No specific position on auditing tax levies, reducing taxes, or preserving revenue for services was found. Bishop did not answer the Tribune's affordability questionnaire, and no tax policy was inferred from his party.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-bishop-return"
+  ],
+  "candidateId": "rob-bishop",
+  "issueId": "government-accountability",
+  "position": 0,
+  "evidenceType": "inference",
+  "summary": "Historical (2025): Bishop was a sponsor of a citizen initiative to repeal voter-approved Proposition 4 and had previously resigned from its redistricting commission over disagreement with proposed maps. Using a ballot initiative gives voters a direct decision, while repealing Proposition 4 would remove a voter-created commission and standards; this is a mixed record rather than a clear tilt toward either end of the issue.",
+  "date": "2025-12-30",
+  "historical": true
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-house-guide"
+  ],
+  "candidateId": "james-rich",
+  "issueId": "starter-housing-and-growth",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Rich proposed state starter-home initiatives prioritizing small-lot houses, townhomes, condos, owner-occupied duplexes, and existing homes, rather than only new construction. This directly matches prioritizing smaller and existing homes.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-house-guide"
+  ],
+  "candidateId": "james-rich",
+  "issueId": "farm-water-rights-and-conservation",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Rich proposed amending Utah's 'use it or lose it' forfeiture rules to protect farmers' underlying water rights when they lower consumption through irrigation upgrades or changing fields. This directly matches protecting rights when farmers reduce use.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-house-guide"
+  ],
+  "candidateId": "james-rich",
+  "issueId": "tax-transparency-and-affordability",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Rich said he wants laws making the tax system transparent and understandable so problem areas can be identified for possible tax reductions and economic opportunities. This directly matches auditing levies and reducing taxes where possible.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-house-guide"
+  ],
+  "candidateId": "james-rich",
+  "issueId": "government-accountability",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Rich said state officials have ignored or tried to overturn voters' will and that he prioritizes listening to all people. This leans toward greater public voice and accountability, though he did not name a specific new check or transparency law.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-earl-ufa-vote"
+  ],
+  "candidateId": "jennie-earl",
+  "issueId": "utah-fits-all-public-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Earl did not respond to The Salt Lake Tribune's 2026 question about Utah Fits All. A 2023 board vote on scholarship appeals rules is procedural and does not establish her position on maintaining or ending the program.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-earl-sensitive-rule-vote",
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "jennie-earl",
+  "issueId": "sensitive-materials-removal",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "In 2024 Earl moved to amend and voted for USBE Rule R277-628 on sensitive materials, which established statewide removal procedures. This leans toward consistent statewide application, although the board approved the rule unanimously and Earl did not answer the Tribune's 2026 survey question.",
+  "date": "2024-06-07",
+  "historical": true
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "jennie-earl",
+  "issueId": "school-immigration-enforcement",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Earl did not respond to the Tribune's question about immigration enforcement at schools; no stance is inferred.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "jennie-earl",
+  "issueId": "third-grade-reading-retention",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Earl did not respond to the Tribune's question about third-grade retention; no stance is inferred.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-earl-device-vote",
+   "src-usbe-device-rule",
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "jennie-earl",
+  "issueId": "bell-to-bell-cellphone-policy",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "Earl voted to approve USBE Rule R277-495, which requires LEAs to maintain electronic-device policies and encourages local participation in setting them. That older rulemaking record leans toward local flexibility; it does not directly answer the Tribune's 2026 question about bell-to-bell bans.",
+  "date": "2024-08-01",
+  "historical": true
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "cathy-callow-heusser",
+  "issueId": "utah-fits-all-public-funding",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Callow-Heusser answered no to using taxpayer money for Utah Fits All, arguing that voucher funds should instead support public schools and citing concerns about progress, enrollment, equitable access, and expenses.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "cathy-callow-heusser",
+  "issueId": "sensitive-materials-removal",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "She called Utah's sensitive-materials law too broad and said statewide removals can go beyond the statutory definition; she urged consideration of district differences and representative local boards.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "cathy-callow-heusser",
+  "issueId": "school-immigration-enforcement",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "She said immigration enforcement has no place in or near schools and that schools should be safe havens for children, matching the position to keep enforcement away from school settings.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "cathy-callow-heusser",
+  "issueId": "third-grade-reading-retention",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "She answered no when asked whether she supports third-grade retention, aligning with an emphasis on interventions and exemptions over retention.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-usbe-survey"
+  ],
+  "candidateId": "cathy-callow-heusser",
+  "issueId": "bell-to-bell-cellphone-policy",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "She answered yes when asked whether she supports Utah's bell-to-bell cellphone bans, matching the position requiring bell-to-bell restrictions.",
+  "date": "2026-10-12",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-besd-tax-minutes"
+  ],
+  "candidateId": "karen-cronin",
+  "issueId": "property-tax-increase-and-budget",
+  "position": -2,
+  "evidenceType": "recorded-vote",
+  "summary": "Cronin voted no on the 2025 tax rate, budget, and salary schedules, and said the nearly 37% tax increase would burden households and undermine voter trust after the bond was rejected. She urged the district to return a different plan to voters.",
+  "date": "2025-08-13",
+  "historical": true
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-cronin-facility"
+  ],
+  "candidateId": "karen-cronin",
+  "issueId": "facilities-and-school-configuration",
+  "position": 0,
+  "evidenceType": "recorded-vote",
+  "summary": "In January 2026, Cronin voted against declaring Foothill Elementary surplus and urged the district to consider reusing buildings, but she also voted to approve negotiations for a new school site. Those records show a mixed approach to reuse and new facilities; they do not address ninth-grade placement.",
+  "date": "2026-01-14",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-cronin-4060"
+  ],
+  "candidateId": "karen-cronin",
+  "issueId": "secondary-grading-and-graduation",
+  "position": -1,
+  "evidenceType": "recorded-vote",
+  "summary": "The official 2024 district minutes report that Cronin opposed Policy 4060 and said students should graduate with their peers if they have 24 credits. This supports some flexibility in graduation timing, but it is a historical vote on graduation requirements and does not establish her view of the newer grading system.",
+  "date": "2024-04-10",
+  "historical": true
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-besd-tax-minutes"
+  ],
+  "candidateId": "karen-cronin",
+  "issueId": "teacher-pay-and-workplace-support",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Cronin voted against a combined package that included the 2025 budget, tax rate, and employee salary schedules, but her recorded explanation focused on the size and process of the tax increase. The bundled vote does not establish her position on teacher compensation or workplace support specifically.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-cronin-device-vote"
+  ],
+  "candidateId": "karen-cronin",
+  "issueId": "phones-and-state-testing",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "In August 2026, Cronin asked how the district's device policy changed student use, heard that devices would be allowed during breaks and lunch, then moved to approve the policy package. This leans toward limited student access; the record does not establish her position on state testing.",
+  "date": "2026-08-12",
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-tonioli-campaign"
+  ],
+  "candidateId": "tara-tonioli",
+  "issueId": "property-tax-increase-and-budget",
+  "position": -1,
+  "evidenceType": "campaign-site",
+  "summary": "Tonioli says she will review where the 37% increase is going, use tax dollars wisely, and lower rates if revenue allows. This leans toward limiting the tax burden, but she does not call for reversing the increase outright.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-tonioli-campaign"
+  ],
+  "candidateId": "tara-tonioli",
+  "issueId": "facilities-and-school-configuration",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Tonioli's campaign page lists questions about building updates and moving ninth grade to high schools, but the page provides no substantive answer to either question; no position is assigned.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-tonioli-campaign"
+  ],
+  "candidateId": "tara-tonioli",
+  "issueId": "secondary-grading-and-graduation",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The campaign page asks about the new secondary grading system but provides no substantive answer on this page; no position is assigned.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-tonioli-campaign"
+  ],
+  "candidateId": "tara-tonioli",
+  "issueId": "teacher-pay-and-workplace-support",
+  "position": -2,
+  "evidenceType": "campaign-site",
+  "summary": "Tonioli says she will advocate for competitive pay, real support for teachers, and a workplace where staff can raise concerns without fear. This directly matches prioritizing compensation and staff support.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-tonioli-campaign"
+  ],
+  "candidateId": "tara-tonioli",
+  "issueId": "phones-and-state-testing",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The campaign page lists questions about bell-to-bell device policy and mandated state testing but provides no substantive answer on either topic; no position is assigned.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-vance-williams-hive"
+  ],
+  "candidateId": "vance-smith",
+  "issueId": "stratos-approval-and-oversight",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "In a June 2026 response about Stratos, Smith said local leadership could not stop this project but could set clear expectations to protect the surrounding community. That leans toward safeguards in this post-approval question, though he did not state a detailed oversight plan.",
+  "date": "2026-06-01",
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "vance-smith",
+  "issueId": "water-and-resource-planning",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "vance-smith",
+  "issueId": "development-tax-and-public-benefit",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-vance-campaign-priorities"
+  ],
+  "candidateId": "vance-smith",
+  "issueId": "county-budget-and-property-taxes",
+  "position": -1,
+  "evidenceType": "campaign-site",
+  "summary": "Smith says he will manage budgets correctly, make smart long-term investments, keep taxes low, and avoid sudden large tax increases. This leans toward limiting tax growth while allowing planned investment.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "alan-williams",
+  "issueId": "stratos-approval-and-oversight",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "alan-williams",
+  "issueId": "water-and-resource-planning",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "alan-williams",
+  "issueId": "development-tax-and-public-benefit",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "alan-williams",
+  "issueId": "county-budget-and-property-taxes",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-upr-stratos"
+  ],
+  "candidateId": "nathan-tueller",
+  "issueId": "stratos-approval-and-oversight",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Tueller said the county should have shared more information about Stratos, but that staying at the table and saying yes was the right call to protect the county. This leans toward negotiated approval while acknowledging a need for better public information.",
+  "date": "2026-06-24",
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "nathan-tueller",
+  "issueId": "water-and-resource-planning",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "nathan-tueller",
+  "issueId": "development-tax-and-public-benefit",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "nathan-tueller",
+  "issueId": "county-budget-and-property-taxes",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sheriff-race"
+  ],
+  "candidateId": "mike-allred",
+  "issueId": "dispatch-reliability-and-governance",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Allred said he had spoken with DPS about getting its dispatch service working and funded, and described his effort as building a bridge between the sheriff office and dispatch. That leans toward rebuilding coordination, without an explicit demand that municipalities return to the shared system.",
+  "date": "2026-10-08",
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-allred-campaign"
+  ],
+  "candidateId": "mike-allred",
+  "issueId": "sheriff-management-accountability",
+  "position": 2,
+  "evidenceType": "campaign-site",
+  "summary": "Allred proposes internal administrative meetings, staff briefings, clearer standards, accountability, and leadership-led changes, including cleaning house if needed. His plan relies on internal management reform rather than an independent outside review.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-allred-campaign"
+  ],
+  "candidateId": "mike-allred",
+  "issueId": "public-safety-budget-and-staffing",
+  "position": 0,
+  "evidenceType": "campaign-site",
+  "summary": "Allred says deputies need training, tools, and resources, while also promising to use tax dollars wisely, streamline operations, and balance workloads. The statement documents both capacity investment and cost control.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-allred-campaign"
+  ],
+  "candidateId": "mike-allred",
+  "issueId": "critical-incident-and-dispatch-practices",
+  "position": 1,
+  "evidenceType": "campaign-site",
+  "summary": "Allred calls for active-shooter training for patrol deputies and says staff should be prepared before a crisis. This favors agency-led readiness and improvement; he does not propose independent incident review in the cited statement.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "douglas-christensen",
+  "issueId": "dispatch-reliability-and-governance",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-sheriff-race"
+  ],
+  "candidateId": "douglas-christensen",
+  "issueId": "sheriff-management-accountability",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Christensen said he wants to work more closely with deputies and the community to identify positive changes, while noting that the office does a good job and can improve. This modestly favors internal, collaborative improvement over a separate independent review.",
+  "date": "2026-10-08",
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "douglas-christensen",
+  "issueId": "public-safety-budget-and-staffing",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "douglas-christensen",
+  "issueId": "critical-incident-and-dispatch-practices",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "allan-shinney",
+  "issueId": "dispatch-reliability-and-governance",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-shinney-campaign",
+   "src-sheriff-race"
+  ],
+  "candidateId": "allan-shinney",
+  "issueId": "sheriff-management-accountability",
+  "position": 1,
+  "evidenceType": "campaign-site",
+  "summary": "Shinney says he will personally act on issues, rebuild department culture, lead by example, and hold himself to a higher standard; he also said he would clean house if needed. Taken together, this favors sheriff-led internal improvement over an independent outside review.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-shinney-campaign"
+  ],
+  "candidateId": "allan-shinney",
+  "issueId": "public-safety-budget-and-staffing",
+  "position": -2,
+  "evidenceType": "campaign-site",
+  "summary": "Shinney says he would operate within budget and seek to reduce it, buy only needed equipment, and reassign work to non-sworn support staff; he says this approach saved funds while statistics increased. This strongly aligns with cost control and efficiency.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "allan-shinney",
+  "issueId": "critical-incident-and-dispatch-practices",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "chad-hayman",
+  "issueId": "dispatch-reliability-and-governance",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "chad-hayman",
+  "issueId": "sheriff-management-accountability",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "chad-hayman",
+  "issueId": "public-safety-budget-and-staffing",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "chad-hayman",
+  "issueId": "critical-incident-and-dispatch-practices",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "marla-young",
+  "issueId": "election-administration-and-access",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "marla-young",
+  "issueId": "election-transparency-and-records",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "marla-young",
+  "issueId": "election-readiness-and-resources",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-wardle-victims-council"
+  ],
+  "candidateId": "blair-wardle",
+  "issueId": "prosecution-and-victim-services",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "In a 2023 Utah Crime Victims Council biography, Wardle said working with victims was at the top of the reasons he valued prosecution. This supports the issue’s victim-support end, though it does not set a charging standard or address fair-case review.",
+  "date": null,
+  "historical": true
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "blair-wardle",
+  "issueId": "legal-review-and-independence",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "blair-wardle",
+  "issueId": "county-legal-risk-and-disclosure",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "shirlene-larsen",
+  "issueId": "budget-transparency-and-fiscal-control",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "shirlene-larsen",
+  "issueId": "property-tax-administration-and-relief",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "shirlene-larsen",
+  "issueId": "budget-reserves-and-service-costs",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "shirlene-larsen",
+  "issueId": "fraud-and-mismanagement-reporting",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
+  "date": null,
+  "historical": false
+ }
+]

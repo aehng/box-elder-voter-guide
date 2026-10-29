@@ -1,0 +1,582 @@
+{
+  "group": "education",
+  "contests": [
+    {
+      "id": "usbe-1",
+      "office": "Utah State Board of Education, District 1",
+      "district": "Box Elder, Cache, Morgan, and Rich counties and part of Summit County",
+      "type": "candidate",
+      "whatOfficeDecides": [
+        "Exercises statewide general supervision of public education and adopts core standards, educator licensing policies, graduation requirements, and administrative rules.",
+        "Approves policies and oversees distribution of state and federal education funds to districts and charter schools; appoints the state superintendent.",
+        "Reviews appeals and statewide compliance matters under applicable education laws and rules."
+      ],
+      "howItAffectsVoters": "The board shapes statewide learning standards, school rules, educator requirements, and how public education programs are administered. A District 1 member represents communities across five northern Utah counties, while many major education funding decisions remain subject to the Legislature.",
+      "candidates": [
+        {
+          "id": "jennie-earl",
+          "name": "Jennie Earl",
+          "party": "Republican",
+          "incumbent": true,
+          "status": "on ballot",
+          "campaignUrl": null,
+          "bio": "Earl has served on the Utah State Board of Education since 2019 and is seeking reelection. She earned a bachelor's degree in elementary education with minors in math and special education from Southern Utah University and a master's degree in education from Weber State University. Her professional experience includes teaching students with special needs and middle school math.",
+          "background": [
+            "Utah State Board of Education District 1 member since 2019",
+            "Former special education and middle school math teacher"
+          ],
+          "sourceIds": [
+            "src-ut-candidates",
+            "src-earl-bio",
+            "src-sltrib-usbe-survey"
+          ]
+        },
+        {
+          "id": "cathy-callow-heusser",
+          "name": "Cathy Callow-Heusser",
+          "party": "Democratic",
+          "incumbent": false,
+          "status": "on ballot",
+          "campaignUrl": null,
+          "bio": "Callow-Heusser is a teacher, university instructor, education consultant, and former Utah State Board of Education staff member, according to her campaign materials as summarized by The Salt Lake Tribune. She is challenging incumbent Jennie Earl for the District 1 seat.",
+          "background": [
+            "Teacher",
+            "University instructor",
+            "Education consultant",
+            "Former USBE staff member"
+          ],
+          "sourceIds": [
+            "src-ut-candidates",
+            "src-sltrib-usbe-survey"
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "id": "utah-fits-all-public-funding",
+          "category": "Education",
+          "question": "Should Utah continue directing public funds to the Utah Fits All education savings account for private-school and homeschool expenses?",
+          "leftLabel": "End or limit the program and prioritize public schools",
+          "rightLabel": "Maintain the program as a family education choice",
+          "leftPros": [
+            "Keeps more public revenue available to district and charter schools serving all students.",
+            "Avoids public subsidy of private education providers that may set their own admissions rules."
+          ],
+          "leftCons": [
+            "Reduces options for families whose needs are not met by their assigned public school.",
+            "Could limit support for eligible students who rely on the scholarship for an alternative setting."
+          ],
+          "rightPros": [
+            "Gives families additional flexibility to choose educational services or settings.",
+            "Can support students whose circumstances call for a nontraditional learning arrangement."
+          ],
+          "rightCons": [
+            "Directs public dollars to expenses outside traditional public schools.",
+            "Raises oversight and equitable-access questions because private schools can apply selective admissions."
+          ],
+          "background": "Utah Fits All provides eligible K-12 students up to $8,000 through an education savings account for approved expenses. Statewide policy, program administration, and funding are shaped by statute and state agencies, so the board's role is not sole control of the program.",
+          "whyLive": "The Tribune asked both District 1 candidates whether they support taxpayer funding for Utah Fits All. Callow-Heusser answered no, arguing funds should support public schools; Earl did not respond by the paper's deadline, which is not evidence of her position. Earl's 2023 board record also shows support for a motion to approve Utah Fits All scholarship appeals rules, a procedural vote rather than a direct vote on the program's existence.",
+          "sourceIds": [
+            "src-sltrib-usbe-survey",
+            "src-ufa",
+            "src-earl-ufa-vote"
+          ]
+        },
+        {
+          "id": "sensitive-materials-removal",
+          "category": "Education",
+          "question": "How should Utah apply its statewide sensitive-materials rules when reviewing books and other school materials?",
+          "leftLabel": "Narrow statewide removals and preserve local review",
+          "rightLabel": "Apply statewide removal rules consistently across districts",
+          "leftPros": [
+            "Allows local boards and communities to account for context and student age.",
+            "May reduce removals of materials that some families consider appropriate and educational."
+          ],
+          "leftCons": [
+            "Can produce different access rules between districts.",
+            "May make statewide enforcement less uniform and increase repeated local disputes."
+          ],
+          "rightPros": [
+            "Creates a consistent statewide floor for restricted material.",
+            "May reassure families seeking predictable restrictions across schools."
+          ],
+          "rightCons": [
+            "Can remove titles statewide based on one challenge or appeal.",
+            "May override local review and reduce access to books used for instruction or independent reading."
+          ],
+          "background": "Utah law and State Board rules establish processes for reviewing and removing sensitive materials from public schools, including an appeal path to USBE. In 2026, statewide removals and local challenges remain active matters of public debate.",
+          "whyLive": "The Tribune's 2026 survey asked both candidates about the law. Callow-Heusser said it is too broad and that local differences and board representation should be considered; Earl did not respond by deadline. USBE has recently reviewed an appeal of a local decision, showing the issue reaches the state board's responsibilities.",
+          "sourceIds": [
+            "src-sltrib-usbe-survey",
+            "src-usbe-appeal",
+            "src-sensitive-rule"
+          ]
+        },
+        {
+          "id": "school-immigration-enforcement",
+          "category": "Education",
+          "question": "What role, if any, should immigration enforcement have in or near schools?",
+          "leftLabel": "Keep enforcement away from school settings",
+          "rightLabel": "Allow enforcement consistent with law and agency protocols",
+          "leftPros": [
+            "May help students feel safe attending school and limit disruption to learning.",
+            "Can reduce fear and absenteeism among students affected by enforcement activity."
+          ],
+          "leftCons": [
+            "May complicate execution of lawful enforcement actions in urgent situations.",
+            "Schools still need clear protocols for responding to legal orders and emergencies."
+          ],
+          "rightPros": [
+            "Recognizes that schools must comply with valid legal requirements.",
+            "Provides room for consistent protocols with law-enforcement agencies."
+          ],
+          "rightCons": [
+            "Enforcement near schools may create fear, trauma, or absenteeism among students.",
+            "Could disrupt classrooms and weaken trust between families and schools."
+          ],
+          "background": "Schools must balance student safety and attendance with legal obligations and operational protocols. The State Board's statewide policies can influence school guidance, while districts implement procedures locally.",
+          "whyLive": "The Tribune included this question in its 2026 USBE candidate survey. Callow-Heusser said enforcement has no place in or near schools; Earl did not respond by deadline, so her position is unknown.",
+          "sourceIds": [
+            "src-sltrib-usbe-survey",
+            "src-usbe-role"
+          ]
+        },
+        {
+          "id": "third-grade-reading-retention",
+          "category": "Education",
+          "question": "How should Utah implement third-grade retention for students who do not meet reading benchmarks, beginning in 2029–30?",
+          "leftLabel": "Emphasize intervention and exemptions over retention",
+          "rightLabel": "Use retention as a required reading intervention when benchmarks are missed",
+          "leftPros": [
+            "Avoids making a single grade-level retention decision the default response to reading difficulty.",
+            "Keeps students with age peers while focusing on targeted instruction and support."
+          ],
+          "leftCons": [
+            "Students may advance without reaching the reading level needed for later coursework.",
+            "Intervention may be inconsistent if schools lack capacity or effective support."
+          ],
+          "rightPros": [
+            "Creates a clear statewide accountability trigger for students below benchmark.",
+            "May provide more time for intensive reading support before students move to later grades."
+          ],
+          "rightCons": [
+            "Retention can carry social and emotional costs and may not address underlying needs by itself.",
+            "Implementation requires staffing, exemptions, appeals, and individualized support."
+          ],
+          "background": "Utah SB 241, enacted in 2026, sets an 80% third-grade reading proficiency goal by 2030 and provides for third-grade retention when benchmarks are missed, subject to statutory good-cause exceptions. The law begins applying this retention requirement in the 2029–30 school year.",
+          "whyLive": "The Tribune asked the candidates directly about the retention proposal. Callow-Heusser answered no; Earl did not respond by deadline, which does not establish opposition or support. The Board will have implementation and oversight responsibilities under the new statewide literacy framework.",
+          "sourceIds": [
+            "src-sltrib-usbe-survey",
+            "src-sb241",
+            "src-usbe-literacy"
+          ]
+        },
+        {
+          "id": "bell-to-bell-cellphone-policy",
+          "category": "Education",
+          "question": "Should Utah require students to keep personal cellphones away throughout the school day?",
+          "leftLabel": "Require bell-to-bell restriction",
+          "rightLabel": "Allow local flexibility and limited student access",
+          "leftPros": [
+            "May reduce classroom distraction and nonacademic screen use.",
+            "Can create a consistent expectation for students and staff."
+          ],
+          "leftCons": [
+            "Can limit family contact and access to devices needed for some students.",
+            "Enforcement can consume staff time and require exceptions for individual needs."
+          ],
+          "rightPros": [
+            "Lets districts tailor rules to age, school context, and student needs.",
+            "Preserves access for family communication and assistive or instructional uses."
+          ],
+          "rightCons": [
+            "Different rules can confuse families and students across schools.",
+            "Permissive use may contribute to distraction or cyberbullying during the school day."
+          ],
+          "background": "Utah's rules and local policies govern student electronic-device use in schools. The practical balance between limiting distraction and preserving appropriate access remains a school-policy question.",
+          "whyLive": "The Tribune asked both District 1 candidates whether they support Utah's bell-to-bell cellphone bans. Callow-Heusser answered yes; Earl did not respond by the deadline, and no position is inferred for her.",
+          "sourceIds": [
+            "src-sltrib-usbe-survey",
+            "src-usbe-device-rule"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "besd-7",
+      "office": "Box Elder School District Board of Education, District 7",
+      "district": "Box Elder School District election District 7",
+      "type": "candidate",
+      "whatOfficeDecides": [
+        "Sets district policy and adopts the district budget and tax rates, subject to state law and the public budget and truth-in-taxation processes.",
+        "Delegates day-to-day district management to the superintendent and monitors district goals, finances, and policy compliance.",
+        "Makes districtwide decisions about facilities, school configuration, curriculum policies, student rules, and other major educational priorities."
+      ],
+      "howItAffectsVoters": "The District 7 trustee is one of the elected members governing Box Elder School District, so the office affects school policies and how local school taxes support district programs and facilities. Board decisions are collective; a single trustee represents the district area but does not independently manage schools.",
+      "candidates": [
+        {
+          "id": "karen-cronin",
+          "name": "Karen Cronin",
+          "party": "Nonpartisan",
+          "incumbent": true,
+          "status": "on ballot",
+          "campaignUrl": null,
+          "bio": "Cronin is the incumbent District 7 trustee and has served on the Box Elder School District board since 2019. Board minutes and local reporting document her participation in district policy, budget, and tax-rate decisions. In 2025 she cast the sole vote against the district's adopted 37.2% property-tax increase.",
+          "background": [
+            "Box Elder School District Board District 7 member since 2019",
+            "Voted against the district's 2025 37.2% property-tax increase",
+            "Opposed a 2024 high-school graduation policy change, stating students should graduate with peers if they have 24 credits"
+          ],
+          "sourceIds": [
+            "src-bec-candidates",
+            "src-goodparty-cronin",
+            "src-deseret-tax",
+            "src-besd-4060-minutes",
+            "src-besd-primary-ballot"
+          ]
+        },
+        {
+          "id": "tara-tonioli",
+          "name": "Tara Tonioli",
+          "party": "Nonpartisan",
+          "incumbent": false,
+          "status": "on ballot",
+          "campaignUrl": "https://taraforschoolboard.com/",
+          "bio": "Tonioli has lived in Box Elder County for more than 20 years and lives in Perry, where she and her husband raised four children. She earned a bachelor's degree in Family, Consumer and Human Development from Utah State University, volunteered in schools and PTA, worked as a reading and progress-monitoring paraprofessional at Lakeview Elementary, earned an Associate Teaching License, and taught kindergarten and second grade.",
+          "background": [
+            "Former Box Elder School District reading and progress-monitoring paraprofessional",
+            "Licensed kindergarten and second-grade teacher",
+            "Longtime school volunteer and PTA member"
+          ],
+          "sourceIds": [
+            "src-bec-candidates",
+            "src-tonioli-campaign",
+            "src-besd-primary-ballot"
+          ]
+        }
+      ],
+      "issues": [
+        {
+          "id": "property-tax-increase-and-budget",
+          "category": "Taxes",
+          "question": "How should the district balance property-tax rates with staffing, programs, and long-term school needs?",
+          "leftLabel": "Lower or limit the tax increase and constrain spending",
+          "rightLabel": "Maintain revenue needed for district services and investments",
+          "leftPros": [
+            "Limits added costs for homeowners, farmers, and businesses.",
+            "Pressures the district to demonstrate needs and spending efficiency."
+          ],
+          "leftCons": [
+            "May constrain compensation, programs, or maintenance if other revenue is insufficient.",
+            "Could defer needed investments and shift costs into later years."
+          ],
+          "rightPros": [
+            "Provides local revenue for district services, employee compensation, and planned improvements.",
+            "Can support predictable multiyear budgeting if needs and costs are well documented."
+          ],
+          "rightCons": [
+            "Raises property-tax costs for residents and businesses.",
+            "Can reduce public trust if voters view the increase as insufficiently explained or responsive to prior bond votes."
+          ],
+          "background": "In August 2025, the Box Elder School Board adopted a 37.2% property-tax increase after a prolonged hearing; news reports describe it as following voters' rejection of a school bond. The board controls district tax-rate decisions within state law and truth-in-taxation requirements.",
+          "whyLive": "Cronin cast the lone vote against the 2025 increase and urged the board to respect community input. Tonioli's 2026 campaign says she will scrutinize where the increase is going and lower rates if district revenue allows. This provides documented contrast, although the positions concern different decisions and dates.",
+          "sourceIds": [
+            "src-deseret-tax",
+            "src-besd-tax-minutes",
+            "src-tonioli-campaign"
+          ]
+        },
+        {
+          "id": "facilities-and-school-configuration",
+          "category": "Education",
+          "question": "How should the district prioritize building upgrades and possible school reconfiguration, including moving ninth grade to high schools?",
+          "leftLabel": "Defer major construction and preserve the current grade configuration",
+          "rightLabel": "Invest in facilities and consider moving ninth grade to high schools",
+          "leftPros": [
+            "Avoids large near-term costs and disruption to families.",
+            "Allows more time to validate enrollment projections and alternatives."
+          ],
+          "leftCons": [
+            "May delay needed repairs or capacity improvements.",
+            "Could limit access to high-school courses or CTE pathways for ninth graders."
+          ],
+          "rightPros": [
+            "Can address aging facilities and long-term enrollment needs.",
+            "May give ninth graders earlier access to high-school coursework, counselors, and CTE pathways."
+          ],
+          "rightCons": [
+            "Requires capital spending and may place pressure on property taxes.",
+            "Changes school transitions and could increase crowding or transportation demands."
+          ],
+          "background": "The district has discussed facilities planning and ninth-grade placement in the context of long-range building needs and school programming. These decisions are district board matters and are connected to the 2024 bond defeat and subsequent 2025 tax-rate debate.",
+          "whyLive": "Tonioli's campaign explicitly raises whether buildings need updating and whether ninth grade should move to high school. The 2025 tax increase followed the district's unsuccessful bond effort. The available sources establish these as active issues; they do not establish Cronin's overall position on each facilities or grade-configuration proposal.",
+          "sourceIds": [
+            "src-tonioli-campaign",
+            "src-ksl-tax",
+            "src-deseret-tax",
+            "src-board-handbook"
+          ]
+        },
+        {
+          "id": "secondary-grading-and-graduation",
+          "category": "Education",
+          "question": "How should the district balance consistent secondary grading and graduation standards with flexibility for individual students?",
+          "leftLabel": "Use flexible, locally tailored grading and graduation pathways",
+          "rightLabel": "Use consistent districtwide standards and credit requirements",
+          "leftPros": [
+            "Allows teachers and schools to adapt to different courses and student needs.",
+            "Can accommodate students who demonstrate learning in different ways."
+          ],
+          "leftCons": [
+            "May create uneven expectations among schools or courses.",
+            "Can make progress and graduation readiness harder for families to compare."
+          ],
+          "rightPros": [
+            "Makes expectations more consistent across secondary schools.",
+            "Can make credit accumulation and graduation planning clearer."
+          ],
+          "rightCons": [
+            "May reduce discretion for teachers and students facing unusual circumstances.",
+            "A strict credit or grading framework can complicate timely graduation for students who need alternate pathways."
+          ],
+          "background": "District boards set policy for local grading and graduation requirements within state standards. Box Elder's 2024 policy review included high-school graduation requirements, and the district has introduced a new secondary grading system discussed by the 2026 District 7 challenger.",
+          "whyLive": "Tonioli's campaign lists the new secondary grading system as a voter question. In 2024 minutes, Cronin opposed Policy 4060 and said students should graduate with their peers if they have 24 credits. This is a specific historical vote and statement, not a complete account of her views on the current grading system.",
+          "sourceIds": [
+            "src-tonioli-campaign",
+            "src-besd-4060-minutes"
+          ]
+        },
+        {
+          "id": "teacher-pay-and-workplace-support",
+          "category": "Education",
+          "question": "How should district resources and policies support teacher compensation, retention, and staff concerns?",
+          "leftLabel": "Prioritize competitive pay and stronger staff support",
+          "rightLabel": "Balance compensation with other district costs and fiscal limits",
+          "leftPros": [
+            "May help recruit and retain educators and support classroom continuity.",
+            "Can provide staff with clearer support and channels to raise concerns."
+          ],
+          "leftCons": [
+            "Raises recurring costs that compete with facilities and other programs.",
+            "Pay increases alone may not resolve workload, class-size, or working-condition concerns."
+          ],
+          "rightPros": [
+            "Preserves flexibility to fund facilities, programs, and other needs.",
+            "Avoids committing to recurring costs without clear revenue forecasts."
+          ],
+          "rightCons": [
+            "May leave the district less competitive in recruiting and retaining educators.",
+            "Unaddressed workplace concerns can contribute to staff turnover and morale problems."
+          ],
+          "background": "The board adopts the district budget and policies, while the superintendent manages staff and district operations. Compensation and working conditions are recurring budget issues, especially alongside the district's facilities plans and recent tax increase.",
+          "whyLive": "Tonioli's campaign prioritizes competitive pay, staff support, and allowing employees to raise concerns without fear for their jobs. The 2025 district tax proposal included an annual employee-compensation component according to local reporting. No opposing position is attributed to Cronin without a specific statement or vote on those terms.",
+          "sourceIds": [
+            "src-tonioli-campaign",
+            "src-ksl-tax",
+            "src-board-handbook"
+          ]
+        },
+        {
+          "id": "phones-and-state-testing",
+          "category": "Education",
+          "question": "How much should district schools rely on bell-to-bell phone limits and mandated state testing?",
+          "leftLabel": "Use strict phone limits and required testing for consistency",
+          "rightLabel": "Allow more local flexibility in device rules and assessment practices",
+          "leftPros": [
+            "Phone limits can reduce distractions and testing can provide comparable achievement data.",
+            "Consistent rules may make expectations easier for students and staff to understand."
+          ],
+          "leftCons": [
+            "Restrictions can complicate family contact and individual student needs.",
+            "High-stakes or frequent testing can narrow instruction and add stress."
+          ],
+          "rightPros": [
+            "Local flexibility can account for age, course needs, and student circumstances.",
+            "Less testing can protect instructional time and reduce assessment burden."
+          ],
+          "rightCons": [
+            "Different rules may be difficult to enforce consistently.",
+            "Less standardized information may limit comparisons and early identification of learning gaps."
+          ],
+          "background": "Utah and district policies shape school-day device rules and state assessment requirements. The local board can adopt district policy and implementation practices within state requirements, while mandated state tests are not simply optional district decisions.",
+          "whyLive": "Tonioli's campaign explicitly asks for voters' views on bell-to-bell phone rules and mandated state testing. These topics matter to district families and fall within local implementation or policy oversight, but available material does not establish a distinct Cronin position on either issue.",
+          "sourceIds": [
+            "src-tonioli-campaign",
+            "src-besd-device-policy",
+            "src-board-handbook"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-ut-candidates",
+      "url": "https://vote.utah.gov/2026-candidate-filings/",
+      "title": "2026 Candidate Filings",
+      "publisher": "Utah Voter Information",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bec-candidates",
+      "url": "https://www.boxeldercountyut.gov/597/Election-Candidates",
+      "title": "Election Candidates",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-bio",
+      "url": "https://www.schools.utah.gov/board/members/utah/jennieearl",
+      "title": "Jennie Earl",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-usbe-role",
+      "url": "https://www.schools.utah.gov/board/",
+      "title": "Utah State Board of Education (USBE or Board)",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sltrib-usbe-survey",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/incumbent-jennie-earl-faces-cathy/",
+      "title": "Utah State Board of Education District 1: Jennie Earl faces off against Cathy Callow-Heusser",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-ufa",
+      "url": "https://schools.utah.gov/utahfitsallscholarship",
+      "title": "Utah Fits All Scholarship Program",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-earl-ufa-vote",
+      "url": "https://www.schools.utah.gov/board/_board_/_votingrecords_/December%202023%20Voting%20Records.pdf",
+      "title": "December 2023 Voting Records",
+      "publisher": "Utah State Board of Education",
+      "published": "2023-12-07",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-usbe-appeal",
+      "url": "https://schools.utah.gov/board/utah/meetings?mid=2608&tid=1",
+      "title": "Board Meeting Information",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sensitive-rule",
+      "url": "https://schools.utah.gov/adminrules/R277-628",
+      "title": "R277-628. Sensitive Materials",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sb241",
+      "url": "https://le.utah.gov/~2026/bills/static/SB0241.html",
+      "title": "S.B. 241 Early Literacy",
+      "publisher": "Utah State Legislature",
+      "published": "2026-02-06",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-usbe-literacy",
+      "url": "https://schools.utah.gov/curr/englishlanguagearts/",
+      "title": "Language Arts Elementary",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-usbe-device-rule",
+      "url": "https://schools.utah.gov/adminrules/R277-495",
+      "title": "R277-495. Electronic Devices in Public Schools",
+      "publisher": "Utah State Board of Education",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-board-handbook",
+      "url": "https://www.utah.gov/pmn/files/1260405.pdf",
+      "title": "Board of Education Handbook Introduction",
+      "publisher": "Box Elder School District",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-deseret-tax",
+      "url": "https://www.deseret.com/utah/2025/08/14/box-elder-school-district-adopts-372-property-tax-increase/",
+      "title": "Box Elder School District adopts 37.2% property tax increase",
+      "publisher": "Deseret News",
+      "published": "2025-08-14",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-ksl-tax",
+      "url": "https://www.ksl.com/article/51354738/box-elder-school-district-proposes-tax-increase-after-bond-failure",
+      "title": "Box Elder School District proposes tax increase after bond failure",
+      "publisher": "KSL.com",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-besd-tax-minutes",
+      "url": "https://www.utah.gov/pmn/sitemap/notice/1023183.html",
+      "title": "School Board Meeting Minutes",
+      "publisher": "Utah Public Notice Website / Box Elder School District",
+      "published": "2025-08-13",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-besd-4060-minutes",
+      "url": "https://core-docs.s3.us-east-1.amazonaws.com/documents/asset/uploaded_file/2202/besd/4175561/041024.pdf",
+      "title": "Box Elder School District Board Meeting Minutes, April 10, 2024",
+      "publisher": "Box Elder School District",
+      "published": "2024-04-10",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-tonioli-campaign",
+      "url": "https://taraforschoolboard.com/",
+      "title": "Tara Tonioli for Box Elder School Board, District 7",
+      "publisher": "Tara Tonioli campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-goodparty-cronin",
+      "url": "https://goodparty.org/people/karen-cronin-dec3a521",
+      "title": "Karen Cronin — Box Elder School Board - District 7",
+      "publisher": "GoodParty.org",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-besd-device-policy",
+      "url": "https://www.student.besd.net/page/school-board-policies",
+      "title": "Board of Education Policies",
+      "publisher": "Box Elder School District",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-besd-primary-ballot",
+      "url": "https://www.boxeldercountyut.gov/DocumentCenter/View/2160/Nonpartisan-School-Board-District-7-PDF",
+      "title": "2026 Nonpartisan School Board District 7 Primary Ballot",
+      "publisher": "Box Elder County",
+      "published": null,
+      "accessed": "2026-10-28"
+    }
+  ]
+}

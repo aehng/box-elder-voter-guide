@@ -1,0 +1,1355 @@
+[
+ {
+  "id": "water-great-salt-lake-and-data-center",
+  "contestIds": [
+   "us-house-1"
+  ],
+  "category": "Water & Land",
+  "question": "How should Congress support water security, Great Salt Lake restoration, and water-intensive development in northern Utah?",
+  "leftLabel": "Prioritize conservation and lake restoration; scrutinize water-intensive projects",
+  "rightLabel": "Prioritize locally led supply, infrastructure, and growth",
+  "leftPros": [
+   "Can direct attention and funding to lake levels, habitat, and long-term watershed health.",
+   "Can surface water costs and risks before major development is approved."
+  ],
+  "leftCons": [
+   "New limits or review can slow development and constrain local decisions.",
+   "Federal conservation programs may be costly and may not ensure water reaches the lake."
+  ],
+  "rightPros": [
+   "Infrastructure and locally set priorities can support communities, farms, and growth.",
+   "Respects state and local authority over many water decisions."
+  ],
+  "rightCons": [
+   "Local control and supply projects may not resolve basin-wide or interstate depletion.",
+   "Large new users may compete with households, agriculture, and ecological needs."
+  ],
+  "background": "Northern Utah faces drought, variable snowpack, population growth, and Great Salt Lake decline. Federal choices include infrastructure grants, lake restoration funding, interstate coordination, and agency permitting; most water-right and land-use decisions remain state or local matters.",
+  "whyLive": "The candidates' 2026 questionnaires directly address Great Salt Lake funding and the proposed Box Elder data center. Crosby emphasizes lake water leases, invasive-plant removal, and infrastructure; Bowen questions data-center water demand; Moesinger stresses locally driven conservation with federal assistance; Moore cites federal project funding, lake legislation, and state-focused solutions. Cottam supplied no questionnaire answer, so no position is inferred.",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib"
+  ]
+ },
+ {
+  "id": "affordability-housing-and-tax-policy",
+  "contestIds": [
+   "us-house-1"
+  ],
+  "category": "Housing & Growth",
+  "question": "Which federal approach should lead on housing and household affordability?",
+  "leftLabel": "Expand public support and affordability protections",
+  "rightLabel": "Cut taxes and regulation to increase private supply and wages",
+  "leftPros": [
+   "Direct assistance can help households facing immediate housing and health costs.",
+   "Public investment can address infrastructure barriers to building."
+  ],
+  "leftCons": [
+   "Subsidies require public spending and can add complexity or demand pressure where supply is constrained.",
+   "Broader federal programs may not fit local housing markets."
+  ],
+  "rightPros": [
+   "Lower regulatory costs and tax burdens can support construction, hiring, and take-home pay.",
+   "Private development may respond quickly to demand if barriers fall."
+  ],
+  "rightCons": [
+   "Tax cuts reduce revenue and do not guarantee savings reach struggling households.",
+   "Deregulation alone may not make homes affordable or protect renters."
+  ],
+  "background": "Housing costs, inflation, and everyday expenses are prominent in northern Utah's campaign coverage. Congress influences taxes, federal housing finance and assistance, infrastructure grants, and regulation, while zoning and most land-use policy are local or state responsibilities.",
+  "whyLive": "The candidates offered materially different proposals in the 2026 Salt Lake Tribune and Utah News Dispatch guides: Crosby calls for rental-history consideration and broader health coverage and criticizes tariffs; Moesinger combines reducing barriers to construction with targeted assistance; Moore points to tax changes, deregulation, and homebuilding legislation; Bowen stresses deficit restraint as a route to lower inflation. Moore's congressional record is also directly relevant: he voted for H.R. 1, the 2025 reconciliation law, which changed taxes and federal spending (historical vote).",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib",
+   "src-house-roll190",
+   "src-hr1"
+  ]
+ },
+ {
+  "id": "federal-deficits-and-spending",
+  "contestIds": [
+   "us-house-1"
+  ],
+  "category": "Taxes",
+  "question": "How should Congress balance tax relief, federal services, and deficit reduction?",
+  "leftLabel": "Protect or expand federal programs and revenue",
+  "rightLabel": "Reduce spending growth and prioritize tax relief",
+  "leftPros": [
+   "Maintains capacity for health, nutrition, infrastructure, and other federal services.",
+   "Can preserve investment that may prevent higher costs later."
+  ],
+  "leftCons": [
+   "Can require higher taxes or borrowing if spending exceeds revenue.",
+   "Program design may produce waste or weak results without oversight."
+  ],
+  "rightPros": [
+   "Can limit federal borrowing and interest costs.",
+   "Tax relief can increase disposable income and may encourage investment."
+  ],
+  "rightCons": [
+   "Spending cuts can reduce access to programs relied on by vulnerable households and providers.",
+   "Tax reductions without matching savings can increase deficits."
+  ],
+  "background": "Congress controls federal taxes, appropriations, and the debt limit. The 2025 reconciliation law, H.R. 1 (Public Law 119-21), combined tax changes with spending and program changes and was a major recorded vote for Moore; its costs and effects remain central in 2026 campaign debate.",
+  "whyLive": "Bowen and Moore emphasize debt and spending restraint, while Crosby criticizes the 2025 law's healthcare effects and tariffs and proposes other tax and benefit changes. Moesinger calls for responsible fiscal policy without a single ideological solution. Moore voted yea on H.R. 1 final passage (House Roll Call 190, July 3, 2025; historical recorded vote). Cottam did not provide a response in the reviewed questionnaires.",
+  "sourceIds": [
+   "src-sltrib",
+   "src-und-guide",
+   "src-house-roll190",
+   "src-hr1"
+  ]
+ },
+ {
+  "id": "government-ethics-and-election-reform",
+  "contestIds": [
+   "us-house-1"
+  ],
+  "category": "Government & Elections",
+  "question": "What federal reforms should Congress prioritize to improve accountability and political representation?",
+  "leftLabel": "Tighten ethics rules and broaden representation reforms",
+  "rightLabel": "Strengthen oversight and retain current electoral structures",
+  "leftPros": [
+   "Limits conflicts of interest and may improve public trust.",
+   "Ranked-choice and multiparty proposals may give voters more choices and reduce winner-take-all incentives."
+  ],
+  "leftCons": [
+   "New restrictions and election systems may be complex to administer or raise constitutional questions.",
+   "Structural reforms do not guarantee more responsive government."
+  ],
+  "rightPros": [
+   "Existing election rules are familiar and comparatively straightforward to administer.",
+   "Oversight and enforcement can address misconduct without changing representation structures."
+  ],
+  "rightCons": [
+   "Incremental oversight may leave incentives and conflicts largely intact.",
+   "Winner-take-all elections can limit choices for voters outside the major parties."
+  ],
+  "background": "Congress can set ethics and campaign-related rules for federal officeholders, while election administration is shared with states and constitutional constraints apply. This race features an independent candidate whose central proposal is electoral reform, alongside candidates who frame accountability around ethics, oversight, or constitutional limits.",
+  "whyLive": "Moesinger names ranked-choice voting and multi-member House districts as his main campaign objective. Crosby proposes bans on congressional stock trading and lobbying restrictions; Moore cites insider-trading legislation and prediction-market limits; Bowen centers constitutional limits. These are direct differences described in candidate responses to the 2026 Salt Lake Tribune questionnaire. Cottam did not respond.",
+  "sourceIds": [
+   "src-sltrib",
+   "src-und-guide",
+   "src-moesinger"
+  ]
+ },
+ {
+  "id": "energy-reliability-and-environment",
+  "contestIds": [
+   "us-house-1"
+  ],
+  "category": "Energy & Environment",
+  "question": "How should federal policy balance reliable, affordable power with environmental impacts and clean-energy investment?",
+  "leftLabel": "Accelerate clean-energy investment and environmental safeguards",
+  "rightLabel": "Prioritize all-source supply, permitting speed, and reliable baseload power",
+  "leftPros": [
+   "Can reduce pollution and support emerging technologies and efficiency.",
+   "Long-term investment may reduce exposure to fuel-price volatility."
+  ],
+  "leftCons": [
+   "Rapid transition can raise near-term costs or reliability challenges if replacement capacity lags.",
+   "Subsidies and mandates can favor selected technologies and increase federal costs."
+  ],
+  "rightPros": [
+   "Can add dispatchable generation and reduce permitting delays as demand grows.",
+   "An all-source approach can preserve multiple local energy industries."
+  ],
+  "rightCons": [
+   "Expanded fossil fuel use can increase pollution and climate impacts.",
+   "Fast permitting may reduce review time for environmental and community concerns."
+  ],
+  "background": "Federal lawmakers shape energy tax credits, public-land leasing, permitting, infrastructure, and environmental rules. Utah's growing demand and local energy production make reliability, electricity prices, and environmental effects relevant to voters and the district's data-center and industrial development debate.",
+  "whyLive": "The Utah News Dispatch candidate guide includes an energy question. Moore calls for all-source production, faster permitting, and domestic mining; other candidate answers describe different emphasis on technology competition, environmental standards, subsidy restraint, and reliability. The range makes federal energy policy a live issue in this contest; no party-only position is assigned to candidates who did not answer.",
+  "sourceIds": [
+   "src-und-guide"
+  ]
+ },
+ {
+  "id": "fair-voting-maps",
+  "contestIds": [
+   "ut-senate-1"
+  ],
+  "category": "Government & Elections",
+  "question": "Who should draw Utah's legislative districts, and how should the process ensure fair representation?",
+  "leftLabel": "Independent or voter-led mapmaking",
+  "rightLabel": "Legislative control of maps",
+  "leftPros": [
+   "Can reduce the risk that mapmakers protect incumbents or one party.",
+   "May improve public trust if the process is open and criteria are clear."
+  ],
+  "leftCons": [
+   "An outside process can reduce direct accountability to elected lawmakers.",
+   "Map criteria and implementation still require difficult policy choices."
+  ],
+  "rightPros": [
+   "Elected legislators are accountable to voters for the maps they enact.",
+   "Lawmakers can weigh local communities and practical district boundaries."
+  ],
+  "rightCons": [
+   "Legislators may have incentives to favor their party or incumbents.",
+   "A process seen as partisan can weaken confidence in election outcomes."
+  ],
+  "background": "Utah's legislative maps determine representation for the next decade. The Legislature has constitutional authority over apportionment, and the 2026 campaign debate centers on whether that legislative role produced fair maps.",
+  "whyLive": "Quinlan says fair maps are a reason she is running and accuses Sandall, as chair of a mapmaking committee, of sabotaging the effort; Sandall and Bigler did not answer the Tribune questionnaire. The allegation is attributed to Quinlan, not presented as an independently established finding.",
+  "sourceIds": [
+   "src-senate-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "water-conservation-and-agriculture",
+  "contestIds": [
+   "ut-senate-1"
+  ],
+  "category": "Water & Land",
+  "question": "How should Utah balance water conservation and Great Salt Lake recovery with agricultural and community water needs?",
+  "leftLabel": "Require broader conservation",
+  "rightLabel": "Protect existing uses and local flexibility",
+  "leftPros": [
+   "Can reduce pressure on rivers and the Great Salt Lake.",
+   "Conservation targets can create incentives for efficient use."
+  ],
+  "leftCons": [
+   "Mandates can impose costs or reduce flexibility for farms and local providers.",
+   "Water savings may require infrastructure investment."
+  ],
+  "rightPros": [
+   "Respects existing water rights and local knowledge.",
+   "Can avoid shifting disproportionate costs to agriculture and rural users."
+  ],
+  "rightCons": [
+   "Voluntary action may not achieve needed basin-wide savings.",
+   "Maintaining current use can leave less water for ecosystems and future growth."
+  ],
+  "background": "Utah lawmakers shape water policy, project funding, and water-rights rules. The district includes agricultural communities and fast-growing areas, making allocation and conservation consequential to voters.",
+  "whyLive": "Quinlan called for other water districts to adopt conservation practices and for statewide voluntary conservation to support the Great Salt Lake and Colorado River. Sandall sponsored a 2026 water-project bill and has an agricultural background; these records make water a live issue, but do not establish a direct candidate disagreement on policy specifics.",
+  "sourceIds": [
+   "src-senate-guide",
+   "src-sandall-bills"
+  ]
+ },
+ {
+  "id": "taxes-and-affordability",
+  "contestIds": [
+   "ut-senate-1"
+  ],
+  "category": "Taxes",
+  "question": "How should Utah address household affordability through tax policy and wages?",
+  "leftLabel": "Higher taxes on wealthy households and wage requirements",
+  "rightLabel": "Lower taxes and fewer mandates",
+  "leftPros": [
+   "Can shift more of the tax burden toward higher-income households.",
+   "Wage requirements may raise earnings for some workers."
+  ],
+  "leftCons": [
+   "Higher taxes or labor mandates may increase costs for businesses or consumers.",
+   "Effects depend on tax design and enforcement."
+  ],
+  "rightPros": [
+   "Lower taxes may leave households and businesses with more disposable income.",
+   "Fewer mandates may reduce compliance costs."
+  ],
+  "rightCons": [
+   "Tax reductions can constrain funding for public services.",
+   "Without wage or tax changes, affordability pressures may persist for lower-paid workers."
+  ],
+  "background": "The Legislature controls state tax law and major spending decisions, which affect household budgets and services. The Tribune asked each candidate how they would respond to affordability concerns.",
+  "whyLive": "Quinlan argued that wealthy people should pay a fairer share and that corporations should pay a living wage; Bigler and Sandall did not answer the Tribune questionnaire. Their nonresponse is not evidence of an opposing position.",
+  "sourceIds": [
+   "src-senate-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "stratos-data-center-and-mida",
+  "contestIds": [
+   "ut-senate-1"
+  ],
+  "category": "Energy & Environment",
+  "question": "How should Utah regulate large data-center projects and the Military Installation Development Authority (MIDA)?",
+  "leftLabel": "Pause or restrict projects pending study and oversight",
+  "rightLabel": "Allow development with permits and project review",
+  "leftPros": [
+   "Allows more time to assess water, energy, environmental, and public-input concerns.",
+   "Could limit risks from public authorities exercising broad development powers."
+  ],
+  "leftCons": [
+   "May delay investment, jobs, and infrastructure development.",
+   "Additional restrictions can create uncertainty for communities and developers."
+  ],
+  "rightPros": [
+   "Can support investment and infrastructure while using existing permit review.",
+   "Avoids delaying projects before all studies and permits are complete."
+  ],
+  "rightCons": [
+   "Permit-by-permit review may not address cumulative regional impacts.",
+   "Fast-moving approvals can leave residents feeling excluded from consequential decisions."
+  ],
+  "background": "The proposed Stratos project area in western Box Elder County is a large data-center development involving MIDA. County records show the county commission authorized MIDA to create the project area; a state senator can affect governing statutes and policy but does not issue the county-level project approval.",
+  "whyLive": "KSL reported Bigler favored more study and regulation and a provisional no on Stratos until environmental studies and public input, while Quinlan opposed data centers in the Great Salt Lake basin and called for dissolving MIDA. Sandall said he would monitor permits and would consider an interview if the issue required a Senate vote; KSL reported he sponsored 2025 SB 132 on large-load electric service. This is a documented difference in candidate positions, with Sandall?s position attributed to his statement.",
+  "sourceIds": [
+   "src-stratos-candidates",
+   "src-stratos-county",
+   "src-sandall-bills"
+  ]
+ },
+ {
+  "id": "starter-housing-and-growth",
+  "contestIds": [
+   "ut-house-6"
+  ],
+  "category": "Housing & Growth",
+  "question": "Which state tools should be prioritized to improve access to attainable first homes?",
+  "leftLabel": "Prioritize smaller and existing homes",
+  "rightLabel": "Rely on broad market supply and local choice",
+  "leftPros": [
+   "Can focus state programs on homes within reach of first-time buyers.",
+   "May expand options beyond large new single-family construction."
+  ],
+  "leftCons": [
+   "State priorities may not fit every local housing market.",
+   "Targeted programs can require public resources or regulatory changes."
+  ],
+  "rightPros": [
+   "Allows local governments and markets greater flexibility.",
+   "Avoids narrowing policy to particular housing types."
+  ],
+  "rightCons": [
+   "May not address a shortage of homes affordable to first-time buyers.",
+   "Local discretion can produce uneven access across communities."
+  ],
+  "background": "Utah lawmakers can shape housing programs, land-use incentives, and state funding, while local governments retain important land-use authority. Home availability and prices affect the district's growing communities.",
+  "whyLive": "Rich called for state starter-home initiatives prioritizing small-lot homes, townhomes, condos, owner-occupied duplexes, and existing homes. Bishop did not answer the Tribune questionnaire; no opposing Bishop position is documented there.",
+  "sourceIds": [
+   "src-house-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "farm-water-rights-and-conservation",
+  "contestIds": [
+   "ut-house-6"
+  ],
+  "category": "Water & Land",
+  "question": "Should Utah change water-forfeiture rules to protect farmers who conserve water?",
+  "leftLabel": "Protect rights when farmers reduce use",
+  "rightLabel": "Keep current forfeiture rules",
+  "leftPros": [
+   "Could reduce the disincentive to conserve irrigation water.",
+   "May support Great Salt Lake and river conservation while preserving farm viability."
+  ],
+  "leftCons": [
+   "Could complicate administration of water rights and measurement of beneficial use.",
+   "May preserve claims to water that otherwise could be available for other users."
+  ],
+  "rightPros": [
+   "Maintains longstanding rules for beneficial use and water allocation.",
+   "May make it easier to address unused claims amid scarcity."
+  ],
+  "rightCons": [
+   "Farmers may fear losing rights when they invest in efficient irrigation or fallow fields.",
+   "Can discourage conservation if reduced use risks a water-right claim."
+  ],
+  "background": "Utah law defines and administers water rights, and the Legislature can amend statutory rules. Farming and water scarcity make the conservation-versus-rights question relevant to Box Elder and Weber communities.",
+  "whyLive": "Rich specifically proposed amending the state's 'use it or lose it' forfeiture rules to protect farmers who lower consumption through irrigation upgrades or field transitions. Bishop did not answer the questionnaire, so it documents Rich's proposal but not a candidate-to-candidate split.",
+  "sourceIds": [
+   "src-house-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "tax-transparency-and-affordability",
+  "contestIds": [
+   "ut-house-6"
+  ],
+  "category": "Taxes",
+  "question": "How should lawmakers use tax policy to respond to affordability concerns?",
+  "leftLabel": "Audit levies and reduce taxes where possible",
+  "rightLabel": "Preserve revenue for public services",
+  "leftPros": [
+   "Clearer tax information can help voters identify costs and evaluate changes.",
+   "Targeted reductions may ease household or business burdens."
+  ],
+  "leftCons": [
+   "Tax cuts can reduce funds available for state services.",
+   "Transparency alone does not determine which taxes should change."
+  ],
+  "rightPros": [
+   "Stable revenue supports education, infrastructure, and public services.",
+   "Avoids cutting revenue without identifying service impacts."
+  ],
+  "rightCons": [
+   "Maintaining taxes can leave household affordability concerns unaddressed.",
+   "Complex tax systems can be difficult for voters to understand."
+  ],
+  "background": "The Legislature sets state tax law and approves the budget. Its choices affect both household costs and the funding available for public services.",
+  "whyLive": "Rich said he would seek laws making the tax system transparent and understandable to identify possible tax reductions and economic opportunities. Bishop did not answer the Tribune affordability question, so his position is unknown rather than opposed.",
+  "sourceIds": [
+   "src-house-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "government-accountability",
+  "contestIds": [
+   "ut-house-6"
+  ],
+  "category": "Government & Elections",
+  "question": "How should Utah lawmakers respond when voters believe state officials have ignored or overridden public preferences?",
+  "leftLabel": "Expand public checks and transparency",
+  "rightLabel": "Rely on elected officials and existing procedures",
+  "leftPros": [
+   "Can strengthen public confidence and make decisions easier to scrutinize.",
+   "May create more avenues for voters to influence policy."
+  ],
+  "leftCons": [
+   "Additional requirements can slow policymaking.",
+   "Direct voter processes can create implementation and fiscal challenges."
+  ],
+  "rightPros": [
+   "Elected lawmakers can weigh complex policy and competing interests.",
+   "Can allow faster legislative response to changing conditions."
+  ],
+  "rightCons": [
+   "Concentrated power may reduce perceived accountability.",
+   "Voters may feel excluded if decisions are made without meaningful public input."
+  ],
+  "background": "Utah's constitution vests legislative power in the Legislature and also provides for voter initiatives and referenda. The balance between representative lawmaking and direct voter control is a live statewide governance question.",
+  "whyLive": "Rich cited elected officials ignoring or trying to overturn voters' will as a reason for distrust and emphasized listening to constituents. Bishop did not answer the Tribune trust question; the available questionnaire does not establish his view.",
+  "sourceIds": [
+   "src-house-guide",
+   "src-ut-constitution"
+  ]
+ },
+ {
+  "id": "utah-fits-all-public-funding",
+  "contestIds": [
+   "usbe-1"
+  ],
+  "category": "Education",
+  "question": "Should Utah continue directing public funds to the Utah Fits All education savings account for private-school and homeschool expenses?",
+  "leftLabel": "End or limit the program and prioritize public schools",
+  "rightLabel": "Maintain the program as a family education choice",
+  "leftPros": [
+   "Keeps more public revenue available to district and charter schools serving all students.",
+   "Avoids public subsidy of private education providers that may set their own admissions rules."
+  ],
+  "leftCons": [
+   "Reduces options for families whose needs are not met by their assigned public school.",
+   "Could limit support for eligible students who rely on the scholarship for an alternative setting."
+  ],
+  "rightPros": [
+   "Gives families additional flexibility to choose educational services or settings.",
+   "Can support students whose circumstances call for a nontraditional learning arrangement."
+  ],
+  "rightCons": [
+   "Directs public dollars to expenses outside traditional public schools.",
+   "Raises oversight and equitable-access questions because private schools can apply selective admissions."
+  ],
+  "background": "Utah Fits All provides eligible K-12 students up to $8,000 through an education savings account for approved expenses. Statewide policy, program administration, and funding are shaped by statute and state agencies, so the board's role is not sole control of the program.",
+  "whyLive": "The Tribune asked both District 1 candidates whether they support taxpayer funding for Utah Fits All. Callow-Heusser answered no, arguing funds should support public schools; Earl did not respond by the paper's deadline, which is not evidence of her position. Earl's 2023 board record also shows support for a motion to approve Utah Fits All scholarship appeals rules, a procedural vote rather than a direct vote on the program's existence.",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-ufa",
+   "src-earl-ufa-vote"
+  ]
+ },
+ {
+  "id": "sensitive-materials-removal",
+  "contestIds": [
+   "usbe-1"
+  ],
+  "category": "Education",
+  "question": "How should Utah apply its statewide sensitive-materials rules when reviewing books and other school materials?",
+  "leftLabel": "Narrow statewide removals and preserve local review",
+  "rightLabel": "Apply statewide removal rules consistently across districts",
+  "leftPros": [
+   "Allows local boards and communities to account for context and student age.",
+   "May reduce removals of materials that some families consider appropriate and educational."
+  ],
+  "leftCons": [
+   "Can produce different access rules between districts.",
+   "May make statewide enforcement less uniform and increase repeated local disputes."
+  ],
+  "rightPros": [
+   "Creates a consistent statewide floor for restricted material.",
+   "May reassure families seeking predictable restrictions across schools."
+  ],
+  "rightCons": [
+   "Can remove titles statewide based on one challenge or appeal.",
+   "May override local review and reduce access to books used for instruction or independent reading."
+  ],
+  "background": "Utah law and State Board rules establish processes for reviewing and removing sensitive materials from public schools, including an appeal path to USBE. In 2026, statewide removals and local challenges remain active matters of public debate.",
+  "whyLive": "The Tribune's 2026 survey asked both candidates about the law. Callow-Heusser said it is too broad and that local differences and board representation should be considered; Earl did not respond by deadline. USBE has recently reviewed an appeal of a local decision, showing the issue reaches the state board's responsibilities.",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-usbe-appeal",
+   "src-sensitive-rule"
+  ]
+ },
+ {
+  "id": "school-immigration-enforcement",
+  "contestIds": [
+   "usbe-1"
+  ],
+  "category": "Education",
+  "question": "What role, if any, should immigration enforcement have in or near schools?",
+  "leftLabel": "Keep enforcement away from school settings",
+  "rightLabel": "Allow enforcement consistent with law and agency protocols",
+  "leftPros": [
+   "May help students feel safe attending school and limit disruption to learning.",
+   "Can reduce fear and absenteeism among students affected by enforcement activity."
+  ],
+  "leftCons": [
+   "May complicate execution of lawful enforcement actions in urgent situations.",
+   "Schools still need clear protocols for responding to legal orders and emergencies."
+  ],
+  "rightPros": [
+   "Recognizes that schools must comply with valid legal requirements.",
+   "Provides room for consistent protocols with law-enforcement agencies."
+  ],
+  "rightCons": [
+   "Enforcement near schools may create fear, trauma, or absenteeism among students.",
+   "Could disrupt classrooms and weaken trust between families and schools."
+  ],
+  "background": "Schools must balance student safety and attendance with legal obligations and operational protocols. The State Board's statewide policies can influence school guidance, while districts implement procedures locally.",
+  "whyLive": "The Tribune included this question in its 2026 USBE candidate survey. Callow-Heusser said enforcement has no place in or near schools; Earl did not respond by deadline, so her position is unknown.",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-usbe-role"
+  ]
+ },
+ {
+  "id": "third-grade-reading-retention",
+  "contestIds": [
+   "usbe-1"
+  ],
+  "category": "Education",
+  "question": "How should Utah implement third-grade retention for students who do not meet reading benchmarks, beginning in 2029–30?",
+  "leftLabel": "Emphasize intervention and exemptions over retention",
+  "rightLabel": "Use retention as a required reading intervention when benchmarks are missed",
+  "leftPros": [
+   "Avoids making a single grade-level retention decision the default response to reading difficulty.",
+   "Keeps students with age peers while focusing on targeted instruction and support."
+  ],
+  "leftCons": [
+   "Students may advance without reaching the reading level needed for later coursework.",
+   "Intervention may be inconsistent if schools lack capacity or effective support."
+  ],
+  "rightPros": [
+   "Creates a clear statewide accountability trigger for students below benchmark.",
+   "May provide more time for intensive reading support before students move to later grades."
+  ],
+  "rightCons": [
+   "Retention can carry social and emotional costs and may not address underlying needs by itself.",
+   "Implementation requires staffing, exemptions, appeals, and individualized support."
+  ],
+  "background": "Utah SB 241, enacted in 2026, sets an 80% third-grade reading proficiency goal by 2030 and provides for third-grade retention when benchmarks are missed, subject to statutory good-cause exceptions. The law begins applying this retention requirement in the 2029–30 school year.",
+  "whyLive": "The Tribune asked the candidates directly about the retention proposal. Callow-Heusser answered no; Earl did not respond by deadline, which does not establish opposition or support. The Board will have implementation and oversight responsibilities under the new statewide literacy framework.",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-sb241",
+   "src-usbe-literacy"
+  ]
+ },
+ {
+  "id": "bell-to-bell-cellphone-policy",
+  "contestIds": [
+   "usbe-1"
+  ],
+  "category": "Education",
+  "question": "Should Utah require students to keep personal cellphones away throughout the school day?",
+  "leftLabel": "Require bell-to-bell restriction",
+  "rightLabel": "Allow local flexibility and limited student access",
+  "leftPros": [
+   "May reduce classroom distraction and nonacademic screen use.",
+   "Can create a consistent expectation for students and staff."
+  ],
+  "leftCons": [
+   "Can limit family contact and access to devices needed for some students.",
+   "Enforcement can consume staff time and require exceptions for individual needs."
+  ],
+  "rightPros": [
+   "Lets districts tailor rules to age, school context, and student needs.",
+   "Preserves access for family communication and assistive or instructional uses."
+  ],
+  "rightCons": [
+   "Different rules can confuse families and students across schools.",
+   "Permissive use may contribute to distraction or cyberbullying during the school day."
+  ],
+  "background": "Utah's rules and local policies govern student electronic-device use in schools. The practical balance between limiting distraction and preserving appropriate access remains a school-policy question.",
+  "whyLive": "The Tribune asked both District 1 candidates whether they support Utah's bell-to-bell cellphone bans. Callow-Heusser answered yes; Earl did not respond by the deadline, and no position is inferred for her.",
+  "sourceIds": [
+   "src-sltrib-usbe-survey",
+   "src-usbe-device-rule"
+  ]
+ },
+ {
+  "id": "property-tax-increase-and-budget",
+  "contestIds": [
+   "besd-7"
+  ],
+  "category": "Taxes",
+  "question": "How should the district balance property-tax rates with staffing, programs, and long-term school needs?",
+  "leftLabel": "Lower or limit the tax increase and constrain spending",
+  "rightLabel": "Maintain revenue needed for district services and investments",
+  "leftPros": [
+   "Limits added costs for homeowners, farmers, and businesses.",
+   "Pressures the district to demonstrate needs and spending efficiency."
+  ],
+  "leftCons": [
+   "May constrain compensation, programs, or maintenance if other revenue is insufficient.",
+   "Could defer needed investments and shift costs into later years."
+  ],
+  "rightPros": [
+   "Provides local revenue for district services, employee compensation, and planned improvements.",
+   "Can support predictable multiyear budgeting if needs and costs are well documented."
+  ],
+  "rightCons": [
+   "Raises property-tax costs for residents and businesses.",
+   "Can reduce public trust if voters view the increase as insufficiently explained or responsive to prior bond votes."
+  ],
+  "background": "In August 2025, the Box Elder School Board adopted a 37.2% property-tax increase after a prolonged hearing; news reports describe it as following voters' rejection of a school bond. The board controls district tax-rate decisions within state law and truth-in-taxation requirements.",
+  "whyLive": "Cronin cast the lone vote against the 2025 increase and urged the board to respect community input. Tonioli's 2026 campaign says she will scrutinize where the increase is going and lower rates if district revenue allows. This provides documented contrast, although the positions concern different decisions and dates.",
+  "sourceIds": [
+   "src-deseret-tax",
+   "src-besd-tax-minutes",
+   "src-tonioli-campaign"
+  ]
+ },
+ {
+  "id": "facilities-and-school-configuration",
+  "contestIds": [
+   "besd-7"
+  ],
+  "category": "Education",
+  "question": "How should the district prioritize building upgrades and possible school reconfiguration, including moving ninth grade to high schools?",
+  "leftLabel": "Defer major construction and preserve the current grade configuration",
+  "rightLabel": "Invest in facilities and consider moving ninth grade to high schools",
+  "leftPros": [
+   "Avoids large near-term costs and disruption to families.",
+   "Allows more time to validate enrollment projections and alternatives."
+  ],
+  "leftCons": [
+   "May delay needed repairs or capacity improvements.",
+   "Could limit access to high-school courses or CTE pathways for ninth graders."
+  ],
+  "rightPros": [
+   "Can address aging facilities and long-term enrollment needs.",
+   "May give ninth graders earlier access to high-school coursework, counselors, and CTE pathways."
+  ],
+  "rightCons": [
+   "Requires capital spending and may place pressure on property taxes.",
+   "Changes school transitions and could increase crowding or transportation demands."
+  ],
+  "background": "The district has discussed facilities planning and ninth-grade placement in the context of long-range building needs and school programming. These decisions are district board matters and are connected to the 2024 bond defeat and subsequent 2025 tax-rate debate.",
+  "whyLive": "Tonioli's campaign explicitly raises whether buildings need updating and whether ninth grade should move to high school. The 2025 tax increase followed the district's unsuccessful bond effort. The available sources establish these as active issues; they do not establish Cronin's overall position on each facilities or grade-configuration proposal.",
+  "sourceIds": [
+   "src-tonioli-campaign",
+   "src-ksl-tax",
+   "src-deseret-tax",
+   "src-board-handbook"
+  ]
+ },
+ {
+  "id": "secondary-grading-and-graduation",
+  "contestIds": [
+   "besd-7"
+  ],
+  "category": "Education",
+  "question": "How should the district balance consistent secondary grading and graduation standards with flexibility for individual students?",
+  "leftLabel": "Use flexible, locally tailored grading and graduation pathways",
+  "rightLabel": "Use consistent districtwide standards and credit requirements",
+  "leftPros": [
+   "Allows teachers and schools to adapt to different courses and student needs.",
+   "Can accommodate students who demonstrate learning in different ways."
+  ],
+  "leftCons": [
+   "May create uneven expectations among schools or courses.",
+   "Can make progress and graduation readiness harder for families to compare."
+  ],
+  "rightPros": [
+   "Makes expectations more consistent across secondary schools.",
+   "Can make credit accumulation and graduation planning clearer."
+  ],
+  "rightCons": [
+   "May reduce discretion for teachers and students facing unusual circumstances.",
+   "A strict credit or grading framework can complicate timely graduation for students who need alternate pathways."
+  ],
+  "background": "District boards set policy for local grading and graduation requirements within state standards. Box Elder's 2024 policy review included high-school graduation requirements, and the district has introduced a new secondary grading system discussed by the 2026 District 7 challenger.",
+  "whyLive": "Tonioli's campaign lists the new secondary grading system as a voter question. In 2024 minutes, Cronin opposed Policy 4060 and said students should graduate with their peers if they have 24 credits. This is a specific historical vote and statement, not a complete account of her views on the current grading system.",
+  "sourceIds": [
+   "src-tonioli-campaign",
+   "src-besd-4060-minutes"
+  ]
+ },
+ {
+  "id": "teacher-pay-and-workplace-support",
+  "contestIds": [
+   "besd-7"
+  ],
+  "category": "Education",
+  "question": "How should district resources and policies support teacher compensation, retention, and staff concerns?",
+  "leftLabel": "Prioritize competitive pay and stronger staff support",
+  "rightLabel": "Balance compensation with other district costs and fiscal limits",
+  "leftPros": [
+   "May help recruit and retain educators and support classroom continuity.",
+   "Can provide staff with clearer support and channels to raise concerns."
+  ],
+  "leftCons": [
+   "Raises recurring costs that compete with facilities and other programs.",
+   "Pay increases alone may not resolve workload, class-size, or working-condition concerns."
+  ],
+  "rightPros": [
+   "Preserves flexibility to fund facilities, programs, and other needs.",
+   "Avoids committing to recurring costs without clear revenue forecasts."
+  ],
+  "rightCons": [
+   "May leave the district less competitive in recruiting and retaining educators.",
+   "Unaddressed workplace concerns can contribute to staff turnover and morale problems."
+  ],
+  "background": "The board adopts the district budget and policies, while the superintendent manages staff and district operations. Compensation and working conditions are recurring budget issues, especially alongside the district's facilities plans and recent tax increase.",
+  "whyLive": "Tonioli's campaign prioritizes competitive pay, staff support, and allowing employees to raise concerns without fear for their jobs. The 2025 district tax proposal included an annual employee-compensation component according to local reporting. No opposing position is attributed to Cronin without a specific statement or vote on those terms.",
+  "sourceIds": [
+   "src-tonioli-campaign",
+   "src-ksl-tax",
+   "src-board-handbook"
+  ]
+ },
+ {
+  "id": "phones-and-state-testing",
+  "contestIds": [
+   "besd-7"
+  ],
+  "category": "Education",
+  "question": "How much should district schools rely on bell-to-bell phone limits and mandated state testing?",
+  "leftLabel": "Use strict phone limits and required testing for consistency",
+  "rightLabel": "Allow more local flexibility in device rules and assessment practices",
+  "leftPros": [
+   "Phone limits can reduce distractions and testing can provide comparable achievement data.",
+   "Consistent rules may make expectations easier for students and staff to understand."
+  ],
+  "leftCons": [
+   "Restrictions can complicate family contact and individual student needs.",
+   "High-stakes or frequent testing can narrow instruction and add stress."
+  ],
+  "rightPros": [
+   "Local flexibility can account for age, course needs, and student circumstances.",
+   "Less testing can protect instructional time and reduce assessment burden."
+  ],
+  "rightCons": [
+   "Different rules may be difficult to enforce consistently.",
+   "Less standardized information may limit comparisons and early identification of learning gaps."
+  ],
+  "background": "Utah and district policies shape school-day device rules and state assessment requirements. The local board can adopt district policy and implementation practices within state requirements, while mandated state tests are not simply optional district decisions.",
+  "whyLive": "Tonioli's campaign explicitly asks for voters' views on bell-to-bell phone rules and mandated state testing. These topics matter to district families and fall within local implementation or policy oversight, but available material does not establish a distinct Cronin position on either issue.",
+  "sourceIds": [
+   "src-tonioli-campaign",
+   "src-besd-device-policy",
+   "src-board-handbook"
+  ]
+ },
+ {
+  "id": "stratos-approval-and-oversight",
+  "contestIds": [
+   "commission-a",
+   "commission-b"
+  ],
+  "category": "Housing & Growth",
+  "question": "How should county officials oversee Stratos after the county's May 2026 consent resolutions?",
+  "leftLabel": "Require stronger public review and safeguards",
+  "rightLabel": "Use negotiated approvals to enable progress",
+  "leftPros": [
+   "More review and reporting help residents assess impacts and compliance.",
+   "Additional safeguards may reduce unanticipated local costs."
+  ],
+  "leftCons": [
+   "More conditions or delay may reduce investment and projected revenue.",
+   "County authority is constrained by the state-created MIDA framework."
+  ],
+  "rightPros": [
+   "Negotiated terms may preserve county protections while enabling investment.",
+   "Development could bring jobs and local revenue."
+  ],
+  "rightCons": [
+   "A fast process or limited county leverage may leave residents dissatisfied.",
+   "Projected benefits depend on future buildout and compliance."
+  ],
+  "background": "On May 4, 2026, the commission approved resolutions consenting to MIDA's Stratos project area and county agreement after contentious public meetings.",
+  "whyLive": "KSL reported both commissioners who approved the project lost their Republican primaries; Smith was Bingham's challenger. Sources establish salience, not either general-election candidate's detailed position.",
+  "sourceIds": [
+   "src-stratos-county",
+   "src-stratos-agreement",
+   "src-commission-primary"
+  ]
+ },
+ {
+  "id": "water-and-resource-planning",
+  "contestIds": [
+   "commission-a",
+   "commission-b"
+  ],
+  "category": "Water & Land",
+  "question": "What safeguards and review should apply to large developments' water and land impacts?",
+  "leftLabel": "Set conservative water limits and independent review",
+  "rightLabel": "Use project-specific plans with monitoring",
+  "leftPros": [
+   "A precautionary approach can protect agriculture and scarce water.",
+   "Independent review and monitoring help residents assess use."
+  ],
+  "leftCons": [
+   "Strict limits may constrain development or require costly studies.",
+   "Some water decisions lie with state agencies or private rights holders."
+  ],
+  "rightPros": [
+   "Project-specific planning can accommodate development and monitor impacts.",
+   "A flexible plan can account for technology and phased construction."
+  ],
+  "rightCons": [
+   "Monitoring may identify harm only after it occurs.",
+   "Residents may view project estimates as uncertain."
+  ],
+  "background": "The county's Stratos timeline says due diligence included water resources, power infrastructure, legal issues, and stakeholder input. A private landowner filed a water-right change application for industrial use related to the project.",
+  "whyLive": "Water, agriculture, and scale were concrete concerns in the Stratos debate. No candidate-specific stance was verified.",
+  "sourceIds": [
+   "src-stratos-timeline",
+   "src-stratos-water"
+  ]
+ },
+ {
+  "id": "development-tax-and-public-benefit",
+  "contestIds": [
+   "commission-a",
+   "commission-b"
+  ],
+  "category": "Taxes",
+  "question": "How should the county weigh development incentives against public revenue and service costs?",
+  "leftLabel": "Prioritize predictable revenue and limited incentives",
+  "rightLabel": "Offer incentives to attract major investment",
+  "leftPros": [
+   "Conservative incentives reduce risk of foregoing revenue for uncertain benefits.",
+   "Public accounting can compare revenue with costs."
+  ],
+  "leftCons": [
+   "Fewer incentives may make projects harder to attract.",
+   "The county could forgo possible future taxes and jobs."
+  ],
+  "rightPros": [
+   "Incentives may make projects competitive and produce long-term receipts.",
+   "Development may diversify the economy and support infrastructure."
+  ],
+  "rightCons": [
+   "Incentives reduce or defer revenue; promises may not materialize.",
+   "Complex agreements can obscure accountability."
+  ],
+  "background": "MIDA's Stratos agreements include a reduced municipal energy-tax rate and property-tax sharing. Project proponents cited projected jobs and revenue; residents questioned the terms.",
+  "whyLive": "Stratos was prominent in commission primaries and the tax terms remain relevant. Evidence establishes salience, not candidate positions.",
+  "sourceIds": [
+   "src-stratos-agreement",
+   "src-stratos-tax-news",
+   "src-commission-primary"
+  ]
+ },
+ {
+  "id": "county-budget-and-property-taxes",
+  "contestIds": [
+   "commission-a",
+   "commission-b"
+  ],
+  "category": "Taxes",
+  "question": "How should commissioners balance property-tax levels, reserves, and service spending?",
+  "leftLabel": "Limit tax growth and scrutinize spending",
+  "rightLabel": "Raise adequate revenue for services and investment",
+  "leftPros": [
+   "Tax restraint limits pressure on households and businesses.",
+   "Tighter review encourages prioritization."
+  ],
+  "leftCons": [
+   "Revenue limits may require cuts or deferred maintenance.",
+   "Underfunding can reduce service capacity."
+  ],
+  "rightPros": [
+   "Recurring revenue can support reliable services and maintenance.",
+   "Investment may address growth needs early."
+  ],
+  "rightCons": [
+   "Higher levies raise taxpayer costs.",
+   "Higher spending requires ongoing oversight."
+  ],
+  "background": "The county's approved 2026 budget documents spending and fund balances; the auditor is budget officer, while the commission adopts the budget and tax levy.",
+  "whyLive": "Budget and tax choices are core commission duties and locally concrete in 2026. No proposed tax or spending policy from Smith or Williams was verified.",
+  "sourceIds": [
+   "src-budget-page",
+   "src-budget-approved",
+   "src-auditor-role"
+  ]
+ },
+ {
+  "id": "dispatch-reliability-and-governance",
+  "contestIds": [
+   "sheriff"
+  ],
+  "category": "Public Safety",
+  "question": "How should the sheriff address dispatch reliability and cities that moved service to Weber Area 911?",
+  "leftLabel": "Rebuild shared county dispatch and coordination",
+  "rightLabel": "Support local agencies choosing outside dispatch",
+  "leftPros": [
+   "Shared communications can keep county and rural partners coordinated."
+  ],
+  "leftCons": [
+   "Cities cited reliability and performance concerns with county dispatch."
+  ],
+  "rightPros": [
+   "Municipalities can select systems they consider more reliable."
+  ],
+  "rightCons": [
+   "Separate centers may complicate coordination and shift costs."
+  ],
+  "background": "Several city agencies moved dispatch contracts to Weber Area 911 in 2026. KSL reported the candidates were motivated partly by the dispute; Allred described working to improve communication with dispatch.",
+  "whyLive": "This is the central issue reported in the race. KSL described Allred's dispatch emphasis, Christensen's community engagement, and Shinney's administrative/fiscal focus.",
+  "sourceIds": [
+   "src-sheriff-race",
+   "src-dispatch-chief-response",
+   "src-sheriff-settlement"
+  ]
+ },
+ {
+  "id": "sheriff-management-accountability",
+  "contestIds": [
+   "sheriff"
+  ],
+  "category": "Government & Elections",
+  "question": "What management changes and accountability should the sheriff prioritize?",
+  "leftLabel": "Independent review and structural reform",
+  "rightLabel": "Internal leadership-led improvement",
+  "leftPros": [
+   "Outside review can identify process problems and provide public measures."
+  ],
+  "leftCons": [
+   "Reviews cost money and may undermine staff trust if poorly designed."
+  ],
+  "rightPros": [
+   "Internal experience can support practical, quick changes and continuity."
+  ],
+  "rightCons": [
+   "Internal reviews may be seen as insufficiently independent."
+  ],
+  "background": "KSL described Allred's intent to fix operational issues, Christensen's interest in working with deputies and communities, and Shinney's administrative experience. These are different emphases, not complete management plans.",
+  "whyLive": "Direct candidate reporting identifies department improvement as a common motivation, with distinct experience and emphases.",
+  "sourceIds": [
+   "src-sheriff-race"
+  ]
+ },
+ {
+  "id": "public-safety-budget-and-staffing",
+  "contestIds": [
+   "sheriff"
+  ],
+  "category": "Public Safety",
+  "question": "How should the sheriff balance staffing, equipment, dispatch resources, and taxpayer cost?",
+  "leftLabel": "Prioritize cost control and measurable efficiency",
+  "rightLabel": "Invest in staffing and operational capacity",
+  "leftPros": [
+   "Budget discipline protects taxpayers and encourages efficiency."
+  ],
+  "leftCons": [
+   "Cost limits can leave staffing or dispatch underfunded."
+  ],
+  "rightPros": [
+   "Capacity investment can support timely response and officer safety."
+  ],
+  "rightCons": [
+   "Spending competes with other county priorities and requires accountability."
+  ],
+  "background": "The county funds the sheriff's office and dispatch. Candidate comments reported by KSL emphasize fiscal management, dispatch support, or department engagement, but no formal budgets were compared.",
+  "whyLive": "The candidates' reported priorities put these tradeoffs in the race; sources do not establish detailed budget proposals.",
+  "sourceIds": [
+   "src-sheriff-race",
+   "src-budget-page"
+  ]
+ },
+ {
+  "id": "critical-incident-and-dispatch-practices",
+  "contestIds": [
+   "sheriff"
+  ],
+  "category": "Public Safety",
+  "question": "What safeguards should guide dispatch and response during critical incidents?",
+  "leftLabel": "Require independent review and stricter protocols",
+  "rightLabel": "Use agency-led continuous improvement",
+  "leftPros": [
+   "Independent review can check corrective actions and improve consistency."
+  ],
+  "leftCons": [
+   "Rigid protocols may fit fast-moving incidents poorly and duplicate review."
+  ],
+  "rightPros": [
+   "Agency-led changes can respond quickly to field experience."
+  ],
+  "rightCons": [
+   "Without outside scrutiny residents may doubt whether fixes are complete."
+  ],
+  "background": "KSL reported a $700,000 settlement to deputy Allred from Utah DPS and dispatch changes including call documentation and minimizing time away from consoles. The report said cities moved contracts for reasons unrelated to the 2025 shooting.",
+  "whyLive": "Dispatch procedures remain salient after the shooting and 2026 changes. This does not attribute the cities' move to the shooting or establish candidate wrongdoing.",
+  "sourceIds": [
+   "src-sheriff-settlement",
+   "src-dispatch-chief-response"
+  ]
+ },
+ {
+  "id": "election-administration-and-access",
+  "contestIds": [
+   "clerk"
+  ],
+  "category": "Government & Elections",
+  "question": "How should the clerk balance reliable election administration with accessible voting and voter support?",
+  "leftLabel": "Expand access and voter assistance",
+  "rightLabel": "Emphasize standardized controls and secure processing",
+  "leftPros": [
+   "Clear guidance and support can reduce barriers and voter errors."
+  ],
+  "leftCons": [
+   "Additional options require staff and careful verification."
+  ],
+  "rightPros": [
+   "Consistent procedures support accurate, auditable processing."
+  ],
+  "rightCons": [
+   "Overly rigid procedures can create avoidable barriers or confusion."
+  ],
+  "background": "Utah county clerks serve as election officers; Box Elder's clerk prepares election materials and reports results. The 2026 general election is the next countywide test.",
+  "whyLive": "Election administration is core to the office. No candidate disagreement or change proposal was located; Young is unopposed.",
+  "sourceIds": [
+   "src-clerk-role",
+   "src-candidates",
+   "src-state-election"
+  ]
+ },
+ {
+  "id": "election-transparency-and-records",
+  "contestIds": [
+   "clerk"
+  ],
+  "category": "Government & Elections",
+  "question": "How should the clerk make election processes and commission records understandable and accessible?",
+  "leftLabel": "Publish more detail and records proactively",
+  "rightLabel": "Use consistent statutory disclosure workflows",
+  "leftPros": [
+   "Proactive information helps residents follow decisions and verify procedures."
+  ],
+  "leftCons": [
+   "More publishing takes staff time and privacy review."
+  ],
+  "rightPros": [
+   "Standard workflows support timely, lawful, privacy-conscious records handling."
+  ],
+  "rightCons": [
+   "Minimum disclosure can leave useful information hard to find."
+  ],
+  "background": "The clerk serves as commission clerk and maintains meeting records; county resources provide records access and GRAMA request intake.",
+  "whyLive": "These are statutory and service duties; no 2026 candidate dispute was found.",
+  "sourceIds": [
+   "src-clerk-role",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "election-readiness-and-resources",
+  "contestIds": [
+   "clerk"
+  ],
+  "category": "Government & Elections",
+  "question": "What resources should the clerk prioritize for election staffing, equipment, and voter service?",
+  "leftLabel": "Minimize spending and rely on existing capacity",
+  "rightLabel": "Invest in staff, equipment, and voter support",
+  "leftPros": [
+   "Existing capacity limits costs and avoids unnecessary technology change."
+  ],
+  "leftCons": [
+   "Lean operations may be less resilient to surges or staff shortages."
+  ],
+  "rightPros": [
+   "Adequate staffing and equipment can improve readiness and accessibility."
+  ],
+  "rightCons": [
+   "Technology and staffing require investment, maintenance, and training."
+  ],
+  "background": "Clerks prepare voting equipment, ballots, and official reports. County budget documents include clerk operations, but no election-specific funding dispute was found.",
+  "whyLive": "This is a recurring duty in a general-election year, not a documented candidate divide; the race is unopposed.",
+  "sourceIds": [
+   "src-clerk-role",
+   "src-budget-page",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "prosecution-and-victim-services",
+  "contestIds": [
+   "attorney"
+  ],
+  "category": "Public Safety",
+  "question": "How should the county attorney balance consistent prosecution with victim support and fair case review?",
+  "leftLabel": "Prioritize victim support and strong prosecution",
+  "rightLabel": "Prioritize individualized review and restraint",
+  "leftPros": [
+   "Strong case preparation supports accountability and public safety."
+  ],
+  "leftCons": [
+   "Aggressive prosecution can increase incarceration and system burden."
+  ],
+  "rightPros": [
+   "Individualized review can promote proportionality and avoid needless prosecution."
+  ],
+  "rightCons": [
+   "Excessive restraint may leave victims unsupported or weaken deterrence."
+  ],
+  "background": "The county attorney's stated mission is prosecuting offenses, assisting victims compassionately, and pursuing justice.",
+  "whyLive": "Core office function, but no 2026 Wardle statement or questionnaire on prosecution policy was found; this is not a candidate contrast.",
+  "sourceIds": [
+   "src-attorney-role",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "legal-review-and-independence",
+  "contestIds": [
+   "attorney"
+  ],
+  "category": "Government & Elections",
+  "question": "How should county legal advice handle publicly disputed county actions?",
+  "leftLabel": "Emphasize independent review and transparent reasoning",
+  "rightLabel": "Emphasize prompt counsel and operational certainty",
+  "leftPros": [
+   "Independent analysis can build confidence in contested decisions."
+  ],
+  "leftCons": [
+   "Public explanation may be limited by confidentiality or litigation."
+  ],
+  "rightPros": [
+   "Prompt advice helps officials meet deadlines and avoid unlawful action."
+  ],
+  "rightCons": [
+   "Residents may question independence when counsel advises decision-makers."
+  ],
+  "background": "In May 2026, County Attorney Stephen Hadfield rejected referendum applications on two Stratos resolutions, determining they were administrative rather than legislative actions. KSL reported the county said he was legally bound to reject them.",
+  "whyLive": "The ruling made the office's statutory review role salient. Wardle is not the current attorney; no position from Wardle on that decision was located.",
+  "sourceIds": [
+   "src-referendum-ruling",
+   "src-candidates",
+   "src-elected-officials"
+  ]
+ },
+ {
+  "id": "county-legal-risk-and-disclosure",
+  "contestIds": [
+   "attorney"
+  ],
+  "category": "Government & Elections",
+  "question": "How should county counsel balance liability protection with public explanation and disclosure?",
+  "leftLabel": "Favor proactive explanation where lawful",
+  "rightLabel": "Favor cautious risk management and confidentiality",
+  "leftPros": [
+   "Clear explanations improve public understanding and reduce speculation."
+  ],
+  "leftCons": [
+   "Statements may affect litigation, privacy, or investigations."
+  ],
+  "rightPros": [
+   "Careful review can protect the county and confidential information."
+  ],
+  "rightCons": [
+   "Limited explanation can erode trust or delay useful guidance."
+  ],
+  "background": "The attorney advises county government and prosecutes criminal cases. In 2026, the office's public reasoning on the Stratos referendum rejection drew attention.",
+  "whyLive": "This accountability question is salient because of that episode; no candidate-specific plan was found and Wardle is unopposed.",
+  "sourceIds": [
+   "src-attorney-role",
+   "src-referendum-ruling"
+  ]
+ },
+ {
+  "id": "budget-transparency-and-fiscal-control",
+  "contestIds": [
+   "auditor"
+  ],
+  "category": "Economy",
+  "question": "How should the auditor make county budgeting and spending oversight useful and understandable?",
+  "leftLabel": "Increase public-facing detail and proactive review",
+  "rightLabel": "Focus on statutory controls and efficient processing",
+  "leftPros": [
+   "Detail helps residents follow spending and spot risk sooner."
+  ],
+  "leftCons": [
+   "Reporting and review take staff time and may slow payments."
+  ],
+  "rightPros": [
+   "Efficient workflows support timely payment and required controls."
+  ],
+  "rightCons": [
+   "Narrow compliance may miss opportunities for public insight."
+  ],
+  "background": "The auditor reviews bills, accounts, and charges and serves as budget officer. The county publishes 2026 budget documents and financial statements and links to fraud reporting.",
+  "whyLive": "These are core auditor functions. No candidate-specific policy difference was found; Larsen is unopposed.",
+  "sourceIds": [
+   "src-auditor-role",
+   "src-budget-page",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "property-tax-administration-and-relief",
+  "contestIds": [
+   "auditor"
+  ],
+  "category": "Taxes",
+  "question": "How should the auditor balance accurate property-tax administration with taxpayer assistance and appeals?",
+  "leftLabel": "Emphasize accessible appeals, relief, and guidance",
+  "rightLabel": "Emphasize consistent valuation and timely administration",
+  "leftPros": [
+   "Guidance helps taxpayers understand and challenge errors."
+  ],
+  "leftCons": [
+   "Expanded assistance takes staffing and cannot change statutory policy."
+  ],
+  "rightPros": [
+   "Consistent administration supports predictable revenue and equal treatment."
+  ],
+  "rightCons": [
+   "Process-heavy service may be difficult for residents to navigate."
+  ],
+  "background": "The auditor administers property taxes with other officials and provides appeal and tax-relief information. The approved 2026 budget includes property-tax revenue estimates.",
+  "whyLive": "Property-tax administration affects residents directly; no candidate disagreement or change proposal was located.",
+  "sourceIds": [
+   "src-auditor-role",
+   "src-budget-approved",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "budget-reserves-and-service-costs",
+  "contestIds": [
+   "auditor"
+  ],
+  "category": "Taxes",
+  "question": "How should budget review weigh fund balances against ongoing county service needs?",
+  "leftLabel": "Preserve reserves and constrain recurring commitments",
+  "rightLabel": "Use available funds for current services and investment",
+  "leftPros": [
+   "Reserves protect against volatility and emergencies."
+  ],
+  "leftCons": [
+   "Excessive caution can delay needed services or capital work."
+  ],
+  "rightPros": [
+   "Strategic spending can address current needs and infrastructure."
+  ],
+  "rightCons": [
+   "One-time balances cannot reliably support recurring expenses."
+  ],
+  "background": "County 2026 budget materials show fund-level revenues, expenditures, transfers, and use of fund balance. The auditor is budget officer; commission makes final appropriations.",
+  "whyLive": "Published budget data makes this a concrete fiscal oversight question; it does not imply Larsen alone sets spending policy.",
+  "sourceIds": [
+   "src-budget-approved",
+   "src-budget-page",
+   "src-auditor-role"
+  ]
+ },
+ {
+  "id": "fraud-and-mismanagement-reporting",
+  "contestIds": [
+   "auditor"
+  ],
+  "category": "Government & Elections",
+  "question": "What should the auditor prioritize in detecting and responding to reports of misuse or mismanagement?",
+  "leftLabel": "Expand proactive audits and follow-up",
+  "rightLabel": "Rely on existing reporting and targeted review",
+  "leftPros": [
+   "Proactive scrutiny may identify control weaknesses sooner."
+  ],
+  "leftCons": [
+   "More reviews require resources and can burden departments."
+  ],
+  "rightPros": [
+   "Targeted review focuses resources and can protect due process."
+  ],
+  "rightCons": [
+   "Incoming-report reliance may miss unreported issues."
+  ],
+  "background": "The auditor's page provides a hotline for suspected waste, legal violations, gross mismanagement, abuse of authority, or unethical conduct. The office reviews county accounts before payment.",
+  "whyLive": "Fraud prevention is inherent to the office; no candidate disagreement was located and Larsen is unopposed.",
+  "sourceIds": [
+   "src-auditor-role",
+   "src-candidates"
+  ]
+ },
+ {
+  "id": "amendment-a-publication-method",
+  "contestIds": [
+   "amendment-a"
+  ],
+  "category": "Government & Elections",
+  "question": "Should Utah change how it publishes proposed constitutional amendments before voters decide on them?",
+  "leftLabel": "Against: keep newspaper publication required by the Constitution",
+  "rightLabel": "For: allow the publication method to be set by state law",
+  "leftPros": [
+   "Keeps the publication channel in the Constitution, so changing it requires another constitutional amendment rather than an ordinary statute.",
+   "Retains publication in local newspapers, a familiar offline channel that can reach readers who do not routinely use state websites."
+  ],
+  "leftCons": [
+   "Retains the newspaper publication expense; the official pamphlet estimates that A together with H.B. 481 could reduce state costs by up to $1.4 million every two years.",
+   "The existing rule depends on newspaper publication in every county where a newspaper is published, rather than specifying publication on state-operated websites."
+  ],
+  "rightPros": [
+   "Maintains a 60-day advance publication period and, under H.B. 481, places full text on the Utah Public Notice Website and Lieutenant Governor website.",
+   "The official fiscal analysis estimates potential state savings of up to $1.4 million every two years with H.B. 481, depending on amendment length and newspaper publication rates.",
+   "Provides flexibility to change publication methods through state law as communication methods change."
+  ],
+  "rightCons": [
+   "Moves the publication method from a constitutional requirement into ordinary state law, which the Legislature can change by statute.",
+   "Replaces newspaper publication with government websites, which may be less accessible to voters who do not use the internet or know where to find the notices."
+  ],
+  "background": "The ballot asks whether Article XXIII, Section 1 should replace its newspaper-publication requirement with publication for 60 days in a manner established by state law. H.B. 481, which takes effect if voters approve Amendment A, specifies full-text publication on the Utah Public Notice Website and Lieutenant Governor website. The amendment leaves unchanged the two-thirds vote in each legislative house needed to propose an amendment and the majority vote needed for voter approval.",
+  "whyLive": "The Legislature referred H.J.R. 10 to voters unanimously (House 70–0, Senate 29–0); the official pamphlet reports no argument against and no rebuttal were submitted because of that unanimous adoption. Although there is no formal opposition argument in the pamphlet, the choice has a clear policy consequence: constitutional newspaper publication versus a method established in statute and, under H.B. 481, online government publication. The official fiscal analysis estimates potential savings.",
+  "sourceIds": [
+   "src-a-vip",
+   "src-a-proposed-text",
+   "src-a-news-context"
+  ]
+ },
+ {
+  "id": "amendment-b-tax-initiative-threshold",
+  "contestIds": [
+   "amendment-b"
+  ],
+  "category": "Government & Elections",
+  "question": "Should certain statewide citizen initiatives that increase taxes require 60% voter approval instead of a simple majority?",
+  "leftLabel": "Against: keep the simple-majority rule for citizen initiatives",
+  "rightLabel": "For: require 60% approval for specified tax-increasing initiatives",
+  "leftPros": [
+   "Keeps the initiative passage standard equal to the simple-majority rule that applies to most statewide initiatives and to many legislative decisions.",
+   "Allows a measure supported by a majority of voters to pass even if it does not reach 60%, preserving citizens' ability to enact tax-funded programs through initiative."
+  ],
+  "leftCons": [
+   "A tax-related initiative could become law with only a narrow majority, which opponents of the current rule may view as insufficient broad support for a tax change affecting taxpayers statewide.",
+   "A citizen initiative can be difficult to revise after passage and may require another initiative to change, according to the official argument in favor."
+  ],
+  "rightPros": [
+   "Requires broader voter support before a specified citizen initiative can create or expand taxes or make the covered property-tax change.",
+   "Supporters argue that initiative laws are difficult to revise and that a higher threshold encourages proposals to build support across regions and viewpoints.",
+   "Leaves the initiative process and simple-majority threshold in place for statewide initiatives outside the listed tax categories."
+  ],
+  "rightCons": [
+   "Makes it harder for voters to enact certain tax-related policies by initiative than under the current simple-majority rule.",
+   "Opponents argue the Legislature may pass comparable measures by simple majority, creating a different standard for citizen lawmaking and legislative action.",
+   "Opponents warn that creating a policy-specific supermajority exception could set a precedent for adding higher thresholds to other initiative topics."
+  ],
+  "background": "The ballot title summarizes the measure as requiring citizen-proposed laws that increase taxes compared with existing law to receive at least 60% approval rather than a simple majority. The constitutional text specifies four triggers: imposing a new tax, expanding a tax to new items or transactions, increasing a tax rate, or making the covered property-tax-rate change; the rule applies to initiatives voted on after November 1, 2026. The official fiscal analysis says enactment likely would not materially affect current state revenues or expenditures.",
+  "whyLive": "The amendment is the subject of an active statewide campaign: the pamphlet includes arguments and rebuttals on both sides, and 2026 reporting documents a campaign urging voters to reject it. Supporters focus on broad voter backing and tax accountability; opponents focus on the unequal threshold for citizens and the effect on the initiative power. This is a statewide ballot measure rather than a candidate contest, so candidate positions are not applicable.",
+  "sourceIds": [
+   "src-b-vip",
+   "src-b-utah-news",
+   "src-b-ksl",
+   "src-b-news-dispatch",
+   "src-b-ballotpedia"
+  ]
+ }
+]

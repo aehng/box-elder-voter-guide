@@ -1,0 +1,489 @@
+[
+ {
+  "id": "peter-crosby",
+  "name": "Peter Crosby",
+  "party": "Democratic",
+  "contestId": "us-house-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://petercrosbyforcongress.org/",
+  "bio": "Utah News Dispatch describes Crosby as an adjunct professor at Utah State University and a project manager and consultant. He is the Democratic nominee for the 2026 general election.",
+  "background": [
+   "Adjunct professor at Utah State University",
+   "Project manager and consultant"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "daniel-cottam",
+  "name": "Daniel Cottam",
+  "party": "Libertarian",
+  "contestId": "us-house-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Utah News Dispatch describes Cottam as a business owner, bariatric surgeon, and consultant. He is listed by the state as the Libertarian candidate; he did not provide responses to the reviewed Utah News Dispatch and Salt Lake Tribune questionnaires.",
+  "background": [
+   "Business owner",
+   "Bariatric surgeon",
+   "Consultant"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-und-guide",
+   "src-sltrib"
+  ],
+  "researchStatus": "limited"
+ },
+ {
+  "id": "robert-moesinger",
+  "name": "Robert Moesinger",
+  "party": "Unaffiliated",
+  "contestId": "us-house-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://www.improveourelections.org/",
+  "bio": "Utah News Dispatch describes Moesinger as an automation engineer and University of Utah graduate; VOTE411 lists an M.S. in biomedical engineering. His campaign centers on election system reform and multiparty representation.",
+  "background": [
+   "Automation engineer",
+   "University of Utah graduate",
+   "M.S. in biomedical engineering (candidate profile)"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-und-guide",
+   "src-vote411",
+   "src-moesinger"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "blake-moore",
+  "name": "Blake Moore",
+  "party": "Republican",
+  "contestId": "us-house-1",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": "https://electmoore.com/",
+  "bio": "Moore is the incumbent U.S. representative, elected in 2020, and represents the district currently designated Utah 1st. He previously worked as a U.S. Foreign Service officer and consultant, and serves as House Republican Caucus vice chair. Under the 2026 map he is running in Utah 2nd District.",
+  "background": [
+   "U.S. representative since 2021",
+   "Former U.S. Foreign Service officer",
+   "House Republican Caucus vice chair"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-und-guide",
+   "src-sltrib",
+   "src-ballotpedia"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "carlton-bowen",
+  "name": "Carlton Bowen",
+  "party": "Independent American",
+  "contestId": "us-house-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://bowenforcongress.com/",
+  "bio": "Bowen is an Air Force veteran who studied economics and worked as a senior IT project manager in healthcare. The Salt Lake Tribune also reports he formerly served on the American Fork City Council.",
+  "background": [
+   "U.S. Air Force veteran",
+   "Senior IT project manager in healthcare",
+   "Former American Fork City Council member"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-und-guide",
+   "src-sltrib",
+   "src-bowen"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "claudia-bigler",
+  "name": "Claudia Bigler",
+  "party": "Democratic",
+  "contestId": "ut-senate-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Bigler is a retired choir teacher who taught at Box Elder High School for 24 years. She is also artistic director of the Cache Children?s Choir.",
+  "background": [
+   "Retired Box Elder High School choir teacher",
+   "Artistic director, Cache Children’s Choir"
+  ],
+  "sourceIds": [
+   "src-senate-guide",
+   "src-official-filings"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "scott-sandall",
+  "name": "Scott Sandall",
+  "party": "Republican",
+  "contestId": "ut-senate-1",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": "https://www.votescottsandall.com/",
+  "bio": "Sandall is a rancher in Promontory and has served in the Legislature since 2015, including as a state senator since 2019. His 2026 legislative work included bills on water project management and energy users. He is the incumbent senator for District 1.",
+  "background": [
+   "Rancher",
+   "Utah legislator since 2015; senator since 2019",
+   "2026 bill sponsor on water project management and energy users"
+  ],
+  "sourceIds": [
+   "src-senate-guide",
+   "src-sandall-bills",
+   "src-official-filings",
+   "src-sandall-bills"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "julie-quinlan",
+  "name": "Julie Quinlan",
+  "party": "Forward",
+  "contestId": "ut-senate-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://julieq4utah.com/",
+  "bio": "Quinlan studied landscape architecture and is a political newcomer. She says fair voting maps are a central reason she is running. She is the Forward Party candidate for Senate District 1.",
+  "background": [
+   "Studied landscape architecture",
+   "Political newcomer",
+   "Forward Party candidate for District 1"
+  ],
+  "sourceIds": [
+   "src-senate-guide",
+   "src-official-filings"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "rob-bishop",
+  "name": "Rob Bishop",
+  "party": "Republican",
+  "contestId": "ut-house-6",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": "https://www.bishop.vote/",
+  "bio": "Bishop returned to the Utah House in 2026 after Republican delegates selected him to fill the vacancy left by Rep. Matthew Gwynn. He previously served in the Utah Legislature from 1978 to 1994, including two years as House speaker, and represented Utah in Congress for nearly two decades before leaving in 2021. He did not respond to the Salt Lake Tribune's 2026 candidate questionnaire.",
+  "background": [
+   "Utah House member since May 2026 by special election",
+   "Former U.S. representative",
+   "Former Utah legislator and House speaker",
+   "Retired history teacher"
+  ],
+  "sourceIds": [
+   "src-house-guide",
+   "src-official-filings",
+   "src-bishop-committee"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "james-rich",
+  "name": "James Rich",
+  "party": "Forward",
+  "contestId": "ut-house-6",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://move.forwardwith.us/",
+  "bio": "Rich leads a company providing information-technology consulting and software to businesses. He is the Forward Party candidate for House District 6. In a 2026 Tribune questionnaire, he discussed affordability, tax transparency, agricultural water conservation, starter homes, and government accountability.",
+  "background": [
+   "Technology consulting and software business executive",
+   "Forward Party candidate for District 6"
+  ],
+  "sourceIds": [
+   "src-house-guide",
+   "src-official-filings"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "jennie-earl",
+  "name": "Jennie Earl",
+  "party": "Republican",
+  "contestId": "usbe-1",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Earl has served on the Utah State Board of Education since 2019 and is seeking reelection. She earned a bachelor's degree in elementary education with minors in math and special education from Southern Utah University and a master's degree in education from Weber State University. Her professional experience includes teaching students with special needs and middle school math.",
+  "background": [
+   "Utah State Board of Education District 1 member since 2019",
+   "Former special education and middle school math teacher"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-earl-bio",
+   "src-sltrib-usbe-survey"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "cathy-callow-heusser",
+  "name": "Cathy Callow-Heusser",
+  "party": "Democratic",
+  "contestId": "usbe-1",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Callow-Heusser is a teacher, university instructor, education consultant, and former Utah State Board of Education staff member, according to her campaign materials as summarized by The Salt Lake Tribune. She is challenging incumbent Jennie Earl for the District 1 seat.",
+  "background": [
+   "Teacher",
+   "University instructor",
+   "Education consultant",
+   "Former USBE staff member"
+  ],
+  "sourceIds": [
+   "src-ut-candidates",
+   "src-sltrib-usbe-survey"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "karen-cronin",
+  "name": "Karen Cronin",
+  "party": "Nonpartisan",
+  "contestId": "besd-7",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Cronin is the incumbent District 7 trustee and has served on the Box Elder School District board since 2019. Board minutes and local reporting document her participation in district policy, budget, and tax-rate decisions. In 2025 she cast the sole vote against the district's adopted 37.2% property-tax increase.",
+  "background": [
+   "Box Elder School District Board District 7 member since 2019",
+   "Voted against the district's 2025 37.2% property-tax increase",
+   "Opposed a 2024 high-school graduation policy change, stating students should graduate with peers if they have 24 credits"
+  ],
+  "sourceIds": [
+   "src-bec-candidates",
+   "src-goodparty-cronin",
+   "src-deseret-tax",
+   "src-besd-4060-minutes",
+   "src-besd-primary-ballot"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "tara-tonioli",
+  "name": "Tara Tonioli",
+  "party": "Nonpartisan",
+  "contestId": "besd-7",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": "https://taraforschoolboard.com/",
+  "bio": "Tonioli has lived in Box Elder County for more than 20 years and lives in Perry, where she and her husband raised four children. She earned a bachelor's degree in Family, Consumer and Human Development from Utah State University, volunteered in schools and PTA, worked as a reading and progress-monitoring paraprofessional at Lakeview Elementary, earned an Associate Teaching License, and taught kindergarten and second grade.",
+  "background": [
+   "Former Box Elder School District reading and progress-monitoring paraprofessional",
+   "Licensed kindergarten and second-grade teacher",
+   "Longtime school volunteer and PTA member"
+  ],
+  "sourceIds": [
+   "src-bec-candidates",
+   "src-tonioli-campaign",
+   "src-besd-primary-ballot"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "vance-smith",
+  "name": "Vance Smith",
+  "party": "Republican",
+  "contestId": "commission-a",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county's 2026 roster lists Smith as a Republican candidate for Seat A. KSL reported he defeated incumbent Boyd Bingham in the June Republican primary; reviewed sources did not provide a candidate-submitted biography.",
+  "background": [
+   "Defeated incumbent Boyd Bingham in the June 2026 Republican primary, per KSL.",
+   "No verified employment or elected-office history located."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-commission-primary"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "alan-williams",
+  "name": "Alan Williams",
+  "party": "Unaffiliated",
+  "contestId": "commission-a",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county's 2026 roster lists Williams as unaffiliated for Seat A. Reviewed official and local-news sources did not provide a candidate bio or independently verifiable career background.",
+  "background": [
+   "No verified career or prior elected-office background located."
+  ],
+  "sourceIds": [
+   "src-candidates"
+  ],
+  "researchStatus": "limited"
+ },
+ {
+  "id": "nathan-tueller",
+  "name": "Nathan Tueller",
+  "party": "Republican",
+  "contestId": "commission-b",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county roster lists Tueller as a Republican for Seat B. KSL reported he defeated incumbent Lee Perry in the June Republican primary; reviewed sources did not provide a candidate-submitted biography.",
+  "background": [
+   "Defeated incumbent Lee Perry in the June 2026 Republican primary, per KSL.",
+   "No verified employment or elected-office history located."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-commission-primary"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "mike-allred",
+  "name": "Mike Allred",
+  "party": "Republican",
+  "contestId": "sheriff",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "Allred is a six-year county sheriff's deputy and six-year volunteer with county Search and Rescue, per KSL. He defeated incumbent Kevin Potter in the Republican primary and has emphasized better communication with dispatch and support for the center.",
+  "background": [
+   "Six years as deputy and six years as volunteer with Box Elder County Search and Rescue.",
+   "Injured in the August 2025 shooting that killed two Tremonton-Garland officers.",
+   "Won the June 2026 Republican primary against Sheriff Kevin Potter."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-sheriff-race",
+   "src-sheriff-settlement"
+  ],
+  "researchStatus": "solid"
+ },
+ {
+  "id": "douglas-christensen",
+  "name": "Douglas Christensen",
+  "party": "Unaffiliated",
+  "contestId": "sheriff",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "KSL reported Christensen grew up in Bear River City and worked in Box Elder County with the Utah Highway Patrol for 16 years. He has advocated closer community engagement and collaboration with deputies to identify improvements.",
+  "background": [
+   "Utah Highway Patrol service in Box Elder County for 16 years, per KSL.",
+   "Grew up in Bear River City."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-sheriff-race"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "allan-shinney",
+  "name": "Allan L Shinney",
+  "party": "Unaffiliated",
+  "contestId": "sheriff",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "KSL reported Shinney lived in South Willard for 21 years and served more than 26 years in law enforcement. He was a colonel in state law enforcement and later chief law-enforcement director at the Utah State Tax Commission; he describes himself as a fiscal conservative.",
+  "background": [
+   "More than 26 years in law enforcement.",
+   "Former state law-enforcement colonel and Utah Tax Commission law-enforcement director."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-sheriff-race"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "chad-hayman",
+  "name": "Chad Hayman",
+  "party": "Unaffiliated",
+  "contestId": "sheriff",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county's official roster continues to list Hayman as an unaffiliated sheriff candidate. KSL reported October 9 that Hayman told the outlet he was no longer campaigning; the county does not mark him withdrawn, so he remains listed as on the ballot.",
+  "background": [
+   "No verified career background located.",
+   "Reported by KSL to have stopped campaigning; still listed by county as a candidate on October 28, 2026."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-sheriff-race"
+  ],
+  "researchStatus": "limited"
+ },
+ {
+  "id": "marla-young",
+  "name": "Marla Young",
+  "party": "Republican",
+  "contestId": "clerk",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county lists Young as the Republican candidate for clerk and its official history records her as clerk since 2011. The office administers elections and keeps commission meeting records; no opponent appears in the county roster.",
+  "background": [
+   "Box Elder County Clerk since 2011, per county history.",
+   "County election officer and clerk to the commission."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-clerk-role",
+   "src-clerk-history"
+  ],
+  "researchStatus": "limited"
+ },
+ {
+  "id": "blair-wardle",
+  "name": "Blair Wardle",
+  "party": "Republican",
+  "contestId": "attorney",
+  "incumbent": false,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county roster lists Blair T. Wardle as Republican candidate for county attorney, with no opponent. The current elected-official roster identifies Stephen Hadfield as serving attorney; reviewed sources did not establish Wardle's career background or campaign biography.",
+  "background": [
+   "Listed Republican candidate for county attorney in 2026.",
+   "No verified prior elected office or career background located."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-elected-officials",
+   "src-attorney-role"
+  ],
+  "researchStatus": "partial"
+ },
+ {
+  "id": "shirlene-larsen",
+  "name": "Shirlene Larsen",
+  "party": "Republican",
+  "contestId": "auditor",
+  "incumbent": true,
+  "status": "on ballot",
+  "campaignUrl": null,
+  "bio": "The county lists Larsen as Republican candidate for auditor and records her as auditor since 2022. The office reviews bills and accounts, serves as budget officer, and helps administer property taxes; no opponent appears in the roster.",
+  "background": [
+   "Box Elder County Auditor since 2022, per county history.",
+   "Budget officer and reviewer of county bills and accounts."
+  ],
+  "sourceIds": [
+   "src-candidates",
+   "src-auditor-role",
+   "src-auditor-history"
+  ],
+  "researchStatus": "limited"
+ }
+]

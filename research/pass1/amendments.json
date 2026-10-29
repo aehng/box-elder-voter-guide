@@ -1,0 +1,97 @@
+﻿{
+  "group": "amendments",
+  "contests": [
+    {
+      "id": "amendment-a",
+      "office": "Utah Constitutional Amendment A — publication of proposed constitutional amendments",
+      "district": "Statewide",
+      "type": "amendment",
+      "whatOfficeDecides": [
+        "Whether to amend Article XXIII, Section 1 of the Utah Constitution so the method for publishing proposed constitutional amendments is set by state law rather than constitutionally requiring newspaper publication in each county where a newspaper is published.",
+        "Under implementing H.B. 481, approval would require the Lieutenant Governor to publish the full text of proposed constitutional amendments and other legislative ballot questions on the Utah Public Notice Website and Lieutenant Governor website for 60 calendar days immediately before the general election. The amendment does not change the two-thirds legislative proposal threshold or majority-voter approval requirement."
+      ],
+      "howItAffectsVoters": "A For vote replaces the constitutional newspaper-publication rule with a 60-day publication period using a method set by state law; H.B. 481 specifies publication of full text on two government websites. A voter Against vote keeps the current constitutional rule requiring publication in a newspaper in every county where one is published for two months before the election. The 2026 pamphlet says A with H.B. 481 could reduce state costs by up to $1.4 million every two years; this is an estimate and depends on amendment length and newspaper rates.",
+      "candidates": [],
+      "issues": [
+        {
+          "id": "amendment-a-publication-method",
+          "category": "Government & Elections",
+          "question": "Should Utah change how it publishes proposed constitutional amendments before voters decide on them?",
+          "leftLabel": "Against: keep newspaper publication required by the Constitution",
+          "rightLabel": "For: allow the publication method to be set by state law",
+          "leftPros": [
+            "Keeps the publication channel in the Constitution, so changing it requires another constitutional amendment rather than an ordinary statute.",
+            "Retains publication in local newspapers, a familiar offline channel that can reach readers who do not routinely use state websites."
+          ],
+          "leftCons": [
+            "Retains the newspaper publication expense; the official pamphlet estimates that A together with H.B. 481 could reduce state costs by up to $1.4 million every two years.",
+            "The existing rule depends on newspaper publication in every county where a newspaper is published, rather than specifying publication on state-operated websites."
+          ],
+          "rightPros": [
+            "Maintains a 60-day advance publication period and, under H.B. 481, places full text on the Utah Public Notice Website and Lieutenant Governor website.",
+            "The official fiscal analysis estimates potential state savings of up to $1.4 million every two years with H.B. 481, depending on amendment length and newspaper publication rates.",
+            "Provides flexibility to change publication methods through state law as communication methods change."
+          ],
+          "rightCons": [
+            "Moves the publication method from a constitutional requirement into ordinary state law, which the Legislature can change by statute.",
+            "Replaces newspaper publication with government websites, which may be less accessible to voters who do not use the internet or know where to find the notices."
+          ],
+          "background": "The ballot asks whether Article XXIII, Section 1 should replace its newspaper-publication requirement with publication for 60 days in a manner established by state law. H.B. 481, which takes effect if voters approve Amendment A, specifies full-text publication on the Utah Public Notice Website and Lieutenant Governor website. The amendment leaves unchanged the two-thirds vote in each legislative house needed to propose an amendment and the majority vote needed for voter approval.",
+          "whyLive": "The Legislature referred H.J.R. 10 to voters unanimously (House 70–0, Senate 29–0); the official pamphlet reports no argument against and no rebuttal were submitted because of that unanimous adoption. Although there is no formal opposition argument in the pamphlet, the choice has a clear policy consequence: constitutional newspaper publication versus a method established in statute and, under H.B. 481, online government publication. The official fiscal analysis estimates potential savings.",
+          "sourceIds": ["src-a-vip", "src-a-proposed-text", "src-a-news-context"]
+        }
+      ]
+    },
+    {
+      "id": "amendment-b",
+      "office": "Utah Constitutional Amendment B — tax-related statewide citizen initiatives",
+      "district": "Statewide",
+      "type": "amendment",
+      "whatOfficeDecides": [
+        "Whether to amend Article VI, Section 1 of the Utah Constitution so certain statewide citizen-initiated laws voted on after November 1, 2026 need at least 60% voter approval to pass.",
+        "The 60% threshold applies if the initiative imposes a new tax, expands an existing tax to additional items or transactions, increases an existing tax rate, or changes a property-tax rate so it decreases less than it would under current law. Other statewide initiatives retain the simple-majority rule; the existing two-thirds threshold for wildlife initiatives remains."
+      ],
+      "howItAffectsVoters": "A For vote makes at least 60% approval necessary for the specified tax-related citizen initiatives; an Against vote keeps the current simple-majority threshold for those initiatives. Supporters argue tax increases should receive broader voter backing and that initiative laws can be difficult to revise; opponents argue the higher threshold gives citizen initiatives a tougher standard than the Legislature faces and weakens a direct-democracy safeguard. The official fiscal analysis says the amendment likely would not materially affect current state revenues or expenditures.",
+      "candidates": [],
+      "issues": [
+        {
+          "id": "amendment-b-tax-initiative-threshold",
+          "category": "Government & Elections",
+          "question": "Should certain statewide citizen initiatives that increase taxes require 60% voter approval instead of a simple majority?",
+          "leftLabel": "Against: keep the simple-majority rule for citizen initiatives",
+          "rightLabel": "For: require 60% approval for specified tax-increasing initiatives",
+          "leftPros": [
+            "Keeps the initiative passage standard equal to the simple-majority rule that applies to most statewide initiatives and to many legislative decisions.",
+            "Allows a measure supported by a majority of voters to pass even if it does not reach 60%, preserving citizens' ability to enact tax-funded programs through initiative."
+          ],
+          "leftCons": [
+            "A tax-related initiative could become law with only a narrow majority, which opponents of the current rule may view as insufficient broad support for a tax change affecting taxpayers statewide.",
+            "A citizen initiative can be difficult to revise after passage and may require another initiative to change, according to the official argument in favor."
+          ],
+          "rightPros": [
+            "Requires broader voter support before a specified citizen initiative can create or expand taxes or make the covered property-tax change.",
+            "Supporters argue that initiative laws are difficult to revise and that a higher threshold encourages proposals to build support across regions and viewpoints.",
+            "Leaves the initiative process and simple-majority threshold in place for statewide initiatives outside the listed tax categories."
+          ],
+          "rightCons": [
+            "Makes it harder for voters to enact certain tax-related policies by initiative than under the current simple-majority rule.",
+            "Opponents argue the Legislature may pass comparable measures by simple majority, creating a different standard for citizen lawmaking and legislative action.",
+            "Opponents warn that creating a policy-specific supermajority exception could set a precedent for adding higher thresholds to other initiative topics."
+          ],
+          "background": "The ballot title summarizes the measure as requiring citizen-proposed laws that increase taxes compared with existing law to receive at least 60% approval rather than a simple majority. The constitutional text specifies four triggers: imposing a new tax, expanding a tax to new items or transactions, increasing a tax rate, or making the covered property-tax-rate change; the rule applies to initiatives voted on after November 1, 2026. The official fiscal analysis says enactment likely would not materially affect current state revenues or expenditures.",
+          "whyLive": "The amendment is the subject of an active statewide campaign: the pamphlet includes arguments and rebuttals on both sides, and 2026 reporting documents a campaign urging voters to reject it. Supporters focus on broad voter backing and tax accountability; opponents focus on the unequal threshold for citizens and the effect on the initiative power. This is a statewide ballot measure rather than a candidate contest, so candidate positions are not applicable.",
+          "sourceIds": ["src-b-vip", "src-b-utah-news", "src-b-ksl", "src-b-news-dispatch", "src-b-ballotpedia"]
+        }
+      ]}
+  ],
+  "sources": [
+    {"id":"src-a-vip","url":"https://vote.utah.gov/wp-content/uploads/2026/10/2026-Voter-Information-Pamphlet-Ballot-Questions-Amendment-A.pdf","title":"2026 Voter Information Pamphlet: Constitutional Amendment A","publisher":"Utah Lieutenant Governor / Utah Voter Information","published":null,"accessed":"2026-10-28"},
+    {"id":"src-a-proposed-text","url":"https://le.utah.gov/constitutionalAmendment/2026/constitutionalamendments.pdf","title":"2026 Proposed Constitutional Amendments","publisher":"Utah Legislature","published":null,"accessed":"2026-10-28"},
+    {"id":"src-a-news-context","url":"https://weber-county-hive.github.io/Transparency/utah-amendments-2026.html","title":"The 2026 Amendments, Part 1: Amendment A, and how you are told","publisher":"The Weber County Hive","published":"2026-10-07","accessed":"2026-10-28"},
+    {"id":"src-b-vip","url":"https://vote.utah.gov/wp-content/uploads/2026/10/2026-Voter-Information-Pamphlet-Ballot-Questions-Amendment-B.pdf","title":"2026 Voter Information Pamphlet: Constitutional Amendment B","publisher":"Utah Lieutenant Governor / Utah Voter Information","published":null,"accessed":"2026-10-28"},
+    {"id":"src-b-utah-news","url":"https://utah.news/measure/constitutional-amendment-b","title":"Constitutional Amendment B — Utah's Nov. 3, 2026 ballot","publisher":"Utah News","published":null,"accessed":"2026-10-28"},
+    {"id":"src-b-ksl","url":"https://www.ksl.com/article/news/utah/politics/proposed-amendment-would-raise-the-bar-for-some-utah-ballot-initiatives/51631261","title":"Proposed amendment would raise the bar for some Utah ballot initiatives","publisher":"KSL.com","published":"2026-10-01","accessed":"2026-10-28"},
+    {"id":"src-b-news-dispatch","url":"https://utahnewsdispatch.com/2026/09/28/utah-amendment-b-ballot-question-higher-bar-for-ballot-initiatives/","title":"Utah lawmakers want a higher bar for ballot initiatives that raise taxes. Will voters sign off?","publisher":"Utah News Dispatch","published":"2026-09-28","accessed":"2026-10-28"},
+    {"id":"src-b-ballotpedia","url":"https://ballotpedia.org/Utah_Constitutional_Amendment_B%2C_60%25_Vote_Requirement_for_Ballot_Initiatives_to_Increase_or_Expand_Taxes_Measure_%282026%29","title":"Utah Constitutional Amendment B, 60% Vote Requirement for Ballot Initiatives to Increase or Expand Taxes Measure (2026)","publisher":"Ballotpedia","published":null,"accessed":"2026-10-28"}
+  ]
+}

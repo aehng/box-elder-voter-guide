@@ -1,0 +1,526 @@
+{
+  "group": "legislature",
+  "positions": [
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "fair-voting-maps",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No specific position on who should draw Utah's legislative maps was found in the reviewed sources. Bigler did not respond to the Salt Lake Tribune questionnaire; that nonresponse is not treated as opposition.",
+      "date": null,
+      "sourceIds": [
+        "src-senate-guide"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "water-conservation-and-agriculture",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No specific position balancing Great Salt Lake or Colorado River conservation with agricultural and community water needs was found. Bigler did not respond to the Tribune water question, and her Stratos comments are not used to infer a broader water policy.",
+      "date": null,
+      "sourceIds": [
+        "src-senate-guide",
+        "src-stratos-candidates"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "taxes-and-affordability",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No specific tax or wage policy was found in the reviewed sources. Bigler did not respond to the Tribune affordability question; that nonresponse is not treated as opposition.",
+      "date": null,
+      "sourceIds": [
+        "src-senate-guide"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "stratos-data-center-and-mida",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Bigler said Utah should study and regulate large data-center projects before proceeding, and described her vote on Stratos as a provisional no pending environmental studies and public input. This strongly matches pausing or restricting projects pending study and oversight.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "fair-voting-maps",
+      "position": 2,
+      "evidenceType": "campaign-site",
+      "summary": "Sandall's campaign says he is working to ensure Utah's elected representatives, rather than unelected judges, decide how districts are drawn. That clearly supports legislative control of maps, the +2 end of this issue's scale.",
+      "date": null,
+      "sourceIds": [
+        "src-sandall-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "water-conservation-and-agriculture",
+      "position": 1,
+      "evidenceType": "campaign-site",
+      "summary": "Sandall says water must be divided among municipalities, industry, and agriculture while maintaining current rights, and that water should move where needed while existing rights are protected. This leans toward protecting existing uses and local flexibility, without a specific position against conservation mandates.",
+      "date": null,
+      "sourceIds": [
+        "src-sandall-issues"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "taxes-and-affordability",
+      "position": 2,
+      "evidenceType": "campaign-site",
+      "summary": "Sandall's campaign says he has worked to provide $1.4 billion in tax cuts and intends to keep the tax burden low. That directly matches the lower-tax end of the issue scale.",
+      "date": null,
+      "sourceIds": [
+        "src-sandall-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "stratos-data-center-and-mida",
+      "position": 1,
+      "evidenceType": "inference",
+      "summary": "In an emailed statement, Sandall said he would monitor the project and ensure all permits were properly vetted. That leans toward allowing development through permit review; he did not state a direct position on dissolving MIDA or give an unconditional approval of Stratos.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "fair-voting-maps",
+      "position": -2,
+      "evidenceType": "campaign-site",
+      "summary": "Quinlan's campaign calls for no more gerrymandering and says voters should choose representatives rather than candidates choosing their voters. That strongly supports voter-led or independent mapmaking over legislative control.",
+      "date": null,
+      "sourceIds": [
+        "src-quinlan-campaign"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "water-conservation-and-agriculture",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Quinlan said Utah should require the other four major water districts to follow the conservation practice that returned water to the Great Salt Lake, and urged statewide voluntary conservation. This strongly favors broader conservation; her answer did not specify how costs should be balanced for agriculture.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-senate-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "taxes-and-affordability",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Quinlan said wealthy households should pay their fair share and corporations should pay a living wage so employees rely less on public assistance and taxes can be lower for other Utahns. This strongly matches the higher taxes on wealthy households and wage-requirement end of the scale.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-senate-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "stratos-data-center-and-mida",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Quinlan said no additional data centers should be built in areas that drain into the Great Salt Lake and called for dissolving MIDA. This strongly matches restricting projects pending oversight and limiting MIDA's authority.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "rob-bishop",
+      "issueId": "starter-housing-and-growth",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Historical (December 2025 pre-election interview): Bishop said housing affordability remained among the issues he cared about, but no specific proposal prioritizing smaller or existing homes, or relying on broader market supply and local choice, was found. He did not respond to the Tribune’s 2026 questionnaire.",
+      "date": null,
+      "sourceIds": [
+        "src-bishop-return",
+        "src-house-guide"
+      ],
+      "confidence": "low",
+      "historical": true
+    },
+    {
+      "candidateId": "rob-bishop",
+      "issueId": "farm-water-rights-and-conservation",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Bishop has spoken generally about protecting northern Utah's water rights, but no specific position on changing forfeiture rules for farmers who voluntarily conserve was found. He did not answer the Tribune's 2026 water question; the broader remarks do not establish a position on this proposal.",
+      "date": null,
+      "sourceIds": [
+        "src-bishop-return",
+        "src-house-guide",
+        "src-bishop-podcast"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "rob-bishop",
+      "issueId": "tax-transparency-and-affordability",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "No specific position on auditing tax levies, reducing taxes, or preserving revenue for services was found. Bishop did not answer the Tribune's affordability questionnaire, and no tax policy was inferred from his party.",
+      "date": null,
+      "sourceIds": [
+        "src-house-guide"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "rob-bishop",
+      "issueId": "government-accountability",
+      "position": 0,
+      "evidenceType": "inference",
+      "summary": "Historical (2025): Bishop was a sponsor of a citizen initiative to repeal voter-approved Proposition 4 and had previously resigned from its redistricting commission over disagreement with proposed maps. Using a ballot initiative gives voters a direct decision, while repealing Proposition 4 would remove a voter-created commission and standards; this is a mixed record rather than a clear tilt toward either end of the issue.",
+      "date": "2025-12-30",
+      "sourceIds": [
+        "src-bishop-return"
+      ],
+      "confidence": "low",
+      "historical": true
+    },
+    {
+      "candidateId": "james-rich",
+      "issueId": "starter-housing-and-growth",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Rich proposed state starter-home initiatives prioritizing small-lot houses, townhomes, condos, owner-occupied duplexes, and existing homes, rather than only new construction. This directly matches prioritizing smaller and existing homes.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-house-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "james-rich",
+      "issueId": "farm-water-rights-and-conservation",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Rich proposed amending Utah's 'use it or lose it' forfeiture rules to protect farmers' underlying water rights when they lower consumption through irrigation upgrades or changing fields. This directly matches protecting rights when farmers reduce use.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-house-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "james-rich",
+      "issueId": "tax-transparency-and-affordability",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Rich said he wants laws making the tax system transparent and understandable so problem areas can be identified for possible tax reductions and economic opportunities. This directly matches auditing levies and reducing taxes where possible.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-house-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "james-rich",
+      "issueId": "government-accountability",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Rich said state officials have ignored or tried to overturn voters' will and that he prioritizes listening to all people. This leans toward greater public voice and accountability, though he did not name a specific new check or transparency law.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-house-guide"
+      ],
+      "confidence": "medium",
+      "historical": false
+    }
+  ],
+  "facts": [
+    {
+      "candidateId": "claudia-bigler",
+      "kind": "background",
+      "text": "Bigler retired in 2025 after 24 years teaching choir at Box Elder High School and is artistic director of the Cache Childrenâ€™s Choir.",
+      "date": null,
+      "sourceIds": [
+        "src-senate-guide"
+      ]
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "kind": "statement",
+      "text": "On Stratos, Bigler said she was not opposed to data centers generally but wanted more study and regulation; she gave a provisional no until environmental studies and public input were available.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "kind": "background",
+      "text": "Sandall's campaign identifies him as a lifelong Box Elder County resident, rancher, business owner, and former member of the Utah Farm Bureau State Board; The Salt Lake Tribune reports he has served in the Legislature since 2015 and the Senate since 2019.",
+      "date": null,
+      "sourceIds": [
+        "src-sandall-campaign",
+        "src-senate-guide"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "kind": "bill",
+      "text": "Sandall sponsored 2025 SB 132, Electric Utility Amendments. The law created requirements for large-scale electric service, including Public Service Commission review of large-load contracts and protections against shifting costs to other electric customers.",
+      "date": "2025-03-25",
+      "sourceIds": [
+        "src-sb132-bill"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "kind": "vote",
+      "text": "Sandall voted yes on the Senate's final concurrence vote for SB 132 on March 7, 2025; the measure passed 27-0 with two absent and was signed into law on March 25.",
+      "date": "2025-03-07",
+      "sourceIds": [
+        "src-sb132-vote",
+        "src-sb132-bill"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "kind": "criticism",
+      "text": "Bigler and Quinlan criticized Sandall's sponsorship of SB 132 as helping fast-track power infrastructure for data-center projects. Sandall responded by saying he would monitor the project to ensure permits were properly vetted and would be interested in an interview if the Senate had to vote on it.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "kind": "background",
+      "text": "Quinlan says she studied landscape architecture at West Valley College and is a political newcomer who entered the race over concerns about the Great Salt Lake, party politics, and the cost of living.",
+      "date": null,
+      "sourceIds": [
+        "src-quinlan-campaign"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "kind": "statement",
+      "text": "Quinlan called for other Utah water districts to adopt conservation practices and for Utahns to conserve water to benefit the Great Salt Lake and Colorado River.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-senate-guide"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "kind": "criticism",
+      "text": "Quinlan accused Sandall, who chaired a legislative mapmaking committee, of sabotaging the effort to create fair maps. This is Quinlan's allegation, not an independently established finding; Sandall did not respond to the Tribune questionnaire.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-senate-guide"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "kind": "statement",
+      "text": "Quinlan said MIDA had too much power and called for the authority to be dissolved; she also opposed additional data centers in the Great Salt Lake basin.",
+      "date": "2026-07-18",
+      "sourceIds": [
+        "src-stratos-candidates"
+      ]
+    },
+    {
+      "candidateId": "rob-bishop",
+      "kind": "background",
+      "text": "Bishop taught history and previously served in the Utah House from 1978 to 1994, including as Speaker, then represented Utah in Congress from 2003 to 2021. Republican delegates selected him to fill House District 6's vacancy in 2026.",
+      "date": null,
+      "sourceIds": [
+        "src-house-guide",
+        "src-bishop-special-election"
+      ]
+    },
+    {
+      "candidateId": "rob-bishop",
+      "kind": "record",
+      "text": "Bishop resigned from Utah's Independent Redistricting Commission in 2021 before it recommended maps, saying the process failed to balance urban and rural interests. In 2025, he was listed among sponsors of a citizen initiative to repeal Proposition 4; his stated concern was that Utah's congressional districts should combine urban and rural voters.",
+      "date": "2025-12-30",
+      "sourceIds": [
+        "src-bishop-return"
+      ]
+    },
+    {
+      "candidateId": "rob-bishop",
+      "kind": "statement",
+      "text": "When announcing his 2026 run, Bishop said housing affordability, water development and control, returning authority to the state, and reducing regulatory workload for teachers remained priorities. He did not specify a starter-home policy in that interview.",
+      "date": "2025-12-30",
+      "sourceIds": [
+        "src-bishop-return"
+      ]
+    },
+    {
+      "candidateId": "james-rich",
+      "kind": "background",
+      "text": "Rich leads a company providing information-technology consulting and software to businesses; Ballotpedia reports that he earned a bachelor's degree from the University of Utah in 2002.",
+      "date": null,
+      "sourceIds": [
+        "src-house-guide",
+        "src-rich-survey"
+      ]
+    },
+    {
+      "candidateId": "james-rich",
+      "kind": "statement",
+      "text": "In his Ballotpedia Candidate Connection survey, Rich said the Great Salt Lake could be helped through changes to water rights, improved agricultural practices, or other efforts, with state universities and the public contributing to solutions.",
+      "date": "2026-06-30",
+      "sourceIds": [
+        "src-rich-survey"
+      ]
+    },
+    {
+      "candidateId": "james-rich",
+      "kind": "statement",
+      "text": "Rich said he wants government to make tax rules transparent and understandable so households and businesses can identify possible reductions and economic opportunities.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-house-guide"
+      ]
+    },
+    {
+      "candidateId": "james-rich",
+      "kind": "endorsement",
+      "text": "Ballotpedia lists the Utah Forward Party, Elevate Utah, and Trailhead to the Ballot Box as endorsements or voter-guide recommendations for Rich.",
+      "date": null,
+      "sourceIds": [
+        "src-rich-survey"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-senate-guide",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/claudia-bigler-scott-sandall-julie/",
+      "title": "Utah Senate District 1: Claudia Bigler, Scott Sandall and Julie Quinlan face off",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-stratos-candidates",
+      "url": "https://www.ksl.com/article/51598787/candidates-seeking-box-elder-senate-seat-weigh-in-on-controversial-stratos-project",
+      "title": "Candidates seeking Box Elder Senate seat weigh in on controversial Stratos project",
+      "publisher": "KSL.com",
+      "published": "2026-07-18",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sandall-campaign",
+      "url": "https://www.votescottsandall.com/",
+      "title": "Scott Sandall for Utah Senate",
+      "publisher": "Scott Sandall campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sandall-issues",
+      "url": "https://www.votescottsandall.com/important-issues",
+      "title": "Important Issues",
+      "publisher": "Scott Sandall campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sb132-bill",
+      "url": "https://le.utah.gov/~2025/bills/static/SB0132.html",
+      "title": "S.B. 132 Electric Utility Amendments",
+      "publisher": "Utah State Legislature",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sb132-vote",
+      "url": "https://le.utah.gov/DynaBill/svotes.jsp?house=S&sessionid=2025GS&voteid=2129",
+      "title": "Senate Vote Status: S.B. 132 concurrence with House amendment",
+      "publisher": "Utah State Legislature",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-quinlan-campaign",
+      "url": "https://julieq4utah.com/",
+      "title": "Julie Quinlan for Utah Senate District 1",
+      "publisher": "Julie Quinlan campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-house-guide",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/rob-bishop-faces-james-rich-2026/",
+      "title": "Utah House District 6: Rob Bishop faces off against James Rich",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bishop-return",
+      "url": "https://www.sltrib.com/news/politics/2025/12/30/former-congressman-rob-bishop-run/",
+      "title": "Former Congressman Rob Bishop poised to return to the Utah House, where his political career began",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2025-12-30",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bishop-podcast",
+      "url": "https://politicitpodcast.podbean.com/e/from-congress-to-the-utah-legislature-rob-bishop-returns-to-public-service/",
+      "title": "From Congress to the Utah Legislature: Rob Bishop Returns to Public Service",
+      "publisher": "PoliticIt Podcast",
+      "published": "2026-09-07",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-bishop-special-election",
+      "url": "https://www.ksl.com/article/news/politics/former-congressman-wins-special-election-to-utah-legislature/51488746",
+      "title": "Former congressman wins special election to Utah Legislature",
+      "publisher": "KSL.com",
+      "published": "2026-04-25",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-rich-survey",
+      "url": "https://ballotpedia.org/James_Rich_(Utah)",
+      "title": "James Rich (Utah) — Candidate Connection survey and endorsements",
+      "publisher": "Ballotpedia",
+      "published": null,
+      "accessed": "2026-10-28"
+    }
+  ]
+}

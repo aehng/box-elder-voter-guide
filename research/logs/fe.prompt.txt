@@ -1,0 +1,1 @@
+﻿Read FRONTEND_BRIEF.md in the current directory and build the entire site exactly as specified. Work autonomously to completion; run pnpm install, pnpm build and pnpm validate until they pass.

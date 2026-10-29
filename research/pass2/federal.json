@@ -1,0 +1,579 @@
+{
+  "group": "federal",
+  "positions": [
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "water-great-salt-lake-and-data-center",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Crosby calls Great Salt Lake restoration urgent and supports federal funding for water leases, infrastructure, and phragmites removal, while also saying Utah and local communities should make major water and data-center decisions. The conservation focus leans left, with a clear local-control qualification.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "affordability-housing-and-tax-policy",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Crosby proposes renter protections and broader health coverage, and says tariffs have raised household costs. These proposals align strongly with expanding public affordability support and protections.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib",
+        "src-und-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "federal-deficits-and-spending",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Crosby supports a single-payer health system with a private option and rental-history-based aid, indicating a lean toward protecting or expanding federal programs. The reviewed answers do not give a specific deficit-reduction or revenue plan.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "government-ethics-and-election-reform",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Crosby proposes bans on congressional stock and crypto trading, a five-year lobbying restriction, a judicial ethics code, and limits on corporate and dark-money influence. These are direct ethics-tightening proposals aligned strongly with the left label.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "energy-reliability-and-environment",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Crosby champions solar and lower-emission generation, criticizing the rollback of solar incentives, while acknowledging that other sources will remain necessary. That favors clean-energy investment but is not an all-renewables position.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib-debate"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "water-great-salt-lake-and-data-center",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on water policy; no candidate-specific position was established in the reviewed sources.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "affordability-housing-and-tax-policy",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on affordability; no candidate-specific position was established in the reviewed sources.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "federal-deficits-and-spending",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Cottam did not answer the Salt Lake Tribune?s open-ended question that elicited other candidates? debt and deficit positions; no candidate-specific budget position was established in the reviewed sources.",
+      "date": null,
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "government-ethics-and-election-reform",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Cottam did not answer the Salt Lake Tribune?s corruption/accountability questionnaire; no candidate-specific ethics or election-reform position was established in the reviewed sources.",
+      "date": null,
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "energy-reliability-and-environment",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "The Utah News Dispatch guide lists no response from Cottam to the energy question; no candidate-specific energy position was established in the reviewed sources.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "water-great-salt-lake-and-data-center",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Moesinger supports voluntary water leasing, conservation, efficient use, and federal assistance for Great Salt Lake restoration, but says decisions should remain close to watersheds and communities and that federal action should augment rather than dictate local policy. This is a conservation-leaning position with local-control limits.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "affordability-housing-and-tax-policy",
+      "position": 0,
+      "evidenceType": "explicit-statement",
+      "summary": "Moesinger says there is no single ideological answer: he supports reducing barriers and expanding housing supply, infrastructure investment, and targeted assistance. That is a documented mix of supply-side changes and public support.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "federal-deficits-and-spending",
+      "position": 0,
+      "evidenceType": "explicit-statement",
+      "summary": "Moesinger calls for responsible fiscal policy while also supporting targeted family assistance and public infrastructure investment. The combination is mixed rather than a clear call either to expand broad programs/revenue or to prioritize spending cuts and tax relief.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "government-ethics-and-election-reform",
+      "position": -2,
+      "evidenceType": "explicit-statement",
+      "summary": "Moesinger?s central reform proposal is ranked-choice voting in multi-member House districts to enable multiparty representation. This is a direct, strong fit with the left label?s broader-representation reforms.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib",
+        "src-und-guide",
+        "src-moesinger"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "energy-reliability-and-environment",
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Moesinger supports a diverse portfolio including nuclear, gas, existing fossil generation, and renewables; he also favors streamlining slow permitting and retaining reliable capacity while requiring environmental safeguards. The all-source and reliability emphasis leans right, with significant environmental qualifications.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "water-great-salt-lake-and-data-center",
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Moore emphasizes water infrastructure for a growing population, federal project funding, and locally or state-led solutions, while also supporting Great Salt Lake restoration and conservation. The growth and infrastructure focus gives this a modest right lean despite his lake-restoration commitments.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "affordability-housing-and-tax-policy",
+      "position": 2,
+      "evidenceType": "explicit-statement",
+      "summary": "Moore advocates tax relief, lower regulatory costs, higher wages, and more housing construction, aligning strongly with the right label. He also cites federal anti-fraud measures and housing legislation.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "federal-deficits-and-spending",
+      "position": 2,
+      "evidenceType": "explicit-statement",
+      "summary": "Moore says deficit reduction, budget reform, stable programs, and less fraud and waste are priorities, aligning with spending restraint and tax relief. Historical context: he voted yea on final passage of H.R. 1 in 2025, a tax-and-spending package; that vote is relevant but does not by itself establish the bill?s net deficit effect.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib",
+        "src-house-roll190",
+        "src-hr1"
+      ],
+      "confidence": "high",
+      "historical": true
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "government-ethics-and-election-reform",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Moore says he backed the Stop Insider Trading Act, proposed limits on election and government-related prediction-market betting, and supports anti-fraud enforcement. These are documented ethics-tightening measures; the reviewed responses do not establish a position on broader representation reforms.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "energy-reliability-and-environment",
+      "position": 2,
+      "evidenceType": "recorded-vote",
+      "summary": "Moore advocates all-source power, faster permitting, and reliable baseload generation. He also voted yea on H.R. 9340, the Ratepayer Protection Act, and says data centers should pay their own power-system costs; this strongly aligns with the right label.",
+      "date": "2026-09-16",
+      "sourceIds": [
+        "src-und-guide",
+        "src-ratepayer-vote"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "water-great-salt-lake-and-data-center",
+      "position": -1,
+      "evidenceType": "explicit-statement",
+      "summary": "Bowen calls the Box Elder data center?s water demand a major concern, questions whether that is an appropriate use, and urges protection of water for basic needs. His comments support scrutinizing water-intensive development, though his answer emphasizes water rights and Colorado River allocations rather than Great Salt Lake restoration.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "affordability-housing-and-tax-policy",
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Bowen links household costs to federal debt and spending and pledges to freeze year-over-year spending growth and oppose debt-limit increases and annual deficit spending. That leans toward fiscal restraint, though he gives no specific housing or tax-relief proposal.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "medium",
+      "historical": false
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "federal-deficits-and-spending",
+      "position": 2,
+      "evidenceType": "explicit-statement",
+      "summary": "Bowen calls the national debt unsustainable and says he would freeze spending growth, oppose debt-limit increases, and avoid annual deficit spending. Those are direct proposals aligned strongly with the right label.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "high",
+      "historical": false
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "government-ethics-and-election-reform",
+      "position": null,
+      "evidenceType": "unknown",
+      "summary": "Bowen described the Box Elder data-center approval as an example of corruption, but the reviewed sources do not establish a specific federal ethics or election-system reform proposal from him, so no directional position is assigned.",
+      "date": null,
+      "sourceIds": [
+        "src-sltrib"
+      ],
+      "confidence": "low",
+      "historical": false
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "energy-reliability-and-environment",
+      "position": 2,
+      "evidenceType": "explicit-statement",
+      "summary": "Bowen supports an all-of-the-above energy mix including fossil fuels, nuclear, hydro, solar, wind, and geothermal, and opposes federal subsidies that favor particular sources. He emphasizes abundant, reliable, and affordable supply, matching the right label strongly.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ],
+      "confidence": "high",
+      "historical": false
+    }
+  ],
+  "facts": [
+    {
+      "candidateId": "peter-crosby",
+      "kind": "background",
+      "text": "Utah News Dispatch describes Crosby as an adjunct professor at Utah State University and a project manager and consultant.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "kind": "endorsement",
+      "text": "Crosby?s campaign site lists endorsements from state Rep. Rosemary Lesser, other Utah candidates, local political groups, and labor and environmental organizations.",
+      "date": null,
+      "sourceIds": [
+        "src-peter-campaign"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "kind": "statement",
+      "text": "His campaign lists affordability, accountability (including banning congressional stock trading), public-land protection, Great Salt Lake restoration, and opposition to the Stratos data-center project among its priorities.",
+      "date": null,
+      "sourceIds": [
+        "src-peter-campaign"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "kind": "criticism",
+      "text": "At the October 2026 debate, Crosby criticized Moore?s support for the 2025 reconciliation law because it rolled back solar tax credits; Moore replied that he had gone to bat for Utah solar companies.",
+      "date": "2026-10-14",
+      "sourceIds": [
+        "src-sltrib-debate"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "background",
+      "text": "Utah News Dispatch describes Cottam as a business owner, bariatric surgeon, and consultant; The Salt Lake Tribune identifies his consulting work with medical-technology company Medtronic.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ]
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "kind": "background",
+      "text": "Utah News Dispatch describes Moesinger as an automation engineer and University of Utah graduate.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "kind": "statement",
+      "text": "Moesinger?s campaign says its legislative goals are nationwide multiparty democracy and institutional changes intended to create more competition and cooperation.",
+      "date": null,
+      "sourceIds": [
+        "src-moesinger"
+      ]
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "kind": "statement",
+      "text": "In the 2026 questionnaire, Moesinger identifies ranked-choice voting and multi-member House districts as his main electoral-reform proposals.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib",
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "kind": "background",
+      "text": "The Salt Lake Tribune identifies Moore as the incumbent representing Utah?s current 1st District and House Republican Caucus vice chair; he previously worked as a U.S. Foreign Service officer and consultant.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-sltrib",
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "kind": "vote",
+      "text": "Moore voted yea on July 3, 2025, on House Roll Call 190, final passage of H.R. 1, the One Big Beautiful Bill Act.",
+      "date": "2025-07-03",
+      "sourceIds": [
+        "src-house-roll190",
+        "src-hr1"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "kind": "bill",
+      "text": "Moore introduced the Saline Lake Ecosystems in the Great Basin States Program Act with Rep. Jared Huffman; the House passed it in 2022 and the measure became Public Law 117-318 on December 27, 2022.",
+      "date": "2022-12-27",
+      "sourceIds": [
+        "src-moore-house-bill",
+        "src-govinfo-saline-act"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "kind": "vote",
+      "text": "Moore voted yea on September 16, 2026, on H.R. 9340, the Ratepayer Protection Act.",
+      "date": "2026-09-16",
+      "sourceIds": [
+        "src-ratepayer-vote"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "kind": "criticism",
+      "text": "At the October 2026 debate, Crosby criticized Moore?s support for the 2025 reconciliation law because it rolled back solar tax credits; Moore replied that he had advocated for Utah solar companies.",
+      "date": "2026-10-14",
+      "sourceIds": [
+        "src-sltrib-debate"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "kind": "background",
+      "text": "Utah News Dispatch describes Bowen as an Air Force veteran who studied economics and worked as a senior IT project manager in healthcare; The Salt Lake Tribune reports he formerly served on the American Fork City Council.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "kind": "statement",
+      "text": "Bowen identifies the Box Elder data center?s water use as a major district concern and says water-intensive projects require transparent tradeoffs.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "kind": "statement",
+      "text": "Bowen supports an all-of-the-above energy approach and says federal subsidies should not pick energy-technology winners and losers.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-und-guide",
+      "url": "https://utahnewsdispatch.com/voter-guides/contests/2026-general-u-s-house-district-2/",
+      "title": "U.S. House representative, U.S. House District 2 | Voter Guide: 2026 General Election",
+      "publisher": "Utah News Dispatch",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sltrib",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/blake-moore-faces-peter-crosby/",
+      "title": "Utah?s 2nd Congressional District: Blake Moore faces off against Peter Crosby and three other candidates",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-12",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-sltrib-debate",
+      "url": "https://www.sltrib.com/news/politics/2026/10/14/moore-crosby-square-off-debate/",
+      "title": "Rep. Blake Moore says he has found ?a productive lane? in Congress. Challenger Peter Crosby says he lacks courage",
+      "publisher": "The Salt Lake Tribune",
+      "published": "2026-10-14",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-peter-campaign",
+      "url": "https://petercrosbyforcongress.org/",
+      "title": "Peter Crosby for Congress",
+      "publisher": "Peter Crosby for Congress campaign",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-moesinger",
+      "url": "https://www.improveourelections.org/home",
+      "title": "The Problem",
+      "publisher": "Improve Our Elections (Robert Moesinger campaign)",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-house-roll190",
+      "url": "https://clerk.house.gov/Votes/2025190",
+      "title": "Roll Call 190: H.R. 1, One Big Beautiful Bill Act",
+      "publisher": "Office of the Clerk, U.S. House of Representatives",
+      "published": "2025-07-03",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-hr1",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/1",
+      "title": "H.R.1 - One Big Beautiful Bill Act",
+      "publisher": "Congress.gov",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-ratepayer-vote",
+      "url": "https://clerk.house.gov/Votes/2026312",
+      "title": "Roll Call 312: H.R. 9340, Ratepayer Protection Act",
+      "publisher": "Office of the Clerk, U.S. House of Representatives",
+      "published": "2026-09-16",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-moore-house-bill",
+      "url": "https://blakemoore.house.gov/media/press-releases/congressman-blake-moores-saline-lake-ecosystems-great-basin-states-program-0",
+      "title": "Congressman Blake Moore?s Saline Lake Ecosystems in the Great Basin States Program Act Passes House of Representatives",
+      "publisher": "Office of U.S. Congressman Blake Moore",
+      "published": "2022-07-29",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-govinfo-saline-act",
+      "url": "https://www.govinfo.gov/app/details/PLAW-117publ318",
+      "title": "Public Law 117-318 - Saline Lake Ecosystems in the Great Basin States Program Act of 2022",
+      "publisher": "U.S. Government Publishing Office",
+      "published": "2022-12-27",
+      "accessed": "2026-10-28"
+    }
+  ]
+}
