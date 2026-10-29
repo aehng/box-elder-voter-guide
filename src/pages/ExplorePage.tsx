@@ -21,6 +21,7 @@ import {
 export const ExplorePage: React.FC = () => {
   const {
     issues,
+    contestMap,
     answers,
     setAnswer,
     sourceMap,
@@ -35,16 +36,27 @@ export const ExplorePage: React.FC = () => {
 
   const currentIssue: Issue | undefined = issues[currentIndex];
 
-  // Group issues by category for jump list
+  const isAmendmentIssue = currentIssue
+    ? currentIssue.contestIds.some((cid) => contestMap.get(cid)?.group === 'amendments')
+    : false;
+  const amendmentContest = isAmendmentIssue && currentIssue
+    ? currentIssue.contestIds.map((cid) => contestMap.get(cid)).find((c) => c?.type === 'amendment')
+    : null;
+
+  // Group issues by category for jump list, surfacing Constitutional Amendments as their own section
   const categoryGroups = useMemo(() => {
     const map = new Map<string, Array<{ issue: Issue; index: number }>>();
     issues.forEach((issue, index) => {
-      const list = map.get(issue.category) || [];
+      const isAmendment = issue.contestIds.some(
+        (cid) => contestMap.get(cid)?.group === 'amendments'
+      );
+      const categoryName = isAmendment ? 'Constitutional Amendments' : issue.category;
+      const list = map.get(categoryName) || [];
       list.push({ issue, index });
-      map.set(issue.category, list);
+      map.set(categoryName, list);
     });
     return Array.from(map.entries());
-  }, [issues]);
+  }, [issues, contestMap]);
 
   if (!currentIssue) {
     return (
@@ -154,6 +166,28 @@ export const ExplorePage: React.FC = () => {
         <div className="lg:col-span-8 space-y-6">
           {/* Question Card */}
           <div className="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-5">
+            {isAmendmentIssue && amendmentContest && (
+              <div className="p-4 rounded-xl bg-teal-50/70 border border-teal-200 text-xs text-stone-700 space-y-1.5">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="font-bold text-teal-900 text-[11px] uppercase tracking-wider">
+                    Statewide Constitutional Amendment
+                  </span>
+                  <Link
+                    to={`/amendment/${amendmentContest.id}`}
+                    className="text-teal-800 hover:underline font-semibold flex items-center gap-0.5"
+                  >
+                    View amendment detail &rarr;
+                  </Link>
+                </div>
+                <h3 className="font-bold text-sm text-stone-900">
+                  {amendmentContest.office}
+                </h3>
+                <p className="text-stone-600 leading-relaxed">
+                  {amendmentContest.howItAffectsVoters}
+                </p>
+              </div>
+            )}
+
             <div>
               <h2 className="text-xl sm:text-2xl font-bold text-stone-900 leading-snug">
                 {currentIssue.question}
@@ -167,12 +201,12 @@ export const ExplorePage: React.FC = () => {
 
             {/* Side-by-side policy cards (stack on mobile) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              {/* Left Policy Card (-2) */}
+              {/* Left Policy Card */}
               <div className="bg-stone-50 rounded-xl p-4 sm:p-5 border border-stone-200 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] font-extrabold tracking-wider uppercase text-stone-500">
-                      Option A (Position −2)
+                      {isAmendmentIssue ? 'Vote AGAINST (Reject)' : 'Perspective A'}
                     </span>
                   </div>
                   <h3 className="font-bold text-sm text-stone-900 mb-3 leading-snug">
@@ -207,12 +241,12 @@ export const ExplorePage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right Policy Card (+2) */}
+              {/* Right Policy Card */}
               <div className="bg-stone-50 rounded-xl p-4 sm:p-5 border border-stone-200 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-[11px] font-extrabold tracking-wider uppercase text-stone-500">
-                      Option B (Position +2)
+                    <span className="text-[11px] font-extrabold tracking-wider uppercase text-teal-800">
+                      {isAmendmentIssue ? 'Vote FOR (Approve)' : 'Perspective B'}
                     </span>
                   </div>
                   <h3 className="font-bold text-sm text-stone-900 mb-3 leading-snug">
@@ -356,13 +390,40 @@ export const ExplorePage: React.FC = () => {
             </div>
           </div>
 
-          {/* After answering: compact "Where candidates stand" mini chart */}
+          {/* After answering */}
           {(isAnswered || isNoOpinion) && (
             <div className="animate-fadeIn">
-              <MiniPositionChart
-                issueId={currentIssue.id}
-                userStance={currentAnswer.stance}
-              />
+              {isAmendmentIssue && amendmentContest ? (
+                <div className="bg-white rounded-xl border border-stone-200 p-4 shadow-2xs space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-stone-500">
+                      Your Recorded Choice on this Amendment
+                    </h4>
+                    <Link
+                      to={`/amendment/${amendmentContest.id}`}
+                      className="text-xs font-semibold text-teal-700 hover:underline"
+                    >
+                      Read full amendment analysis &rarr;
+                    </Link>
+                  </div>
+                  <p className="text-xs text-stone-600">
+                    This is a statewide constitutional amendment decided by voters. Candidates do not hold individual ballot positions on amendments in this guide.
+                  </p>
+                  {isAnswered && (
+                    <div className="p-2.5 rounded-lg bg-teal-50 border border-teal-200 text-xs text-teal-900 font-medium flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0" />
+                      <span>
+                        Your stance: <strong>{currentAnswer.stance === -2 ? currentIssue.leftLabel : currentAnswer.stance === 2 ? currentIssue.rightLabel : currentAnswer.stance === 0 ? 'Undecided / Neutral' : currentAnswer.stance! < 0 ? `Lean: ${currentIssue.leftLabel}` : `Lean: ${currentIssue.rightLabel}`}</strong>
+                      </span>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <MiniPositionChart
+                  issueId={currentIssue.id}
+                  userStance={currentAnswer.stance}
+                />
+              )}
             </div>
           )}
         </div>

@@ -107,6 +107,12 @@ export const ComparePage: React.FC = () => {
             Assumed
           </span>
         );
+      case 'unanswered':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-stone-100 text-stone-600">
+            You haven&rsquo;t answered
+          </span>
+        );
       case 'unknown':
       default:
         return (
@@ -176,11 +182,20 @@ export const ComparePage: React.FC = () => {
                 <span className="font-bold text-xs sm:text-sm block leading-snug truncate mt-0.5">
                   {c.office}
                 </span>
-                <span className={`text-[11px] block mt-1 ${
-                  isSelected ? 'text-stone-300' : 'text-stone-500'
-                }`}>
-                  {c.candidateIds.length} candidate{c.candidateIds.length === 1 ? '' : 's'}
-                </span>
+                <div className="flex items-center gap-1.5 mt-1 flex-wrap">
+                  <span className={`text-[11px] block ${
+                    isSelected ? 'text-stone-300' : 'text-stone-500'
+                  }`}>
+                    {c.candidateIds.length} candidate{c.candidateIds.length === 1 ? '' : 's'}
+                  </span>
+                  {c.uncontested && (
+                    <span className={`text-[10px] font-bold px-1.5 py-0.2 rounded ${
+                      isSelected ? 'bg-stone-700 text-stone-200' : 'bg-stone-200 text-stone-800'
+                    }`}>
+                      Unopposed
+                    </span>
+                  )}
+                </div>
               </button>
             );
           })}
@@ -189,6 +204,21 @@ export const ComparePage: React.FC = () => {
 
       {currentContest && (
         <div className="space-y-6">
+          {/* Unopposed Race Context Notice */}
+          {currentContest.uncontested && (
+            <div className="p-4 sm:p-5 rounded-2xl bg-stone-100 border border-stone-200 text-xs sm:text-sm text-stone-800 space-y-1.5 shadow-2xs">
+              <div className="flex items-center gap-2 text-stone-900 font-bold">
+                <span className="px-2 py-0.5 rounded bg-stone-200 text-stone-800 text-xs uppercase tracking-wider">
+                  Unopposed Race
+                </span>
+                <span>Office Context & Record</span>
+              </div>
+              <p className="text-stone-600 leading-relaxed">
+                This race is unopposed ({contestCandidates[0]?.name || 'The candidate'} has no challenger on the ballot). Issues and stances for this office are shown below as background context for their upcoming term rather than a competitive matchup.
+              </p>
+            </div>
+          )}
+
           {/* Candidates Summary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {contestCandidates.map((cand) => {
@@ -198,7 +228,8 @@ export const ComparePage: React.FC = () => {
               let agreeCount = 0;
               let differCount = 0;
               let middleCount = 0;
-              let unknownCount = 0;
+              let candidateUnknownCount = 0;
+              let userUnansweredCount = 0;
               let assumedCount = 0;
 
               for (const issue of contestIssues) {
@@ -206,12 +237,18 @@ export const ComparePage: React.FC = () => {
                 const uStance = ans && ans.status === 'answered' ? ans.stance : null;
                 const pos = candPositions.find((p) => p.issueId === issue.id);
 
-                const align = getAlignment(uStance, pos);
-                if (align === 'agree') agreeCount++;
-                else if (align === 'differ') differCount++;
-                else if (align === 'middle') middleCount++;
-                else if (align === 'assumed') assumedCount++;
-                else unknownCount++;
+                if (!pos || pos.position === null || pos.evidenceType === 'unknown') {
+                  candidateUnknownCount++;
+                } else if (pos.evidenceType === 'party-assumed' && !settings.includePartyAssumed) {
+                  assumedCount++;
+                } else if (uStance === null) {
+                  userUnansweredCount++;
+                } else {
+                  const align = getAlignment(uStance, pos);
+                  if (align === 'agree') agreeCount++;
+                  else if (align === 'differ') differCount++;
+                  else if (align === 'middle') middleCount++;
+                }
               }
 
               return (
@@ -227,11 +264,18 @@ export const ComparePage: React.FC = () => {
                       >
                         {cand.name}
                       </Link>
-                      {cand.incumbent && (
-                        <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-stone-100 text-stone-700 border border-stone-200 shrink-0">
-                          Incumbent
-                        </span>
-                      )}
+                      <div className="flex items-center gap-1 shrink-0">
+                        {cand.incumbent && (
+                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-stone-100 text-stone-700 border border-stone-200">
+                            Incumbent
+                          </span>
+                        )}
+                        {currentContest.uncontested && (
+                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-stone-200 text-stone-800">
+                            Unopposed
+                          </span>
+                        )}
+                      </div>
                     </div>
 
                     <div className="text-xs text-stone-500 font-medium mb-3">
@@ -274,7 +318,13 @@ export const ComparePage: React.FC = () => {
                           {middleCount > 0 && (
                             <span className="text-stone-600">{middleCount} middle</span>
                           )}
-                          <span className="text-stone-500">{unknownCount} unknown</span>
+                          <span className="text-stone-500">{candidateUnknownCount} unknown</span>
+                          {assumedCount > 0 && (
+                            <span className="text-stone-400">({assumedCount} assumed)</span>
+                          )}
+                          {userUnansweredCount > 0 && (
+                            <span className="text-stone-400">({userUnansweredCount} unanswered by you)</span>
+                          )}
                         </div>
                       </div>
                     ) : (
@@ -343,10 +393,14 @@ export const ComparePage: React.FC = () => {
           <div className="bg-white rounded-2xl border border-stone-200 shadow-2xs overflow-hidden">
             <div className="p-4 sm:p-5 border-b border-stone-200">
               <h2 className="text-base font-bold text-stone-900">
-                Your Views vs. Their Documented Positions
+                {currentContest.uncontested
+                  ? 'Candidate Positions & Office Issues Context'
+                  : 'Your Views vs. Their Documented Positions'}
               </h2>
               <p className="text-xs text-stone-500 mt-0.5">
-                Unknown stances never count toward agree or differ. Party assumptions are excluded unless the toggle is on.
+                {currentContest.uncontested
+                  ? 'Candidate documented positions on key office issues shown as background context.'
+                  : 'Unknown candidate positions never count toward agree or differ. Party assumptions are excluded unless the toggle is on.'}
               </p>
             </div>
 
@@ -363,7 +417,14 @@ export const ComparePage: React.FC = () => {
                       <th className="p-3.5 min-w-[150px]">Your Stance & Priority</th>
                       {contestCandidates.map((c) => (
                         <th key={c.id} className="p-3.5 min-w-[200px]">
-                          <div>{c.name}</div>
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span>{c.name}</span>
+                            {currentContest.uncontested && (
+                              <span className="text-[10px] font-bold px-1.5 py-0.2 rounded bg-stone-200 text-stone-700">
+                                Unopposed
+                              </span>
+                            )}
+                          </div>
                           <div className="text-[10px] font-normal text-stone-500">
                             {c.party || 'Nonpartisan'}
                           </div>
@@ -396,10 +457,7 @@ export const ComparePage: React.FC = () => {
                           <td className="p-3.5 align-top">
                             {userAns && userAns.status === 'answered' && userStance !== null ? (
                               <div className="space-y-1">
-                                <span className="font-semibold text-teal-800 block">
-                                  {userStance > 0 ? `+${userStance}` : userStance}
-                                </span>
-                                <span className="text-[11px] text-stone-600 block line-clamp-2">
+                                <span className="font-semibold text-teal-800 block text-xs">
                                   {userStance === -2
                                     ? issue.leftLabel
                                     : userStance === 2
@@ -419,12 +477,15 @@ export const ComparePage: React.FC = () => {
                             ) : userAns && userAns.status === 'no-opinion' ? (
                               <span className="text-stone-400 italic">No opinion</span>
                             ) : (
-                              <Link
-                                to="/explore"
-                                className="text-teal-700 hover:underline font-medium text-[11px]"
-                              >
-                                Answer now &rarr;
-                              </Link>
+                              <div className="space-y-1">
+                                <span className="text-stone-500 italic block">You haven&rsquo;t answered</span>
+                                <Link
+                                  to="/explore"
+                                  className="text-teal-700 hover:underline font-semibold text-[11px] inline-flex items-center gap-0.5"
+                                >
+                                  Answer now &rarr;
+                                </Link>
+                              </div>
                             )}
                           </td>
 
@@ -463,12 +524,25 @@ export const ComparePage: React.FC = () => {
                             return (
                               <td key={cand.id} className="p-3.5 align-top space-y-1.5">
                                 <div className="flex flex-wrap items-center gap-1.5">
-                                  {userStance !== null && formatDirectionBadge(align)}
+                                  {userStance !== null
+                                    ? formatDirectionBadge(align)
+                                    : formatDirectionBadge('unanswered')}
                                   <EvidenceBadge type={pos.evidenceType} />
                                 </div>
 
-                                <div className="font-semibold text-stone-800">
-                                  Stance: {pos.position > 0 ? `+${pos.position}` : pos.position}
+                                <div className="font-semibold text-stone-800 text-[11px] leading-snug">
+                                  Stance:{' '}
+                                  <span className="font-medium">
+                                    {pos.position === -2
+                                      ? issue.leftLabel
+                                      : pos.position === 2
+                                      ? issue.rightLabel
+                                      : pos.position === 0
+                                      ? 'Middle ground'
+                                      : pos.position < 0
+                                      ? `Lean: ${issue.leftLabel}`
+                                      : `Lean: ${issue.rightLabel}`}
+                                  </span>
                                 </div>
 
                                 <p className="text-stone-600 text-[11px] leading-relaxed line-clamp-3">

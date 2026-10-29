@@ -150,6 +150,52 @@
   ]
  },
  {
+  "candidateId": "daniel-cottam",
+  "kind": "statement",
+  "text": "In Ballotpedia's 2024 Candidate Connection survey, Cottam said a congressman's core responsibility is to pass a balanced federal budget and pledged to never vote for a deficit budget.",
+  "date": null,
+  "sourceIds": [
+   "src-cottam-ballotpedia-2024"
+  ]
+ },
+ {
+  "candidateId": "daniel-cottam",
+  "kind": "statement",
+  "text": "During the 2024 congressional debate, Cottam said the federal role in housing is very limited, linked affordability to restraining federal spending and inflation, and said communities need to allow denser housing construction.",
+  "date": "2024-10-08",
+  "sourceIds": [
+   "src-cottam-ksl-debate-2024",
+   "src-cottam-ballotpedia-2024"
+  ]
+ },
+ {
+  "candidateId": "daniel-cottam",
+  "kind": "statement",
+  "text": "In his 2024 Ballotpedia survey responses, Cottam said federal financial transparency and accountability needed to be restored and criticized Moore's FISA votes, arguing that government access to Americans' data should require a warrant.",
+  "date": null,
+  "sourceIds": [
+   "src-cottam-ballotpedia-2024"
+  ]
+ },
+ {
+  "candidateId": "daniel-cottam",
+  "kind": "statement",
+  "text": "In an August 2026 response to Friends of Little Cottonwood Canyon, Cottam opposed taxpayer funding for the proposed gondola, said ski resorts could build it with their own funds, and argued it would not serve the canyon's natural access needs.",
+  "date": "2026-08-24",
+  "sourceIds": [
+   "src-cottam-folcc-2026"
+  ]
+ },
+ {
+  "candidateId": "daniel-cottam",
+  "kind": "statement",
+  "text": "A comment attributed to Daniel Cottam in UDOT's Little Cottonwood Canyon Final EIS comment volume argued the gondola would not solve summer or whole-canyon transportation needs and proposed congestion pricing plus a bus line not hindered by traffic, using natural-gas or electric buses.",
+  "date": null,
+  "sourceIds": [
+   "src-cottam-udot-eis-comments"
+  ]
+ },
+ {
   "candidateId": "claudia-bigler",
   "kind": "background",
   "text": "Bigler retired in 2025 after 24 years teaching choir at Box Elder High School and is artistic director of the Cache Childrenâ€™s Choir.",
@@ -556,7 +602,7 @@
  {
   "candidateId": "douglas-christensen",
   "kind": "statement",
-  "text": "Christensen said the sheriff office should be more involved with communities and youth, and that he would work more closely with deputies and residents to identify improvements.",
+  "text": "Christensen said the sheriff's office should be more involved with communities and youth and that he would work more closely with deputies and residents to identify improvements. He added that the office does a good job, there is room for improvement, and change would be gradual rather than overnight.",
   "date": "2026-10-08",
   "sourceIds": [
    "src-sheriff-race"
@@ -678,6 +724,69 @@
   "date": "2026-05-06",
   "sourceIds": [
    "src-sltrib-referendum-application"
+  ]
+ },
+ {
+  "candidateId": "alan-williams",
+  "kind": "statement",
+  "text": "During a July 13, 2026 tour of the proposed Stratos site, Williams criticized the approval process, saying critics received short shrift, public feedback was lacking, and the public's will was not heard. KSL reported he joined a tour organized by project opponents; this establishes a process criticism, not a specific water-use or tax position.",
+  "date": "2026-07-14",
+  "sourceIds": [
+   "src-williams-ksl-tour"
+  ]
+ },
+ {
+  "candidateId": "allan-shinney",
+  "kind": "accomplishment",
+  "text": "In Jan. 18, 2022 Motor Vehicle Enforcement Division advisory-board minutes, Shinney described a staffing reduction from 25 investigators to 18 sworn investigators and said the division's investigation count rose from just under 3,000 to nearly 6,000. This is a historical, self-reported management record about MVED, not Box Elder Sheriff's Office.",
+  "date": "2022-01-18",
+  "sourceIds": [
+   "src-shinney-mved-minutes"
+  ]
+ },
+ {
+  "candidateId": "chad-hayman",
+  "kind": "background",
+  "text": "Tremonton City Council minutes from Feb. 18, 2025 list Hayman as a sergeant with 20 years of service among the city's service awards. The minutes establish municipal service tenure but do not state any sheriff-campaign position.",
+  "date": "2025-02-18",
+  "sourceIds": [
+   "src-hayman-tremonton-minutes"
+  ]
+ },
+ {
+  "candidateId": "shirlene-larsen",
+  "kind": "record",
+  "text": "Box Elder County's May 28, 2026 release says Larsen, acting as budget officer, completed the required fiscal analysis for Stratos referendum applications. The county said the analysis estimated revenue and service-cost effects and a special-election cost; these are the county's estimates, not independently verified figures.",
+  "date": "2026-05-28",
+  "sourceIds": [
+   "src-referendum-fiscal-impact"
+  ]
+ },
+ {
+  "candidateId": "shirlene-larsen",
+  "kind": "statement",
+  "text": "The county's May 28, 2026 release quoted Larsen saying her duty was to prepare an unbiased, good-faith estimate and that she served as a neutral party providing factual information required by Utah law. This is her statement about that statutory analysis, not a general campaign platform.",
+  "date": "2026-05-28",
+  "sourceIds": [
+   "src-referendum-fiscal-impact"
+  ]
+ },
+ {
+  "candidateId": "shirlene-larsen",
+  "kind": "criticism",
+  "text": "Bloomberg Law reported that the referendum complaint alleged the impact statements issued by County Attorney Stephen Hadfield and Budget Director Larsen were biased and gave an inaccurate or incomplete view of fiscal and legal consequences. This records the plaintiffs' allegation, not a court finding about Larsen or the analysis.",
+  "date": "2026-06-04",
+  "sourceIds": [
+   "src-larsen-referendum-lawsuit"
+  ]
+ },
+ {
+  "candidateId": "marla-young",
+  "kind": "statement",
+  "text": "A May 28, 2026 county release quoted Young saying her office began the statutory review when a referendum application was filed, including referral to the budget officer for fiscal impact and the county attorney for legal review. This documents her description of the process, not a general campaign policy on voter access or records.",
+  "date": "2026-05-28",
+  "sourceIds": [
+   "src-referendum-fiscal-impact"
   ]
  }
 ]

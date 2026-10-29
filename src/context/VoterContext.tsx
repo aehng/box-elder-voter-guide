@@ -12,7 +12,8 @@ import type {
   Position,
   Fact,
   Source,
-  MetaData
+  MetaData,
+  AlignmentDirection,
 } from '../types';
 
 import contestsData from '../data/contests.json';
@@ -26,7 +27,7 @@ import metaData from '../data/meta.json';
 const STORAGE_ANSWERS_KEY = 'bevg.answers.v1';
 const STORAGE_SETTINGS_KEY = 'bevg.settings.v1';
 
-export type AlignmentDirection = 'agree' | 'differ' | 'middle' | 'unknown' | 'assumed';
+export type { AlignmentDirection };
 
 interface VoterContextValue {
   // Data
@@ -220,7 +221,11 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   ): AlignmentDirection => {
     const includeAssumed = includePartyAssumedOverride ?? settings.includePartyAssumed;
 
-    if (userStance === null || !candPosition || candPosition.position === null) {
+    if (userStance === null) {
+      return 'unanswered';
+    }
+
+    if (!candPosition || candPosition.position === null || candPosition.evidenceType === 'unknown') {
       return 'unknown';
     }
 

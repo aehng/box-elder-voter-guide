@@ -7,7 +7,7 @@ export type EvidenceType =
   | 'party-assumed'
   | 'unknown';
 
-export type AlignmentDirection = 'agree' | 'differ' | 'middle' | 'unknown' | 'assumed';
+export type AlignmentDirection = 'agree' | 'differ' | 'middle' | 'unknown' | 'assumed' | 'unanswered';
 
 export interface Source {
   id: string;

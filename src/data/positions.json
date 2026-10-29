@@ -71,66 +71,73 @@
   "confidence": "low",
   "sourceIds": [
    "src-und-guide",
-   "src-sltrib"
+   "src-sltrib",
+   "src-vote411-2026-cottam",
+   "src-cottam-folcc-2026"
   ],
   "candidateId": "daniel-cottam",
   "issueId": "water-great-salt-lake-and-data-center",
   "position": null,
   "evidenceType": "unknown",
-  "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on water policy; no candidate-specific position was established in the reviewed sources.",
+  "summary": "The 2026 Utah News Dispatch, Salt Lake Tribune, and VOTE411 questionnaires record no Cottam response on water. His separate 2026 statement opposing public funding for the Little Cottonwood Canyon gondola does not establish a position on Great Salt Lake restoration, Box Elder data-center water demand, or federal water policy, so no position is assigned.",
   "date": null,
   "historical": false
  },
  {
-  "confidence": "low",
+  "confidence": "medium",
   "sourceIds": [
-   "src-und-guide",
-   "src-sltrib"
+   "src-cottam-ballotpedia-2024",
+   "src-cottam-ksl-debate-2024"
   ],
   "candidateId": "daniel-cottam",
   "issueId": "affordability-housing-and-tax-policy",
-  "position": null,
-  "evidenceType": "unknown",
-  "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on affordability; no candidate-specific position was established in the reviewed sources.",
-  "date": null,
-  "historical": false
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Historical (2024): In a candidate survey and debate, Cottam said the federal role in housing is very limited, linked affordability partly to federal spending and inflation, and said higher-density development is needed to increase housing supply. This modestly fits the supply and limited-government side; he did not make a specific federal tax-cut proposal, so the evidence supports +1 rather than +2.",
+  "date": "2024-10-08",
+  "historical": true
  },
  {
-  "confidence": "low",
+  "confidence": "high",
   "sourceIds": [
-   "src-sltrib"
+   "src-cottam-ballotpedia-2024",
+   "src-cottam-udn-debate-2024",
+   "src-cottam-ksl-debate-2024"
   ],
   "candidateId": "daniel-cottam",
   "issueId": "federal-deficits-and-spending",
-  "position": null,
-  "evidenceType": "unknown",
-  "summary": "Cottam did not answer the Salt Lake Tribune?s open-ended question that elicited other candidates? debt and deficit positions; no candidate-specific budget position was established in the reviewed sources.",
-  "date": null,
-  "historical": false
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Historical (2024): Cottam said a congressman's primary responsibility is to pass a balanced federal budget, pledged never to vote for a deficit budget, and described austerity as necessary to reverse persistent deficits. At the debate he argued that both major parties increase spending. This strongly matches reducing spending growth; the sources do not specify his preferred tax reductions.",
+  "date": "2024-10-08",
+  "historical": true
  },
  {
   "confidence": "low",
   "sourceIds": [
-   "src-sltrib"
+   "src-cottam-ballotpedia-2024",
+   "src-sltrib",
+   "src-vote411-2026-cottam"
   ],
   "candidateId": "daniel-cottam",
   "issueId": "government-ethics-and-election-reform",
   "position": null,
   "evidenceType": "unknown",
-  "summary": "Cottam did not answer the Salt Lake Tribune?s corruption/accountability questionnaire; no candidate-specific ethics or election-reform position was established in the reviewed sources.",
+  "summary": "Historical (2024): Cottam criticized Moore's FISA votes on surveillance and called for federal financial transparency and accountability, but the reviewed statements do not specify an ethics-rule or election/representation reform that maps to either end of this issue scale. His 2026 VOTE411 and Salt Lake Tribune questionnaires record no response, so no directional position is assigned.",
   "date": null,
-  "historical": false
+  "historical": true
  },
  {
   "confidence": "low",
   "sourceIds": [
-   "src-und-guide"
+   "src-und-guide",
+   "src-vote411-2026-cottam"
   ],
   "candidateId": "daniel-cottam",
   "issueId": "energy-reliability-and-environment",
   "position": null,
   "evidenceType": "unknown",
-  "summary": "The Utah News Dispatch guide lists no response from Cottam to the energy question; no candidate-specific energy position was established in the reviewed sources.",
+  "summary": "The 2026 Utah News Dispatch and VOTE411 questionnaires record no Cottam response on energy. The other reviewed candidate statements concern housing, spending, surveillance, or a specific canyon transportation project and do not establish a federal energy position matching this issue scale.",
   "date": null,
   "historical": false
  },
@@ -916,14 +923,16 @@
   "historical": false
  },
  {
-  "confidence": "low",
-  "sourceIds": [],
+  "confidence": "medium",
+  "sourceIds": [
+   "src-williams-ksl-tour"
+  ],
   "candidateId": "alan-williams",
   "issueId": "stratos-approval-and-oversight",
-  "position": null,
-  "evidenceType": "unknown",
-  "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
-  "date": null,
+  "position": -1,
+  "evidenceType": "news",
+  "summary": "In July 2026 Williams criticized the Stratos approval process, saying critics received short shrift and that the public's will was not heard. This leans toward stronger review and public input, though he did not specify a formal safeguard.",
+  "date": "2026-07-14",
   "historical": false
  },
  {
@@ -1077,7 +1086,7 @@
   "issueId": "sheriff-management-accountability",
   "position": 1,
   "evidenceType": "explicit-statement",
-  "summary": "Christensen said he wants to work more closely with deputies and the community to identify positive changes, while noting that the office does a good job and can improve. This modestly favors internal, collaborative improvement over a separate independent review.",
+  "summary": "Christensen said he wants closer work with deputies and communities to identify improvements, while noting the office does a good job and that change will take growth rather than happen overnight. This modestly favors internal, collaborative improvement; he did not state whether he supports independent review.",
   "date": "2026-10-08",
   "historical": false
  },

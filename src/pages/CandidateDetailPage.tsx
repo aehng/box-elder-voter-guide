@@ -116,6 +116,12 @@ export const CandidateDetailPage: React.FC = () => {
             Assumed
           </span>
         );
+      case 'unanswered':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-stone-100 text-stone-600">
+            You haven&rsquo;t answered
+          </span>
+        );
       case 'unknown':
       default:
         return (
@@ -151,6 +157,11 @@ export const CandidateDetailPage: React.FC = () => {
               {candidate.incumbent && (
                 <span className="text-xs font-bold px-2 py-0.5 rounded bg-stone-200 text-stone-800">
                   Incumbent
+                </span>
+              )}
+              {contest?.uncontested && (
+                <span className="text-xs font-bold px-2 py-0.5 rounded bg-stone-200 text-stone-800">
+                  Unopposed
                 </span>
               )}
               <ResearchStatusBadge status={candidate.researchStatus} />
@@ -263,22 +274,48 @@ export const CandidateDetailPage: React.FC = () => {
                   </Link>
                 </div>
 
-                <div className="flex items-center gap-4 shrink-0">
-                  <div className="text-right">
+                <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4 shrink-0">
+                  <div className="text-left sm:text-right">
                     <span className="text-[11px] text-stone-500 block">Your stance:</span>
-                    <span className="font-semibold text-stone-800">
-                      {uStance !== null ? (uStance > 0 ? `+${uStance}` : uStance) : 'Unanswered'}
+                    <span className="font-semibold text-stone-800 text-xs">
+                      {uStance !== null ? (
+                        uStance === -2
+                          ? issue.leftLabel
+                          : uStance === 2
+                          ? issue.rightLabel
+                          : uStance === 0
+                          ? 'Middle ground'
+                          : uStance < 0
+                          ? `Lean: ${issue.leftLabel}`
+                          : `Lean: ${issue.rightLabel}`
+                      ) : (
+                        <Link to="/explore" className="text-teal-700 hover:underline">
+                          You haven&rsquo;t answered
+                        </Link>
+                      )}
                     </span>
                   </div>
 
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <span className="text-[11px] text-stone-500 block">Their stance:</span>
-                    <span className="font-semibold text-stone-800">
-                      {pos && pos.position !== null ? (pos.position > 0 ? `+${pos.position}` : pos.position) : 'Unknown'}
+                    <span className="font-semibold text-stone-800 text-xs">
+                      {pos && pos.position !== null ? (
+                        pos.position === -2
+                          ? issue.leftLabel
+                          : pos.position === 2
+                          ? issue.rightLabel
+                          : pos.position === 0
+                          ? 'Middle ground'
+                          : pos.position < 0
+                          ? `Lean: ${issue.leftLabel}`
+                          : `Lean: ${issue.rightLabel}`
+                      ) : (
+                        'Unknown'
+                      )}
                     </span>
                   </div>
 
-                  <div className="min-w-[85px] text-right">
+                  <div className="min-w-[140px] text-left sm:text-right">
                     {formatDirectionBadge(align)}
                   </div>
                 </div>
@@ -295,7 +332,7 @@ export const CandidateDetailPage: React.FC = () => {
             Policy Positions & Documented Records
           </h2>
           <p className="text-xs sm:text-sm text-stone-600 mt-1">
-            Value spectrum from −2 to +2 backed by verified citations.
+            Verified stances on local ballot questions backed by citations.
           </p>
         </div>
 
@@ -328,9 +365,22 @@ export const CandidateDetailPage: React.FC = () => {
                   <div className="space-y-3 pt-2">
                     {/* Value bar */}
                     <div className="space-y-1">
-                      <div className="flex items-center justify-between text-xs text-stone-500">
-                        <span>Position: <strong className="text-stone-900">{pos.position > 0 ? `+${pos.position}` : pos.position}</strong></span>
-                        <span className="capitalize text-[11px]">Confidence: {pos.confidence}</span>
+                      <div className="flex items-center justify-between text-xs text-stone-600">
+                        <span>
+                          Stance:{' '}
+                          <strong className="text-stone-900">
+                            {pos.position === -2
+                              ? issue.leftLabel
+                              : pos.position === 2
+                              ? issue.rightLabel
+                              : pos.position === 0
+                              ? 'Middle ground'
+                              : pos.position < 0
+                              ? `Lean: ${issue.leftLabel}`
+                              : `Lean: ${issue.rightLabel}`}
+                          </strong>
+                        </span>
+                        <span className="capitalize text-[11px] text-stone-400">Confidence: {pos.confidence}</span>
                       </div>
                       <div className="w-full bg-stone-200 h-2 rounded-full relative">
                         <div
@@ -338,9 +388,9 @@ export const CandidateDetailPage: React.FC = () => {
                           style={{ left: `${((pos.position + 2) / 4) * 100}%` }}
                         />
                       </div>
-                      <div className="flex justify-between text-[10px] text-stone-400 pt-0.5">
-                        <span className="truncate max-w-[45%]">−2: {issue.leftLabel}</span>
-                        <span className="truncate max-w-[45%] text-right">+2: {issue.rightLabel}</span>
+                      <div className="flex justify-between text-[11px] text-stone-500 pt-0.5">
+                        <span className="truncate max-w-[48%]">{issue.leftLabel}</span>
+                        <span className="truncate max-w-[48%] text-right">{issue.rightLabel}</span>
                       </div>
                     </div>
 
@@ -486,7 +536,7 @@ export const CandidateDetailPage: React.FC = () => {
       )}
 
       {/* Compared With Others in Contest */}
-      {otherCandidates.length > 0 && (
+      {otherCandidates.length > 0 ? (
         <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-4">
           <h2 className="text-lg sm:text-xl font-bold text-stone-900">
             Other Candidates in this Race
@@ -513,7 +563,19 @@ export const CandidateDetailPage: React.FC = () => {
             })}
           </div>
         </section>
-      )}
+      ) : contest?.uncontested ? (
+        <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-2">
+          <h2 className="text-lg sm:text-xl font-bold text-stone-900">
+            Candidates in this Race
+          </h2>
+          <div className="p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs sm:text-sm text-stone-700 space-y-1">
+            <span className="font-bold text-stone-900 block">Running Unopposed</span>
+            <p>
+              {candidate.name} is the sole candidate on the ballot for {contest.office}. There are no opposing candidates in this race.
+            </p>
+          </div>
+        </section>
+      ) : null}
 
       {/* Sources Bibliography List */}
       <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-4">

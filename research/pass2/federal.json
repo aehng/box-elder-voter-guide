@@ -74,11 +74,13 @@
       "issueId": "water-great-salt-lake-and-data-center",
       "position": null,
       "evidenceType": "unknown",
-      "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on water policy; no candidate-specific position was established in the reviewed sources.",
+      "summary": "The 2026 Utah News Dispatch, Salt Lake Tribune, and VOTE411 questionnaires record no Cottam response on water. His separate 2026 statement opposing public funding for the Little Cottonwood Canyon gondola does not establish a position on Great Salt Lake restoration, Box Elder data-center water demand, or federal water policy, so no position is assigned.",
       "date": null,
       "sourceIds": [
         "src-und-guide",
-        "src-sltrib"
+        "src-sltrib",
+        "src-vote411-2026-cottam",
+        "src-cottam-folcc-2026"
       ],
       "confidence": "low",
       "historical": false
@@ -86,52 +88,57 @@
     {
       "candidateId": "daniel-cottam",
       "issueId": "affordability-housing-and-tax-policy",
-      "position": null,
-      "evidenceType": "unknown",
-      "summary": "The Utah News Dispatch guide and Salt Lake Tribune questionnaire list no response from Cottam on affordability; no candidate-specific position was established in the reviewed sources.",
-      "date": null,
+      "position": 1,
+      "evidenceType": "explicit-statement",
+      "summary": "Historical (2024): In a candidate survey and debate, Cottam said the federal role in housing is very limited, linked affordability partly to federal spending and inflation, and said higher-density development is needed to increase housing supply. This modestly fits the supply and limited-government side; he did not make a specific federal tax-cut proposal, so the evidence supports +1 rather than +2.",
+      "date": "2024-10-08",
       "sourceIds": [
-        "src-und-guide",
-        "src-sltrib"
+        "src-cottam-ballotpedia-2024",
+        "src-cottam-ksl-debate-2024"
       ],
-      "confidence": "low",
-      "historical": false
+      "confidence": "medium",
+      "historical": true
     },
     {
       "candidateId": "daniel-cottam",
       "issueId": "federal-deficits-and-spending",
-      "position": null,
-      "evidenceType": "unknown",
-      "summary": "Cottam did not answer the Salt Lake Tribune?s open-ended question that elicited other candidates? debt and deficit positions; no candidate-specific budget position was established in the reviewed sources.",
-      "date": null,
+      "position": 2,
+      "evidenceType": "explicit-statement",
+      "summary": "Historical (2024): Cottam said a congressman's primary responsibility is to pass a balanced federal budget, pledged never to vote for a deficit budget, and described austerity as necessary to reverse persistent deficits. At the debate he argued that both major parties increase spending. This strongly matches reducing spending growth; the sources do not specify his preferred tax reductions.",
+      "date": "2024-10-08",
       "sourceIds": [
-        "src-sltrib"
+        "src-cottam-ballotpedia-2024",
+        "src-cottam-udn-debate-2024",
+        "src-cottam-ksl-debate-2024"
       ],
-      "confidence": "low",
-      "historical": false
+      "confidence": "high",
+      "historical": true
     },
     {
       "candidateId": "daniel-cottam",
       "issueId": "government-ethics-and-election-reform",
       "position": null,
       "evidenceType": "unknown",
-      "summary": "Cottam did not answer the Salt Lake Tribune?s corruption/accountability questionnaire; no candidate-specific ethics or election-reform position was established in the reviewed sources.",
+      "summary": "Historical (2024): Cottam criticized Moore's FISA votes on surveillance and called for federal financial transparency and accountability, but the reviewed statements do not specify an ethics-rule or election/representation reform that maps to either end of this issue scale. His 2026 VOTE411 and Salt Lake Tribune questionnaires record no response, so no directional position is assigned.",
       "date": null,
       "sourceIds": [
-        "src-sltrib"
+        "src-cottam-ballotpedia-2024",
+        "src-sltrib",
+        "src-vote411-2026-cottam"
       ],
       "confidence": "low",
-      "historical": false
+      "historical": true
     },
     {
       "candidateId": "daniel-cottam",
       "issueId": "energy-reliability-and-environment",
       "position": null,
       "evidenceType": "unknown",
-      "summary": "The Utah News Dispatch guide lists no response from Cottam to the energy question; no candidate-specific energy position was established in the reviewed sources.",
+      "summary": "The 2026 Utah News Dispatch and VOTE411 questionnaires record no Cottam response on energy. The other reviewed candidate statements concern housing, spending, surveillance, or a specific canyon transportation project and do not establish a federal energy position matching this issue scale.",
       "date": null,
       "sourceIds": [
-        "src-und-guide"
+        "src-und-guide",
+        "src-vote411-2026-cottam"
       ],
       "confidence": "low",
       "historical": false
@@ -492,6 +499,52 @@
       "sourceIds": [
         "src-und-guide"
       ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "statement",
+      "text": "In Ballotpedia's 2024 Candidate Connection survey, Cottam said a congressman's core responsibility is to pass a balanced federal budget and pledged to never vote for a deficit budget.",
+      "date": null,
+      "sourceIds": [
+        "src-cottam-ballotpedia-2024"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "statement",
+      "text": "During the 2024 congressional debate, Cottam said the federal role in housing is very limited, linked affordability to restraining federal spending and inflation, and said communities need to allow denser housing construction.",
+      "date": "2024-10-08",
+      "sourceIds": [
+        "src-cottam-ksl-debate-2024",
+        "src-cottam-ballotpedia-2024"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "statement",
+      "text": "In his 2024 Ballotpedia survey responses, Cottam said federal financial transparency and accountability needed to be restored and criticized Moore's FISA votes, arguing that government access to Americans' data should require a warrant.",
+      "date": null,
+      "sourceIds": [
+        "src-cottam-ballotpedia-2024"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "statement",
+      "text": "In an August 2026 response to Friends of Little Cottonwood Canyon, Cottam opposed taxpayer funding for the proposed gondola, said ski resorts could build it with their own funds, and argued it would not serve the canyon's natural access needs.",
+      "date": "2026-08-24",
+      "sourceIds": [
+        "src-cottam-folcc-2026"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "kind": "statement",
+      "text": "A comment attributed to Daniel Cottam in UDOT's Little Cottonwood Canyon Final EIS comment volume argued the gondola would not solve summer or whole-canyon transportation needs and proposed congestion pricing plus a bus line not hindered by traffic, using natural-gas or electric buses.",
+      "date": null,
+      "sourceIds": [
+        "src-cottam-udot-eis-comments"
+      ]
     }
   ],
   "sources": [
@@ -573,6 +626,54 @@
       "title": "Public Law 117-318 - Saline Lake Ecosystems in the Great Basin States Program Act of 2022",
       "publisher": "U.S. Government Publishing Office",
       "published": "2022-12-27",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-vote411-2026-cottam",
+      "url": "https://onyourballot.vote411.org/m/race-detail.do?id=38266150",
+      "title": "Utah Congressional District 2 - VOTE411 Voter Guide",
+      "publisher": "League of Women Voters Education Fund / VOTE411",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cottam-ballotpedia-2024",
+      "url": "https://ballotpedia.org/Utah%27s_1st_Congressional_District_election%2C_2024",
+      "title": "Utah's 1st Congressional District election, 2024 - Candidate Connection survey responses",
+      "publisher": "Ballotpedia",
+      "published": null,
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cottam-udn-debate-2024",
+      "url": "https://utahnewsdispatch.com/2024/10/08/utah-1st-congressional-district-debate-blake-moore-bill-campbell-daniel-cottam/",
+      "title": "Federal spending takes center stage during friendly yet fiery 1st Congressional District debate",
+      "publisher": "Utah News Dispatch",
+      "published": "2024-10-08",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cottam-ksl-debate-2024",
+      "url": "https://www.ksl.com/article/news/politics/immigration-spending-take-center-stage-in-district-1-debate/51151173",
+      "title": "Immigration, spending take center stage in District 1 debate",
+      "publisher": "KSL.com",
+      "published": "2024-10-08",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cottam-folcc-2026",
+      "url": "https://lccfriends.org/utah-voting-guide-2026-folcc/",
+      "title": "FoLCC's Utah Voting Guide - 2026 General Election",
+      "publisher": "Friends of Little Cottonwood Canyon",
+      "published": "2026-08-24",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-cottam-udot-eis-comments",
+      "url": "https://littlecottonwoodeis.udot.utah.gov/wp-content/uploads/2022/12/Volume-1_LCC-Final-EIS-Comments_-Aug.-31-to-Oct.-17-2022-v2.pdf",
+      "title": "Comments on Little Cottonwood Canyon Final EIS",
+      "publisher": "Utah Department of Transportation",
+      "published": null,
       "accessed": "2026-10-28"
     }
   ]

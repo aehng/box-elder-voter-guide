@@ -182,19 +182,22 @@ const ContestCard: React.FC<{ contest: Contest }> = ({ contest }) => {
             <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-stone-100 text-stone-700 mb-2 inline-block">
               Statewide Ballot Measure
             </span>
-            <h3 className="text-xl font-bold text-stone-900">{contest.office}</h3>
+            <Link
+              to={`/amendment/${contest.id}`}
+              className="text-xl font-bold text-stone-900 hover:text-teal-900 hover:underline block leading-snug"
+            >
+              {contest.office}
+            </Link>
             {contest.district && (
               <p className="text-xs text-stone-500 mt-1">{contest.district}</p>
             )}
           </div>
-          {issue && (
-            <Link
-              to={`/issues/${issue.id}`}
-              className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-teal-700 hover:underline self-start sm:self-auto"
-            >
-              Read full amendment analysis &rarr;
-            </Link>
-          )}
+          <Link
+            to={`/amendment/${contest.id}`}
+            className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-teal-700 hover:underline self-start sm:self-auto shrink-0"
+          >
+            Read full amendment analysis &rarr;
+          </Link>
         </div>
 
         <p className="text-sm text-stone-700 leading-relaxed">
@@ -204,14 +207,14 @@ const ContestCard: React.FC<{ contest: Contest }> = ({ contest }) => {
         {issue && (
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
             <div className="p-3.5 rounded-xl bg-stone-50 border border-stone-200 text-xs">
-              <span className="font-bold text-stone-900 block mb-1">
-                FOR (Position +2):
+              <span className="font-bold text-teal-800 block mb-1">
+                FOR (Approve):
               </span>
               <p className="text-stone-600">{issue.rightLabel}</p>
             </div>
             <div className="p-3.5 rounded-xl bg-stone-50 border border-stone-200 text-xs">
-              <span className="font-bold text-stone-900 block mb-1">
-                AGAINST (Position −2):
+              <span className="font-bold text-stone-800 block mb-1">
+                AGAINST (Reject):
               </span>
               <p className="text-stone-600">{issue.leftLabel}</p>
             </div>
@@ -237,7 +240,7 @@ const ContestCard: React.FC<{ contest: Contest }> = ({ contest }) => {
             </span>
             {contest.uncontested && (
               <span className="text-xs font-semibold px-2 py-0.5 rounded bg-stone-200 text-stone-800">
-                Uncontested
+                Unopposed
               </span>
             )}
           </div>
@@ -248,12 +251,21 @@ const ContestCard: React.FC<{ contest: Contest }> = ({ contest }) => {
         </div>
 
         {contest.issueIds.length > 0 && (
-          <Link
-            to="/compare"
-            className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-stone-800 hover:text-stone-950 underline self-start sm:self-auto"
-          >
-            Compare in this race &rarr;
-          </Link>
+          contest.uncontested ? (
+            <Link
+              to={`/compare?contest=${contest.id}`}
+              className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-stone-700 hover:text-stone-950 underline self-start sm:self-auto"
+            >
+              View candidate context &rarr;
+            </Link>
+          ) : (
+            <Link
+              to={`/compare?contest=${contest.id}`}
+              className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-stone-800 hover:text-stone-950 underline self-start sm:self-auto"
+            >
+              Compare in this race &rarr;
+            </Link>
+          )
         )}
       </div>
 
@@ -268,7 +280,9 @@ const ContestCard: React.FC<{ contest: Contest }> = ({ contest }) => {
       {/* Candidates Chips / Cards */}
       <div>
         <h4 className="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
-          Candidates on Ballot ({candidateList.length})
+          {contest.uncontested
+            ? 'Candidate on Ballot (Unopposed)'
+            : `Candidates on Ballot (${candidateList.length})`}
         </h4>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">

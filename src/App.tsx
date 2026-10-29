@@ -1,19 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { VoterProvider } from './context/VoterContext';
 import { Header } from './components/Header';
 import { BottomNav } from './components/BottomNav';
 
-import { LandingPage } from './pages/LandingPage';
-import { BallotPage } from './pages/BallotPage';
-import { ExplorePage } from './pages/ExplorePage';
-import { MyViewsPage } from './pages/MyViewsPage';
-import { ComparePage } from './pages/ComparePage';
-import { CandidateDetailPage } from './pages/CandidateDetailPage';
-import { IssueDetailPage } from './pages/IssueDetailPage';
-import { JudgeDetailPage } from './pages/JudgeDetailPage';
-import { SourcesPage } from './pages/SourcesPage';
-import { AboutPage } from './pages/AboutPage';
+// Code-split route pages with React.lazy
+const LandingPage = lazy(() => import('./pages/LandingPage').then((m) => ({ default: m.LandingPage })));
+const BallotPage = lazy(() => import('./pages/BallotPage').then((m) => ({ default: m.BallotPage })));
+const ExplorePage = lazy(() => import('./pages/ExplorePage').then((m) => ({ default: m.ExplorePage })));
+const MyViewsPage = lazy(() => import('./pages/MyViewsPage').then((m) => ({ default: m.MyViewsPage })));
+const ComparePage = lazy(() => import('./pages/ComparePage').then((m) => ({ default: m.ComparePage })));
+const CandidateDetailPage = lazy(() => import('./pages/CandidateDetailPage').then((m) => ({ default: m.CandidateDetailPage })));
+const IssueDetailPage = lazy(() => import('./pages/IssueDetailPage').then((m) => ({ default: m.IssueDetailPage })));
+const JudgeDetailPage = lazy(() => import('./pages/JudgeDetailPage').then((m) => ({ default: m.JudgeDetailPage })));
+const AmendmentDetailPage = lazy(() => import('./pages/AmendmentDetailPage').then((m) => ({ default: m.AmendmentDetailPage })));
+const SourcesPage = lazy(() => import('./pages/SourcesPage').then((m) => ({ default: m.SourcesPage })));
+const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+
+// Accessible loading fallback
+const PageLoader: React.FC = () => (
+  <div className="min-h-[50vh] flex items-center justify-center p-8 text-stone-500 text-xs">
+    <div className="flex flex-col items-center gap-3">
+      <div className="w-7 h-7 border-2 border-stone-200 border-t-teal-700 rounded-full animate-spin" />
+      <span>Loading page...</span>
+    </div>
+  </div>
+);
 
 // Scroll to top helper on route change
 const ScrollToTop: React.FC = () => {
@@ -35,20 +47,24 @@ export const App: React.FC = () => {
           <Header />
 
           <main className="flex-1 pb-24 md:pb-12">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/ballot" element={<BallotPage />} />
-              <Route path="/explore" element={<ExplorePage />} />
-              <Route path="/my-views" element={<MyViewsPage />} />
-              <Route path="/compare" element={<ComparePage />} />
-              <Route path="/candidate/:id" element={<CandidateDetailPage />} />
-              <Route path="/issues/:id" element={<IssueDetailPage />} />
-              <Route path="/judges/:id" element={<JudgeDetailPage />} />
-              <Route path="/sources" element={<SourcesPage />} />
-              <Route path="/about" element={<AboutPage />} />
-              {/* Fallback */}
-              <Route path="*" element={<LandingPage />} />
-            </Routes>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/ballot" element={<BallotPage />} />
+                <Route path="/explore" element={<ExplorePage />} />
+                <Route path="/my-views" element={<MyViewsPage />} />
+                <Route path="/compare" element={<ComparePage />} />
+                <Route path="/candidate/:id" element={<CandidateDetailPage />} />
+                <Route path="/issues/:id" element={<IssueDetailPage />} />
+                <Route path="/judges/:id" element={<JudgeDetailPage />} />
+                <Route path="/amendment/:id" element={<AmendmentDetailPage />} />
+                <Route path="/amendments/:id" element={<AmendmentDetailPage />} />
+                <Route path="/sources" element={<SourcesPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                {/* Fallback */}
+                <Route path="*" element={<LandingPage />} />
+              </Routes>
+            </Suspense>
           </main>
 
           <footer className="border-t border-stone-200 bg-white py-8 text-center text-xs text-stone-500 mb-14 md:mb-0">

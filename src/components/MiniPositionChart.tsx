@@ -201,10 +201,11 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
                       cx="0"
                       cy="0"
                       r="12"
-                      fill={isAssumed ? '#f5f5f4' : isSelected ? '#1c1917' : '#44403c'}
+                      fill={isAssumed ? '#ffffff' : isSelected ? '#1c1917' : '#44403c'}
                       stroke={isAssumed ? '#78716c' : '#ffffff'}
                       strokeWidth="2"
                       strokeDasharray={isAssumed ? '3 2' : undefined}
+                      opacity={isAssumed ? 0.6 : 1}
                       className="transition-transform group-hover:scale-110 shadow-xs"
                     />
                     <text
@@ -212,8 +213,9 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
                       y="3.5"
                       textAnchor="middle"
                       className={`text-[9px] font-bold ${
-                        isAssumed ? 'fill-stone-700' : 'fill-white'
+                        isAssumed ? 'fill-stone-600' : 'fill-white'
                       }`}
+                      opacity={isAssumed ? 0.7 : 1}
                     >
                       {cand.initials}
                     </text>

@@ -191,11 +191,11 @@ export const IssuePositionChart: React.FC<IssuePositionChartProps> = ({
       {/* Axis Ends Labels */}
       <div className="grid grid-cols-2 gap-4 text-xs text-stone-600 mb-1">
         <div className="text-left font-medium pr-2">
-          <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">Position −2</span>
+          <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">One Viewpoint</span>
           {issue.leftLabel}
         </div>
         <div className="text-right font-medium pl-2">
-          <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">Position +2</span>
+          <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block">Alternative Viewpoint</span>
           {issue.rightLabel}
         </div>
       </div>
@@ -298,6 +298,7 @@ export const IssuePositionChart: React.FC<IssuePositionChartProps> = ({
                     stroke={isAssumed ? '#78716c' : '#ffffff'}
                     strokeWidth="2"
                     strokeDasharray={isAssumed ? '3 2' : undefined}
+                    opacity={isAssumed ? 0.6 : 1}
                     className="transition-transform group-hover:scale-115 shadow-xs"
                   />
                   <text
@@ -305,8 +306,9 @@ export const IssuePositionChart: React.FC<IssuePositionChartProps> = ({
                     y="4"
                     textAnchor="middle"
                     className={`text-[9.5px] font-bold ${
-                      isAssumed ? 'fill-stone-700' : 'fill-white'
+                      isAssumed ? 'fill-stone-600' : 'fill-white'
                     }`}
+                    opacity={isAssumed ? 0.7 : 1}
                   >
                     {cand.initials}
                   </text>

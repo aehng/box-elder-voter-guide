@@ -52,12 +52,14 @@
     {
       "candidateId": "alan-williams",
       "issueId": "stratos-approval-and-oversight",
-      "position": null,
-      "evidenceType": "unknown",
-      "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
-      "date": null,
-      "sourceIds": [],
-      "confidence": "low",
+      "position": -1,
+      "evidenceType": "news",
+      "summary": "In July 2026 Williams criticized the Stratos approval process, saying critics received short shrift and that the public's will was not heard. This leans toward stronger review and public input, though he did not specify a formal safeguard.",
+      "date": "2026-07-14",
+      "sourceIds": [
+        "src-williams-ksl-tour"
+      ],
+      "confidence": "medium",
       "historical": false
     },
     {
@@ -207,7 +209,7 @@
       "issueId": "sheriff-management-accountability",
       "position": 1,
       "evidenceType": "explicit-statement",
-      "summary": "Christensen said he wants to work more closely with deputies and the community to identify positive changes, while noting that the office does a good job and can improve. This modestly favors internal, collaborative improvement over a separate independent review.",
+      "summary": "Christensen said he wants closer work with deputies and communities to identify improvements, while noting the office does a good job and that change will take growth rather than happen overnight. This modestly favors internal, collaborative improvement; he did not state whether he supports independent review.",
       "date": "2026-10-08",
       "sourceIds": [
         "src-sheriff-race"
@@ -567,7 +569,7 @@
     {
       "candidateId": "douglas-christensen",
       "kind": "statement",
-      "text": "Christensen said the sheriff office should be more involved with communities and youth, and that he would work more closely with deputies and residents to identify improvements.",
+      "text": "Christensen said the sheriff's office should be more involved with communities and youth and that he would work more closely with deputies and residents to identify improvements. He added that the office does a good job, there is room for improvement, and change would be gradual rather than overnight.",
       "date": "2026-10-08",
       "sourceIds": [
         "src-sheriff-race"
@@ -689,6 +691,69 @@
       "date": "2026-05-06",
       "sourceIds": [
         "src-sltrib-referendum-application"
+      ]
+    },
+    {
+      "candidateId": "alan-williams",
+      "kind": "statement",
+      "text": "During a July 13, 2026 tour of the proposed Stratos site, Williams criticized the approval process, saying critics received short shrift, public feedback was lacking, and the public's will was not heard. KSL reported he joined a tour organized by project opponents; this establishes a process criticism, not a specific water-use or tax position.",
+      "date": "2026-07-14",
+      "sourceIds": [
+        "src-williams-ksl-tour"
+      ]
+    },
+    {
+      "candidateId": "allan-shinney",
+      "kind": "accomplishment",
+      "text": "In Jan. 18, 2022 Motor Vehicle Enforcement Division advisory-board minutes, Shinney described a staffing reduction from 25 investigators to 18 sworn investigators and said the division's investigation count rose from just under 3,000 to nearly 6,000. This is a historical, self-reported management record about MVED, not Box Elder Sheriff's Office.",
+      "date": "2022-01-18",
+      "sourceIds": [
+        "src-shinney-mved-minutes"
+      ]
+    },
+    {
+      "candidateId": "chad-hayman",
+      "kind": "background",
+      "text": "Tremonton City Council minutes from Feb. 18, 2025 list Hayman as a sergeant with 20 years of service among the city's service awards. The minutes establish municipal service tenure but do not state any sheriff-campaign position.",
+      "date": "2025-02-18",
+      "sourceIds": [
+        "src-hayman-tremonton-minutes"
+      ]
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "kind": "record",
+      "text": "Box Elder County's May 28, 2026 release says Larsen, acting as budget officer, completed the required fiscal analysis for Stratos referendum applications. The county said the analysis estimated revenue and service-cost effects and a special-election cost; these are the county's estimates, not independently verified figures.",
+      "date": "2026-05-28",
+      "sourceIds": [
+        "src-referendum-fiscal-impact"
+      ]
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "kind": "statement",
+      "text": "The county's May 28, 2026 release quoted Larsen saying her duty was to prepare an unbiased, good-faith estimate and that she served as a neutral party providing factual information required by Utah law. This is her statement about that statutory analysis, not a general campaign platform.",
+      "date": "2026-05-28",
+      "sourceIds": [
+        "src-referendum-fiscal-impact"
+      ]
+    },
+    {
+      "candidateId": "shirlene-larsen",
+      "kind": "criticism",
+      "text": "Bloomberg Law reported that the referendum complaint alleged the impact statements issued by County Attorney Stephen Hadfield and Budget Director Larsen were biased and gave an inaccurate or incomplete view of fiscal and legal consequences. This records the plaintiffs' allegation, not a court finding about Larsen or the analysis.",
+      "date": "2026-06-04",
+      "sourceIds": [
+        "src-larsen-referendum-lawsuit"
+      ]
+    },
+    {
+      "candidateId": "marla-young",
+      "kind": "statement",
+      "text": "A May 28, 2026 county release quoted Young saying her office began the statutory review when a referendum application was filed, including referral to the budget officer for fiscal impact and the county attorney for legal review. This documents her description of the process, not a general campaign policy on voter access or records.",
+      "date": "2026-05-28",
+      "sourceIds": [
+        "src-referendum-fiscal-impact"
       ]
     }
   ],
@@ -931,6 +996,46 @@
       "title": "Box Elder voters may have chance to overturn decision on hyperscale data center project, clerk says",
       "publisher": "The Salt Lake Tribune",
       "published": "2026-05-06",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-williams-ksl-tour",
+      "url": "https://www.ksl.com/article/51597332/sacred-pristine-data-center-foes-redouble-calls-to-protect-area-where-facility-would-be-built",
+      "title": "'Sacred,' 'pristine': Data center foes redouble calls to protect area where facility would be built",
+      "publisher": "KSL.com",
+      "published": "2026-07-14",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-referendum-fiscal-impact",
+      "url": "https://www.boxeldercountyut.gov/DocumentCenter/View/2240/Referendum-Press-Release",
+      "title": "Box Elder County Attorney Issues Legal Decision on Referendum Applications for Resolutions",
+      "publisher": "Box Elder County",
+      "published": "2026-05-28",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-larsen-referendum-lawsuit",
+      "url": "https://news.bloomberglaw.com/litigation/utah-residents-ask-court-to-allow-november-vote-on-data-center",
+      "title": "Utah Residents Ask Court to Allow County Vote on Data Center",
+      "publisher": "Bloomberg Law",
+      "published": "2026-06-04",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-hayman-tremonton-minutes",
+      "url": "https://www.utah.gov/pmn/files/1240947.pdf",
+      "title": "Tremonton City Council Meeting Minutes, February 18, 2025",
+      "publisher": "Tremonton City Corporation via Utah Public Notice Website",
+      "published": "2025-02-18",
+      "accessed": "2026-10-28"
+    },
+    {
+      "id": "src-shinney-mved-minutes",
+      "url": "https://files.tax.utah.gov/mved/meeting/2022-01-18-minutes.pdf",
+      "title": "Motor Vehicle Enforcement Division Advisory Board Meeting Minutes, January 18, 2022",
+      "publisher": "Utah State Tax Commission",
+      "published": "2022-01-18",
       "accessed": "2026-10-28"
     }
   ]

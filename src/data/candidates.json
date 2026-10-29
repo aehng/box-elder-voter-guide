@@ -38,7 +38,7 @@
    "src-und-guide",
    "src-sltrib"
   ],
-  "researchStatus": "limited"
+  "researchStatus": "partial"
  },
  {
   "id": "robert-moesinger",
@@ -327,7 +327,7 @@
   "sourceIds": [
    "src-candidates"
   ],
-  "researchStatus": "limited"
+  "researchStatus": "partial"
  },
  {
   "id": "nathan-tueller",

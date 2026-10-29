@@ -52,6 +52,11 @@ export const IssueDetailPage: React.FC = () => {
     .map((cid) => contestMap.get(cid))
     .filter(Boolean);
 
+  const isAmendment = associatedContests.some((c) => c?.type === 'amendment');
+  const amendmentContest = isAmendment
+    ? associatedContests.find((c) => c?.type === 'amendment')
+    : null;
+
   // Group candidate positions
   const candidatesWithPositions = rawPositions
     .map((p) => {
@@ -127,7 +132,7 @@ export const IssueDetailPage: React.FC = () => {
         <div className="bg-white rounded-2xl border border-stone-200 p-6 shadow-2xs space-y-4">
           <div className="border-b border-stone-100 pb-3">
             <span className="text-xs font-extrabold uppercase tracking-wider text-stone-500 block mb-1">
-              Option A (Position −2)
+              {isAmendment ? 'Vote AGAINST (Reject)' : 'Perspective A'}
             </span>
             <h2 className="text-base font-bold text-stone-900 leading-snug">
               {issue.leftLabel}
@@ -164,8 +169,8 @@ export const IssueDetailPage: React.FC = () => {
         {/* Right Option */}
         <div className="bg-white rounded-2xl border border-stone-200 p-6 shadow-2xs space-y-4">
           <div className="border-b border-stone-100 pb-3">
-            <span className="text-xs font-extrabold uppercase tracking-wider text-stone-500 block mb-1">
-              Option B (Position +2)
+            <span className="text-xs font-extrabold uppercase tracking-wider text-teal-800 block mb-1">
+              {isAmendment ? 'Vote FOR (Approve)' : 'Perspective B'}
             </span>
             <h2 className="text-base font-bold text-stone-900 leading-snug">
               {issue.rightLabel}
@@ -228,81 +233,119 @@ export const IssueDetailPage: React.FC = () => {
         />
       </section>
 
-      {/* Candidate Positions list */}
-      <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
-        <div>
-          <h2 className="text-lg sm:text-xl font-bold text-stone-900">
-            All Candidates&rsquo; Stances on this Issue
-          </h2>
-          <p className="text-xs text-stone-500 mt-0.5">
-            Documented roll calls, statements, and campaign records.
-          </p>
-        </div>
+      {/* Candidate Positions list or Amendment Notice */}
+      {isAmendment ? (
+        <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-4">
+          <div>
+            <h2 className="text-lg sm:text-xl font-bold text-stone-900">
+              Statewide Ballot Measure
+            </h2>
+            <p className="text-xs sm:text-sm text-stone-600 mt-1 leading-relaxed">
+              This constitutional amendment is decided directly by Utah voters. Candidates do not hold individual ballot positions on amendments in this guide.
+            </p>
+          </div>
+          {amendmentContest && (
+            <Link
+              to={`/amendment/${amendmentContest.id}`}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-stone-900 text-white font-semibold text-xs hover:bg-stone-800"
+            >
+              View full amendment analysis &rarr;
+            </Link>
+          )}
+        </section>
+      ) : (
+        <section className="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs space-y-6">
+          <div>
+            <h2 className="text-lg sm:text-xl font-bold text-stone-900">
+              All Candidates&rsquo; Stances on this Issue
+            </h2>
+            <p className="text-xs text-stone-500 mt-0.5">
+              Documented roll calls, statements, and campaign records.
+            </p>
+          </div>
 
-        <div className="space-y-4">
-          {candidatesWithPositions.map((item) => {
-            if (!item) return null;
-            const { pos, cand } = item;
+          <div className="space-y-4">
+            {candidatesWithPositions.length === 0 ? (
+              <p className="text-xs text-stone-500 italic">
+                No candidate positions documented yet on this specific issue.
+              </p>
+            ) : (
+              candidatesWithPositions.map((item) => {
+                if (!item) return null;
+                const { pos, cand } = item;
 
-            return (
-              <div
-                key={cand.id}
-                className="p-5 rounded-2xl border border-stone-200 bg-stone-50/50 space-y-2.5"
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                  <div>
-                    <Link
-                      to={`/candidate/${cand.id}`}
-                      className="font-bold text-base text-stone-900 hover:underline"
-                    >
-                      {cand.name}
-                    </Link>
-                    <span className="text-xs text-stone-500 ml-2">
-                      ({cand.party || 'Nonpartisan'})
-                    </span>
-                  </div>
-                  <EvidenceBadge type={pos.evidenceType} />
-                </div>
-
-                {pos.position !== null ? (
-                  <>
-                    <div className="text-xs font-semibold text-stone-800">
-                      Stance value: {pos.position > 0 ? `+${pos.position}` : pos.position}
-                    </div>
-                    <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
-                      {pos.summary}
-                    </p>
-                    {pos.sourceIds && pos.sourceIds.length > 0 && (
-                      <div className="pt-1 text-xs text-stone-500 flex flex-wrap gap-2">
-                        <span className="font-semibold text-stone-600">Source:</span>
-                        {pos.sourceIds.map((sid) => {
-                          const s = sourceMap.get(sid);
-                          return s ? (
-                            <a
-                              key={sid}
-                              href={s.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-teal-700 hover:underline inline-flex items-center gap-0.5"
-                            >
-                              {s.title}
-                              <ExternalLink className="w-2.5 h-2.5 inline" />
-                            </a>
-                          ) : null;
-                        })}
+                return (
+                  <div
+                    key={cand.id}
+                    className="p-5 rounded-2xl border border-stone-200 bg-stone-50/50 space-y-2.5"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                      <div>
+                        <Link
+                          to={`/candidate/${cand.id}`}
+                          className="font-bold text-base text-stone-900 hover:underline"
+                        >
+                          {cand.name}
+                        </Link>
+                        <span className="text-xs text-stone-500 ml-2">
+                          ({cand.party || 'Nonpartisan'})
+                        </span>
                       </div>
+                      <EvidenceBadge type={pos.evidenceType} />
+                    </div>
+
+                    {pos.position !== null ? (
+                      <>
+                        <div className="text-xs font-semibold text-stone-800">
+                          Stance:{' '}
+                          <span className="font-medium">
+                            {pos.position === -2
+                              ? issue.leftLabel
+                              : pos.position === 2
+                              ? issue.rightLabel
+                              : pos.position === 0
+                              ? 'Middle ground'
+                              : pos.position < 0
+                              ? `Lean: ${issue.leftLabel}`
+                              : `Lean: ${issue.rightLabel}`}
+                          </span>
+                        </div>
+                        <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
+                          {pos.summary}
+                        </p>
+                        {pos.sourceIds && pos.sourceIds.length > 0 && (
+                          <div className="pt-1 text-xs text-stone-500 flex flex-wrap gap-2">
+                            <span className="font-semibold text-stone-600">Source:</span>
+                            {pos.sourceIds.map((sid) => {
+                              const s = sourceMap.get(sid);
+                              return s ? (
+                                <a
+                                  key={sid}
+                                  href={s.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-teal-700 hover:underline inline-flex items-center gap-0.5"
+                                >
+                                  {s.title}
+                                  <ExternalLink className="w-2.5 h-2.5 inline" />
+                                </a>
+                              ) : null;
+                            })}
+                          </div>
+                        )}
+                      </>
+                    ) : (
+                      <p className="text-xs text-stone-500 italic">
+                        No public stance found for this candidate during nonpartisan research.
+                      </p>
                     )}
-                  </>
-                ) : (
-                  <p className="text-xs text-stone-500 italic">
-                    No public stance found for this candidate during nonpartisan research.
-                  </p>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+                  </div>
+                );
+              })
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Sources list for this issue */}
       {issue.sourceIds && issue.sourceIds.length > 0 && (

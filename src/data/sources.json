@@ -113,6 +113,54 @@
  },
  {
   "accessed": "2026-10-28",
+  "id": "src-vote411-2026-cottam",
+  "url": "https://onyourballot.vote411.org/m/race-detail.do?id=38266150",
+  "title": "Utah Congressional District 2 - VOTE411 Voter Guide",
+  "publisher": "League of Women Voters Education Fund / VOTE411",
+  "published": null
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-cottam-ballotpedia-2024",
+  "url": "https://ballotpedia.org/Utah%27s_1st_Congressional_District_election%2C_2024",
+  "title": "Utah's 1st Congressional District election, 2024 - Candidate Connection survey responses",
+  "publisher": "Ballotpedia",
+  "published": null
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-cottam-udn-debate-2024",
+  "url": "https://utahnewsdispatch.com/2024/10/08/utah-1st-congressional-district-debate-blake-moore-bill-campbell-daniel-cottam/",
+  "title": "Federal spending takes center stage during friendly yet fiery 1st Congressional District debate",
+  "publisher": "Utah News Dispatch",
+  "published": "2024-10-08"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-cottam-ksl-debate-2024",
+  "url": "https://www.ksl.com/article/news/politics/immigration-spending-take-center-stage-in-district-1-debate/51151173",
+  "title": "Immigration, spending take center stage in District 1 debate",
+  "publisher": "KSL.com",
+  "published": "2024-10-08"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-cottam-folcc-2026",
+  "url": "https://lccfriends.org/utah-voting-guide-2026-folcc/",
+  "title": "FoLCC's Utah Voting Guide - 2026 General Election",
+  "publisher": "Friends of Little Cottonwood Canyon",
+  "published": "2026-08-24"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-cottam-udot-eis-comments",
+  "url": "https://littlecottonwoodeis.udot.utah.gov/wp-content/uploads/2022/12/Volume-1_LCC-Final-EIS-Comments_-Aug.-31-to-Oct.-17-2022-v2.pdf",
+  "title": "Comments on Little Cottonwood Canyon Final EIS",
+  "publisher": "Utah Department of Transportation",
+  "published": null
+ },
+ {
+  "accessed": "2026-10-28",
   "id": "src-official-filings",
   "url": "https://vote.utah.gov/2026-candidate-filings/",
   "title": "2026 Candidate Filings",
@@ -686,6 +734,46 @@
   "title": "Box Elder voters may have chance to overturn decision on hyperscale data center project, clerk says",
   "publisher": "The Salt Lake Tribune",
   "published": "2026-05-06"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-williams-ksl-tour",
+  "url": "https://www.ksl.com/article/51597332/sacred-pristine-data-center-foes-redouble-calls-to-protect-area-where-facility-would-be-built",
+  "title": "'Sacred,' 'pristine': Data center foes redouble calls to protect area where facility would be built",
+  "publisher": "KSL.com",
+  "published": "2026-07-14"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-referendum-fiscal-impact",
+  "url": "https://www.boxeldercountyut.gov/DocumentCenter/View/2240/Referendum-Press-Release",
+  "title": "Box Elder County Attorney Issues Legal Decision on Referendum Applications for Resolutions",
+  "publisher": "Box Elder County",
+  "published": "2026-05-28"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-larsen-referendum-lawsuit",
+  "url": "https://news.bloomberglaw.com/litigation/utah-residents-ask-court-to-allow-november-vote-on-data-center",
+  "title": "Utah Residents Ask Court to Allow County Vote on Data Center",
+  "publisher": "Bloomberg Law",
+  "published": "2026-06-04"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-hayman-tremonton-minutes",
+  "url": "https://www.utah.gov/pmn/files/1240947.pdf",
+  "title": "Tremonton City Council Meeting Minutes, February 18, 2025",
+  "publisher": "Tremonton City Corporation via Utah Public Notice Website",
+  "published": "2025-02-18"
+ },
+ {
+  "accessed": "2026-10-28",
+  "id": "src-shinney-mved-minutes",
+  "url": "https://files.tax.utah.gov/mved/meeting/2022-01-18-minutes.pdf",
+  "title": "Motor Vehicle Enforcement Division Advisory Board Meeting Minutes, January 18, 2022",
+  "publisher": "Utah State Tax Commission",
+  "published": "2022-01-18"
  },
  {
   "accessed": "2026-10-28",
