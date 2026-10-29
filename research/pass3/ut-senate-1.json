@@ -1,0 +1,480 @@
+{
+  "contestId": "ut-senate-1",
+  "issues": [
+    {
+      "id": "uts-local-control-education-funding",
+      "category": "Education",
+      "question": "What is the best balance between statewide rules and local discretion in deciding how public school funding is spent?",
+      "leftLabel": "Set funding priorities mainly through statewide rules and formulas",
+      "rightLabel": "Give local school communities more discretion over spending",
+      "leftPros": [
+        "Statewide formulas can make allocations more consistent across districts.",
+        "State priorities can direct funding toward students or programs with identified needs."
+      ],
+      "leftCons": [
+        "Statewide rules may fit local enrollment and cost differences poorly.",
+        "More restrictions can leave districts and schools with less room to respond to local needs."
+      ],
+      "rightPros": [
+        "Local educators and communities can tailor spending to student needs and local conditions.",
+        "School leaders may be able to adjust staffing and programs as needs change."
+      ],
+      "rightCons": [
+        "Districts may have different capacity to plan and manage local funding decisions.",
+        "Less statewide direction can lead to different services or priorities across communities."
+      ],
+      "background": "Utah's Constitution assigns the Legislature responsibility for establishing and maintaining the public education system and says the Uniform School Fund is apportioned as the Legislature provides. The policy question is how to balance statewide funding rules with discretion for local school communities.",
+      "whyLive": "Sandall's 2026 campaign platform says teachers and principals should make most school funding decisions with their local communities. Public education funding was also before the Legislature in 2026, and Senate District 1 includes Box Elder County and parts of Cache and Tooele counties.",
+      "sourceIds": [
+        "src-uts-sandall-platform",
+        "src-uts-utah-constitution-article-x",
+        "src-uts-education-appropriations-2026",
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "id": "uts-road-usage-funding",
+      "category": "Other",
+      "question": "How should Utah adjust road funding as vehicles use less gasoline or switch to electric power?",
+      "leftLabel": "Keep fuel taxes and statewide appropriations as primary sources",
+      "rightLabel": "Expand charges based on miles driven",
+      "leftPros": [
+        "Fuel taxes use an existing collection method tied to fuel purchases.",
+        "State appropriations can provide funding without requiring mileage reporting."
+      ],
+      "leftCons": [
+        "Fuel-tax revenue per mile varies with vehicle efficiency and fuel type.",
+        "Drivers with similar mileage can contribute different amounts depending on their vehicles."
+      ],
+      "rightPros": [
+        "A per-mile charge can connect a driver's contribution more directly to miles driven.",
+        "A mileage-based system can apply to electric vehicles that do not buy gasoline."
+      ],
+      "rightCons": [
+        "Mileage reporting and billing add administrative work; privacy depends on the reporting method and data collected.",
+        "Drivers with long required trips could pay more unless the system includes adjustments."
+      ],
+      "background": "Utah uses fuel taxes to help fund transportation and operates a voluntary per-mile charge for electric vehicles instead of an annual alternative-fuel vehicle fee. A 2025 Legislative Auditor General report cited a projected $40 billion shortfall for needed transportation projects through 2050 and noted that growing electric-vehicle use may require replacement revenue sources.",
+      "whyLive": "Sandall's campaign site says the transportation funding model is becoming obsolete and that road users should pay in proportion to their use. In 2026, S.B. 242 proposed changes to the road-usage-charge program; the district includes Box Elder County and parts of Cache and Tooele counties.",
+      "sourceIds": [
+        "src-uts-sandall-platform",
+        "src-uts-sb242-2026",
+        "src-uts-udot-road-usage-charge",
+        "src-uts-transportation-audit-2025",
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "id": "uts-school-phone-rules",
+      "category": "Education",
+      "question": "How should Utah set rules for students using personal phones during the school day?",
+      "leftLabel": "Restrict use throughout the school day",
+      "rightLabel": "Limit use during instruction, with more local choice",
+      "leftPros": [
+        "A school-day default limits use during breaks as well as lessons.",
+        "A statewide standard gives schools a common starting point."
+      ],
+      "leftCons": [
+        "Students may have fewer opportunities to contact family or use personal devices during breaks.",
+        "Statewide rules can leave less room for local preferences unless exceptions are made."
+      ],
+      "rightPros": [
+        "Schools can tailor rules for breaks and other noninstructional time.",
+        "Students can have more opportunities to contact family or use devices between lessons."
+      ],
+      "rightCons": [
+        "Device use during breaks may still distract students or disrupt school activities.",
+        "Different local rules can lead to inconsistent expectations across schools."
+      ],
+      "background": "Utah previously restricted personal devices during instructional time. In 2026, S.B. 69 changed the default to the full school day while allowing local policies and certain accommodations and exceptions.",
+      "whyLive": "Sandall highlighted the school-day phone policy in his 2026 legislative newsletter and voted for S.B. 69; the Legislature can amend the statewide rule in the next term.",
+      "sourceIds": [
+        "src-uts-sandall-week2",
+        "src-uts-sb69-enrolled",
+        "src-uts-sb69-votes"
+      ]
+    },
+    {
+      "id": "uts-accessory-dwelling-zoning",
+      "category": "Housing & Growth",
+      "question": "How much control should Utah cities have over allowing separate small homes on residential lots?",
+      "leftLabel": "Require eligible cities to allow qualifying units",
+      "rightLabel": "Let cities decide whether to allow units",
+      "leftPros": [
+        "Can open more residential lots to small homes without requiring a new subdivision.",
+        "A statewide baseline can make rules more predictable for property owners."
+      ],
+      "leftCons": [
+        "A statewide requirement reduces local discretion over whether to permit such units.",
+        "Additional residents can increase demand for parking and infrastructure."
+      ],
+      "rightPros": [
+        "Cities can tailor decisions to neighborhood conditions and infrastructure.",
+        "Local officials can choose whether additional homes fit local plans."
+      ],
+      "rightCons": [
+        "Restrictive local rules can limit opportunities to add small homes.",
+        "Rules may vary substantially from one city to another."
+      ],
+      "background": "Detached accessory dwelling units are separate small homes on the same lot as a primary home. In 2026 S.B. 284 required specified municipalities to allow qualifying units on lots of at least 11,000 square feet, while retaining some local standards.",
+      "whyLive": "Sandall voted for S.B. 284 in 2026, and housing affordability was raised in the District 1 candidate questionnaire. The Legislature can revise these state land-use requirements in the next term.",
+      "sourceIds": [
+        "src-uts-sb284-enrolled",
+        "src-uts-sb284-votes",
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "id": "uts-public-land-control",
+      "category": "Federal Lands",
+      "question": "What position should Utah take on control of federally managed public lands within the state?",
+      "leftLabel": "Seek greater state control of eligible lands",
+      "rightLabel": "Keep federal management of those lands",
+      "leftPros": [
+        "State management could place more decisions closer to Utah residents and officials.",
+        "A state role could emphasize local access and resource development priorities."
+      ],
+      "leftCons": [
+        "A transfer or change in authority would require federal or judicial action beyond the state Legislature.",
+        "Managing additional lands could require substantial state resources."
+      ],
+      "rightPros": [
+        "Federal agencies would continue managing lands for the national public under federal law.",
+        "The state would avoid taking on the full management costs of transferred lands."
+      ],
+      "rightCons": [
+        "State and local preferences may not prevail in federal management decisions.",
+        "Federal restrictions can limit some access or resource uses."
+      ],
+      "background": "Federal agencies manage substantial areas of Utah public land. Utah has pursued changes to control and jurisdiction, but the U.S. Supreme Court declined to hear its 2024 ownership lawsuit in 2025; the state cannot unilaterally transfer federal land.",
+      "whyLive": "Sandall's campaign calls for public lands to remain public under state control. Utah lawmakers considered public-land jurisdiction legislation in 2026 and can decide state funding and advocacy in the next term.",
+      "sourceIds": [
+        "src-uts-sandall-platform",
+        "src-uts-public-lands-2026",
+        "src-uts-land-lawsuit"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "uts-local-control-education-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on statewide versus local discretion in public-school funding was found in the reviewed sources. Bigler did not respond to the Salt Lake Tribune questionnaire; that nonresponse is not treated as a policy view.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "uts-road-usage-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific statement about fuel taxes, road usage charges, or other transportation funding was found in the reviewed sources. No position is inferred from party or from her statements on other issues.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "uts-local-control-education-funding",
+      "position": 2,
+      "evidenceType": "campaign-website",
+      "confidence": "high",
+      "summary": "Sandall says funding decisions should be made mainly at the local level, with teachers and principals making most decisions alongside local communities. This directly supports the local-discretion end of the scale.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-sandall-platform"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "uts-road-usage-funding",
+      "position": 1,
+      "evidenceType": "public-statement",
+      "confidence": "medium",
+      "summary": "In 2019, Sandall called Utah's road-usage charge a potential replacement for the gas tax and supported a user-based transportation system. His campaign site says road users should pay in proportion to their use, but does not specify an expansion to all drivers.",
+      "date": "2019-09-20",
+      "sourceIds": [
+        "src-uts-sandall-road-usage-2019",
+        "src-uts-sandall-platform"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "uts-local-control-education-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on statewide versus local discretion in public-school funding was found in the reviewed campaign materials. Her campaign discusses other education-related interests but does not state a position on this funding question.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-quinlan-campaign",
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "uts-road-usage-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific statement about fuel taxes, road usage charges, or other transportation funding was found in the reviewed campaign materials. No position is inferred from her views on water, data centers, or other issues.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-quinlan-campaign",
+        "src-uts-senate-district-guide"
+      ]
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "uts-school-phone-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on school-day phone rules was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "uts-school-phone-rules",
+      "position": -2,
+      "evidenceType": "voting-record",
+      "confidence": "high",
+      "summary": "Sandall voted for S.B. 69 on January 30, 2026, and his legislative newsletter highlighted a school-day default phone restriction with exceptions and local flexibility.",
+      "date": "2026-01-30",
+      "sourceIds": [
+        "src-uts-sb69-votes",
+        "src-uts-sandall-week2"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "uts-school-phone-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on school-day phone rules was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-quinlan-campaign"
+      ]
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "uts-accessory-dwelling-zoning",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "claudia-bigler",
+      "issueId": "uts-public-land-control",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "uts-accessory-dwelling-zoning",
+      "position": -1,
+      "evidenceType": "voting-record",
+      "confidence": "medium",
+      "summary": "Sandall voted for concurrence on S.B. 284, a broad land-use bill that included a requirement for specified municipalities to allow qualifying detached accessory dwellings. The vote does not establish his view of that provision in isolation.",
+      "date": "2026-03-06",
+      "sourceIds": [
+        "src-uts-sb284-votes",
+        "src-uts-sb284-enrolled"
+      ]
+    },
+    {
+      "candidateId": "scott-sandall",
+      "issueId": "uts-public-land-control",
+      "position": -1,
+      "evidenceType": "campaign-website",
+      "confidence": "medium",
+      "summary": "Sandall says public lands should remain public under state control, while he also sponsored a 2026 resolution allowing a specific land transfer to the federal government for a Great Salt Lake settlement.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-sandall-platform",
+        "src-uts-bear-river-settlement"
+      ]
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "uts-accessory-dwelling-zoning",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "julie-quinlan",
+      "issueId": "uts-public-land-control",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "Quinlan calls for keeping public lands public and opposes privatization, but the reviewed statement does not say whether federal or state government should manage them.",
+      "date": null,
+      "sourceIds": [
+        "src-uts-quinlan-campaign"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-uts-sandall-platform",
+      "title": "Important Issues - Scott Sandall for Utah Senate",
+      "url": "https://www.votescottsandall.com/important-issues",
+      "publisher": "Scott Sandall campaign",
+      "date": null
+    },
+    {
+      "id": "src-uts-utah-constitution-article-x",
+      "title": "Utah Constitution, Article X: Education",
+      "url": "https://le.utah.gov/xcode/ArticleX/UC_AX_1800010118000101.pdf",
+      "publisher": "Utah State Legislature",
+      "date": null
+    },
+    {
+      "id": "src-uts-education-appropriations-2026",
+      "title": "Public Education Appropriations Subcommittee: Chair Recommended Increases",
+      "url": "https://le.utah.gov/interim/2026/pdf/00001530.pdf",
+      "publisher": "Utah State Legislature",
+      "date": "2026-02-09"
+    },
+    {
+      "id": "src-uts-senate-district-guide",
+      "title": "Utah Senate District 1: Claudia Bigler, Scott Sandall and Julie Quinlan face off",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/claudia-bigler-scott-sandall-julie/",
+      "publisher": "The Salt Lake Tribune",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "src-uts-sb242-2026",
+      "title": "S.B. 242 Transportation Amendments",
+      "url": "https://le.utah.gov/Session/2026/bills/introduced/SB0242.pdf",
+      "publisher": "Utah State Legislature",
+      "date": "2026-02-03"
+    },
+    {
+      "id": "src-uts-udot-road-usage-charge",
+      "title": "UDOT Road Usage Charge",
+      "url": "https://roadusagecharge.udot.utah.gov/",
+      "publisher": "Utah Department of Transportation",
+      "date": null
+    },
+    {
+      "id": "src-uts-transportation-audit-2025",
+      "title": "High-Risk List: Identifying and Mitigating Critical Vulnerabilities in Utah - 2025",
+      "url": "https://le.utah.gov/interim/2025/pdf/00004376.pdf",
+      "publisher": "Utah Office of the Legislative Auditor General",
+      "date": "2025-11-18"
+    },
+    {
+      "id": "src-uts-quinlan-campaign",
+      "title": "Julie Quinlan for Utah Senate District 1",
+      "url": "https://www.julieq4utah.com/",
+      "publisher": "Julie Quinlan campaign",
+      "date": null
+    },
+    {
+      "id": "src-uts-sandall-road-usage-2019",
+      "title": "New Program Introduces Fee For Electric Vehicle Users",
+      "url": "https://www.upr.org/utah-news/2019-09-20/new-program-introduces-fee-for-electric-vehicle-users",
+      "publisher": "Utah Public Radio",
+      "date": "2019-09-20"
+    },
+    {
+      "id": "src-uts-sandall-week2",
+      "title": "2026 Session Week Two",
+      "url": "https://www.votescottsandall.com/weektwo",
+      "publisher": "Scott Sandall campaign",
+      "date": null
+    },
+    {
+      "id": "src-uts-sb69-enrolled",
+      "title": "S.B. 69 School Device Revisions, enrolled",
+      "url": "https://le.utah.gov/Session/2026/bills/enrolled/SB0069.pdf",
+      "publisher": "Utah State Legislature",
+      "date": null
+    },
+    {
+      "id": "src-uts-sb69-votes",
+      "title": "S.B. 69 votes and actions",
+      "url": "https://fastdemocracy.com/bill-search/ut/2026/bills/UTB00013984/",
+      "publisher": "FastDemocracy",
+      "date": null
+    },
+    {
+      "id": "src-uts-sb134-votes",
+      "title": "S.B. 134 votes and actions",
+      "url": "https://fastdemocracy.com/bill-search/ut/2026/bills/UTB00014581/",
+      "publisher": "FastDemocracy",
+      "date": null
+    },
+    {
+      "id": "src-uts-court-expansion-news",
+      "title": "Utah Legislature passes bill to expand Utah Supreme Court, add 5 more lower court judges",
+      "url": "https://utahnewsdispatch.com/2026/01/30/utah-legislature-passes-bill-to-expand-utah-supreme-court/",
+      "publisher": "Utah News Dispatch",
+      "date": "2026-01-30"
+    },
+    {
+      "id": "src-uts-court-confirmations",
+      "title": "Utah Senate confirms governor's latest Supreme Court nominees",
+      "url": "https://www.ksl.com/article/51625007/utah-senate-confirms-governors-latest-supreme-court-nominees",
+      "publisher": "KSL",
+      "date": "2026-09-16"
+    },
+    {
+      "id": "src-uts-sb284-enrolled",
+      "title": "S.B. 284 Local Land and Water Modifications, enrolled",
+      "url": "https://le.utah.gov/Session/2026/bills/enrolled/SB0284.pdf",
+      "publisher": "Utah State Legislature",
+      "date": null
+    },
+    {
+      "id": "src-uts-sb284-votes",
+      "title": "S.B. 284 votes and actions",
+      "url": "https://fastdemocracy.com/bill-search/ut/2026/bills/UTB00014008/",
+      "publisher": "FastDemocracy",
+      "date": null
+    },
+    {
+      "id": "src-uts-public-lands-2026",
+      "title": "A look at Utah's biggest environment and land bills in 2026",
+      "url": "https://www.ksl.com/article/news/utah/environment/a-look-at-utahs-biggest-environment-and-land-bills-in-2026/51455090",
+      "publisher": "KSL / Deseret News",
+      "date": "2026-02-28"
+    },
+    {
+      "id": "src-uts-land-lawsuit",
+      "title": "Supreme Court rejects Utah's push to wrest control of public land from the federal government",
+      "url": "https://apnews.com/article/supreme-court-public-lands-utah-d495d1a68f7861d2b04789819f2dd4a2",
+      "publisher": "Associated Press",
+      "date": "2025-01-13"
+    },
+    {
+      "id": "src-uts-bear-river-settlement",
+      "title": "Utah secures $60 million for Great Salt Lake through settlement agreement",
+      "url": "https://governor.utah.gov/uncategorized/utah-secures-60-million-for-great-salt-lake-through-settlement-agreement/",
+      "publisher": "Utah Office of the Governor",
+      "date": "2026-09-25"
+    }
+  ]
+}

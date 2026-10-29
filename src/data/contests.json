@@ -24,7 +24,16 @@
    "affordability-housing-and-tax-policy",
    "federal-deficits-and-spending",
    "government-ethics-and-election-reform",
-   "energy-reliability-and-environment"
+   "energy-reliability-and-environment",
+   "ush-tariffs-and-trade-policy",
+   "ush-iran-hostilities",
+   "ush-immigration-legalization",
+   "ush-health-coverage-system",
+   "ush-ai-state-rules",
+   "ush-personal-data-rights",
+   "ush-public-land-management",
+   "ush-public-media-funding",
+   "ush-abortion-federal-funding"
   ],
   "uncontested": false
  },
@@ -51,7 +60,12 @@
    "fair-voting-maps",
    "water-conservation-and-agriculture",
    "taxes-and-affordability",
-   "stratos-data-center-and-mida"
+   "stratos-data-center-and-mida",
+   "uts-local-control-education-funding",
+   "uts-road-usage-funding",
+   "uts-school-phone-rules",
+   "uts-accessory-dwelling-zoning",
+   "uts-public-land-control"
   ],
   "uncontested": false
  },
@@ -76,7 +90,8 @@
    "starter-housing-and-growth",
    "farm-water-rights-and-conservation",
    "tax-transparency-and-affordability",
-   "government-accountability"
+   "government-accountability",
+   "uth-redistricting-commission"
   ],
   "uncontested": false
  },

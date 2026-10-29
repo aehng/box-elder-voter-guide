@@ -1,0 +1,15 @@
+﻿# PASS 3 research brief (nonpartisan; neutral wording; never "vote for")
+Contest: us-house-1 (see src/data/contests.json, candidates.json, issues.json, positions.json for existing data; read research/CONTRACT.md for field conventions).
+GOAL: add NEW issues for this contest ONLY where they genuinely matter: the office actually decides/votes on it AND there is evidence it is live in the 2026 campaign in this district (cite that evidence in whyLive + sourceIds). The question count is NOT a target; do not pad. Quality over quantity. Candidate pool to consider (reject any that do not qualify):
+For each new issue: id (kebab, unique, prefix "ush-"), category, question (plain, neutral), leftLabel and rightLabel (two REAL policy alternatives, comparable strength, short), leftPros/leftCons/rightPros/rightCons (2-3 each, factual), background (2-3 sentences), whyLive (1-2 sentences, cite why it matters in 2026 for this district), sourceIds.
+Then for EVERY candidate in this contest x EVERY new issue: position on scale -2 (strongly leftLabel) .. +2 (strongly rightLabel), 0 = middle; null if no evidence (do NOT guess, do NOT infer from party). evidenceType one of: voting-record, public-statement, campaign-website, questionnaire, debate, unknown. confidence high|medium|low. summary (1-2 neutral sentences, what they said/did), date (YYYY-MM-DD or null), sourceIds. Every non-null position MUST have at least one real source URL you actually opened.
+Also, if you find new evidence for an EXISTING issue where the candidate currently has position null, add that position too (same rules).
+OUTPUT: write valid UTF-8 JSON (plain ASCII apostrophes/quotes) to research/pass3/us-house-1.json:
+{"contestId":"us-house-1","issues":[...],"positions":[{"candidateId","issueId","position","evidenceType","confidence","summary","date","sourceIds"}],"sources":[{"id","title","url","publisher","date"}]}
+Write the file incrementally (after issues, then after each candidate) so partial work survives. Do not edit any other file. Finish with a one-line coverage summary per candidate.
+
+
+
+RESUME: if research/pass3/us-house-1.json already exists, read it, verify/keep good work, and continue from where it stopped (do not redo finished parts).
+
+SECOND PASS (refine, keep existing good work): your first pass was too strict. An issue QUALIFIES if (a) this office votes on/decides it in the coming term AND (b) there is evidence it is live in 2026 for this district: any candidate in this race addressed it (campaign site, debate e.g. Utah Debate Commission, candidate questionnaire such as Vote411/Deseret News/Salt Lake Tribune/KSL/Standard-Examiner, social posts, interviews) OR the incumbent recently voted/sponsored on it OR major Utah coverage ties it to this race. Go through EVERY topic in the pool one by one, search for evidence, and add each that qualifies. Write research/pass3/us-house-1-decisions.md listing every pool topic as ACCEPTED/REJECTED with one-line reason + URL. Still no padding, no guessing stances.

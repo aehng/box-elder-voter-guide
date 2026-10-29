@@ -1,0 +1,1 @@
+Set-Location C:\Users\elijk\code\box-elder-voter-guide; Get-Content research\pass3\brief-ut-senate-1.md -Raw | codex exec -m gpt-6.1-terra -c model_reasoning_effort=xhigh -c service_tier=priority -s danger-full-access --skip-git-repo-check - *> research\logs\p3b-ut-senate-1.log

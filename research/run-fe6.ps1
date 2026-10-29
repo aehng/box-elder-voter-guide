@@ -1,0 +1,1 @@
+Set-Location C:\Users\elijk\code\box-elder-voter-guide; agy --model gemini-3.8-flash-medium --dangerously-skip-permissions -p="Implement everything in UI_FIX_BRIEF4.md in this repo exactly. Read the existing code first (including uncommitted changes). Do not commit." *> research\logs\fe6.log

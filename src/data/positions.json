@@ -1316,5 +1316,716 @@
   "summary": "No candidate-specific statement, vote, or record establishing a position was located in the sources reviewed.",
   "date": null,
   "historical": false
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-sltrib-debate",
+   "src-sltrib",
+   "src-utah-chamber"
+  ],
+  "evidenceType": "explicit-statement",
+  "position": -2,
+  "summary": "Crosby calls for ending broad tariffs that he says hurt local families and businesses. He would retain tariffs as a strategic tool for specific industries and trade practices.",
+  "date": "2026-10-13",
+  "candidateId": "peter-crosby",
+  "issueId": "ush-tariffs-and-trade-policy"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-sltrib",
+   "src-und-guide",
+   "src-sltrib-debate"
+  ],
+  "evidenceType": "unknown",
+  "position": null,
+  "summary": "The reviewed 2026 district questionnaire answers and debate coverage did not establish a tariff position for Moesinger. No position is assigned.",
+  "date": null,
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-tariffs-and-trade-policy"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-und-guide",
+   "src-sltrib",
+   "src-sltrib-debate"
+  ],
+  "evidenceType": "unknown",
+  "position": null,
+  "summary": "The 2026 Utah News Dispatch and Salt Lake Tribune guides report that Cottam did not provide questionnaire responses, and debate coverage does not establish a tariff position. No position is inferred from nonresponse.",
+  "date": null,
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-tariffs-and-trade-policy"
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-crosby-debate-recap"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-iran-hostilities",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby said Congress could vote to end the war in Iran and identified ending it as a campaign priority. His comments support congressional action to end hostilities.",
+  "date": "2026-10-13"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-iran-hostilities",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed campaign sources do not establish Cottam's position on a congressional direction to withdraw from Iran hostilities.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-iran-hostilities",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed campaign sources do not establish Moesinger's position on a congressional direction to withdraw from Iran hostilities.",
+  "date": null
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-canada-house-65",
+   "src-sltrib-debate",
+   "src-moore-tariff-2025"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-tariffs-and-trade-policy",
+  "position": 0,
+  "evidenceType": "recorded-vote",
+  "summary": "Moore voted against a resolution to terminate the Canada-related national emergency underlying tariffs; at the 2026 debate he described both benefits and harms and relief for a local employer. Historical (2025): he criticized broad tariffs and favored targeted action, making his record mixed.",
+  "date": "2026-02-11"
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-iran-house-307",
+   "src-und-guide"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-iran-hostilities",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "Moore voted against the September 2026 resolution directing withdrawal from Iran hostilities. He also said in a 2026 questionnaire that he was pressing the administration to bring the Iran war to a close.",
+  "date": "2026-09-15"
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-utah-chamber"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-tariffs-and-trade-policy",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen supports efforts to address unequal tariffs on U.S. businesses and prefers tariff revenue to direct income taxes. He did not specify a broad tariff rate or a targeted relief plan.",
+  "date": "2026-10-12"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-und-guide"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-iran-hostilities",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Bowen criticized the costs of the Iran war and opposed prolonged foreign wars, but did not specify whether Congress should direct withdrawal from Iran hostilities.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-crosby-immigration-forum"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-immigration-legalization",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "At a September 2026 candidate forum, Crosby called for a straightforward path to citizenship for hardworking immigrants and criticized current enforcement practices.",
+  "date": "2026-09-10"
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-crosby-policies"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-health-coverage-system",
+  "position": -2,
+  "evidenceType": "campaign-site",
+  "summary": "Crosby says he prefers a single-payer system and proposes expanding Medicare while allowing private insurers to exist.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-ksl-debate-tech"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-ai-state-rules",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby said states should be able to experiment with AI rules and that the federal government also has a role.",
+  "date": "2026-10-13"
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-ksl-debate-tech",
+   "src-crosby-policies"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-personal-data-rights",
+  "position": -2,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby called for a national right to privacy and for Americans to own their personal data.",
+  "date": "2026-10-13"
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-crosby-policies",
+   "src-utah-chamber"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-public-land-management",
+  "position": -1,
+  "evidenceType": "campaign-site",
+  "summary": "Crosby lists protection of public lands as a campaign priority; he also supports agency staffing and balanced permitting. His statements do not specify every land-use restriction.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-public-media-upr"
+  ],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-public-media-funding",
+  "position": -1,
+  "evidenceType": "explicit-statement",
+  "summary": "Crosby said he would have opposed the 2025 cuts to public media funding.",
+  "date": "2026-08-12"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "peter-crosby",
+  "issueId": "ush-abortion-federal-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-cottam-immigration-2024"
+  ],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-immigration-legalization",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Historical (2024): Cottam supported more work visas and stronger border enforcement, but the reviewed statement did not establish his position on a legalization path for undocumented residents.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-health-coverage-system",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-ai-state-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-personal-data-rights",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-public-land-management",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-public-media-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "daniel-cottam",
+  "issueId": "ush-abortion-federal-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-immigration-legalization",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-health-coverage-system",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-ai-state-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-personal-data-rights",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-public-land-management",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-public-media-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "robert-moesinger",
+  "issueId": "ush-abortion-federal-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-dream-act-roll-2021",
+   "src-cd2-ballotpedia"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-immigration-legalization",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "Historical (2021): Moore voted against the Dream Act, which would have provided eligible immigrants brought to the U.S. as children a route to legal status. His 2026 profile emphasizes border security and lawful immigration but does not address every proposed legalization path.",
+  "date": "2021-03-18"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "blake-moore",
+  "issueId": "ush-health-coverage-system",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-ksl-debate-tech"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-ai-state-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Moore praised Utah lawmakers' efforts to regulate AI but did not specify whether Congress should preempt state rules.",
+  "date": "2026-10-13"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-ksl-debate-tech"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-personal-data-rights",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Moore expressed trust in local law enforcement to use license plate readers appropriately, but did not state a position on a federal personal-data ownership right.",
+  "date": "2026-10-13"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "blake-moore",
+  "issueId": "ush-public-land-management",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-public-media-upr"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-public-media-funding",
+  "position": 1,
+  "evidenceType": "recorded-vote",
+  "summary": "Moore voted for the 2025 public-media funding cuts and later defended them as a step toward reducing the federal deficit.",
+  "date": "2026-08-12"
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-moore-campaign-issues"
+  ],
+  "candidateId": "blake-moore",
+  "issueId": "ush-abortion-federal-funding",
+  "position": 2,
+  "evidenceType": "campaign-site",
+  "summary": "Moore's campaign says he has worked to stop taxpayer funding for abortion and abortion-related travel.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-utah-chamber"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-immigration-legalization",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen told the Utah Chamber he supports legal immigration and opposes amnesty.",
+  "date": "2026-10-12"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-health-coverage-system",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-ai-state-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-personal-data-rights",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-utah-chamber"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-public-land-management",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "Bowen supports mining, grazing, timber, energy development, and recreation on appropriate public lands, with timely permitting.",
+  "date": "2026-10-12"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-public-media-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "The reviewed sources do not establish a position on this specific proposal.",
+  "date": null
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-bowen-2024-survey"
+  ],
+  "candidateId": "carlton-bowen",
+  "issueId": "ush-abortion-federal-funding",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "Historical (2024): Bowen supported restrictions on federal funding for abortions abroad and on military funding or travel for abortion. The response did not address every federal health program.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-p3-uth6-redistricting-kuer",
+   "src-p3-uth6-petition-status"
+  ],
+  "candidateId": "rob-bishop",
+  "issueId": "uth-redistricting-commission",
+  "position": 2,
+  "evidenceType": "explicit-statement",
+  "summary": "In October 2025, Bishop joined an indirect initiative seeking to put repeal of Proposition 4 before lawmakers. The sponsors withdrew that indirect initiative; this is a documented pre-2026-campaign action, not a vote in the Utah House.",
+  "date": "2025-10-16"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-p3-uth6-tribune-questionnaire"
+  ],
+  "candidateId": "james-rich",
+  "issueId": "uth-redistricting-commission",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No specific position on retaining or repealing Proposition 4 and its independent redistricting commission was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-senate-district-guide"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "uts-local-control-education-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on statewide versus local discretion in public-school funding was found in the reviewed sources. Bigler did not respond to the Salt Lake Tribune questionnaire; that nonresponse is not treated as a policy view.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-senate-district-guide"
+  ],
+  "candidateId": "claudia-bigler",
+  "issueId": "uts-road-usage-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement about fuel taxes, road usage charges, or other transportation funding was found in the reviewed sources. No position is inferred from party or from her statements on other issues.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-uts-sandall-platform"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "uts-local-control-education-funding",
+  "position": 2,
+  "evidenceType": "campaign-site",
+  "summary": "Sandall says funding decisions should be made mainly at the local level, with teachers and principals making most decisions alongside local communities. This directly supports the local-discretion end of the scale.",
+  "date": null
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-uts-sandall-road-usage-2019",
+   "src-uts-sandall-platform"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "uts-road-usage-funding",
+  "position": 1,
+  "evidenceType": "explicit-statement",
+  "summary": "In 2019, Sandall called Utah's road-usage charge a potential replacement for the gas tax and supported a user-based transportation system. His campaign site says road users should pay in proportion to their use, but does not specify an expansion to all drivers.",
+  "date": "2019-09-20"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-quinlan-campaign",
+   "src-uts-senate-district-guide"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "uts-local-control-education-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on statewide versus local discretion in public-school funding was found in the reviewed campaign materials. Her campaign discusses other education-related interests but does not state a position on this funding question.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-quinlan-campaign",
+   "src-uts-senate-district-guide"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "uts-road-usage-funding",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific statement about fuel taxes, road usage charges, or other transportation funding was found in the reviewed campaign materials. No position is inferred from her views on water, data centers, or other issues.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "claudia-bigler",
+  "issueId": "uts-school-phone-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on school-day phone rules was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "high",
+  "sourceIds": [
+   "src-uts-sb69-votes",
+   "src-uts-sandall-week2"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "uts-school-phone-rules",
+  "position": -2,
+  "evidenceType": "recorded-vote",
+  "summary": "Sandall voted for S.B. 69 on January 30, 2026, and his legislative newsletter highlighted a school-day default phone restriction with exceptions and local flexibility.",
+  "date": "2026-01-30"
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-quinlan-campaign"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "uts-school-phone-rules",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on school-day phone rules was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "claudia-bigler",
+  "issueId": "uts-accessory-dwelling-zoning",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "claudia-bigler",
+  "issueId": "uts-public-land-control",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-uts-sb284-votes",
+   "src-uts-sb284-enrolled"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "uts-accessory-dwelling-zoning",
+  "position": -1,
+  "evidenceType": "recorded-vote",
+  "summary": "Sandall voted for concurrence on S.B. 284, a broad land-use bill that included a requirement for specified municipalities to allow qualifying detached accessory dwellings. The vote does not establish his view of that provision in isolation.",
+  "date": "2026-03-06"
+ },
+ {
+  "confidence": "medium",
+  "sourceIds": [
+   "src-uts-sandall-platform",
+   "src-uts-bear-river-settlement"
+  ],
+  "candidateId": "scott-sandall",
+  "issueId": "uts-public-land-control",
+  "position": -1,
+  "evidenceType": "campaign-site",
+  "summary": "Sandall says public lands should remain public under state control, while he also sponsored a 2026 resolution allowing a specific land transfer to the federal government for a Great Salt Lake settlement.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [],
+  "candidateId": "julie-quinlan",
+  "issueId": "uts-accessory-dwelling-zoning",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "No candidate-specific position on this question was found in the sources reviewed.",
+  "date": null
+ },
+ {
+  "confidence": "low",
+  "sourceIds": [
+   "src-uts-quinlan-campaign"
+  ],
+  "candidateId": "julie-quinlan",
+  "issueId": "uts-public-land-control",
+  "position": null,
+  "evidenceType": "unknown",
+  "summary": "Quinlan calls for keeping public lands public and opposes privatization, but the reviewed statement does not say whether federal or state government should manage them.",
+  "date": null
  }
 ]

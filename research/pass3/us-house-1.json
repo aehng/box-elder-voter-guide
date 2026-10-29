@@ -1,0 +1,930 @@
+{
+  "contestId": "us-house-1",
+  "issues": [
+    {
+      "sourceIds": [
+        "src-crs-tariffs",
+        "src-sltrib-debate",
+        "src-sltrib",
+        "src-und-guide",
+        "src-utah-chamber"
+      ],
+      "leftLabel": "Reduce broad tariffs and pursue lower trade barriers",
+      "id": "ush-tariffs-and-trade-policy",
+      "whyLive": "At the October 2026 northern Utah debate, Moore described both a local manufacturer helped by tariffs and other businesses harmed, including a Box Elder employer. Crosby called for ending broad tariffs, while Bowen supports efforts to address unequal tariffs and prefers tariff revenue to income taxes.",
+      "category": "Economy",
+      "leftCons": [
+        "Lower tariffs can expose domestic producers and workers to increased import competition.",
+        "Reducing tariff leverage may limit one tool for responding to certain foreign trade practices."
+      ],
+      "background": "Tariffs are taxes on imported goods. Congress has constitutional authority over tariffs but has delegated some power to the President, so Congress can shape tariff policy through legislation and oversight.",
+      "question": "How should Congress use its authority over import tariffs?",
+      "leftPros": [
+        "Lower tariffs can reduce costs for consumers and businesses that rely on imported goods and materials.",
+        "Reducing trade barriers can lower the risk of retaliatory tariffs that make U.S. exports less competitive."
+      ],
+      "rightLabel": "Use tariffs to protect U.S. industries and address unequal trade",
+      "rightCons": [
+        "Import tariffs can raise costs for consumers, farmers, and businesses that use imported goods or inputs.",
+        "Trading partners may retaliate, making it harder for U.S. exporters to compete abroad."
+      ],
+      "rightPros": [
+        "Tariffs can give domestic industries protection from import surges and support domestic production capacity.",
+        "Tariffs can provide leverage in trade negotiations or responses to some foreign trade practices."
+      ]
+    },
+    {
+      "id": "ush-iran-hostilities",
+      "category": "Other",
+      "question": "How should Congress respond to U.S. military hostilities with Iran?",
+      "leftLabel": "Direct withdrawal from unauthorized Iran hostilities",
+      "rightLabel": "Do not direct withdrawal through Congress",
+      "leftPros": [
+        "A withdrawal direction can strengthen congressional oversight of military operations.",
+        "Reducing military involvement may reduce risks to service members and the financial costs of prolonged fighting."
+      ],
+      "leftCons": [
+        "Restricting operations may reduce the president's flexibility to respond to threats.",
+        "A withdrawal direction could weaken U.S. military leverage in negotiations."
+      ],
+      "rightPros": [
+        "Leaving operational decisions to the administration can preserve flexibility to respond to threats.",
+        "Continuing military pressure may give the United States leverage in negotiations."
+      ],
+      "rightCons": [
+        "Without a withdrawal direction, military involvement could continue without a new congressional authorization.",
+        "Prolonged hostilities can expose service members to harm and add financial costs."
+      ],
+      "background": "Congress can consider war powers resolutions directing the removal of U.S. forces from specified hostilities, while the president serves as commander in chief. In 2026 the House approved resolutions directing withdrawal from unauthorized hostilities with Iran; their legal effect and implementation are contested.",
+      "whyLive": "In this northern Utah race, Crosby and Bowen have discussed the Iran war and its costs, while Moore voted against a House Iran withdrawal resolution and later said he was pressing the administration to end the war. The district includes Box Elder County.",
+      "sourceIds": [
+        "src-und-guide",
+        "src-iran-house-307",
+        "src-iran-ap",
+        "src-crosby-debate-recap"
+      ]
+    },
+    {
+      "id": "ush-immigration-legalization",
+      "category": "Immigration",
+      "question": "Should Congress create a path to legal status or citizenship for eligible undocumented immigrants?",
+      "leftLabel": "Create a qualifying path to legal status or citizenship",
+      "rightLabel": "Enforce existing law without a new legalization path",
+      "leftPros": [
+        "Eligible people could obtain legal status and work authorization.",
+        "A legal process could bring more people into the formal tax and employment system."
+      ],
+      "leftCons": [
+        "A new process would require administrative resources and eligibility checks.",
+        "Critics argue legalization could encourage future unauthorized entry."
+      ],
+      "rightPros": [
+        "Retaining existing restrictions avoids creating a new legalization program.",
+        "Enforcement can support compliance with current immigration rules."
+      ],
+      "rightCons": [
+        "People without eligible pathways could remain without legal status.",
+        "Enforcement and removal require federal resources and can separate families."
+      ],
+      "background": "Congress sets immigration eligibility and can create or change paths to legal status and citizenship. It also funds federal immigration enforcement and detention.",
+      "whyLive": "At a 2026 Cache Valley candidate forum, Crosby called for a path to citizenship, while Bowen told the Utah Chamber he opposes amnesty. Moore has emphasized border security and a lawful immigration system in his 2026 candidate profile.",
+      "sourceIds": [
+        "src-crosby-immigration-forum",
+        "src-utah-chamber",
+        "src-cd2-ballotpedia"
+      ]
+    },
+    {
+      "id": "ush-health-coverage-system",
+      "category": "Health",
+      "question": "How should Congress organize health insurance coverage?",
+      "leftLabel": "Expand public coverage toward a single-payer system",
+      "rightLabel": "Retain a mixed system of public and private coverage",
+      "leftPros": [
+        "A public coverage expansion could reduce gaps in insurance coverage.",
+        "A single payer can simplify billing by using a common set of coverage rules."
+      ],
+      "leftCons": [
+        "A larger public program requires substantial public financing.",
+        "Changes to payment rates and benefits could disrupt providers and existing coverage."
+      ],
+      "rightPros": [
+        "A mixed system preserves a role for existing private and public insurance plans.",
+        "Consumers and employers can choose among available plan designs."
+      ],
+      "rightCons": [
+        "Multiple coverage systems can add administrative complexity.",
+        "Coverage and out-of-pocket costs can vary substantially by plan and eligibility."
+      ],
+      "background": "Congress sets rules and funding for federal coverage programs and the individual insurance market. A Medicare for All bill introduced in 2025 would establish a national health insurance program; proposals differ in the role they would leave for private insurance.",
+      "whyLive": "Crosby calls for a single-payer approach and expanded Medicare on his northern Utah campaign site, while Moore highlights health savings accounts and health care transparency in his campaign.",
+      "sourceIds": [
+        "src-crosby-policies",
+        "src-moore-campaign-issues",
+        "src-medicare-all-bill"
+      ]
+    },
+    {
+      "id": "ush-ai-state-rules",
+      "category": "Government & Elections",
+      "question": "Should Congress allow states to enforce their own artificial intelligence rules?",
+      "leftLabel": "Preserve state authority alongside federal rules",
+      "rightLabel": "Limit state rules in favor of a national standard",
+      "leftPros": [
+        "States can adapt protections to local needs and test different approaches.",
+        "State laws can address risks before federal rules are adopted."
+      ],
+      "leftCons": [
+        "Different state requirements can increase compliance costs for businesses operating nationwide.",
+        "Protections may vary substantially across state lines."
+      ],
+      "rightPros": [
+        "A national standard can provide more consistent rules for interstate businesses.",
+        "Uniform rules can reduce the need to track multiple state requirements."
+      ],
+      "rightCons": [
+        "Preemption can prevent states from adopting stronger or more tailored protections.",
+        "A national standard may take time to enact or revise as technology changes."
+      ],
+      "background": "Congress can legislate national technology standards and can decide whether federal law displaces state rules. In 2025 Congress considered a proposed temporary limit on enforcement of state AI regulations.",
+      "whyLive": "At the October 2026 northern Utah debate, Crosby said states should be able to experiment with AI rules; Moore praised Utah lawmakers' regulatory efforts but did not give a specific federal proposal.",
+      "sourceIds": [
+        "src-ksl-debate-tech",
+        "src-ai-congressional-record"
+      ]
+    },
+    {
+      "id": "ush-personal-data-rights",
+      "category": "Government & Elections",
+      "question": "Should Congress establish national rights for people to control their personal data?",
+      "leftLabel": "Create federal personal data and privacy rights",
+      "rightLabel": "Rely on existing sector and state privacy rules",
+      "leftPros": [
+        "National rights could give people more control over collection and use of their information.",
+        "Federal rules can provide protections across state lines."
+      ],
+      "leftCons": [
+        "Compliance and enforcement can add costs for businesses and public agencies.",
+        "Broad rules may restrict useful data sharing and require difficult exceptions."
+      ],
+      "rightPros": [
+        "Existing rules allow tailored approaches for different industries and states.",
+        "Avoiding new federal requirements can reduce additional compliance costs."
+      ],
+      "rightCons": [
+        "Protections can be uneven across states and types of data.",
+        "People may have limited control over some uses of their information."
+      ],
+      "background": "Congress can establish national privacy rights and rules governing personal data. Existing federal and state protections vary by type of information and use.",
+      "whyLive": "In the 2026 Logan debate, Crosby called for a national right to privacy and ownership of personal data; the candidates also discussed automated license plate readers.",
+      "sourceIds": [
+        "src-ksl-debate-tech",
+        "src-crosby-policies"
+      ]
+    },
+    {
+      "id": "ush-public-land-management",
+      "category": "Federal Lands",
+      "question": "How should Congress guide management of federal public lands in Utah?",
+      "leftLabel": "Prioritize conservation and protection of public lands",
+      "rightLabel": "Prioritize multiple use and resource development",
+      "leftPros": [
+        "Conservation measures can protect habitat, scenery, and recreational access.",
+        "Restricting some activities can reduce damage to sensitive land and water."
+      ],
+      "leftCons": [
+        "Restrictions can limit some grazing, mining, timber, or energy projects.",
+        "Additional review can delay projects and increase costs."
+      ],
+      "rightPros": [
+        "Multiple-use management can support grazing, recreation, timber, mining, and energy activity.",
+        "Timely permits can provide more certainty for land users and communities."
+      ],
+      "rightCons": [
+        "Resource development can disturb habitat, water, or recreation areas.",
+        "Expedited decisions can reduce time for environmental review and public input."
+      ],
+      "background": "Congress sets the laws governing federal lands and funds the agencies that manage them. Federal land management can accommodate multiple uses while setting protections for particular areas and resources.",
+      "whyLive": "Crosby lists protection of public lands as a 2026 northern Utah priority. In a 2026 business questionnaire, Bowen called for resource use and timely permitting while Moore discussed federal land access and forest management.",
+      "sourceIds": [
+        "src-crosby-policies",
+        "src-utah-chamber"
+      ]
+    },
+    {
+      "id": "ush-public-media-funding",
+      "category": "Other",
+      "question": "Should Congress provide federal funding for public broadcasting?",
+      "leftLabel": "Provide federal funding for public broadcasting",
+      "rightLabel": "End federal funding for public broadcasting",
+      "leftPros": [
+        "Federal support can help stations provide public-service programming, especially in areas with small audiences.",
+        "National funding can support educational and emergency information services."
+      ],
+      "leftCons": [
+        "Federal appropriations require taxpayer funding and compete with other priorities.",
+        "Public broadcasters may become dependent on decisions made by Congress."
+      ],
+      "rightPros": [
+        "Ending funding reduces federal spending on public broadcasting.",
+        "Stations can seek funding from viewers, donors, sponsors, and other sources."
+      ],
+      "rightCons": [
+        "Some stations may cut services or close if replacement funding is insufficient.",
+        "Rural stations with smaller fundraising bases can face particular pressure."
+      ],
+      "background": "Congress can appropriate funding for public broadcasting or rescind previously approved funds. Federal funding was cut in 2025, and Congress could make future appropriations or establish a different funding arrangement.",
+      "whyLive": "In August 2026, Crosby said he opposed the public-media cuts, while Moore defended his vote for them when discussing federal priorities with Cache Valley residents.",
+      "sourceIds": [
+        "src-public-media-upr"
+      ]
+    },
+    {
+      "id": "ush-abortion-federal-funding",
+      "category": "Social Issues",
+      "question": "Should federal funds be available for abortion services?",
+      "leftLabel": "Allow federal funding for abortion services",
+      "rightLabel": "Restrict federal funding for abortion services",
+      "leftPros": [
+        "Funding can reduce financial barriers for people seeking abortion care.",
+        "Federal coverage can make access less dependent on personal income."
+      ],
+      "leftCons": [
+        "Taxpayers who oppose abortion may object to funding the procedure.",
+        "Expanded funding would require federal spending and decisions about eligibility."
+      ],
+      "rightPros": [
+        "Restrictions limit taxpayer funding of a procedure some people oppose.",
+        "Federal resources can be directed to other health and pregnancy services."
+      ],
+      "rightCons": [
+        "Restrictions can increase out-of-pocket costs for eligible patients.",
+        "Access can depend more heavily on income, insurance, and state funding."
+      ],
+      "background": "Congress sets conditions on federal health spending, including restrictions and exceptions for abortion coverage. Congress can change those funding rules through legislation and appropriations.",
+      "whyLive": "Moore's 2026 campaign says he has worked to stop taxpayer funding for abortion; federal funding policy is within congressional authority.",
+      "sourceIds": [
+        "src-moore-campaign-issues"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "confidence": "high",
+      "evidenceType": "debate",
+      "position": -2,
+      "sourceIds": [
+        "src-sltrib-debate",
+        "src-sltrib",
+        "src-utah-chamber"
+      ],
+      "summary": "Crosby calls for ending broad tariffs that he says hurt local families and businesses. He would retain tariffs as a strategic tool for specific industries and trade practices.",
+      "date": "2026-10-13",
+      "candidateId": "peter-crosby",
+      "issueId": "ush-tariffs-and-trade-policy"
+    },
+    {
+      "confidence": "low",
+      "evidenceType": "unknown",
+      "position": null,
+      "sourceIds": [
+        "src-sltrib",
+        "src-und-guide",
+        "src-sltrib-debate"
+      ],
+      "summary": "The reviewed 2026 district questionnaire answers and debate coverage did not establish a tariff position for Moesinger. No position is assigned.",
+      "date": null,
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-tariffs-and-trade-policy"
+    },
+    {
+      "confidence": "low",
+      "evidenceType": "unknown",
+      "position": null,
+      "sourceIds": [
+        "src-und-guide",
+        "src-sltrib",
+        "src-sltrib-debate"
+      ],
+      "summary": "The 2026 Utah News Dispatch and Salt Lake Tribune guides report that Cottam did not provide questionnaire responses, and debate coverage does not establish a tariff position. No position is inferred from nonresponse.",
+      "date": null,
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-tariffs-and-trade-policy"
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-iran-hostilities",
+      "position": -2,
+      "evidenceType": "debate",
+      "confidence": "high",
+      "summary": "Crosby said Congress could vote to end the war in Iran and identified ending it as a campaign priority. His comments support congressional action to end hostilities.",
+      "date": "2026-10-13",
+      "sourceIds": [
+        "src-crosby-debate-recap"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-iran-hostilities",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed campaign sources do not establish Cottam's position on a congressional direction to withdraw from Iran hostilities.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-iran-hostilities",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed campaign sources do not establish Moesinger's position on a congressional direction to withdraw from Iran hostilities.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-tariffs-and-trade-policy",
+      "position": 0,
+      "evidenceType": "voting-record",
+      "confidence": "medium",
+      "summary": "Moore voted against a resolution to terminate the Canada-related national emergency underlying tariffs; at the 2026 debate he described both benefits and harms and relief for a local employer. Historical (2025): he criticized broad tariffs and favored targeted action, making his record mixed.",
+      "date": "2026-02-11",
+      "sourceIds": [
+        "src-canada-house-65",
+        "src-sltrib-debate",
+        "src-moore-tariff-2025"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-iran-hostilities",
+      "position": 1,
+      "evidenceType": "voting-record",
+      "confidence": "high",
+      "summary": "Moore voted against the September 2026 resolution directing withdrawal from Iran hostilities. He also said in a 2026 questionnaire that he was pressing the administration to bring the Iran war to a close.",
+      "date": "2026-09-15",
+      "sourceIds": [
+        "src-iran-house-307",
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-tariffs-and-trade-policy",
+      "position": 1,
+      "evidenceType": "questionnaire",
+      "confidence": "medium",
+      "summary": "Bowen supports efforts to address unequal tariffs on U.S. businesses and prefers tariff revenue to direct income taxes. He did not specify a broad tariff rate or a targeted relief plan.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-utah-chamber"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-iran-hostilities",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "Bowen criticized the costs of the Iran war and opposed prolonged foreign wars, but did not specify whether Congress should direct withdrawal from Iran hostilities.",
+      "date": null,
+      "sourceIds": [
+        "src-und-guide"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-immigration-legalization",
+      "position": -2,
+      "evidenceType": "public-statement",
+      "confidence": "high",
+      "summary": "At a September 2026 candidate forum, Crosby called for a straightforward path to citizenship for hardworking immigrants and criticized current enforcement practices.",
+      "date": "2026-09-10",
+      "sourceIds": [
+        "src-crosby-immigration-forum"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-health-coverage-system",
+      "position": -2,
+      "evidenceType": "campaign-website",
+      "confidence": "high",
+      "summary": "Crosby says he prefers a single-payer system and proposes expanding Medicare while allowing private insurers to exist.",
+      "date": null,
+      "sourceIds": [
+        "src-crosby-policies"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-ai-state-rules",
+      "position": -2,
+      "evidenceType": "debate",
+      "confidence": "high",
+      "summary": "Crosby said states should be able to experiment with AI rules and that the federal government also has a role.",
+      "date": "2026-10-13",
+      "sourceIds": [
+        "src-ksl-debate-tech"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-personal-data-rights",
+      "position": -2,
+      "evidenceType": "debate",
+      "confidence": "high",
+      "summary": "Crosby called for a national right to privacy and for Americans to own their personal data.",
+      "date": "2026-10-13",
+      "sourceIds": [
+        "src-ksl-debate-tech",
+        "src-crosby-policies"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-public-land-management",
+      "position": -1,
+      "evidenceType": "campaign-website",
+      "confidence": "medium",
+      "summary": "Crosby lists protection of public lands as a campaign priority; he also supports agency staffing and balanced permitting. His statements do not specify every land-use restriction.",
+      "date": null,
+      "sourceIds": [
+        "src-crosby-policies",
+        "src-utah-chamber"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-public-media-funding",
+      "position": -1,
+      "evidenceType": "public-statement",
+      "confidence": "high",
+      "summary": "Crosby said he would have opposed the 2025 cuts to public media funding.",
+      "date": "2026-08-12",
+      "sourceIds": [
+        "src-public-media-upr"
+      ]
+    },
+    {
+      "candidateId": "peter-crosby",
+      "issueId": "ush-abortion-federal-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-immigration-legalization",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "Historical (2024): Cottam supported more work visas and stronger border enforcement, but the reviewed statement did not establish his position on a legalization path for undocumented residents.",
+      "date": null,
+      "sourceIds": [
+        "src-cottam-immigration-2024"
+      ]
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-health-coverage-system",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-ai-state-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-personal-data-rights",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-public-land-management",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-public-media-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "daniel-cottam",
+      "issueId": "ush-abortion-federal-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-immigration-legalization",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-health-coverage-system",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-ai-state-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-personal-data-rights",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-public-land-management",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-public-media-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "robert-moesinger",
+      "issueId": "ush-abortion-federal-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-immigration-legalization",
+      "position": 1,
+      "evidenceType": "voting-record",
+      "confidence": "medium",
+      "summary": "Historical (2021): Moore voted against the Dream Act, which would have provided eligible immigrants brought to the U.S. as children a route to legal status. His 2026 profile emphasizes border security and lawful immigration but does not address every proposed legalization path.",
+      "date": "2021-03-18",
+      "sourceIds": [
+        "src-dream-act-roll-2021",
+        "src-cd2-ballotpedia"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-health-coverage-system",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-ai-state-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "Moore praised Utah lawmakers' efforts to regulate AI but did not specify whether Congress should preempt state rules.",
+      "date": "2026-10-13",
+      "sourceIds": [
+        "src-ksl-debate-tech"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-personal-data-rights",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "Moore expressed trust in local law enforcement to use license plate readers appropriately, but did not state a position on a federal personal-data ownership right.",
+      "date": "2026-10-13",
+      "sourceIds": [
+        "src-ksl-debate-tech"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-public-land-management",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-public-media-funding",
+      "position": 1,
+      "evidenceType": "voting-record",
+      "confidence": "high",
+      "summary": "Moore voted for the 2025 public-media funding cuts and later defended them as a step toward reducing the federal deficit.",
+      "date": "2026-08-12",
+      "sourceIds": [
+        "src-public-media-upr"
+      ]
+    },
+    {
+      "candidateId": "blake-moore",
+      "issueId": "ush-abortion-federal-funding",
+      "position": 2,
+      "evidenceType": "campaign-website",
+      "confidence": "high",
+      "summary": "Moore's campaign says he has worked to stop taxpayer funding for abortion and abortion-related travel.",
+      "date": null,
+      "sourceIds": [
+        "src-moore-campaign-issues"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-immigration-legalization",
+      "position": 2,
+      "evidenceType": "questionnaire",
+      "confidence": "high",
+      "summary": "Bowen told the Utah Chamber he supports legal immigration and opposes amnesty.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-utah-chamber"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-health-coverage-system",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-ai-state-rules",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-personal-data-rights",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-public-land-management",
+      "position": 2,
+      "evidenceType": "questionnaire",
+      "confidence": "high",
+      "summary": "Bowen supports mining, grazing, timber, energy development, and recreation on appropriate public lands, with timely permitting.",
+      "date": "2026-10-12",
+      "sourceIds": [
+        "src-utah-chamber"
+      ]
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-public-media-funding",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "The reviewed sources do not establish a position on this specific proposal.",
+      "date": null,
+      "sourceIds": []
+    },
+    {
+      "candidateId": "carlton-bowen",
+      "issueId": "ush-abortion-federal-funding",
+      "position": 1,
+      "evidenceType": "questionnaire",
+      "confidence": "medium",
+      "summary": "Historical (2024): Bowen supported restrictions on federal funding for abortions abroad and on military funding or travel for abortion. The response did not address every federal health program.",
+      "date": null,
+      "sourceIds": [
+        "src-bowen-2024-survey"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "publisher": "Congressional Research Service",
+      "title": "Congressional and Presidential Authority to Impose Import Tariffs",
+      "url": "https://www.congress.gov/crs_external_products/R/PDF/R48435/R48435.1.pdf",
+      "id": "src-crs-tariffs",
+      "date": "2025-02-27"
+    },
+    {
+      "publisher": "The Salt Lake Tribune",
+      "title": "Rep. Blake Moore says he has found a productive lane in Congress. Challenger Peter Crosby says he lacks courage",
+      "url": "https://www.sltrib.com/news/politics/2026/10/14/moore-crosby-square-off-debate/",
+      "id": "src-sltrib-debate",
+      "date": "2026-10-14"
+    },
+    {
+      "publisher": "The Salt Lake Tribune",
+      "title": "Utah's 2nd Congressional District: Blake Moore faces off against Peter Crosby and three other candidates",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/blake-moore-faces-peter-crosby/",
+      "id": "src-sltrib",
+      "date": "2026-10-12"
+    },
+    {
+      "publisher": "Utah News Dispatch",
+      "title": "U.S. House representative, U.S. House District 2 | Voter Guide: 2026 General Election",
+      "url": "https://utahnewsdispatch.com/voter-guides/contests/2026-general-u-s-house-district-2/",
+      "id": "src-und-guide",
+      "date": null
+    },
+    {
+      "id": "src-iran-house-307",
+      "title": "Roll Call 307: H. Con. Res. 93",
+      "url": "https://clerk.house.gov/Votes/2026307",
+      "publisher": "Office of the Clerk, U.S. House of Representatives",
+      "date": "2026-09-15"
+    },
+    {
+      "id": "src-iran-ap",
+      "title": "House approves war powers resolution to halt military action against Iran",
+      "url": "https://apnews.com/article/9aaadea35f9523c818802286a6553536",
+      "publisher": "Associated Press",
+      "date": "2026-06-03"
+    },
+    {
+      "id": "src-crosby-debate-recap",
+      "title": "Peter Crosby Shows Voters He's Dedicated to Fixing the Issues They Care About Most in Debate for Utah's 2nd Congressional District",
+      "url": "https://petercrosbyforcongress.netlify.app/press/debate-recap",
+      "publisher": "Peter Crosby for Congress",
+      "date": "2026-10-14"
+    },
+    {
+      "id": "src-utah-chamber",
+      "title": "Utah Congressional District 2 Candidates Weigh In on Issues Important to the Business Community",
+      "url": "https://www.utchamber.com/blog/utah-congressional-district-2-candidates-weigh-in-on-issues-important-to-the-business-community/",
+      "publisher": "Utah Chamber",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "src-moore-tariff-2025",
+      "title": "Utah congressman offers pushback to Trump administration on immigration, tariffs",
+      "url": "https://www.deseret.com/utah/2025/04/30/utah-congressman-offers-pushback-to-trump-administration-on-immigration-tariffs/",
+      "publisher": "Deseret News",
+      "date": "2025-04-30"
+    },
+    {
+      "id": "src-canada-house-65",
+      "title": "Roll Call 65: H. J. Res. 72",
+      "url": "https://clerk.house.gov/Votes/202665",
+      "publisher": "Office of the Clerk, U.S. House of Representatives",
+      "date": "2026-02-11"
+    },
+    {
+      "id": "src-ksl-debate-tech",
+      "title": "Candidates discuss economy, AI and privacy in debate for Utah's 2nd District",
+      "url": "https://www.ksl.com/article/news/utah/politics/candidates-discuss-economy-ai-and-privacy-in-debate-for-utahs-2nd-district/51635948",
+      "publisher": "KSL",
+      "date": "2026-10-13"
+    },
+    {
+      "id": "src-crosby-policies",
+      "title": "Where Peter Stands",
+      "url": "https://petercrosbyforcongress.org/policies",
+      "publisher": "Peter Crosby for Congress",
+      "date": null
+    },
+    {
+      "id": "src-moore-campaign-issues",
+      "title": "Fighting for Utah Families",
+      "url": "https://www.electmoore.com/fighting-for-utah-families",
+      "publisher": "Blake Moore for Congress",
+      "date": null
+    },
+    {
+      "id": "src-crosby-immigration-forum",
+      "title": "Democratic candidate Peter Crosby condemns Trump administration immigration policy",
+      "url": "https://kvnutalk.com/democratic-candidate-peter-crosby-condemns-trump-administration-immigration-policy/",
+      "publisher": "KVNU",
+      "date": "2026-09-11"
+    },
+    {
+      "id": "src-cottam-immigration-2024",
+      "title": "What Utah 1st Congressional District candidates say about immigration",
+      "url": "https://www.upr.org/politics/2024-10-09/where-do-utahs-1st-congressional-district-candidates-stand-on-immigration",
+      "publisher": "Utah Public Radio",
+      "date": "2024-10-09"
+    },
+    {
+      "id": "src-public-media-upr",
+      "title": "Two Utah candidates, two different answers on federal spending priorities",
+      "url": "https://www.upr.org/politics/2026-08-12/crosby-moore-utah-congressional-election",
+      "publisher": "Utah Public Radio",
+      "date": "2026-08-12"
+    },
+    {
+      "id": "src-medicare-all-bill",
+      "title": "Medicare for All Act, S. 1506, 119th Congress",
+      "url": "https://www.congress.gov/119/bills/s1506/BILLS-119s1506is.pdf",
+      "publisher": "U.S. Congress",
+      "date": "2025-04-29"
+    },
+    {
+      "id": "src-cd2-ballotpedia",
+      "title": "Utah's 2nd Congressional District election, 2026",
+      "url": "https://ballotpedia.org/Utah%27s_2nd_Congressional_District_election%2C_2026",
+      "publisher": "Ballotpedia",
+      "date": null
+    },
+    {
+      "id": "src-bowen-2024-survey",
+      "title": "Voter Information Guide for Nov 5 General Election",
+      "url": "https://realimpactcedarcity.com/voter-information-guide-nov-general/",
+      "publisher": "Real Impact Cedar City",
+      "date": null
+    },
+    {
+      "id": "src-dream-act-roll-2021",
+      "title": "Roll Call 91: H.R. 6, Dream Act",
+      "url": "https://clerk.house.gov/Votes/202191",
+      "publisher": "Office of the Clerk, U.S. House of Representatives",
+      "date": "2021-03-18"
+    },
+    {
+      "id": "src-ai-congressional-record",
+      "title": "Congressional Record, Senate, June 28, 2025",
+      "url": "https://www.congress.gov/119/crec/2025/06/28/171/112/CREC-2025-06-28.pdf",
+      "publisher": "U.S. Congress",
+      "date": "2025-06-28"
+    }
+  ]
+}

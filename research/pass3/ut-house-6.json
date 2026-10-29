@@ -1,0 +1,114 @@
+{
+  "contestId": "ut-house-6",
+  "issues": [
+    {
+      "id": "uth-redistricting-commission",
+      "category": "Government & Elections",
+      "question": "How should Utah approach the independent redistricting commission and Proposition 4 standards?",
+      "leftLabel": "Retain the commission and standards",
+      "rightLabel": "Seek repeal of the commission and standards",
+      "leftPros": [
+        "An independent commission can provide an alternative source of proposed maps for lawmakers to consider.",
+        "The standards prohibit drawing maps to deliberately favor a political party."
+      ],
+      "leftCons": [
+        "Commission review and compliance with standards add steps to the redistricting process.",
+        "Disagreements over applying the standards can lead to litigation and uncertainty."
+      ],
+      "rightPros": [
+        "Repeal could give lawmakers greater flexibility over redistricting procedures and map design.",
+        "Removing commission requirements could simplify the statutory process."
+      ],
+      "rightCons": [
+        "Repeal would remove the commission and the specific standards established by Proposition 4.",
+        "A repeal effort may require voter action or face constitutional challenges and litigation."
+      ],
+      "background": "Proposition 4 created an independent commission and standards for redistricting; the Legislature passes district maps. Courts restored the measure after finding a legislative repeal unconstitutional, limiting how lawmakers may change voter-enacted reforms. Lawmakers can propose constitutional amendments for voters to decide.",
+      "whyLive": "In 2025, Bishop joined an effort to put repeal before lawmakers while preparing his 2026 campaign. A subsequent direct repeal initiative failed to qualify for the 2026 ballot, and the redistricting dispute continues in court.",
+      "sourceIds": [
+        "src-p3-uth6-bishop-announcement",
+        "src-p3-uth6-redistricting-kuer",
+        "src-p3-uth6-petition-status",
+        "src-p3-uth6-redistricting-case"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "candidateId": "rob-bishop",
+      "issueId": "uth-redistricting-commission",
+      "position": 2,
+      "evidenceType": "public-statement",
+      "confidence": "high",
+      "summary": "In October 2025, Bishop joined an indirect initiative seeking to put repeal of Proposition 4 before lawmakers. The sponsors withdrew that indirect initiative; this is a documented pre-2026-campaign action, not a vote in the Utah House.",
+      "date": "2025-10-16",
+      "sourceIds": [
+        "src-p3-uth6-redistricting-kuer",
+        "src-p3-uth6-petition-status"
+      ]
+    },
+    {
+      "candidateId": "james-rich",
+      "issueId": "uth-redistricting-commission",
+      "position": null,
+      "evidenceType": "unknown",
+      "confidence": "low",
+      "summary": "No specific position on retaining or repealing Proposition 4 and its independent redistricting commission was found in the sources reviewed.",
+      "date": null,
+      "sourceIds": [
+        "src-p3-uth6-tribune-questionnaire"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "src-p3-uth6-bishop-announcement",
+      "title": "Former 9-term congressman Rob Bishop running for Utah legislative seat",
+      "url": "https://www.ksl.com/article/51424894/former-9-term-congressman-rob-bishop-running-for-utah-legislative-seat",
+      "publisher": "Deseret News via KSL.com",
+      "date": "2025-12-30"
+    },
+    {
+      "id": "src-p3-uth6-superintendents",
+      "title": "Push Pause: Decrease the Number of Education Bills Being Passed",
+      "url": "https://www.ussaut.org/article/2615021",
+      "publisher": "Utah School Superintendents Association",
+      "date": "2026-01-03"
+    },
+    {
+      "id": "src-p3-uth6-education-rules",
+      "title": "Administrative Rules",
+      "url": "https://schools.utah.gov/adminrules/",
+      "publisher": "Utah State Board of Education",
+      "date": null
+    },
+    {
+      "id": "src-p3-uth6-tribune-questionnaire",
+      "title": "Utah House District 6: Rob Bishop faces off against James Rich",
+      "url": "https://www.sltrib.com/news/politics/2026/10/12/rob-bishop-faces-james-rich-2026/",
+      "publisher": "The Salt Lake Tribune",
+      "date": "2026-10-12"
+    },
+    {
+      "id": "src-p3-uth6-redistricting-kuer",
+      "title": "Utah's redistricting enters new legal fight over GOP plan to repeal Prop 4",
+      "url": "https://www.kuer.org/politics-government/2025-10-16/utahs-redistricting-enters-new-legal-fight-over-gop-plan-to-repeal-prop-4",
+      "publisher": "KUER",
+      "date": "2025-10-16"
+    },
+    {
+      "id": "src-p3-uth6-petition-status",
+      "title": "Initiatives and Referenda",
+      "url": "https://vote.utah.gov/initiatives-and-referenda/",
+      "publisher": "Utah Voter Information",
+      "date": null
+    },
+    {
+      "id": "src-p3-uth6-redistricting-case",
+      "title": "League of Women Voters of Utah v. Utah State Legislature",
+      "url": "https://redistricting.lls.edu/case/lwv-of-utah-v-utah-state-legislature/",
+      "publisher": "All About Redistricting, Loyola Law School",
+      "date": null
+    }
+  ]
+}

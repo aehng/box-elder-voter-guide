@@ -1351,5 +1351,500 @@
    "src-b-news-dispatch",
    "src-b-ballotpedia"
   ]
+ },
+ {
+  "sourceIds": [
+   "src-crs-tariffs",
+   "src-sltrib-debate",
+   "src-sltrib",
+   "src-und-guide",
+   "src-utah-chamber"
+  ],
+  "leftLabel": "Reduce broad tariffs and pursue lower trade barriers",
+  "id": "ush-tariffs-and-trade-policy",
+  "whyLive": "At the October 2026 northern Utah debate, Moore described both a local manufacturer helped by tariffs and other businesses harmed, including a Box Elder employer. Crosby called for ending broad tariffs, while Bowen supports efforts to address unequal tariffs and prefers tariff revenue to income taxes.",
+  "category": "Economy",
+  "leftCons": [
+   "Lower tariffs can expose domestic producers and workers to increased import competition.",
+   "Reducing tariff leverage may limit one tool for responding to certain foreign trade practices."
+  ],
+  "background": "Tariffs are taxes on imported goods. Congress has constitutional authority over tariffs but has delegated some power to the President, so Congress can shape tariff policy through legislation and oversight.",
+  "question": "How should Congress use its authority over import tariffs?",
+  "leftPros": [
+   "Lower tariffs can reduce costs for consumers and businesses that rely on imported goods and materials.",
+   "Reducing trade barriers can lower the risk of retaliatory tariffs that make U.S. exports less competitive."
+  ],
+  "rightLabel": "Use tariffs to protect U.S. industries and address unequal trade",
+  "rightCons": [
+   "Import tariffs can raise costs for consumers, farmers, and businesses that use imported goods or inputs.",
+   "Trading partners may retaliate, making it harder for U.S. exporters to compete abroad."
+  ],
+  "rightPros": [
+   "Tariffs can give domestic industries protection from import surges and support domestic production capacity.",
+   "Tariffs can provide leverage in trade negotiations or responses to some foreign trade practices."
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-iran-hostilities",
+  "category": "Other",
+  "question": "How should Congress respond to U.S. military hostilities with Iran?",
+  "leftLabel": "Direct withdrawal from unauthorized Iran hostilities",
+  "rightLabel": "Do not direct withdrawal through Congress",
+  "leftPros": [
+   "A withdrawal direction can strengthen congressional oversight of military operations.",
+   "Reducing military involvement may reduce risks to service members and the financial costs of prolonged fighting."
+  ],
+  "leftCons": [
+   "Restricting operations may reduce the president's flexibility to respond to threats.",
+   "A withdrawal direction could weaken U.S. military leverage in negotiations."
+  ],
+  "rightPros": [
+   "Leaving operational decisions to the administration can preserve flexibility to respond to threats.",
+   "Continuing military pressure may give the United States leverage in negotiations."
+  ],
+  "rightCons": [
+   "Without a withdrawal direction, military involvement could continue without a new congressional authorization.",
+   "Prolonged hostilities can expose service members to harm and add financial costs."
+  ],
+  "background": "Congress can consider war powers resolutions directing the removal of U.S. forces from specified hostilities, while the president serves as commander in chief. In 2026 the House approved resolutions directing withdrawal from unauthorized hostilities with Iran; their legal effect and implementation are contested.",
+  "whyLive": "In this northern Utah race, Crosby and Bowen have discussed the Iran war and its costs, while Moore voted against a House Iran withdrawal resolution and later said he was pressing the administration to end the war. The district includes Box Elder County.",
+  "sourceIds": [
+   "src-und-guide",
+   "src-iran-house-307",
+   "src-iran-ap",
+   "src-crosby-debate-recap"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-immigration-legalization",
+  "category": "Immigration",
+  "question": "Should Congress create a path to legal status or citizenship for eligible undocumented immigrants?",
+  "leftLabel": "Create a qualifying path to legal status or citizenship",
+  "rightLabel": "Enforce existing law without a new legalization path",
+  "leftPros": [
+   "Eligible people could obtain legal status and work authorization.",
+   "A legal process could bring more people into the formal tax and employment system."
+  ],
+  "leftCons": [
+   "A new process would require administrative resources and eligibility checks.",
+   "Critics argue legalization could encourage future unauthorized entry."
+  ],
+  "rightPros": [
+   "Retaining existing restrictions avoids creating a new legalization program.",
+   "Enforcement can support compliance with current immigration rules."
+  ],
+  "rightCons": [
+   "People without eligible pathways could remain without legal status.",
+   "Enforcement and removal require federal resources and can separate families."
+  ],
+  "background": "Congress sets immigration eligibility and can create or change paths to legal status and citizenship. It also funds federal immigration enforcement and detention.",
+  "whyLive": "At a 2026 Cache Valley candidate forum, Crosby called for a path to citizenship, while Bowen told the Utah Chamber he opposes amnesty. Moore has emphasized border security and a lawful immigration system in his 2026 candidate profile.",
+  "sourceIds": [
+   "src-crosby-immigration-forum",
+   "src-utah-chamber",
+   "src-cd2-ballotpedia"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-health-coverage-system",
+  "category": "Health",
+  "question": "How should Congress organize health insurance coverage?",
+  "leftLabel": "Expand public coverage toward a single-payer system",
+  "rightLabel": "Retain a mixed system of public and private coverage",
+  "leftPros": [
+   "A public coverage expansion could reduce gaps in insurance coverage.",
+   "A single payer can simplify billing by using a common set of coverage rules."
+  ],
+  "leftCons": [
+   "A larger public program requires substantial public financing.",
+   "Changes to payment rates and benefits could disrupt providers and existing coverage."
+  ],
+  "rightPros": [
+   "A mixed system preserves a role for existing private and public insurance plans.",
+   "Consumers and employers can choose among available plan designs."
+  ],
+  "rightCons": [
+   "Multiple coverage systems can add administrative complexity.",
+   "Coverage and out-of-pocket costs can vary substantially by plan and eligibility."
+  ],
+  "background": "Congress sets rules and funding for federal coverage programs and the individual insurance market. A Medicare for All bill introduced in 2025 would establish a national health insurance program; proposals differ in the role they would leave for private insurance.",
+  "whyLive": "Crosby calls for a single-payer approach and expanded Medicare on his northern Utah campaign site, while Moore highlights health savings accounts and health care transparency in his campaign.",
+  "sourceIds": [
+   "src-crosby-policies",
+   "src-moore-campaign-issues",
+   "src-medicare-all-bill"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-ai-state-rules",
+  "category": "Government & Elections",
+  "question": "Should Congress allow states to enforce their own artificial intelligence rules?",
+  "leftLabel": "Preserve state authority alongside federal rules",
+  "rightLabel": "Limit state rules in favor of a national standard",
+  "leftPros": [
+   "States can adapt protections to local needs and test different approaches.",
+   "State laws can address risks before federal rules are adopted."
+  ],
+  "leftCons": [
+   "Different state requirements can increase compliance costs for businesses operating nationwide.",
+   "Protections may vary substantially across state lines."
+  ],
+  "rightPros": [
+   "A national standard can provide more consistent rules for interstate businesses.",
+   "Uniform rules can reduce the need to track multiple state requirements."
+  ],
+  "rightCons": [
+   "Preemption can prevent states from adopting stronger or more tailored protections.",
+   "A national standard may take time to enact or revise as technology changes."
+  ],
+  "background": "Congress can legislate national technology standards and can decide whether federal law displaces state rules. In 2025 Congress considered a proposed temporary limit on enforcement of state AI regulations.",
+  "whyLive": "At the October 2026 northern Utah debate, Crosby said states should be able to experiment with AI rules; Moore praised Utah lawmakers' regulatory efforts but did not give a specific federal proposal.",
+  "sourceIds": [
+   "src-ksl-debate-tech",
+   "src-ai-congressional-record"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-personal-data-rights",
+  "category": "Government & Elections",
+  "question": "Should Congress establish national rights for people to control their personal data?",
+  "leftLabel": "Create federal personal data and privacy rights",
+  "rightLabel": "Rely on existing sector and state privacy rules",
+  "leftPros": [
+   "National rights could give people more control over collection and use of their information.",
+   "Federal rules can provide protections across state lines."
+  ],
+  "leftCons": [
+   "Compliance and enforcement can add costs for businesses and public agencies.",
+   "Broad rules may restrict useful data sharing and require difficult exceptions."
+  ],
+  "rightPros": [
+   "Existing rules allow tailored approaches for different industries and states.",
+   "Avoiding new federal requirements can reduce additional compliance costs."
+  ],
+  "rightCons": [
+   "Protections can be uneven across states and types of data.",
+   "People may have limited control over some uses of their information."
+  ],
+  "background": "Congress can establish national privacy rights and rules governing personal data. Existing federal and state protections vary by type of information and use.",
+  "whyLive": "In the 2026 Logan debate, Crosby called for a national right to privacy and ownership of personal data; the candidates also discussed automated license plate readers.",
+  "sourceIds": [
+   "src-ksl-debate-tech",
+   "src-crosby-policies"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-public-land-management",
+  "category": "Federal Lands",
+  "question": "How should Congress guide management of federal public lands in Utah?",
+  "leftLabel": "Prioritize conservation and protection of public lands",
+  "rightLabel": "Prioritize multiple use and resource development",
+  "leftPros": [
+   "Conservation measures can protect habitat, scenery, and recreational access.",
+   "Restricting some activities can reduce damage to sensitive land and water."
+  ],
+  "leftCons": [
+   "Restrictions can limit some grazing, mining, timber, or energy projects.",
+   "Additional review can delay projects and increase costs."
+  ],
+  "rightPros": [
+   "Multiple-use management can support grazing, recreation, timber, mining, and energy activity.",
+   "Timely permits can provide more certainty for land users and communities."
+  ],
+  "rightCons": [
+   "Resource development can disturb habitat, water, or recreation areas.",
+   "Expedited decisions can reduce time for environmental review and public input."
+  ],
+  "background": "Congress sets the laws governing federal lands and funds the agencies that manage them. Federal land management can accommodate multiple uses while setting protections for particular areas and resources.",
+  "whyLive": "Crosby lists protection of public lands as a 2026 northern Utah priority. In a 2026 business questionnaire, Bowen called for resource use and timely permitting while Moore discussed federal land access and forest management.",
+  "sourceIds": [
+   "src-crosby-policies",
+   "src-utah-chamber"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-public-media-funding",
+  "category": "Other",
+  "question": "Should Congress provide federal funding for public broadcasting?",
+  "leftLabel": "Provide federal funding for public broadcasting",
+  "rightLabel": "End federal funding for public broadcasting",
+  "leftPros": [
+   "Federal support can help stations provide public-service programming, especially in areas with small audiences.",
+   "National funding can support educational and emergency information services."
+  ],
+  "leftCons": [
+   "Federal appropriations require taxpayer funding and compete with other priorities.",
+   "Public broadcasters may become dependent on decisions made by Congress."
+  ],
+  "rightPros": [
+   "Ending funding reduces federal spending on public broadcasting.",
+   "Stations can seek funding from viewers, donors, sponsors, and other sources."
+  ],
+  "rightCons": [
+   "Some stations may cut services or close if replacement funding is insufficient.",
+   "Rural stations with smaller fundraising bases can face particular pressure."
+  ],
+  "background": "Congress can appropriate funding for public broadcasting or rescind previously approved funds. Federal funding was cut in 2025, and Congress could make future appropriations or establish a different funding arrangement.",
+  "whyLive": "In August 2026, Crosby said he opposed the public-media cuts, while Moore defended his vote for them when discussing federal priorities with Cache Valley residents.",
+  "sourceIds": [
+   "src-public-media-upr"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "ush-abortion-federal-funding",
+  "category": "Social Issues",
+  "question": "Should federal funds be available for abortion services?",
+  "leftLabel": "Allow federal funding for abortion services",
+  "rightLabel": "Restrict federal funding for abortion services",
+  "leftPros": [
+   "Funding can reduce financial barriers for people seeking abortion care.",
+   "Federal coverage can make access less dependent on personal income."
+  ],
+  "leftCons": [
+   "Taxpayers who oppose abortion may object to funding the procedure.",
+   "Expanded funding would require federal spending and decisions about eligibility."
+  ],
+  "rightPros": [
+   "Restrictions limit taxpayer funding of a procedure some people oppose.",
+   "Federal resources can be directed to other health and pregnancy services."
+  ],
+  "rightCons": [
+   "Restrictions can increase out-of-pocket costs for eligible patients.",
+   "Access can depend more heavily on income, insurance, and state funding."
+  ],
+  "background": "Congress sets conditions on federal health spending, including restrictions and exceptions for abortion coverage. Congress can change those funding rules through legislation and appropriations.",
+  "whyLive": "Moore's 2026 campaign says he has worked to stop taxpayer funding for abortion; federal funding policy is within congressional authority.",
+  "sourceIds": [
+   "src-moore-campaign-issues"
+  ],
+  "contestIds": [
+   "us-house-1"
+  ]
+ },
+ {
+  "id": "uth-redistricting-commission",
+  "category": "Government & Elections",
+  "question": "How should Utah approach the independent redistricting commission and Proposition 4 standards?",
+  "leftLabel": "Retain the commission and standards",
+  "rightLabel": "Seek repeal of the commission and standards",
+  "leftPros": [
+   "An independent commission can provide an alternative source of proposed maps for lawmakers to consider.",
+   "The standards prohibit drawing maps to deliberately favor a political party."
+  ],
+  "leftCons": [
+   "Commission review and compliance with standards add steps to the redistricting process.",
+   "Disagreements over applying the standards can lead to litigation and uncertainty."
+  ],
+  "rightPros": [
+   "Repeal could give lawmakers greater flexibility over redistricting procedures and map design.",
+   "Removing commission requirements could simplify the statutory process."
+  ],
+  "rightCons": [
+   "Repeal would remove the commission and the specific standards established by Proposition 4.",
+   "A repeal effort may require voter action or face constitutional challenges and litigation."
+  ],
+  "background": "Proposition 4 created an independent commission and standards for redistricting; the Legislature passes district maps. Courts restored the measure after finding a legislative repeal unconstitutional, limiting how lawmakers may change voter-enacted reforms. Lawmakers can propose constitutional amendments for voters to decide.",
+  "whyLive": "In 2025, Bishop joined an effort to put repeal before lawmakers while preparing his 2026 campaign. A subsequent direct repeal initiative failed to qualify for the 2026 ballot, and the redistricting dispute continues in court.",
+  "sourceIds": [
+   "src-p3-uth6-bishop-announcement",
+   "src-p3-uth6-redistricting-kuer",
+   "src-p3-uth6-petition-status",
+   "src-p3-uth6-redistricting-case"
+  ],
+  "contestIds": [
+   "ut-house-6"
+  ]
+ },
+ {
+  "id": "uts-local-control-education-funding",
+  "category": "Education",
+  "question": "What is the best balance between statewide rules and local discretion in deciding how public school funding is spent?",
+  "leftLabel": "Set funding priorities mainly through statewide rules and formulas",
+  "rightLabel": "Give local school communities more discretion over spending",
+  "leftPros": [
+   "Statewide formulas can make allocations more consistent across districts.",
+   "State priorities can direct funding toward students or programs with identified needs."
+  ],
+  "leftCons": [
+   "Statewide rules may fit local enrollment and cost differences poorly.",
+   "More restrictions can leave districts and schools with less room to respond to local needs."
+  ],
+  "rightPros": [
+   "Local educators and communities can tailor spending to student needs and local conditions.",
+   "School leaders may be able to adjust staffing and programs as needs change."
+  ],
+  "rightCons": [
+   "Districts may have different capacity to plan and manage local funding decisions.",
+   "Less statewide direction can lead to different services or priorities across communities."
+  ],
+  "background": "Utah's Constitution assigns the Legislature responsibility for establishing and maintaining the public education system and says the Uniform School Fund is apportioned as the Legislature provides. The policy question is how to balance statewide funding rules with discretion for local school communities.",
+  "whyLive": "Sandall's 2026 campaign platform says teachers and principals should make most school funding decisions with their local communities. Public education funding was also before the Legislature in 2026, and Senate District 1 includes Box Elder County and parts of Cache and Tooele counties.",
+  "sourceIds": [
+   "src-uts-sandall-platform",
+   "src-uts-utah-constitution-article-x",
+   "src-uts-education-appropriations-2026",
+   "src-uts-senate-district-guide"
+  ],
+  "contestIds": [
+   "ut-senate-1"
+  ]
+ },
+ {
+  "id": "uts-road-usage-funding",
+  "category": "Other",
+  "question": "How should Utah adjust road funding as vehicles use less gasoline or switch to electric power?",
+  "leftLabel": "Keep fuel taxes and statewide appropriations as primary sources",
+  "rightLabel": "Expand charges based on miles driven",
+  "leftPros": [
+   "Fuel taxes use an existing collection method tied to fuel purchases.",
+   "State appropriations can provide funding without requiring mileage reporting."
+  ],
+  "leftCons": [
+   "Fuel-tax revenue per mile varies with vehicle efficiency and fuel type.",
+   "Drivers with similar mileage can contribute different amounts depending on their vehicles."
+  ],
+  "rightPros": [
+   "A per-mile charge can connect a driver's contribution more directly to miles driven.",
+   "A mileage-based system can apply to electric vehicles that do not buy gasoline."
+  ],
+  "rightCons": [
+   "Mileage reporting and billing add administrative work; privacy depends on the reporting method and data collected.",
+   "Drivers with long required trips could pay more unless the system includes adjustments."
+  ],
+  "background": "Utah uses fuel taxes to help fund transportation and operates a voluntary per-mile charge for electric vehicles instead of an annual alternative-fuel vehicle fee. A 2025 Legislative Auditor General report cited a projected $40 billion shortfall for needed transportation projects through 2050 and noted that growing electric-vehicle use may require replacement revenue sources.",
+  "whyLive": "Sandall's campaign site says the transportation funding model is becoming obsolete and that road users should pay in proportion to their use. In 2026, S.B. 242 proposed changes to the road-usage-charge program; the district includes Box Elder County and parts of Cache and Tooele counties.",
+  "sourceIds": [
+   "src-uts-sandall-platform",
+   "src-uts-sb242-2026",
+   "src-uts-udot-road-usage-charge",
+   "src-uts-transportation-audit-2025",
+   "src-uts-senate-district-guide"
+  ],
+  "contestIds": [
+   "ut-senate-1"
+  ]
+ },
+ {
+  "id": "uts-school-phone-rules",
+  "category": "Education",
+  "question": "How should Utah set rules for students using personal phones during the school day?",
+  "leftLabel": "Restrict use throughout the school day",
+  "rightLabel": "Limit use during instruction, with more local choice",
+  "leftPros": [
+   "A school-day default limits use during breaks as well as lessons.",
+   "A statewide standard gives schools a common starting point."
+  ],
+  "leftCons": [
+   "Students may have fewer opportunities to contact family or use personal devices during breaks.",
+   "Statewide rules can leave less room for local preferences unless exceptions are made."
+  ],
+  "rightPros": [
+   "Schools can tailor rules for breaks and other noninstructional time.",
+   "Students can have more opportunities to contact family or use devices between lessons."
+  ],
+  "rightCons": [
+   "Device use during breaks may still distract students or disrupt school activities.",
+   "Different local rules can lead to inconsistent expectations across schools."
+  ],
+  "background": "Utah previously restricted personal devices during instructional time. In 2026, S.B. 69 changed the default to the full school day while allowing local policies and certain accommodations and exceptions.",
+  "whyLive": "Sandall highlighted the school-day phone policy in his 2026 legislative newsletter and voted for S.B. 69; the Legislature can amend the statewide rule in the next term.",
+  "sourceIds": [
+   "src-uts-sandall-week2",
+   "src-uts-sb69-enrolled",
+   "src-uts-sb69-votes"
+  ],
+  "contestIds": [
+   "ut-senate-1"
+  ]
+ },
+ {
+  "id": "uts-accessory-dwelling-zoning",
+  "category": "Housing & Growth",
+  "question": "How much control should Utah cities have over allowing separate small homes on residential lots?",
+  "leftLabel": "Require eligible cities to allow qualifying units",
+  "rightLabel": "Let cities decide whether to allow units",
+  "leftPros": [
+   "Can open more residential lots to small homes without requiring a new subdivision.",
+   "A statewide baseline can make rules more predictable for property owners."
+  ],
+  "leftCons": [
+   "A statewide requirement reduces local discretion over whether to permit such units.",
+   "Additional residents can increase demand for parking and infrastructure."
+  ],
+  "rightPros": [
+   "Cities can tailor decisions to neighborhood conditions and infrastructure.",
+   "Local officials can choose whether additional homes fit local plans."
+  ],
+  "rightCons": [
+   "Restrictive local rules can limit opportunities to add small homes.",
+   "Rules may vary substantially from one city to another."
+  ],
+  "background": "Detached accessory dwelling units are separate small homes on the same lot as a primary home. In 2026 S.B. 284 required specified municipalities to allow qualifying units on lots of at least 11,000 square feet, while retaining some local standards.",
+  "whyLive": "Sandall voted for S.B. 284 in 2026, and housing affordability was raised in the District 1 candidate questionnaire. The Legislature can revise these state land-use requirements in the next term.",
+  "sourceIds": [
+   "src-uts-sb284-enrolled",
+   "src-uts-sb284-votes",
+   "src-uts-senate-district-guide"
+  ],
+  "contestIds": [
+   "ut-senate-1"
+  ]
+ },
+ {
+  "id": "uts-public-land-control",
+  "category": "Federal Lands",
+  "question": "What position should Utah take on control of federally managed public lands within the state?",
+  "leftLabel": "Seek greater state control of eligible lands",
+  "rightLabel": "Keep federal management of those lands",
+  "leftPros": [
+   "State management could place more decisions closer to Utah residents and officials.",
+   "A state role could emphasize local access and resource development priorities."
+  ],
+  "leftCons": [
+   "A transfer or change in authority would require federal or judicial action beyond the state Legislature.",
+   "Managing additional lands could require substantial state resources."
+  ],
+  "rightPros": [
+   "Federal agencies would continue managing lands for the national public under federal law.",
+   "The state would avoid taking on the full management costs of transferred lands."
+  ],
+  "rightCons": [
+   "State and local preferences may not prevail in federal management decisions.",
+   "Federal restrictions can limit some access or resource uses."
+  ],
+  "background": "Federal agencies manage substantial areas of Utah public land. Utah has pursued changes to control and jurisdiction, but the U.S. Supreme Court declined to hear its 2024 ownership lawsuit in 2025; the state cannot unilaterally transfer federal land.",
+  "whyLive": "Sandall's campaign calls for public lands to remain public under state control. Utah lawmakers considered public-land jurisdiction legislation in 2026 and can decide state funding and advocacy in the next term.",
+  "sourceIds": [
+   "src-uts-sandall-platform",
+   "src-uts-public-lands-2026",
+   "src-uts-land-lawsuit"
+  ],
+  "contestIds": [
+   "ut-senate-1"
+  ]
  }
 ]

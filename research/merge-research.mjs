@@ -1,4 +1,4 @@
-// Merge research/pass1/*.json + research/pass2/*.json -> src/data/*.json
+﻿// Merge research/pass1/*.json + research/pass2/*.json -> src/data/*.json
 import fs from 'node:fs'; import path from 'node:path';
 const R='research', OUT='src/data'; const groups=['federal','legislature','education','county','amendments'];
 const read=f=>{try{return JSON.parse(fs.readFileSync(f,'utf8').replace(/^\uFEFF/,''))}catch(e){console.warn('skip',f,e.message);return null}};
@@ -19,6 +19,21 @@ for(const g of groups){
   for(const p of p2.positions||[]){ if(![-2,-1,0,1,2,null].includes(p.position)) p.position=null; if(p.position===null) p.evidenceType='unknown'; positions.push({confidence:'low',sourceIds:[],...p}); }
   facts.push(...(p2.facts||[]));
 }
+// pass3: second-round per-contest research (research/pass3/<contestId>.json)
+{ const cm=new Map(contests.map(c=>[c.id,c])); const P3=path.join(R,'pass3');
+  for(const f of (fs.existsSync(P3)?fs.readdirSync(P3):[]).filter(f=>f.endsWith('.json'))){
+    const j=read(path.join(P3,f)); if(!j) continue; const c=cm.get(j.contestId); if(!c){console.warn('pass3 unknown contest',j.contestId);continue}
+    for(const s of j.sources||[]) if(s?.id&&s.url&&!sources.has(s.id)) sources.set(s.id,{accessed:'2026-10-29',...s});
+    for(const i of j.issues||[]){ if(!c.issueIds.includes(i.id)) c.issueIds.push(i.id); const ex=issues.get(i.id); if(ex){ if(!ex.contestIds.includes(c.id)) ex.contestIds.push(c.id); continue }
+      issues.set(i.id,{...i,id:i.id,contestIds:[c.id],category:i.category||'Other',leftPros:i.leftPros||[],leftCons:i.leftCons||[],rightPros:i.rightPros||[],rightCons:i.rightCons||[],background:i.background||''}); }
+    let added=0,filled=0;
+    for(const p of j.positions||[]){ if(![-2,-1,0,1,2,null].includes(p.position)) p.position=null; if(p.position===null) p.evidenceType='unknown';
+      const ex=positions.find(x=>x.candidateId===p.candidateId&&x.issueId===p.issueId);
+      if(!ex){positions.push({confidence:'low',sourceIds:[],...p});added++}
+      else if(ex.position==null&&p.position!=null){Object.assign(ex,p);filled++} }
+    console.log('pass3',j.contestId,'issues',(j.issues||[]).length,'added',added,'filled',filled);
+  } }
+{ const EV={'voting-record':'recorded-vote','public-statement':'explicit-statement','debate':'explicit-statement','questionnaire':'explicit-statement','campaign-website':'campaign-site'}; for(const p of positions) if(EV[p.evidenceType]) p.evidenceType=EV[p.evidenceType]; }
 // ensure every candidate x issue in its contest has a position row (unknown default)
 const cmap=new Map(contests.map(c=>[c.id,c]));
 for(const k of candidates){ const c=cmap.get(k.contestId); for(const iid of c.issueIds){ if(!positions.find(p=>p.candidateId===k.id&&p.issueId===iid)) positions.push({candidateId:k.id,issueId:iid,position:null,evidenceType:'unknown',summary:'No public position found during research.',date:null,sourceIds:[],confidence:'low'}); } }
