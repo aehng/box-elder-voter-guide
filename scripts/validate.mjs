@@ -145,6 +145,40 @@ try {
     }
   }
 
+  // Check all strings in src/data for encoding corruption / mojibake per QA brief
+  const letterQuestionPattern = /[A-Za-z]\?(s|t|re|ll|d|ve|m)\b/;
+
+  function validateStrings(obj, location) {
+    if (typeof obj === 'string') {
+      if (obj.includes('â€')) {
+        errors.push(`String in ${location} contains 'â€': "${obj.slice(0, 80)}"`);
+      }
+      if (obj.includes('\uFFFD')) {
+        errors.push(`String in ${location} contains U+FFFD: "${obj.slice(0, 80)}"`);
+      }
+      // Check letter-?-letter pattern outside URLs
+      const withoutUrls = obj.replace(/https?:\/\/[^\s"'<>]+/gi, '');
+      const match = withoutUrls.match(letterQuestionPattern);
+      if (match) {
+        errors.push(
+          `String in ${location} contains corrupted punctuation ('${match[0]}') outside URLs: "${obj.slice(0, 80)}"`
+        );
+      }
+    } else if (Array.isArray(obj)) {
+      obj.forEach((item, idx) => validateStrings(item, `${location}[${idx}]`));
+    } else if (obj !== null && typeof obj === 'object') {
+      for (const [key, val] of Object.entries(obj)) {
+        validateStrings(val, `${location}.${key}`);
+      }
+    }
+  }
+
+  const allFiles = fs.readdirSync(DATA_DIR).filter((f) => f.endsWith('.json'));
+  for (const filename of allFiles) {
+    const data = loadJson(filename);
+    validateStrings(data, filename);
+  }
+
   if (errors.length > 0) {
     console.error(`Validation FAILED with ${errors.length} error(s):`);
     for (const err of errors.slice(0, 30)) {

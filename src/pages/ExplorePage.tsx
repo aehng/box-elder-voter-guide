@@ -4,6 +4,7 @@ import { useVoter } from '../context/VoterContext';
 import { PositionSlider } from '../components/PositionSlider';
 import { ImportanceSlider } from '../components/ImportanceSlider';
 import { MiniPositionChart } from '../components/MiniPositionChart';
+import { formatStanceLabel } from '../lib/compare';
 import type { UserStance, UserImportance, UserAnswerStatus, Issue } from '../types';
 import {
   ChevronLeft,
@@ -413,7 +414,7 @@ export const ExplorePage: React.FC = () => {
                     <div className="p-2.5 rounded-lg bg-teal-50 border border-teal-200 text-xs text-teal-900 font-medium flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-teal-700 shrink-0" />
                       <span>
-                        Your stance: <strong>{currentAnswer.stance === -2 ? currentIssue.leftLabel : currentAnswer.stance === 2 ? currentIssue.rightLabel : currentAnswer.stance === 0 ? 'Undecided / Neutral' : currentAnswer.stance! < 0 ? `Lean: ${currentIssue.leftLabel}` : `Lean: ${currentIssue.rightLabel}`}</strong>
+                        Your stance: <strong>{formatStanceLabel(currentAnswer.stance, currentIssue)}</strong>
                       </span>
                     </div>
                   )}

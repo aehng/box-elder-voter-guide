@@ -5,6 +5,7 @@ import { EvidenceBadge } from '../components/EvidenceBadge';
 import { PositionSlider } from '../components/PositionSlider';
 import { ImportanceSlider } from '../components/ImportanceSlider';
 import { MiniPositionChart } from '../components/MiniPositionChart';
+import { formatStanceLabel } from '../lib/compare';
 import type { UserStance, UserImportance, UserAnswerStatus } from '../types';
 import {
   ExternalLink,
@@ -299,15 +300,7 @@ export const IssueDetailPage: React.FC = () => {
                         <div className="text-xs font-semibold text-stone-800">
                           Stance:{' '}
                           <span className="font-medium">
-                            {pos.position === -2
-                              ? issue.leftLabel
-                              : pos.position === 2
-                              ? issue.rightLabel
-                              : pos.position === 0
-                              ? 'Middle ground'
-                              : pos.position < 0
-                              ? `Lean: ${issue.leftLabel}`
-                              : `Lean: ${issue.rightLabel}`}
+                            {formatStanceLabel(pos.position, issue)}
                           </span>
                         </div>
                         <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">

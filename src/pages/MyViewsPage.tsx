@@ -16,7 +16,10 @@ export const MyViewsPage: React.FC = () => {
     setIncludePartyAssumed,
     resetAllAnswers,
     answeredCount,
+    noOpinionCount,
+    skippedCount,
     totalActiveIssuesCount,
+    positionsByIssue,
   } = useVoter();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -52,6 +55,13 @@ export const MyViewsPage: React.FC = () => {
     if (selectedCategory === 'all') return answeredIssues;
     return answeredIssues.filter(({ issue }) => issue.category === selectedCategory);
   }, [answeredIssues, selectedCategory]);
+
+  const hasPartyAssumedInViews = useMemo(() => {
+    return displayedIssues.some(({ issue }) => {
+      const list = positionsByIssue.get(issue.id) || [];
+      return list.some((p) => p.evidenceType === 'party-assumed');
+    });
+  }, [displayedIssues, positionsByIssue]);
 
   // Empty state if nothing answered
   if (answeredIssues.length === 0) {
@@ -97,8 +107,11 @@ export const MyViewsPage: React.FC = () => {
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
             My Views Dashboard
           </h1>
-          <p className="mt-1 text-sm text-stone-600">
-            {answeredCount} of {totalActiveIssuesCount} questions rated, sorted by importance to your vote.
+          <p className="mt-1 text-sm font-medium text-stone-700">
+            {answeredCount} answered &middot; {noOpinionCount} no opinion &middot; {skippedCount} skipped of {totalActiveIssuesCount}
+          </p>
+          <p className="text-xs text-stone-500 mt-0.5">
+            Sorted by importance to your vote. Unset priority defaults to 3 (Moderately important).
           </p>
         </div>
 
@@ -132,56 +145,63 @@ export const MyViewsPage: React.FC = () => {
       </div>
 
       {/* Control Bar: Party Assumption Toggle & Category Filter */}
-      <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-4">
-        {/* Toggle */}
-        <label className="flex items-center gap-3 cursor-pointer select-none">
-          <input
-            type="checkbox"
-            checked={settings.includePartyAssumed}
-            onChange={(e) => setIncludePartyAssumed(e.target.checked)}
-            className="h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
-          />
-          <div>
-            <span className="text-xs sm:text-sm font-semibold text-stone-900 block">
-              Include party-based assumptions
-            </span>
-            <span className="text-[11px] text-stone-500 block">
-              Show estimated stances from official party platforms when candidates have no individual statement
-            </span>
-          </div>
-        </label>
+      {(hasPartyAssumedInViews || categories.length > 1) && (
+        <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs flex flex-col md:flex-row md:items-center justify-between gap-4">
+          {/* Toggle (hidden if no party-assumed positions exist in relevant candidates) */}
+          {hasPartyAssumedInViews && (
+            <label className="flex items-center gap-3 cursor-pointer select-none">
+              <input
+                type="checkbox"
+                checked={settings.includePartyAssumed}
+                onChange={(e) => setIncludePartyAssumed(e.target.checked)}
+                className="h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+              />
+              <div>
+                <span className="text-xs sm:text-sm font-semibold text-stone-900 block">
+                  Include party-based assumptions
+                </span>
+                <span className="text-[11px] text-stone-500 block">
+                  Show estimated stances from official party platforms when candidates have no individual statement
+                </span>
+              </div>
+            </label>
+          )}
 
-        {/* Category Pills / Filter */}
-        {categories.length > 1 && (
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-            <button
-              type="button"
-              onClick={() => setSelectedCategory('all')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                selectedCategory === 'all'
-                  ? 'bg-stone-900 text-white'
-                  : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-              }`}
-            >
-              All ({answeredIssues.length})
-            </button>
-            {categories.map((cat) => (
+          {/* Category Pills / Filter */}
+          {categories.length > 1 && (
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none ml-auto">
               <button
-                key={cat}
                 type="button"
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => setSelectedCategory('all')}
                 className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                  selectedCategory === cat
+                  selectedCategory === 'all'
                     ? 'bg-stone-900 text-white'
                     : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
                 }`}
               >
-                {cat}
+                All ({answeredIssues.length})
               </button>
-            ))}
-          </div>
-        )}
-      </div>
+              {categories.map((cat) => {
+                const count = answeredIssues.filter((i) => i.issue.category === cat).length;
+                return (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => setSelectedCategory(cat)}
+                    className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                      selectedCategory === cat
+                        ? 'bg-stone-900 text-white'
+                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                    }`}
+                  >
+                    {cat} ({count})
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Reset Confirmation Dialog */}
       {showResetConfirm && (

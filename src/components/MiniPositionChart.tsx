@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useVoter } from '../context/VoterContext';
 import type { UserStance, Position } from '../types';
 import { EvidenceBadge } from './EvidenceBadge';
+import { formatStanceLabel } from '../lib/compare';
 
 interface MiniPositionChartProps {
   issueId: string;
@@ -14,12 +15,13 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
   userStance,
   className = '',
 }) => {
-  const { positionsByIssue, candidateMap, settings } = useVoter();
+  const { positionsByIssue, candidateMap, issueMap, settings } = useVoter();
   const [activeCandidateId, setActiveCandidateId] = useState<string | null>(null);
 
+  const issue = issueMap.get(issueId);
   const rawPositions = positionsByIssue.get(issueId) || [];
 
-  // Filter positions according to settings: if party-assumed is excluded, we show them as unknown or exclude
+  // Filter positions according to settings
   const knownPositions: Array<{
     pos: Position;
     candidateName: string;
@@ -56,12 +58,11 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
 
   // SVG dimensions
   const width = 600;
-  const height = 90;
+  const height = 96;
   const paddingX = 45;
-  const axisY = 45;
+  const axisY = 48;
 
   const getX = (val: number) => {
-    // val is -2 to +2. Map to paddingX .. width - paddingX
     const norm = (val + 2) / 4;
     return paddingX + norm * (width - 2 * paddingX);
   };
@@ -102,6 +103,18 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
         </div>
       </div>
 
+      {/* Axis Ends Labels using real issue labels */}
+      {issue && (
+        <div className="grid grid-cols-2 gap-3 text-[11px] font-semibold text-stone-700 mb-1.5">
+          <div className="text-left pr-2 leading-snug">
+            {issue.leftLabel}
+          </div>
+          <div className="text-right pl-2 leading-snug">
+            {issue.rightLabel}
+          </div>
+        </div>
+      )}
+
       {knownPositions.length === 0 && (userStance === undefined || userStance === null) ? (
         <p className="text-xs text-stone-500 py-3 italic">
           No public candidate positions recorded yet on this specific issue.
@@ -134,51 +147,22 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
               strokeWidth="1.5"
             />
 
-            {/* Position Tick Marks and Labels */}
+            {/* Position Tick Marks (dots only, no generic -2/+2 numbers) */}
             {[-2, -1, 0, 1, 2].map((tick) => {
               const x = getX(tick);
               return (
                 <g key={tick}>
                   <circle cx={x} cy={axisY} r="3" fill="#a8a29e" />
-                  <text
-                    x={x}
-                    y={axisY + 22}
-                    textAnchor="middle"
-                    className="text-[11px] fill-stone-700 font-mono font-medium"
-                  >
-                    {tick > 0 ? `+${tick}` : tick}
-                  </text>
                 </g>
               );
             })}
 
-            {/* User marker if answered */}
-            {userStance !== undefined && userStance !== null && (
-              <g transform={`translate(${getX(userStance)}, ${axisY})`}>
-                <polygon
-                  points="0,-18 10,0 0,18 -10,0"
-                  fill="#0d9488"
-                  stroke="#ffffff"
-                  strokeWidth="2"
-                  className="filter drop-shadow-sm"
-                />
-                <text
-                  x="0"
-                  y="-22"
-                  textAnchor="middle"
-                  className="text-[10px] fill-teal-900 font-bold"
-                >
-                  YOU
-                </text>
-              </g>
-            )}
-
-            {/* Candidate Dots */}
+            {/* Candidate Dots (rendered first) */}
             {Array.from(groupedByPos.entries()).map(([posVal, candidatesAtPos]) => {
               const baseX = getX(posVal);
               return candidatesAtPos.map((cand, idx) => {
                 // Stack vertically if multiple candidates share position
-                const offsetY = idx === 0 ? 0 : idx % 2 === 1 ? -16 * Math.ceil(idx / 2) : 16 * Math.ceil(idx / 2);
+                const offsetY = idx === 0 ? 0 : idx % 2 === 1 ? -18 * Math.ceil(idx / 2) : 18 * Math.ceil(idx / 2);
                 const finalY = axisY + offsetY;
                 const isAssumed = cand.isAssumed;
                 const isSelected = activeCandidateId === cand.pos.candidateId;
@@ -223,6 +207,39 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
                 );
               });
             })}
+
+            {/* User marker (rendered LAST on top, visually distinct) */}
+            {userStance !== undefined && userStance !== null && (
+              <g transform={`translate(${getX(userStance)}, ${axisY})`}>
+                <circle cx="0" cy="0" r="14" fill="#0d9488" fillOpacity="0.25" />
+                <polygon
+                  points="0,-16 10,0 0,16 -10,0"
+                  fill="#0f766e"
+                  stroke="#ffffff"
+                  strokeWidth="2.5"
+                  className="filter drop-shadow-sm"
+                />
+                <polygon points="0,-6 4,0 0,6 -4,0" fill="#ffffff" />
+                <rect
+                  x="-14"
+                  y="-29"
+                  width="28"
+                  height="13"
+                  rx="3"
+                  fill="#0f766e"
+                  stroke="#ffffff"
+                  strokeWidth="1.5"
+                />
+                <text
+                  x="0"
+                  y="-20"
+                  textAnchor="middle"
+                  className="text-[8.5px] fill-white font-extrabold tracking-wider"
+                >
+                  YOU
+                </text>
+              </g>
+            )}
           </svg>
 
           {/* Active tooltip / candidate inspection */}
@@ -234,6 +251,11 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
                 </span>
                 <EvidenceBadge type={activeItem.pos.evidenceType} />
               </div>
+              {issue && (
+                <div className="text-[11px] font-semibold text-stone-800">
+                  Stance: {formatStanceLabel(activeItem.pos.position, issue)}
+                </div>
+              )}
               <p className="text-stone-600">{activeItem.pos.summary}</p>
             </div>
           )}
@@ -244,10 +266,9 @@ export const MiniPositionChart: React.FC<MiniPositionChartProps> = ({
       {unknownCandidates.length > 0 && (
         <div className="mt-3 pt-2.5 border-t border-stone-100 text-[11px] text-stone-500 flex flex-wrap items-center gap-1.5">
           <span className="font-medium text-stone-600">No public position found:</span>
-          {unknownCandidates.map((name, i) => (
+          {unknownCandidates.map((name) => (
             <span key={name} className="bg-stone-100 text-stone-600 px-2 py-0.5 rounded">
               {name}
-              {i < unknownCandidates.length - 1 ? '' : ''}
             </span>
           ))}
         </div>

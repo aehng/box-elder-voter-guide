@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { PositionSlider } from '../components/PositionSlider';
 import { ImportanceSlider } from '../components/ImportanceSlider';
+import { formatStanceLabel } from '../lib/compare';
 import type { UserStance, UserImportance, UserAnswerStatus } from '../types';
 import { ArrowLeft, ExternalLink, CheckCircle2, Scale } from 'lucide-react';
 
@@ -76,15 +77,7 @@ export const AmendmentDetailPage: React.FC = () => {
   // Human stance description
   const userStanceLabel =
     userAns.status === 'answered' && userAns.stance !== null && issue
-      ? userAns.stance === -2
-        ? `Against: ${issue.leftLabel}`
-        : userAns.stance === 2
-        ? `For: ${issue.rightLabel}`
-        : userAns.stance === 0
-        ? 'Undecided / Neutral'
-        : userAns.stance < 0
-        ? `Lean Against: ${issue.leftLabel}`
-        : `Lean For: ${issue.rightLabel}`
+      ? formatStanceLabel(userAns.stance, issue)
       : null;
 
   return (

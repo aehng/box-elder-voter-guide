@@ -54,6 +54,7 @@ export const App: React.FC = () => {
                 <Route path="/explore" element={<ExplorePage />} />
                 <Route path="/my-views" element={<MyViewsPage />} />
                 <Route path="/compare" element={<ComparePage />} />
+                <Route path="/compare/:contestId" element={<ComparePage />} />
                 <Route path="/candidate/:id" element={<CandidateDetailPage />} />
                 <Route path="/issues/:id" element={<IssueDetailPage />} />
                 <Route path="/judges/:id" element={<JudgeDetailPage />} />

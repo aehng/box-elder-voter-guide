@@ -61,6 +61,7 @@ interface VoterContextValue {
 
   // Helpers
   answeredCount: number;
+  noOpinionCount: number;
   skippedCount: number;
   totalActiveIssuesCount: number;
   getAlignment: (
@@ -208,9 +209,13 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     return Object.values(answers).filter((a) => a.status === 'answered' && a.stance !== null).length;
   }, [answers]);
 
-  const skippedCount = useMemo(() => {
-    return Object.values(answers).filter((a) => a.status === 'skipped').length;
+  const noOpinionCount = useMemo(() => {
+    return Object.values(answers).filter((a) => a.status === 'no-opinion').length;
   }, [answers]);
+
+  const skippedCount = useMemo(() => {
+    return Math.max(0, issues.length - answeredCount - noOpinionCount);
+  }, [issues.length, answeredCount, noOpinionCount]);
 
   const totalActiveIssuesCount = issues.length;
 
@@ -271,6 +276,7 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
         resetAllAnswers,
         setIncludePartyAssumed,
         answeredCount,
+        noOpinionCount,
         skippedCount,
         totalActiveIssuesCount,
         getAlignment,

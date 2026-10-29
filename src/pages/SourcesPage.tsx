@@ -123,26 +123,21 @@ export const SourcesPage: React.FC = () => {
             Policy stances are mapped onto a 5-stop numerical scale:
           </p>
 
-          <div className="grid grid-cols-5 gap-2 text-center text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-2 text-center text-xs">
             <div className="p-2.5 bg-stone-100 rounded-xl border border-stone-200 font-semibold">
-              <span className="block text-sm font-bold text-stone-900">−2</span>
-              <span className="text-[11px] text-stone-600">Strong Left</span>
+              <span className="text-[11px] text-stone-700">Strongly: &lt;left&gt;</span>
             </div>
             <div className="p-2.5 bg-stone-100 rounded-xl border border-stone-200 font-semibold">
-              <span className="block text-sm font-bold text-stone-900">−1</span>
-              <span className="text-[11px] text-stone-600">Lean Left</span>
+              <span className="text-[11px] text-stone-700">Lean: &lt;left&gt;</span>
             </div>
             <div className="p-2.5 bg-teal-50 rounded-xl border border-teal-200 font-semibold">
-              <span className="block text-sm font-bold text-teal-900">0</span>
-              <span className="text-[11px] text-teal-800">Middle Ground</span>
+              <span className="text-[11px] text-teal-900 font-bold">Middle ground</span>
             </div>
             <div className="p-2.5 bg-stone-100 rounded-xl border border-stone-200 font-semibold">
-              <span className="block text-sm font-bold text-stone-900">+1</span>
-              <span className="text-[11px] text-stone-600">Lean Right</span>
+              <span className="text-[11px] text-stone-700">Lean: &lt;right&gt;</span>
             </div>
             <div className="p-2.5 bg-stone-100 rounded-xl border border-stone-200 font-semibold">
-              <span className="block text-sm font-bold text-stone-900">+2</span>
-              <span className="text-[11px] text-stone-600">Strong Right</span>
+              <span className="text-[11px] text-stone-700">Strongly: &lt;right&gt;</span>
             </div>
           </div>
 

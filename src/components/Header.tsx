@@ -4,9 +4,14 @@ import { useVoter } from '../context/VoterContext';
 import { Settings, Info, BookOpen, SlidersHorizontal, Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
-  const { answeredCount, totalActiveIssuesCount, settings, setIncludePartyAssumed } = useVoter();
+  const { answeredCount, totalActiveIssuesCount, settings, setIncludePartyAssumed, positions } = useVoter();
   const [showSettingsModal, setShowSettingsModal] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const hasAnyPartyAssumed = React.useMemo(
+    () => positions.some((p) => p.evidenceType === 'party-assumed'),
+    [positions]
+  );
 
   const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     `px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
@@ -138,24 +143,26 @@ export const Header: React.FC = () => {
             </div>
 
             <div className="space-y-4">
-              <div className="p-4 rounded-xl bg-stone-50 border border-stone-200">
-                <label className="flex items-start gap-3 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={settings.includePartyAssumed}
-                    onChange={(e) => setIncludePartyAssumed(e.target.checked)}
-                    className="mt-1 h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
-                  />
-                  <div>
-                    <span className="block text-sm font-semibold text-stone-900">
-                      Include party-based assumptions
-                    </span>
-                    <span className="block text-xs text-stone-600 mt-1 leading-relaxed">
-                      By default (off), only documented statements, votes, and campaign publications from the candidate are included. When turned on, positions without candidate statements are estimated from their official state party platform and labeled with dashed badges.
-                    </span>
-                  </div>
-                </label>
-              </div>
+              {hasAnyPartyAssumed && (
+                <div className="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                  <label className="flex items-start gap-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={settings.includePartyAssumed}
+                      onChange={(e) => setIncludePartyAssumed(e.target.checked)}
+                      className="mt-1 h-4 w-4 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+                    />
+                    <div>
+                      <span className="block text-sm font-semibold text-stone-900">
+                        Include party-based assumptions
+                      </span>
+                      <span className="block text-xs text-stone-600 mt-1 leading-relaxed">
+                        By default (off), only documented statements, votes, and campaign publications from the candidate are included. When turned on, positions without candidate statements are estimated from their official state party platform and labeled with dashed badges.
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              )}
 
               <div className="text-xs text-stone-500 space-y-1">
                 <p>

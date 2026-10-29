@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { EvidenceBadge } from '../components/EvidenceBadge';
 import { ResearchStatusBadge } from '../components/ResearchStatusBadge';
-import type { AlignmentDirection } from '../types';
+import { relation, formatStanceLabel, type ComparisonRelation } from '../lib/compare';
 import {
   ExternalLink,
   AlertTriangle,
@@ -28,7 +28,7 @@ export const CandidateDetailPage: React.FC = () => {
     factsByCandidate,
     sourceMap,
     answers,
-    getAlignment,
+    settings,
   } = useVoter();
 
   const candidate = id ? candidateMap.get(id) : undefined;
@@ -90,7 +90,7 @@ export const CandidateDetailPage: React.FC = () => {
     .map((sid) => sourceMap.get(sid))
     .filter(Boolean);
 
-  const formatDirectionBadge = (dir: AlignmentDirection) => {
+  const formatDirectionBadge = (dir: ComparisonRelation) => {
     switch (dir) {
       case 'agree':
         return (
@@ -104,16 +104,22 @@ export const CandidateDetailPage: React.FC = () => {
             <XCircle className="w-3.5 h-3.5" /> Differ
           </span>
         );
-      case 'middle':
+      case 'partial':
         return (
           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-stone-100 text-stone-700">
-            <MinusCircle className="w-3.5 h-3.5" /> Middle
+            <MinusCircle className="w-3.5 h-3.5" /> Partial
           </span>
         );
-      case 'assumed':
+      case 'assumed-excluded':
         return (
           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-stone-100 text-stone-500 border border-dashed border-stone-300">
             Assumed
+          </span>
+        );
+      case 'no-opinion':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-stone-100 text-stone-600">
+            No opinion
           </span>
         );
       case 'unanswered':
@@ -255,7 +261,7 @@ export const CandidateDetailPage: React.FC = () => {
             const pos = candPositions.find((p) => p.issueId === issue.id);
             const userAns = answers[issue.id];
             const uStance = userAns && userAns.status === 'answered' ? userAns.stance : null;
-            const align = getAlignment(uStance, pos);
+            const align = relation(userAns, pos, { includePartyAssumed: settings.includePartyAssumed });
 
             return (
               <div
@@ -278,16 +284,10 @@ export const CandidateDetailPage: React.FC = () => {
                   <div className="text-left sm:text-right">
                     <span className="text-[11px] text-stone-500 block">Your stance:</span>
                     <span className="font-semibold text-stone-800 text-xs">
-                      {uStance !== null ? (
-                        uStance === -2
-                          ? issue.leftLabel
-                          : uStance === 2
-                          ? issue.rightLabel
-                          : uStance === 0
-                          ? 'Middle ground'
-                          : uStance < 0
-                          ? `Lean: ${issue.leftLabel}`
-                          : `Lean: ${issue.rightLabel}`
+                      {userAns?.status === 'no-opinion' ? (
+                        'No opinion'
+                      ) : uStance !== null ? (
+                        formatStanceLabel(uStance, issue)
                       ) : (
                         <Link to="/explore" className="text-teal-700 hover:underline">
                           You haven&rsquo;t answered
@@ -300,15 +300,7 @@ export const CandidateDetailPage: React.FC = () => {
                     <span className="text-[11px] text-stone-500 block">Their stance:</span>
                     <span className="font-semibold text-stone-800 text-xs">
                       {pos && pos.position !== null ? (
-                        pos.position === -2
-                          ? issue.leftLabel
-                          : pos.position === 2
-                          ? issue.rightLabel
-                          : pos.position === 0
-                          ? 'Middle ground'
-                          : pos.position < 0
-                          ? `Lean: ${issue.leftLabel}`
-                          : `Lean: ${issue.rightLabel}`
+                        formatStanceLabel(pos.position, issue)
                       ) : (
                         'Unknown'
                       )}
@@ -369,15 +361,7 @@ export const CandidateDetailPage: React.FC = () => {
                         <span>
                           Stance:{' '}
                           <strong className="text-stone-900">
-                            {pos.position === -2
-                              ? issue.leftLabel
-                              : pos.position === 2
-                              ? issue.rightLabel
-                              : pos.position === 0
-                              ? 'Middle ground'
-                              : pos.position < 0
-                              ? `Lean: ${issue.leftLabel}`
-                              : `Lean: ${issue.rightLabel}`}
+                            {formatStanceLabel(pos.position, issue)}
                           </strong>
                         </span>
                         <span className="capitalize text-[11px] text-stone-400">Confidence: {pos.confidence}</span>

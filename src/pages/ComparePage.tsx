@@ -1,9 +1,15 @@
 import React, { useState, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { EvidenceBadge } from '../components/EvidenceBadge';
 import { ResearchStatusBadge } from '../components/ResearchStatusBadge';
-import type { Candidate, Issue, AlignmentDirection } from '../types';
+import {
+  relation,
+  formatStanceLabel,
+  calculateContestCloseness,
+  type ComparisonRelation,
+} from '../lib/compare';
+import type { Candidate, Issue } from '../types';
 import {
   ExternalLink,
   CheckCircle2,
@@ -11,6 +17,8 @@ import {
   HelpCircle,
   MinusCircle,
   Compass,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react';
 
 export const ComparePage: React.FC = () => {
@@ -23,11 +31,11 @@ export const ComparePage: React.FC = () => {
     answers,
     settings,
     setIncludePartyAssumed,
-    getAlignment,
     answeredCount,
   } = useVoter();
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const { contestId } = useParams<{ contestId?: string }>();
+  const navigate = useNavigate();
 
   // Find contest with candidates
   const candidateContests = useMemo(
@@ -35,15 +43,18 @@ export const ComparePage: React.FC = () => {
     [contests]
   );
 
-  const initialContestId = searchParams.get('contest') || candidateContests[0]?.id || '';
-  const [selectedContestId, setSelectedContestId] = useState<string>(initialContestId);
+  // Contest selection derives reactively from route param /compare/:contestId (defaults to first contest)
+  const currentContest = useMemo(() => {
+    if (contestId) {
+      const found = contests.find((c) => c.id === contestId);
+      if (found) return found;
+    }
+    return candidateContests[0];
+  }, [contests, contestId, candidateContests]);
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [minImportance, setMinImportance] = useState<number>(0);
-
-  const currentContest = useMemo(
-    () => contests.find((c) => c.id === selectedContestId) || candidateContests[0],
-    [contests, selectedContestId, candidateContests]
-  );
+  const [expandedCandidateId, setExpandedCandidateId] = useState<string | null>(null);
 
   const contestCandidates = useMemo(() => {
     if (!currentContest) return [];
@@ -66,7 +77,7 @@ export const ComparePage: React.FC = () => {
     return Array.from(set).sort();
   }, [contestIssues]);
 
-  // Filtered issues
+  // Filtered issues for the side-by-side table
   const filteredIssues = useMemo(() => {
     return contestIssues.filter((issue) => {
       if (selectedCategory !== 'all' && issue.category !== selectedCategory) {
@@ -81,30 +92,63 @@ export const ComparePage: React.FC = () => {
     });
   }, [contestIssues, selectedCategory, minImportance, answers]);
 
-  const formatDirectionBadge = (dir: AlignmentDirection) => {
-    switch (dir) {
+  // Party-assumed check: hide toggle if zero party-assumed positions exist for relevant candidates
+  const hasPartyAssumedInContest = useMemo(() => {
+    return contestCandidates.some((cand) => {
+      const posList = positionsByCandidate.get(cand.id) || [];
+      return posList.some((p) => p.evidenceType === 'party-assumed');
+    });
+  }, [contestCandidates, positionsByCandidate]);
+
+  // Calculate closeness and ranked candidates
+  const closenessData = useMemo(() => {
+    return calculateContestCloseness({
+      contestIssues,
+      candidates: contestCandidates,
+      positionsByCandidate,
+      answers,
+      sourceMap,
+      includePartyAssumed: settings.includePartyAssumed,
+    });
+  }, [
+    contestIssues,
+    contestCandidates,
+    positionsByCandidate,
+    answers,
+    sourceMap,
+    settings.includePartyAssumed,
+  ]);
+
+  const formatDirectionBadge = (rel: ComparisonRelation) => {
+    switch (rel) {
       case 'agree':
         return (
           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 text-emerald-800">
             <CheckCircle2 className="w-3.5 h-3.5" /> Agree
           </span>
         );
+      case 'partial':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-stone-100 text-stone-700 border border-stone-200">
+            <MinusCircle className="w-3.5 h-3.5" /> Partial
+          </span>
+        );
       case 'differ':
         return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold bg-amber-100 text-amber-900">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-bold bg-rose-100 text-rose-900">
             <XCircle className="w-3.5 h-3.5" /> Differ
           </span>
         );
-      case 'middle':
-        return (
-          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-stone-100 text-stone-700">
-            <MinusCircle className="w-3.5 h-3.5" /> Middle
-          </span>
-        );
-      case 'assumed':
+      case 'assumed-excluded':
         return (
           <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-semibold bg-stone-100 text-stone-500 border border-dashed border-stone-300">
             Assumed
+          </span>
+        );
+      case 'no-opinion':
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-stone-100 text-stone-600">
+            No opinion
           </span>
         );
       case 'unanswered':
@@ -136,7 +180,7 @@ export const ComparePage: React.FC = () => {
       </div>
 
       {answeredCount === 0 && (
-        <div className="bg-teal-50 border border-teal-200 rounded-2xl p-4 flex items-center justify-between gap-4">
+        <div className="bg-teal-50 border border-teal-200 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <Compass className="w-5 h-5 text-teal-700 shrink-0" />
             <p className="text-xs sm:text-sm text-teal-900 font-medium">
@@ -145,16 +189,16 @@ export const ComparePage: React.FC = () => {
           </div>
           <Link
             to="/explore"
-            className="px-3.5 py-1.5 rounded-lg bg-teal-800 text-white font-semibold text-xs whitespace-nowrap hover:bg-teal-900"
+            className="px-3.5 py-1.5 rounded-lg bg-teal-800 text-white font-semibold text-xs whitespace-nowrap hover:bg-teal-900 self-start sm:self-auto"
           >
             Answer questions &rarr;
           </Link>
         </div>
       )}
 
-      {/* Contest Selector Bar */}
+      {/* Contest Selector Bar: Reactive Route Navigation */}
       <div className="bg-white rounded-2xl border border-stone-200 p-4 shadow-2xs space-y-3">
-        <label htmlFor="contest-select" className="text-xs font-bold uppercase tracking-wider text-stone-500 block">
+        <label className="text-xs font-bold uppercase tracking-wider text-stone-500 block">
           Choose a Race to Compare:
         </label>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
@@ -165,8 +209,7 @@ export const ComparePage: React.FC = () => {
                 key={c.id}
                 type="button"
                 onClick={() => {
-                  setSelectedContestId(c.id);
-                  setSearchParams({ contest: c.id });
+                  navigate(`/compare/${c.id}`);
                 }}
                 className={`p-3 rounded-xl text-left border transition-all ${
                   isSelected
@@ -219,123 +262,245 @@ export const ComparePage: React.FC = () => {
             </div>
           )}
 
-          {/* Candidates Summary Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {contestCandidates.map((cand) => {
-              const candPositions = positionsByCandidate.get(cand.id) || [];
+          {/* Section: Closest to your answers */}
+          <div className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs space-y-4">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-stone-100 pb-3">
+              <div>
+                <h2 className="text-base font-bold text-stone-900 tracking-tight">
+                  Closest match to your answers
+                </h2>
+                <p className="text-xs text-stone-500 mt-0.5">
+                  Order based on verified public stances matching issues you prioritized. Independent and nonpartisan; never a voting directive.
+                </p>
+              </div>
+            </div>
 
-              // Calculate per-contest alignment counts
-              let agreeCount = 0;
-              let differCount = 0;
-              let middleCount = 0;
-              let candidateUnknownCount = 0;
-              let userUnansweredCount = 0;
-              let assumedCount = 0;
+            {closenessData.answeredRelevant === 0 ? (
+              <div className="p-6 bg-stone-50 rounded-xl border border-stone-200 text-center space-y-3">
+                <Compass className="w-6 h-6 text-stone-400 mx-auto" />
+                <p className="text-xs sm:text-sm text-stone-600 max-w-md mx-auto">
+                  You haven&rsquo;t answered any of the questions relevant to this race yet. Answer issues to view which candidates align closest with your views.
+                </p>
+                <div>
+                  <Link
+                    to="/explore"
+                    className="inline-flex items-center gap-1 px-4 py-2 bg-stone-900 text-white rounded-lg text-xs font-semibold hover:bg-stone-800 transition-colors"
+                  >
+                    Answer ballot questions &rarr;
+                  </Link>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {closenessData.results.map((res) => {
+                    const isExpanded = expandedCandidateId === res.candidate.id;
 
-              for (const issue of contestIssues) {
-                const ans = answers[issue.id];
-                const uStance = ans && ans.status === 'answered' ? ans.stance : null;
-                const pos = candPositions.find((p) => p.issueId === issue.id);
-
-                if (!pos || pos.position === null || pos.evidenceType === 'unknown') {
-                  candidateUnknownCount++;
-                } else if (pos.evidenceType === 'party-assumed' && !settings.includePartyAssumed) {
-                  assumedCount++;
-                } else if (uStance === null) {
-                  userUnansweredCount++;
-                } else {
-                  const align = getAlignment(uStance, pos);
-                  if (align === 'agree') agreeCount++;
-                  else if (align === 'differ') differCount++;
-                  else if (align === 'middle') middleCount++;
-                }
-              }
-
-              return (
-                <div
-                  key={cand.id}
-                  className="bg-white rounded-2xl border border-stone-200 p-5 shadow-2xs flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="flex items-start justify-between gap-2 mb-1.5">
-                      <Link
-                        to={`/candidate/${cand.id}`}
-                        className="text-base font-bold text-stone-900 hover:text-stone-700 hover:underline"
+                    return (
+                      <div
+                        key={res.candidate.id}
+                        className="p-4 rounded-xl border border-stone-200 bg-stone-50/50 flex flex-col justify-between space-y-3"
                       >
-                        {cand.name}
-                      </Link>
-                      <div className="flex items-center gap-1 shrink-0">
-                        {cand.incumbent && (
-                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-stone-100 text-stone-700 border border-stone-200">
-                            Incumbent
-                          </span>
-                        )}
-                        {currentContest.uncontested && (
-                          <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-stone-200 text-stone-800">
-                            Unopposed
-                          </span>
-                        )}
-                      </div>
-                    </div>
+                        <div>
+                          <div className="flex items-start justify-between gap-2">
+                            <div>
+                              <Link
+                                to={`/candidate/${res.candidate.id}`}
+                                className="font-bold text-stone-900 hover:underline text-sm block"
+                              >
+                                {res.candidate.name}
+                              </Link>
+                              <span className="text-[11px] text-stone-500 font-medium">
+                                {res.candidate.party || 'Nonpartisan'}
+                              </span>
+                            </div>
+                            <ResearchStatusBadge status={res.candidate.researchStatus} />
+                          </div>
 
-                    <div className="text-xs text-stone-500 font-medium mb-3">
-                      {cand.party || 'Nonpartisan'}
-                    </div>
+                          {/* Soft Bar & Info */}
+                          <div className="mt-3 space-y-1.5">
+                            {res.isRanked ? (
+                              <>
+                                <div className="w-full bg-stone-200/80 rounded-full h-2 overflow-hidden">
+                                  <div
+                                    className="bg-stone-700 h-full rounded-full transition-all duration-300"
+                                    style={{ width: `${Math.round((res.score ?? 0) * 100)}%` }}
+                                  />
+                                </div>
+                                <div className="text-[11px] text-stone-600 font-medium">
+                                  Based on {res.counted} of {res.answeredRelevant} issues you answered &middot; {res.unknownCount} unknown
+                                </div>
+                              </>
+                            ) : (
+                              <div className="space-y-1">
+                                <span className="inline-block px-2 py-0.5 rounded bg-stone-200 text-stone-700 text-[11px] font-semibold">
+                                  Not enough info
+                                </span>
+                                <div className="text-[11px] text-stone-500">
+                                  Based on {res.counted} of {res.answeredRelevant} issues you answered &middot; {res.unknownCount} unknown
+                                </div>
+                              </div>
+                            )}
 
-                    {cand.background && cand.background.length > 0 && (
-                      <ul className="text-xs text-stone-600 space-y-1 mb-4 list-disc pl-4">
-                        {cand.background.slice(0, 2).map((item, idx) => (
-                          <li key={idx}>{item}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-
-                  {/* Alignment counts note: NO single score, NO winner */}
-                  <div className="pt-3 border-t border-stone-100 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <ResearchStatusBadge status={cand.researchStatus} />
-                      <Link
-                        to={`/candidate/${cand.id}`}
-                        className="text-xs font-semibold text-stone-700 hover:underline"
-                      >
-                        Profile &rarr;
-                      </Link>
-                    </div>
-
-                    {answeredCount > 0 ? (
-                      <div className="bg-stone-50 rounded-xl p-2.5 text-xs text-stone-700 space-y-1 border border-stone-200">
-                        <span className="font-semibold text-stone-900 block text-[11px] uppercase tracking-wider">
-                          Your alignment counts:
-                        </span>
-                        <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                          <span className="text-emerald-800 font-semibold">
-                            {agreeCount} agree
-                          </span>
-                          <span className="text-amber-800 font-semibold">
-                            {differCount} differ
-                          </span>
-                          {middleCount > 0 && (
-                            <span className="text-stone-600">{middleCount} middle</span>
-                          )}
-                          <span className="text-stone-500">{candidateUnknownCount} unknown</span>
-                          {assumedCount > 0 && (
-                            <span className="text-stone-400">({assumedCount} assumed)</span>
-                          )}
-                          {userUnansweredCount > 0 && (
-                            <span className="text-stone-400">({userUnansweredCount} unanswered by you)</span>
-                          )}
+                          {/* Summary Counts using relation() */}
+                          <div className="pt-2 text-[11px] text-stone-600 flex flex-wrap items-center justify-between gap-2">
+                            <div className="flex flex-wrap gap-x-2 gap-y-0.5">
+                              <span className="text-emerald-800 font-semibold">
+                                {res.agreeCount} agree
+                                {res.weightedAgree > 0 && ` (wt: ${res.weightedAgree})`}
+                              </span>
+                              <span>&middot;</span>
+                              <span className="text-stone-700 font-medium">{res.partialCount} partial</span>
+                              <span>&middot;</span>
+                              <span className="text-rose-800 font-semibold">
+                                {res.differCount} differ
+                                {res.weightedDiffer > 0 && ` (wt: ${res.weightedDiffer})`}
+                              </span>
+                            </div>
+                            <Link
+                              to={`/candidate/${res.candidate.id}`}
+                              className="text-xs font-semibold text-teal-800 hover:underline"
+                            >
+                              Profile &rarr;
+                            </Link>
+                          </div>
                         </div>
                       </div>
-                    ) : (
-                      <div className="text-[11px] text-stone-500 italic">
-                        Answer questions to calculate alignment counts.
+
+                        {/* Expandable Trace Trigger */}
+                        <div className="pt-2 border-t border-stone-200/70">
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setExpandedCandidateId(isExpanded ? null : res.candidate.id)
+                            }
+                            className="w-full flex items-center justify-between text-xs font-semibold text-stone-700 hover:text-stone-950 py-1 transition-colors"
+                          >
+                            <span>{isExpanded ? 'Hide issue trace' : 'View issue trace'}</span>
+                            {isExpanded ? (
+                              <ChevronUp className="w-3.5 h-3.5" />
+                            ) : (
+                              <ChevronDown className="w-3.5 h-3.5" />
+                            )}
+                          </button>
+                        </div>
                       </div>
-                    )}
-                  </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
+
+                {/* Expanded Per-Issue Trace Card */}
+                {expandedCandidateId && (
+                  (() => {
+                    const expandedRes = closenessData.results.find(
+                      (r) => r.candidate.id === expandedCandidateId
+                    );
+                    if (!expandedRes) return null;
+
+                    return (
+                      <div className="p-4 sm:p-5 rounded-xl border border-stone-200 bg-stone-50 space-y-3 animate-fadeIn">
+                        <div className="flex items-center justify-between border-b border-stone-200 pb-2">
+                          <h3 className="font-bold text-xs sm:text-sm text-stone-900">
+                            Issue-by-issue trace: {expandedRes.candidate.name}
+                          </h3>
+                          <button
+                            type="button"
+                            onClick={() => setExpandedCandidateId(null)}
+                            className="text-xs text-stone-500 hover:text-stone-800"
+                          >
+                            Close trace &times;
+                          </button>
+                        </div>
+
+                        <div className="space-y-2 text-xs">
+                          {expandedRes.traces.map((trace) => (
+                            <div
+                              key={trace.issueId}
+                              className="p-3 rounded-lg bg-white border border-stone-200 space-y-1.5"
+                            >
+                              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
+                                <Link
+                                  to={`/issues/${trace.issueId}`}
+                                  className="font-bold text-stone-900 hover:underline"
+                                >
+                                  {trace.issue.question}
+                                </Link>
+                                <div className="flex items-center gap-1.5 shrink-0">
+                                  {formatDirectionBadge(trace.relation)}
+                                  <span className="text-[11px] font-medium px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 border border-amber-200">
+                                    Priority: {trace.importance}/5
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-stone-700 pt-1">
+                                <div>
+                                  <span className="font-semibold text-stone-500 block">Your stance:</span>
+                                  <span>{trace.userStanceLabel}</span>
+                                </div>
+                                <div>
+                                  <span className="font-semibold text-stone-500 block">Their stance:</span>
+                                  <span>{trace.candidateStanceLabel}</span>
+                                </div>
+                              </div>
+
+                              <div className="flex flex-wrap items-center justify-between gap-2 pt-1 border-t border-stone-100 text-[11px] text-stone-500">
+                                <div>
+                                  {trace.closeness !== null ? (
+                                    <span>
+                                      Closeness: <strong>{Math.round(trace.closeness * 100)}%</strong> (weight contribution: {trace.weightedContribution?.toFixed(2)})
+                                    </span>
+                                  ) : (
+                                    <span className="italic">Excluded from score calculation</span>
+                                  )}
+                                </div>
+                                {trace.sources.length > 0 && (
+                                  <div className="flex items-center gap-1">
+                                    <span>Evidence:</span>
+                                    {trace.sources.map((s) => (
+                                      <a
+                                        key={s.id}
+                                        href={s.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-stone-700 underline hover:text-stone-900 inline-flex items-center gap-0.5 mr-1"
+                                      >
+                                        {s.publisher || 'Source'}
+                                        <ExternalLink className="w-2.5 h-2.5 inline" />
+                                      </a>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })()
+                )}
+
+                {/* Footnote notes */}
+                <div className="text-[11px] text-stone-500 space-y-0.5 pt-1">
+                  <p>
+                    <strong>Note:</strong> Unset priority defaults to 3 (Moderately important). Priority 0 issues are excluded.
+                  </p>
+                  <p>
+                    A candidate is ranked only if public positions exist for at least 2 issues and at least 50% of the issues you answered; otherwise shown as &ldquo;Not enough info&rdquo;.
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Thresholds Legend Card per Brief Item 1 */}
+          <div className="bg-stone-50 border border-stone-200 rounded-xl p-3.5 text-xs text-stone-700 space-y-1">
+            <span className="font-bold text-stone-900 block">Stance Comparison Thresholds:</span>
+            <p className="leading-relaxed">
+              <strong className="text-emerald-800">Agree:</strong> same side or within one step. &middot;{' '}
+              <strong className="text-stone-800">Partial:</strong> one of you is in the middle. &middot;{' '}
+              <strong className="text-rose-800">Differ:</strong> two or more steps apart on opposite sides.
+            </p>
           </div>
 
           {/* Filters Bar */}
@@ -377,16 +542,18 @@ export const ComparePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Party Assumption Toggle */}
-            <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-stone-700">
-              <input
-                type="checkbox"
-                checked={settings.includePartyAssumed}
-                onChange={(e) => setIncludePartyAssumed(e.target.checked)}
-                className="h-3.5 w-3.5 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
-              />
-              <span>Include party-based assumptions</span>
-            </label>
+            {/* Party Assumption Toggle (hidden when zero party-assumed positions exist for relevant candidates) */}
+            {hasPartyAssumedInContest && (
+              <label className="flex items-center gap-2 cursor-pointer text-xs font-semibold text-stone-700">
+                <input
+                  type="checkbox"
+                  checked={settings.includePartyAssumed}
+                  onChange={(e) => setIncludePartyAssumed(e.target.checked)}
+                  className="h-3.5 w-3.5 rounded border-stone-300 text-teal-600 focus:ring-teal-500"
+                />
+                <span>Include party-based assumptions</span>
+              </label>
+            )}
           </div>
 
           {/* Side by Side Comparison Matrix Table */}
@@ -414,7 +581,7 @@ export const ComparePage: React.FC = () => {
                   <thead>
                     <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 font-semibold">
                       <th className="p-3.5 min-w-[240px]">Ballot Question</th>
-                      <th className="p-3.5 min-w-[150px]">Your Stance & Priority</th>
+                      <th className="p-3.5 min-w-[150px]">Your Stance &amp; Priority</th>
                       {contestCandidates.map((c) => (
                         <th key={c.id} className="p-3.5 min-w-[200px]">
                           <div className="flex items-center gap-1.5 flex-wrap">
@@ -458,15 +625,7 @@ export const ComparePage: React.FC = () => {
                             {userAns && userAns.status === 'answered' && userStance !== null ? (
                               <div className="space-y-1">
                                 <span className="font-semibold text-teal-800 block text-xs">
-                                  {userStance === -2
-                                    ? issue.leftLabel
-                                    : userStance === 2
-                                    ? issue.rightLabel
-                                    : userStance === 0
-                                    ? 'Middle ground'
-                                    : userStance < 0
-                                    ? `Lean ${issue.leftLabel}`
-                                    : `Lean ${issue.rightLabel}`}
+                                  {formatStanceLabel(userStance, issue)}
                                 </span>
                                 {userImportance !== null && userImportance !== undefined && (
                                   <span className="inline-block text-[10px] font-medium px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 border border-amber-200">
@@ -475,7 +634,7 @@ export const ComparePage: React.FC = () => {
                                 )}
                               </div>
                             ) : userAns && userAns.status === 'no-opinion' ? (
-                              <span className="text-stone-400 italic">No opinion</span>
+                              <span className="text-stone-500 font-medium italic">No opinion</span>
                             ) : (
                               <div className="space-y-1">
                                 <span className="text-stone-500 italic block">You haven&rsquo;t answered</span>
@@ -493,9 +652,11 @@ export const ComparePage: React.FC = () => {
                           {contestCandidates.map((cand) => {
                             const candPositions = positionsByCandidate.get(cand.id) || [];
                             const pos = candPositions.find((p) => p.issueId === issue.id);
-                            const align = getAlignment(userStance, pos);
+                            const rel = relation(userAns, pos, {
+                              includePartyAssumed: settings.includePartyAssumed,
+                            });
 
-                            if (!pos || pos.position === null) {
+                            if (!pos || pos.position === null || pos.evidenceType === 'unknown') {
                               return (
                                 <td key={cand.id} className="p-3.5 align-top text-stone-400">
                                   <div className="space-y-1">
@@ -512,7 +673,7 @@ export const ComparePage: React.FC = () => {
                               return (
                                 <td key={cand.id} className="p-3.5 align-top text-stone-400">
                                   <div className="space-y-1">
-                                    {formatDirectionBadge('assumed')}
+                                    {formatDirectionBadge('assumed-excluded')}
                                     <p className="text-[11px] text-stone-500 italic mt-1">
                                       Estimated from party platform (toggle off)
                                     </p>
@@ -524,24 +685,14 @@ export const ComparePage: React.FC = () => {
                             return (
                               <td key={cand.id} className="p-3.5 align-top space-y-1.5">
                                 <div className="flex flex-wrap items-center gap-1.5">
-                                  {userStance !== null
-                                    ? formatDirectionBadge(align)
-                                    : formatDirectionBadge('unanswered')}
+                                  {formatDirectionBadge(rel)}
                                   <EvidenceBadge type={pos.evidenceType} />
                                 </div>
 
                                 <div className="font-semibold text-stone-800 text-[11px] leading-snug">
                                   Stance:{' '}
                                   <span className="font-medium">
-                                    {pos.position === -2
-                                      ? issue.leftLabel
-                                      : pos.position === 2
-                                      ? issue.rightLabel
-                                      : pos.position === 0
-                                      ? 'Middle ground'
-                                      : pos.position < 0
-                                      ? `Lean: ${issue.leftLabel}`
-                                      : `Lean: ${issue.rightLabel}`}
+                                    {formatStanceLabel(pos.position, issue)}
                                   </span>
                                 </div>
 
