@@ -15,14 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 9
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: pnpm install --no-frozen-lockfile
-      - run: pnpm build
+      - run: npm install --no-package-lock
+      - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
@@ -35,3 +32,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
