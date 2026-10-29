@@ -33,7 +33,7 @@ export const SourcesPage: React.FC = () => {
   }, [sources, selectedPublisher, searchQuery]);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-12 min-w-0">
       {/* Page Title */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
@@ -216,7 +216,7 @@ export const SourcesPage: React.FC = () => {
             No sources matched your search.
           </p>
         ) : (
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto min-w-0 max-w-full">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 font-semibold">

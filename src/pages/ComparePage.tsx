@@ -145,7 +145,7 @@ export const ComparePage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-8 min-w-0">
       {/* Title */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
@@ -299,7 +299,7 @@ export const ComparePage: React.FC = () => {
           </div>
 
           {/* Side by Side Comparison Matrix Table */}
-          <div className="bg-white rounded-2xl border border-stone-200 shadow-2xs overflow-hidden">
+          <div className="bg-white rounded-2xl border border-stone-200 shadow-2xs overflow-hidden min-w-0 max-w-full">
             <div className="p-4 sm:p-5 border-b border-stone-200">
               <h2 className="text-base font-bold text-stone-900">
                 {currentContest.uncontested
@@ -318,7 +318,7 @@ export const ComparePage: React.FC = () => {
                 No issues match your current filters. Try setting Min Priority to &ldquo;Any&rdquo;.
               </div>
             ) : (
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto min-w-0 max-w-full">
                 <table className="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 font-semibold">

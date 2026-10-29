@@ -171,7 +171,7 @@ export const ExplorePage: React.FC = () => {
   ]);
 
   const topCandidateResult = targetContestCloseness?.results[0];
-  const hasEnoughInfo = Boolean(topCandidateResult && topCandidateResult.isRanked && topCandidateResult.score !== null);
+  const hasEnoughInfo = Boolean(topCandidateResult && topCandidateResult.counted >= 1 && topCandidateResult.score !== null);
 
   const handleSkip = () => {
     if (!currentIssue) return;

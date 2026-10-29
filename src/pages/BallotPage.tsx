@@ -23,7 +23,7 @@ export const BallotPage: React.FC = () => {
     : contests.filter((c) => c.group === selectedGroup);
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-8 min-w-0">
       {/* Page Header */}
       <div>
         <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
@@ -58,7 +58,7 @@ export const BallotPage: React.FC = () => {
       </div>
 
       {/* Group Filter Tabs */}
-      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none border-b border-stone-200">
+      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none border-b border-stone-200 min-w-0 max-w-full">
         <button
           type="button"
           onClick={() => setSelectedGroup('all')}

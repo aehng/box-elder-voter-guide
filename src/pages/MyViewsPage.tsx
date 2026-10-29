@@ -2,8 +2,9 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { useVoter } from '../context/VoterContext';
 import { IssuePositionChart } from '../components/IssuePositionChart';
-import { RaceFilterChips } from '../components/RaceFilterChips';
 import { ContestMatches } from '../components/ContestMatches';
+import { ErrorBoundary } from '../components/ErrorBoundary';
+import { getContestShortName } from '../components/RaceFilterChips';
 import type { Issue, Candidate } from '../types';
 import {
   Compass,
@@ -15,6 +16,7 @@ export const MyViewsPage: React.FC = () => {
   const {
     contests,
     issues,
+    contestMap,
     candidateMap,
     issueMap,
     positionsByCandidate,
@@ -24,58 +26,32 @@ export const MyViewsPage: React.FC = () => {
     settings,
     setIncludePartyAssumed,
     resetAllAnswers,
-    clearRaceFilter,
     answeredCount,
+    noOpinionCount,
+    skippedCount,
+    totalActiveIssuesCount,
   } = useVoter();
 
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedRace, setSelectedRace] = useState<string>('all');
   const [showResetConfirm, setShowResetConfirm] = useState(false);
 
-  const activeRaceFilter = settings.raceFilter || [];
-
-  // Filter issues whose contestIds intersect the active raceFilter (empty = all)
-  const filteredIssues = useMemo(() => {
-    if (activeRaceFilter.length === 0) return issues;
-    return issues.filter((issue) =>
-      issue.contestIds.some((cid) => activeRaceFilter.includes(cid))
-    );
-  }, [issues, activeRaceFilter]);
-
-  // Header counts reflect filtered set
-  const filteredTotal = filteredIssues.length;
-  const filteredAnswered = useMemo(() => {
-    return filteredIssues.filter(
-      (i) => answers[i.id]?.status === 'answered' && answers[i.id]?.stance !== null
-    ).length;
-  }, [filteredIssues, answers]);
-
-  const filteredNoOpinion = useMemo(() => {
-    return filteredIssues.filter(
-      (i) => answers[i.id]?.status === 'no-opinion'
-    ).length;
-  }, [filteredIssues, answers]);
-
-  const filteredSkipped = useMemo(() => {
-    return Math.max(0, filteredTotal - filteredAnswered - filteredNoOpinion);
-  }, [filteredTotal, filteredAnswered, filteredNoOpinion]);
-
-  // Contests where user has >= 1 answered (not no-opinion) issue
+  // Contests where user has >= 1 answered issue (ALWAYS shows every race with answers)
   const contestsWithMatches = useMemo(() => {
     return contests
       .filter((c) => {
         if (c.type !== 'candidate' || c.candidateIds.length === 0) return false;
-        if (activeRaceFilter.length > 0 && !activeRaceFilter.includes(c.id)) return false;
         return c.issueIds.some((iid) => {
           const ans = answers[iid];
           return ans && ans.status === 'answered' && ans.stance !== null;
         });
       })
       .sort((a, b) => a.order - b.order);
-  }, [contests, answers, activeRaceFilter]);
+  }, [contests, answers]);
 
-  // Filter issues answered or marked no-opinion within the filtered set
-  const answeredIssues = useMemo(() => {
-    return filteredIssues
+  // All issues answered or marked no-opinion across the guide
+  const allAnsweredIssues = useMemo(() => {
+    return issues
       .filter((i) => {
         const a = answers[i.id];
         return a && (a.status === 'answered' || a.status === 'no-opinion');
@@ -85,24 +61,41 @@ export const MyViewsPage: React.FC = () => {
         answer: answers[issue.id],
       }))
       .sort((a, b) => {
-        // Sort by importance desc, then by question title
         const impA = a.answer.importance ?? -1;
         const impB = b.answer.importance ?? -1;
         if (impB !== impA) return impB - impA;
         return a.issue.question.localeCompare(b.issue.question);
       });
-  }, [filteredIssues, answers]);
+  }, [issues, answers]);
 
+  // Categories available among answered issues
   const categories = useMemo(() => {
     const set = new Set<string>();
-    answeredIssues.forEach(({ issue }) => set.add(issue.category));
+    allAnsweredIssues.forEach(({ issue }) => set.add(issue.category));
     return Array.from(set).sort();
-  }, [answeredIssues]);
+  }, [allAnsweredIssues]);
 
+  // Races available among answered issues
+  const answeredContests = useMemo(() => {
+    const set = new Set<string>();
+    allAnsweredIssues.forEach(({ issue }) => {
+      issue.contestIds.forEach((cid) => set.add(cid));
+    });
+    return contests.filter((c) => set.has(c.id)).sort((a, b) => a.order - b.order);
+  }, [allAnsweredIssues, contests]);
+
+  // Local filtered issues for the answer list below
   const displayedIssues = useMemo(() => {
-    if (selectedCategory === 'all') return answeredIssues;
-    return answeredIssues.filter(({ issue }) => issue.category === selectedCategory);
-  }, [answeredIssues, selectedCategory]);
+    return allAnsweredIssues.filter(({ issue }) => {
+      if (selectedCategory !== 'all' && issue.category !== selectedCategory) {
+        return false;
+      }
+      if (selectedRace !== 'all' && !issue.contestIds.includes(selectedRace)) {
+        return false;
+      }
+      return true;
+    });
+  }, [allAnsweredIssues, selectedCategory, selectedRace]);
 
   const hasPartyAssumedInViews = useMemo(() => {
     return displayedIssues.some(({ issue }) => {
@@ -110,6 +103,24 @@ export const MyViewsPage: React.FC = () => {
       return list.some((p) => p.evidenceType === 'party-assumed');
     });
   }, [displayedIssues, positionsByIssue]);
+
+  const isLocalFilterActive = selectedCategory !== 'all' || selectedRace !== 'all';
+
+  const activeFilterLabel = useMemo(() => {
+    if (selectedRace !== 'all') {
+      const c = contestMap.get(selectedRace);
+      return c ? getContestShortName(c) : selectedRace;
+    }
+    if (selectedCategory !== 'all') {
+      return selectedCategory;
+    }
+    return 'All';
+  }, [selectedRace, selectedCategory, contestMap]);
+
+  const resetLocalFilters = () => {
+    setSelectedCategory('all');
+    setSelectedRace('all');
+  };
 
   // Empty state if nothing answered anywhere in the guide
   if (answeredCount === 0) {
@@ -148,20 +159,15 @@ export const MyViewsPage: React.FC = () => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-10 min-w-0">
       {/* Page Title & Summary Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 min-w-0">
+        <div className="min-w-0">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
             My Matches
           </h1>
           <p className="mt-1 text-sm font-medium text-stone-700">
-            {filteredAnswered} answered &middot; {filteredNoOpinion} no opinion &middot; {filteredSkipped} skipped of {filteredTotal}
-            {activeRaceFilter.length > 0 && (
-              <span className="text-teal-800 ml-1.5 font-semibold">
-                (filtered by {activeRaceFilter.length} race{activeRaceFilter.length === 1 ? '' : 's'})
-              </span>
-            )}
+            {answeredCount} answered &middot; {noOpinionCount} no opinion &middot; {skippedCount} skipped of {totalActiveIssuesCount}
           </p>
           <p className="text-xs text-stone-500 mt-0.5">
             Per-race matches based on verified public stances matching issues you answered. Independent and nonpartisan.
@@ -197,14 +203,9 @@ export const MyViewsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Race Filter Chips (shared persisted state with Explore) */}
-      <div className="bg-white rounded-2xl border border-stone-200 p-4 sm:p-5 shadow-2xs">
-        <RaceFilterChips />
-      </div>
-
-      {/* Per-Race Match Results Section (lead with matches where user answered >= 1 issue) */}
+      {/* Per-Race Match Results Section (ALWAYS shows every race with answers) */}
       {contestsWithMatches.length > 0 ? (
-        <div className="space-y-10">
+        <div className="space-y-10 min-w-0">
           {contestsWithMatches.map((contest) => {
             const contestIssues = contest.issueIds
               .map((id) => issueMap.get(id))
@@ -214,43 +215,31 @@ export const MyViewsPage: React.FC = () => {
               .filter((k): k is Candidate => Boolean(k));
 
             return (
-              <ContestMatches
-                key={contest.id}
-                contest={contest}
-                contestIssues={contestIssues}
-                candidates={contestCandidates}
-                positionsByCandidate={positionsByCandidate}
-                answers={answers}
-                sourceMap={sourceMap}
-                includePartyAssumed={settings.includePartyAssumed}
-                showFullComparisonLink={true}
-              />
+              <ErrorBoundary key={contest.id}>
+                <ContestMatches
+                  contest={contest}
+                  contestIssues={contestIssues}
+                  candidates={contestCandidates}
+                  positionsByCandidate={positionsByCandidate}
+                  answers={answers}
+                  sourceMap={sourceMap}
+                  includePartyAssumed={settings.includePartyAssumed}
+                  showFullComparisonLink={true}
+                />
+              </ErrorBoundary>
             );
           })}
         </div>
       ) : (
-        <div className="bg-white rounded-2xl border border-stone-200 p-8 text-center space-y-3 shadow-2xs">
+        <div className="bg-white rounded-2xl border border-stone-200 p-8 text-center space-y-3 shadow-2xs min-w-0">
           <Compass className="w-8 h-8 text-stone-400 mx-auto" />
           <h2 className="text-base font-bold text-stone-900">
-            {activeRaceFilter.length > 0
-              ? 'No answered questions match this race filter'
-              : 'Answer candidate race questions to see matches'}
+            Answer candidate race questions to see matches
           </h2>
           <p className="text-xs sm:text-sm text-stone-500 max-w-md mx-auto">
-            {activeRaceFilter.length > 0
-              ? 'You haven\u2019t answered any questions in the selected races yet.'
-              : 'Answer questions in competitive races like U.S. House, State Senate, or School Board to view closeness matches.'}
+            Answer questions in competitive races like U.S. House, State Senate, or School Board to view closeness matches.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
-            {activeRaceFilter.length > 0 && (
-              <button
-                type="button"
-                onClick={clearRaceFilter}
-                className="px-3.5 py-1.5 rounded-lg bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors"
-              >
-                Reset to all races
-              </button>
-            )}
             <Link
               to="/explore"
               className="px-3.5 py-1.5 rounded-lg bg-teal-700 text-white text-xs font-semibold hover:bg-teal-800 transition-colors"
@@ -262,9 +251,9 @@ export const MyViewsPage: React.FC = () => {
       )}
 
       {/* Your Answers Section (Answer list and edit below matches) */}
-      <div className="pt-8 border-t border-stone-200 space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-          <div>
+      <div className="pt-8 border-t border-stone-200 space-y-6 min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 min-w-0 w-full">
+          <div className="min-w-0">
             <h2 className="text-xl sm:text-2xl font-bold text-stone-900 tracking-tight">
               Your answers
             </h2>
@@ -273,44 +262,90 @@ export const MyViewsPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Category Filter Pills */}
-          {categories.length > 1 && (
-            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          {/* Local Filter Pills: Categories & Races */}
+          <div className="flex flex-wrap items-center gap-1.5 min-w-0">
+            {categories.length > 1 && (
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none min-w-0 max-w-full">
+                <button
+                  type="button"
+                  onClick={() => setSelectedCategory('all')}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                    selectedCategory === 'all'
+                      ? 'bg-stone-900 text-white'
+                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                  }`}
+                >
+                  All Categories ({allAnsweredIssues.length})
+                </button>
+                {categories.map((cat) => {
+                  const count = allAnsweredIssues.filter((i) => i.issue.category === cat).length;
+                  return (
+                    <button
+                      key={cat}
+                      type="button"
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                        selectedCategory === cat
+                          ? 'bg-stone-900 text-white'
+                          : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                      }`}
+                    >
+                      {cat} ({count})
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {answeredContests.length > 1 && (
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none min-w-0 max-w-full">
+                <button
+                  type="button"
+                  onClick={() => setSelectedRace('all')}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                    selectedRace === 'all'
+                      ? 'bg-stone-900 text-white'
+                      : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                  }`}
+                >
+                  All Races
+                </button>
+                {answeredContests.map((c) => {
+                  const shortName = getContestShortName(c);
+                  const count = allAnsweredIssues.filter((i) => i.issue.contestIds.includes(c.id)).length;
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => setSelectedRace(c.id)}
+                      className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
+                        selectedRace === c.id
+                          ? 'bg-stone-900 text-white'
+                          : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                      }`}
+                    >
+                      {shortName} ({count})
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+
+            {isLocalFilterActive && (
               <button
                 type="button"
-                onClick={() => setSelectedCategory('all')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                  selectedCategory === 'all'
-                    ? 'bg-stone-900 text-white'
-                    : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                }`}
+                onClick={resetLocalFilters}
+                className="text-xs font-semibold text-teal-800 hover:text-teal-950 underline whitespace-nowrap ml-1"
               >
-                All ({answeredIssues.length})
+                Showing: {activeFilterLabel} &mdash; Show all
               </button>
-              {categories.map((cat) => {
-                const count = answeredIssues.filter((i) => i.issue.category === cat).length;
-                return (
-                  <button
-                    key={cat}
-                    type="button"
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`px-2.5 py-1 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors ${
-                      selectedCategory === cat
-                        ? 'bg-stone-900 text-white'
-                        : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                    }`}
-                  >
-                    {cat} ({count})
-                  </button>
-                );
-              })}
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Party-assumed toggle if relevant */}
         {hasPartyAssumedInViews && (
-          <div className="bg-white rounded-xl border border-stone-200 p-3.5 shadow-2xs">
+          <div className="bg-white rounded-xl border border-stone-200 p-3.5 shadow-2xs min-w-0">
             <label className="flex items-center gap-3 cursor-pointer select-none">
               <input
                 type="checkbox"
@@ -330,16 +365,33 @@ export const MyViewsPage: React.FC = () => {
           </div>
         )}
 
-        {/* Issues Position Chart List */}
-        <div className="space-y-6">
-          {displayedIssues.map(({ issue, answer }) => (
-            <IssuePositionChart
-              key={issue.id}
-              issue={issue}
-              answer={answer}
-            />
-          ))}
-        </div>
+        {/* Issues Position Chart List or Empty State */}
+        {displayedIssues.length === 0 ? (
+          <div className="bg-white rounded-2xl border border-stone-200 p-8 text-center space-y-3 shadow-2xs min-w-0">
+            <p className="text-sm font-semibold text-stone-700">
+              No answered questions match this filter.
+            </p>
+            <div>
+              <button
+                type="button"
+                onClick={resetLocalFilters}
+                className="px-3.5 py-1.5 rounded-lg bg-stone-900 text-white text-xs font-semibold hover:bg-stone-800 transition-colors"
+              >
+                Showing: {activeFilterLabel} &mdash; Show all
+              </button>
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-6 min-w-0">
+            {displayedIssues.map(({ issue, answer }) => (
+              <IssuePositionChart
+                key={issue.id}
+                issue={issue}
+                answer={answer}
+              />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Reset Confirmation Dialog */}

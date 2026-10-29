@@ -80,7 +80,64 @@ function loadInitialAnswers(): UserAnswersMap {
   try {
     const raw = localStorage.getItem(STORAGE_ANSWERS_KEY);
     if (raw) {
-      return JSON.parse(raw);
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+        const validIssueIds = new Set((issuesData as Issue[]).map((i) => i.id));
+        const sanitized: UserAnswersMap = {};
+
+        for (const [key, value] of Object.entries(parsed)) {
+          // Drop entries whose issue id is not in issues.json
+          if (!validIssueIds.has(key)) {
+            continue;
+          }
+          if (!value || typeof value !== 'object') {
+            continue;
+          }
+          const val = value as Partial<UserAnswer>;
+
+          // stance in -2..2 | null
+          let stance: UserStance = null;
+          if (val.stance === null || val.stance === undefined) {
+            stance = null;
+          } else if (
+            typeof val.stance === 'number' &&
+            Number.isInteger(val.stance) &&
+            val.stance >= -2 &&
+            val.stance <= 2
+          ) {
+            stance = val.stance as UserStance;
+          }
+
+          // importance in 0..5 | null
+          let importance: UserImportance = null;
+          if (val.importance === null || val.importance === undefined) {
+            importance = null;
+          } else if (
+            typeof val.importance === 'number' &&
+            Number.isInteger(val.importance) &&
+            val.importance >= 0 &&
+            val.importance <= 5
+          ) {
+            importance = val.importance as UserImportance;
+          }
+
+          // status in 'answered' | 'no-opinion' | 'skipped'
+          let status: UserAnswerStatus = 'skipped';
+          if (val.status === 'answered' || val.status === 'no-opinion' || val.status === 'skipped') {
+            status = val.status;
+          } else if (stance !== null) {
+            status = 'answered';
+          }
+
+          sanitized[key] = {
+            stance,
+            importance,
+            status,
+            updated: typeof val.updated === 'string' ? val.updated : new Date().toISOString(),
+          };
+        }
+        return sanitized;
+      }
     }
   } catch (err) {
     console.error('Failed to parse saved answers from localStorage:', err);
@@ -89,19 +146,35 @@ function loadInitialAnswers(): UserAnswersMap {
 }
 
 function loadInitialSettings(): UserSettings {
+  const DEFAULT_SETTINGS: UserSettings = {
+    includePartyAssumed: false,
+    raceFilter: [],
+  };
+
   try {
     const raw = localStorage.getItem(STORAGE_SETTINGS_KEY);
     if (raw) {
       const parsed = JSON.parse(raw);
-      return {
-        includePartyAssumed: Boolean(parsed.includePartyAssumed),
-        raceFilter: Array.isArray(parsed.raceFilter) ? parsed.raceFilter : [],
-      };
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) {
+        const knownContestIds = new Set((contestsData as Contest[]).map((c) => c.id));
+        const validRaceFilter = Array.isArray(parsed.raceFilter)
+          ? parsed.raceFilter.filter(
+              (id: unknown): id is string => typeof id === 'string' && knownContestIds.has(id)
+            )
+          : [];
+
+        return {
+          ...DEFAULT_SETTINGS,
+          ...parsed,
+          includePartyAssumed: Boolean(parsed.includePartyAssumed),
+          raceFilter: validRaceFilter,
+        };
+      }
     }
   } catch (err) {
     console.error('Failed to parse saved settings from localStorage:', err);
   }
-  return { includePartyAssumed: false, raceFilter: [] };
+  return DEFAULT_SETTINGS;
 }
 
 export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -213,11 +286,15 @@ export const VoterProvider: React.FC<{ children: React.ReactNode }> = ({ childre
   };
 
   const setRaceFilter = (filter: string[]) => {
-    setSettings((prev) => ({ ...prev, raceFilter: filter }));
+    const knownContestIds = new Set(contests.map((c) => c.id));
+    const valid = filter.filter((id) => knownContestIds.has(id));
+    setSettings((prev) => ({ ...prev, raceFilter: valid }));
   };
 
   const toggleRaceFilter = (contestId: string) => {
     setSettings((prev) => {
+      const knownContestIds = new Set(contests.map((c) => c.id));
+      if (!knownContestIds.has(contestId)) return prev;
       const current = prev.raceFilter || [];
       const exists = current.includes(contestId);
       const updated = exists ? current.filter((id) => id !== contestId) : [...current, contestId];

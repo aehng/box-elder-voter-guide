@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { VoterProvider } from './context/VoterContext';
 import { Header } from './components/Header';
 import { BottomNav } from './components/BottomNav';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Code-split route pages with React.lazy
 const LandingPage = lazy(() => import('./pages/LandingPage').then((m) => ({ default: m.LandingPage })));
@@ -16,6 +17,10 @@ const JudgeDetailPage = lazy(() => import('./pages/JudgeDetailPage').then((m) =>
 const AmendmentDetailPage = lazy(() => import('./pages/AmendmentDetailPage').then((m) => ({ default: m.AmendmentDetailPage })));
 const SourcesPage = lazy(() => import('./pages/SourcesPage').then((m) => ({ default: m.SourcesPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+
+const withBoundary = (element: React.ReactNode) => (
+  <ErrorBoundary>{element}</ErrorBoundary>
+);
 
 // Accessible loading fallback
 const PageLoader: React.FC = () => (
@@ -49,22 +54,22 @@ export const App: React.FC = () => {
           <main className="flex-1 pb-24 md:pb-12">
             <Suspense fallback={<PageLoader />}>
               <Routes>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/ballot" element={<BallotPage />} />
-                <Route path="/explore" element={<ExplorePage />} />
-                <Route path="/my-views" element={<MyViewsPage />} />
-                <Route path="/my-matches" element={<MyViewsPage />} />
-                <Route path="/compare" element={<ComparePage />} />
-                <Route path="/compare/:contestId" element={<ComparePage />} />
-                <Route path="/candidate/:id" element={<CandidateDetailPage />} />
-                <Route path="/issues/:id" element={<IssueDetailPage />} />
-                <Route path="/judges/:id" element={<JudgeDetailPage />} />
-                <Route path="/amendment/:id" element={<AmendmentDetailPage />} />
-                <Route path="/amendments/:id" element={<AmendmentDetailPage />} />
-                <Route path="/sources" element={<SourcesPage />} />
-                <Route path="/about" element={<AboutPage />} />
+                <Route path="/" element={withBoundary(<LandingPage />)} />
+                <Route path="/ballot" element={withBoundary(<BallotPage />)} />
+                <Route path="/explore" element={withBoundary(<ExplorePage />)} />
+                <Route path="/my-views" element={withBoundary(<MyViewsPage />)} />
+                <Route path="/my-matches" element={withBoundary(<MyViewsPage />)} />
+                <Route path="/compare" element={withBoundary(<ComparePage />)} />
+                <Route path="/compare/:contestId" element={withBoundary(<ComparePage />)} />
+                <Route path="/candidate/:id" element={withBoundary(<CandidateDetailPage />)} />
+                <Route path="/issues/:id" element={withBoundary(<IssueDetailPage />)} />
+                <Route path="/judges/:id" element={withBoundary(<JudgeDetailPage />)} />
+                <Route path="/amendment/:id" element={withBoundary(<AmendmentDetailPage />)} />
+                <Route path="/amendments/:id" element={withBoundary(<AmendmentDetailPage />)} />
+                <Route path="/sources" element={withBoundary(<SourcesPage />)} />
+                <Route path="/about" element={withBoundary(<AboutPage />)} />
                 {/* Fallback */}
-                <Route path="*" element={<LandingPage />} />
+                <Route path="*" element={withBoundary(<LandingPage />)} />
               </Routes>
             </Suspense>
           </main>

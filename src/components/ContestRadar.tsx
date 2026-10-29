@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import type { Issue, Candidate, Position, UserAnswer } from '../types';
 import { MiniPositionChart } from './MiniPositionChart';
-import { formatStanceLabel } from '../lib/compare';
+import { formatStanceLabel, getShortIssueName } from '../lib/compare';
 import { Eye, EyeOff, Info, Compass } from 'lucide-react';
 
 export interface ContestRadarProps {
@@ -71,65 +71,6 @@ export const CANDIDATE_PALETTE = [
     badge: 'bg-sky-50 text-sky-800 border-sky-200',
   },
 ];
-
-// Short issue names for radar spokes (readable at 390px)
-const SHORT_TITLES: Record<string, string> = {
-  'water-great-salt-lake-and-data-center': 'Water & Salt Lake',
-  'affordability-housing-and-tax-policy': 'Housing & Taxes',
-  'federal-deficits-and-spending': 'Deficits & Spending',
-  'government-ethics-and-election-reform': 'Ethics & Elections',
-  'energy-reliability-and-environment': 'Energy & Grid',
-  'fair-voting-maps': 'Voting Maps',
-  'water-conservation-and-agriculture': 'Water & Ag',
-  'taxes-and-affordability': 'Tax Relief',
-  'stratos-data-center-and-mida': 'Stratos / MIDA',
-  'starter-housing-and-growth': 'Starter Housing',
-  'farm-water-rights-and-conservation': 'Farm Water Rights',
-  'tax-transparency-and-affordability': 'Tax Transparency',
-  'government-accountability': 'Accountability',
-  'utah-fits-all-public-funding': 'Utah Fits All',
-  'sensitive-materials-removal': 'School Materials',
-  'school-immigration-enforcement': 'Immigration & Schools',
-  'third-grade-reading-retention': '3rd Grade Reading',
-  'bell-to-bell-cellphone-policy': 'Cellphone Policy',
-  'property-tax-increase-and-budget': 'Tax & Budget',
-  'facilities-and-school-configuration': 'School Facilities',
-  'secondary-grading-and-graduation': 'Grading Standards',
-  'teacher-pay-and-workplace-support': 'Teacher Pay',
-  'phones-and-state-testing': 'Phones & Testing',
-  'stratos-approval-and-oversight': 'Stratos Oversight',
-  'water-and-resource-planning': 'Water & Resources',
-  'development-tax-and-public-benefit': 'Dev Incentives',
-  'county-budget-and-property-taxes': 'County Budget',
-  'dispatch-reliability-and-governance': 'Dispatch Reliability',
-  'sheriff-management-accountability': 'Sheriff Oversight',
-  'public-safety-budget-and-staffing': 'Safety & Staffing',
-  'critical-incident-and-dispatch-practices': 'Incident Practices',
-  'election-administration-and-access': 'Election Access',
-  'election-transparency-and-records': 'Election Records',
-  'election-readiness-and-resources': 'Election Readiness',
-  'prosecution-and-victim-services': 'Prosecution & Victims',
-  'legal-review-and-independence': 'Legal Independence',
-  'county-legal-risk-and-disclosure': 'Legal Risk',
-  'budget-transparency-and-fiscal-control': 'Budget Transparency',
-  'property-tax-administration-and-relief': 'Tax Relief Admin',
-  'budget-reserves-and-service-costs': 'Budget Reserves',
-  'fraud-and-mismanagement-reporting': 'Fraud Reporting',
-  'amendment-a-publication-method': 'Amendment A',
-  'amendment-b-tax-initiative-threshold': 'Amendment B',
-};
-
-function getShortIssueName(issue: Issue): string {
-  if (SHORT_TITLES[issue.id]) {
-    return SHORT_TITLES[issue.id];
-  }
-  // Fallback: derive title from id
-  return issue.id
-    .split('-')
-    .slice(0, 3)
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
-}
 
 export const ContestRadar: React.FC<ContestRadarProps> = ({
   contestIssues,
