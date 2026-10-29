@@ -224,9 +224,7 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
   const unknownR = 16; // center ring radius reserved for unknown
 
   // Angles: spoke 0 at 12 o'clock (-PI/2), moving clockwise
-  const angles = useMemo(() => {
-    return answeredIssues.map((_, i) => -Math.PI / 2 + (2 * Math.PI * i) / N);
-  }, [answeredIssues, N]);
+  const angles = answeredIssues.map((_, i) => -Math.PI / 2 + (2 * Math.PI * i) / N);
 
   // Radius map: stance -2..+2 mapped to >0 radius: r = ((v + 3) / 5) * maxR
   // -2 -> 0.20 * maxR (30px)
