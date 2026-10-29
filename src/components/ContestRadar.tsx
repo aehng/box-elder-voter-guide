@@ -455,7 +455,7 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
       </div>
 
       {/* Radar SVG Container */}
-      <div className="relative w-full min-w-[300px] max-w-[520px] mx-auto select-none -mx-1 sm:mx-auto">
+      <div className="relative w-full max-w-[520px] mx-auto select-none overflow-hidden">
         <svg
           viewBox={`${cx - maxR - 78} ${cy - maxR - 44} ${2 * (maxR + 78)} ${2 * (maxR + 44)}`}
           className="w-full h-auto overflow-visible"
