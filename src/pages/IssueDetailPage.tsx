@@ -133,7 +133,7 @@ export const IssueDetailPage: React.FC = () => {
         <div className="bg-white rounded-2xl border border-stone-200 p-6 shadow-2xs space-y-4">
           <div className="border-b border-stone-100 pb-3">
             <span className="text-xs font-extrabold uppercase tracking-wider text-stone-500 block mb-1">
-              {isAmendment ? 'Vote AGAINST (Reject)' : 'Perspective A'}
+              {isAmendment ? 'Vote AGAINST (Reject)' : 'Approach'}
             </span>
             <h2 className="text-base font-bold text-stone-900 leading-snug">
               {issue.leftLabel}
@@ -171,7 +171,7 @@ export const IssueDetailPage: React.FC = () => {
         <div className="bg-white rounded-2xl border border-stone-200 p-6 shadow-2xs space-y-4">
           <div className="border-b border-stone-100 pb-3">
             <span className="text-xs font-extrabold uppercase tracking-wider text-teal-800 block mb-1">
-              {isAmendment ? 'Vote FOR (Approve)' : 'Perspective B'}
+              {isAmendment ? 'Vote FOR (Approve)' : 'Approach'}
             </span>
             <h2 className="text-base font-bold text-stone-900 leading-snug">
               {issue.rightLabel}

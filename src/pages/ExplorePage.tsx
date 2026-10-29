@@ -328,7 +328,7 @@ export const ExplorePage: React.FC = () => {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] font-extrabold tracking-wider uppercase text-stone-500">
-                      {isAmendmentIssue ? 'Vote AGAINST (Reject)' : 'Perspective A'}
+                      {isAmendmentIssue ? 'Vote AGAINST (Reject)' : 'Approach'}
                     </span>
                   </div>
                   <h3 className="font-bold text-sm text-stone-900 mb-3 leading-snug">
@@ -368,7 +368,7 @@ export const ExplorePage: React.FC = () => {
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-[11px] font-extrabold tracking-wider uppercase text-teal-800">
-                      {isAmendmentIssue ? 'Vote FOR (Approve)' : 'Perspective B'}
+                      {isAmendmentIssue ? 'Vote FOR (Approve)' : 'Approach'}
                     </span>
                   </div>
                   <h3 className="font-bold text-sm text-stone-900 mb-3 leading-snug">
