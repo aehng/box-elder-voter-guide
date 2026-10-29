@@ -803,7 +803,7 @@ export const ContestRadar: React.FC<ContestRadarProps> = ({
           </div>
         ) : (
           <div className="text-[11px] text-stone-500">
-            Click any issue above or on the radar chart to inspect the Left/Right scale ends and candidate comparisons for that specific issue.
+            Click any issue above or on the radar chart to inspect both sides of the issue and candidate comparisons for that specific issue.
           </div>
         )}
       </div>
